@@ -76,7 +76,7 @@ Shader "Custom/OwnMask"
 			
 			float3 Rot;*/
 	
-			float4 Originalq = rot * float4(-1, -1, -1, -1);
+			float4 Originalq = rot * float4(-1, -1, -1, 1);
 			return Quat(rot, Quat(float4(vec, 0), Originalq)).xyz;
 			
 
