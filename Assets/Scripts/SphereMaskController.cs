@@ -15,9 +15,9 @@ public class SphereMaskController : MonoBehaviour
         if(pivot)
         {
             Vector3 direccion = pivot.position - transform.position;
-            float angulo = Mathf.Atan2(direccion.y, direccion.x) * Mathf.Rad2Deg;
-            transform.rotation = Quaternion.AngleAxis(angulo, Vector3.forward);
-            DissolvantManager.SetLens(this.GetInstanceID().ToString(), transform.position, radius, Vector3.Distance(pivot.position, transform.position), transform.worldToLocalMatrix);
+
+            transform.rotation = Quaternion.LookRotation(direccion);
+            DissolvantManager.SetLens(this.GetInstanceID().ToString(), transform.position, radius, length, transform.worldToLocalMatrix);
         }
         else
         {
