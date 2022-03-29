@@ -20,6 +20,7 @@ public class PlayerInteraction : MonoBehaviour
     bool iInteract = false; // If i interact with an object before or not
 
     bool onlyOnce = false;
+    bool onlyTwice = false;
 
     // Info to use mouse on Camera
     Vector3 mpS;
@@ -27,6 +28,8 @@ public class PlayerInteraction : MonoBehaviour
     Vector3 rayOrigin;
     Vector3 rayDirection;
     float distancePlayer;
+
+    Interactable interactable;
 
     void IncreaseHoldTime() => holdTime += Time.deltaTime;
     void ResetHoldTime() => holdTime = 0f;
@@ -53,12 +56,13 @@ public class PlayerInteraction : MonoBehaviour
     public GameObject interactionHoldGO; // the ui parent to disable when not interacting
     public UnityEngine.UI.Image interactionHoldProgress; // the progress bar for hold interaction type
 
+
     void Start()
     {
         mainCameraC = mainCamera.GetComponent<Camera>();
 
-        d_Default = GetComponent<DialogueDefault>();
-        default_Answer = d_Default.GetComponent<Interactable>();
+        //d_Default = GetComponent<DialogueDefault>();
+        //default_Answer = d_Default.GetComponent<Interactable>();
 
         CursorSettings();
     }
@@ -76,17 +80,27 @@ public class PlayerInteraction : MonoBehaviour
         rayOrigin = mainCameraC.transform.position;
         rayDirection = (mpW - mainCameraC.transform.position);
 
+        hitAndInteraction();
+    }
+
+    void CursorSettings()
+    {
+        interactCursorHotspot = new Vector2(interactCursor.width / 2 - 2, interactCursor.height / 2 - 6);
+        normalCursorHotspot = new Vector2(normalCursor.width / 2 - 2, normalCursor.height / 2 - 6);
+        Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);
+    }
+
+    void hitAndInteraction()
+    {
         Ray ray = new Ray(rayOrigin, rayDirection);
 
         RaycastHit hitInfo;
 
-        bool hitSomething = Physics.SphereCast(ray, raysphereRadius, out hitInfo, Mathf.Infinity, interactableLayer);
+        bool hitSomething = Physics.SphereCast(ray, raysphereRadius, out hitInfo, Mathf.Infinity, interactableLayer);;
 
-        distancePlayer = Vector3.Distance(hitInfo.point, gameObject.transform.position);
+        bool interactMouseButton = Input.GetMouseButtonDown(0) ? true : false;
 
-        bool closeEnought = distancePlayer < rayDistance && hitSomething ? true : false;
-
-        if (hitSomething && !iInteract)
+        if (hitSomething)
         {
             if (!onlyOnce)
             {
@@ -94,46 +108,67 @@ public class PlayerInteraction : MonoBehaviour
                 onlyOnce = true;
             }
 
-            Interactable interactable = hitInfo.collider.GetComponent<Interactable>();
-
-            if (closeEnought)
+            if (interactMouseButton || Input.GetKeyDown(KeyCode.Mouse1))
             {
-                gameObject.GetComponent<InteractDialogueOrObjects>().Interacting();
-
-                if (interactable != null)
-                {
-                    HandleInteraction(interactable);
-
-                    interactionHoldGO.SetActive(interactable.interactionType == Interactable.InteractionType.Hold);
-                }
+                interactable = hitInfo.collider.GetComponent<Interactable>();
             }
-            else
+
+            if (Input.GetKeyDown(KeyCode.Mouse1)) // Observation
             {
-                gameObject.GetComponent<InteractDialogueOrObjects>().StopInteract();
-
-                if (Input.GetKeyDown(KeyCode.Mouse0)) // Default Answer interaction been be not close enought
-                {
-                    HandleInteraction(default_Answer);
-                }
-                else if(Input.GetKeyDown(KeyCode.Mouse1)) // Observation
-                {
-                    interactable.Observation();
-                }
-                
-
+                interactable.Observation();
+                interactable = null;
             }
 
         }
-        else // if we miss, hide the UI
+        else
         {
+
+            if (interactMouseButton)
+            {
+                interactable = null;
+                gameObject.GetComponent<InteractDialogueOrObjects>().StopInteract();
+                ResetHoldTime();
+
+            }
+
             if (onlyOnce)
             {
                 Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);
                 gameObject.GetComponent<InteractDialogueOrObjects>().StopInteract();
                 onlyOnce = false;
             }
-            
-            interactionHoldGO.SetActive(false);
+        }
+
+        if (interactable != null && !iInteract)
+        {
+            distancePlayer = Vector3.Distance(interactable.transform.position, gameObject.transform.position);
+
+            bool closeEnought = distancePlayer < rayDistance;
+
+            interactionHoldGO.SetActive(interactable.interactionType == Interactable.InteractionType.Hold);
+
+            if (closeEnought)
+            {
+                gameObject.GetComponent<InteractDialogueOrObjects>().Interacting();
+                HandleInteraction(interactable);
+                onlyTwice = true;
+            }
+            else
+            {
+                if (onlyTwice)
+                {
+                    Debug.Log("A ");
+                    gameObject.GetComponent<InteractDialogueOrObjects>().StopInteract();
+                    ResetHoldTime();
+                    onlyTwice = false;
+                }
+                
+            }
+
+        }
+        else
+        {
+            gameObject.GetComponent<InteractDialogueOrObjects>().StopInteract();
         }
 
         if (timeToUseAgain <= 0)
@@ -148,45 +183,37 @@ public class PlayerInteraction : MonoBehaviour
         Debug.DrawLine(ray.origin, ray.origin + ray.direction * (hitSomething ? hitInfo.distance : 100), hitSomething ? Color.green : Color.red);
     }
 
-    void CursorSettings()
-    {
-        interactCursorHotspot = new Vector2(interactCursor.width / 2 - 2, interactCursor.height / 2 - 6);
-        normalCursorHotspot = new Vector2(normalCursor.width / 2 - 2, normalCursor.height / 2 - 6);
-        Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);
-    }
-
     void HandleInteraction(Interactable interactable)
     {
-        KeyCode key = KeyCode.Mouse0;
+        //KeyCode key = KeyCode.Mouse0;
 
         switch (interactable.interactionType)
         {
             case Interactable.InteractionType.Click:
                 // interaction type is click and we clicked the button -> interact
-                if (Input.GetKeyDown(key))
-                {
-                    interactable.Interact();
-                    timeToUseAgain = 1.3f;
-                    iInteract = true;
-                }
+                
+                interactable.Interact();
+                    
+                timeToUseAgain = 1.3f;
+                iInteract = true;
+
+                this.interactable = null;
+
+
                 break;
             case Interactable.InteractionType.Hold:
-                if (Input.GetKey(key))
+                
+                // we are holding the key, increase the timer until we reach the max
+                IncreaseHoldTime();
+                if (holdTime >= interactable.GetHoldTime())
                 {
-                    // we are holding the key, increase the timer until we reach the max
-                    IncreaseHoldTime();
-                    if (holdTime >= interactable.GetHoldTime())
-                    {
-                        interactable.Interact();
-                        ResetHoldTime();
-
-                        timeToUseAgain = 1.3f; // The time until interact with an object again
-                        iInteract = true;
-                    }
-                }
-                else
-                {
+                    interactable.Interact();
                     ResetHoldTime();
+
+                    timeToUseAgain = 1.3f; // The time until interact with an object again
+                    iInteract = true;
+
+                    this.interactable = null;
                 }
 
                 interactionHoldProgress.fillAmount = holdTime / interactable.GetHoldTime();

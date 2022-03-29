@@ -2,18 +2,21 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private float speed = 5.0f;
-    [SerializeField] private float speedRotation = 5.0f;
+    //[SerializeField] private float speed = 5.0f;
+    //[SerializeField] private float speedRotation = 5.0f;
     [SerializeField] private DialogueUI dialogueUI;
+    [SerializeField] private LayerMask layerMask;
 
     public DialogueUI DialogueUI => dialogueUI;
 
     public static event Action<PlayerController> WhoIsPlayerController = delegate { };
 
     Rigidbody rb;
+    NavMeshAgent agent;
 
     private void OnEnable()
     {
@@ -27,7 +30,9 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
+        //rb = GetComponent<Rigidbody>();
+
+        agent = GetComponent<NavMeshAgent>();
 
         WhoIsPlayerController(this);
     }
@@ -35,32 +40,27 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (dialogueUI.isOpen) { rb.velocity = Vector3.zero; return; }
+        if (dialogueUI.isOpen) { /*rb.velocity = Vector3.zero;*/ return; }
         Move();
-        LookAtTheMouse();
 
     }
 
     void Move()
     {
-        var dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-
-        rb.velocity = dir * speed;
-    }
-
-    void LookAtTheMouse()
-    {
-        Plane playerPlane = new Plane(Vector3.up, transform.position);
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-
-        float hitdist;
-
-        if(playerPlane.Raycast(ray, out hitdist))
+        if (Input.GetMouseButtonDown(0))
         {
-            Vector3 targetPoint = ray.GetPoint(hitdist);
-            Quaternion targetRotation = Quaternion.LookRotation(targetPoint - transform.position);
-            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation, speedRotation * Time.deltaTime);
+            RaycastHit hit;
+            Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+            if(Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+            {
+                agent.SetDestination(hit.point);
+            }
+
         }
+
+        //var dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+
+        //rb.velocity = dir * speed;
     }
 
     void StopInteractingDialogue()
@@ -68,10 +68,4 @@ public class PlayerController : MonoBehaviour
         GetComponent<InteractDialogueOrObjects>().StopInteract();
     }
 
-    void IamPlayerController(PlayerController transferPlayerController)
-    {
-        Debug.Log("1 " + transferPlayerController);
-        transferPlayerController = this;
-        Debug.Log("2 " + transferPlayerController);
-    }
 }

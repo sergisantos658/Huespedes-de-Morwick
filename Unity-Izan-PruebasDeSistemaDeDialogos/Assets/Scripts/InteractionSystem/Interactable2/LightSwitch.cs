@@ -39,6 +39,6 @@ public class LightSwitch : Interactable
     }
     public override void Observation()
     {
-        player.DialogueUI.ShowDialogue(obs);
+            player.DialogueUI.ShowDialogue(obs);
     }
 }

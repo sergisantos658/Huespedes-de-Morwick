@@ -106,15 +106,15 @@ NavMeshSettings:
   m_BuildSettings:
     serializedVersion: 2
     agentTypeID: 0
-    agentRadius: 0.5
-    agentHeight: 2
-    agentSlope: 45
+    agentRadius: 1.5
+    agentHeight: 1
+    agentSlope: 25
     agentClimb: 0.4
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     minRegionArea: 2
     manualCellSize: 0
-    cellSize: 0.16666667
+    cellSize: 0.5
     manualTileSize: 0
     tileSize: 256
     accuratePlacement: 0
@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: f02a29ba6651b884f815af60338bea85, type: 2}
 --- !u!1 &89629562
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,7 +393,7 @@ GameObject:
   - component: {fileID: 401231896}
   - component: {fileID: 401231895}
   - component: {fileID: 401231894}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Eyes
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -610,6 +610,7 @@ MonoBehaviour:
   holdTime: 0
   interactionType: 0
   dialogueObject: {fileID: 11400000, guid: a5d211c807417d6439f22a7a31606a4a, type: 2}
+  o_DialogueObject: {fileID: 0}
 --- !u!135 &532723240
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -672,7 +673,7 @@ GameObject:
   - component: {fileID: 536254300}
   - component: {fileID: 536254299}
   - component: {fileID: 536254298}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: ImageHoldGO
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -754,7 +755,8 @@ GameObject:
   - component: {fileID: 671045009}
   - component: {fileID: 671045011}
   - component: {fileID: 671045012}
-  m_Layer: 0
+  - component: {fileID: 671045013}
+  m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -773,9 +775,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7e46b562803fb4cb57c03e72cd1e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 5
-  speedRotation: 5
   dialogueUI: {fileID: 1485298894}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 119
 --- !u!54 &671045004
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -912,14 +915,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09f406e15e65ab42afedd05fe1ceabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayDistance: 5
-  raysphereRadius: 0.5
+  rayDistance: 3
+  raysphereRadius: 0.25
   interactableLayer:
     serializedVersion: 2
     m_Bits: 64
   mainCamera: {fileID: 963194225}
-  interactCursor: {fileID: 10912, guid: 0000000000000000f000000000000000, type: 0}
-  normalCursor: {fileID: 2800000, guid: 28a738094a8dc534182b684c214bb54a, type: 3}
+  interactCursor: {fileID: 2800000, guid: f1e920af7058243458bfac230784b6f1, type: 3}
+  normalCursor: {fileID: 2800000, guid: 1991885a008f56d40b57502219ff97a0, type: 3}
   interactionHoldGO: {fileID: 536254297}
   interactionHoldProgress: {fileID: 536254298}
 --- !u!114 &671045012
@@ -937,6 +940,28 @@ MonoBehaviour:
   holdTime: 0
   interactionType: 0
   dialogueObject: {fileID: 11400000, guid: 2aa3ba309cfdda84c8c05520851f7cc4, type: 2}
+--- !u!195 &671045013
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 671045002}
+  m_Enabled: 1
+  m_AgentTypeID: 0
+  m_Radius: 0.5
+  m_Speed: 5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 1
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 4
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1131,7 +1156,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!65 &974316126
 BoxCollider:
@@ -1235,7 +1260,7 @@ GameObject:
   - component: {fileID: 975793944}
   - component: {fileID: 975793943}
   - component: {fileID: 975793942}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: E
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1312,6 +1337,7 @@ GameObject:
   - component: {fileID: 1255909241}
   - component: {fileID: 1255909240}
   - component: {fileID: 1255909239}
+  - component: {fileID: 1255909244}
   m_Layer: 6
   m_Name: Lights (1)
   m_TagString: Untagged
@@ -1333,6 +1359,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdTime: 0
   interactionType: 0
+  obs: {fileID: 11400000, guid: f137c4d806dadf74184974064ed89c1e, type: 2}
   m_Light: {fileID: 705507994}
 --- !u!65 &1255909240
 BoxCollider:
@@ -1405,12 +1432,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255909238}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 9.48, y: 0.79, z: -3.07}
+  m_LocalPosition: {x: 9.48, y: 0.64, z: -3.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &1255909244
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255909238}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &1465577788
 GameObject:
   m_ObjectHideFlags: 0
@@ -1627,7 +1670,7 @@ GameObject:
   - component: {fileID: 1650107476}
   - component: {fileID: 1650107475}
   - component: {fileID: 1650107474}
-  m_Layer: 5
+  m_Layer: 3
   m_Name: CanvasWorld
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1788,6 +1831,7 @@ MonoBehaviour:
   holdTime: 3
   interactionType: 1
   dialogueObject: {fileID: 11400000, guid: 607ffef745541724880303c50f653391, type: 2}
+  o_DialogueObject: {fileID: 0}
 --- !u!135 &1678049900
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -1908,6 +1952,7 @@ GameObject:
   - component: {fileID: 1888365555}
   - component: {fileID: 1888365554}
   - component: {fileID: 1888365553}
+  - component: {fileID: 1888365558}
   m_Layer: 6
   m_Name: Lights
   m_TagString: Untagged
@@ -1927,8 +1972,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7a543d125b1622e44babedc9fc173ee7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 0.5
+  holdTime: 2
   interactionType: 1
+  obs: {fileID: 11400000, guid: f137c4d806dadf74184974064ed89c1e, type: 2}
   m_Light: {fileID: 705507994}
 --- !u!65 &1888365554
 BoxCollider:
@@ -2001,12 +2047,28 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1888365552}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -11.25, y: 0.79, z: -3.07}
+  m_LocalPosition: {x: -11.25, y: 0.62, z: -3.07}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!208 &1888365558
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1888365552}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.5, y: 0.5, z: 0.5}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: 0, y: 0, z: 0}
+  m_TimeToStationary: 0.5
 --- !u!1 &2020156764
 GameObject:
   m_ObjectHideFlags: 0
@@ -2019,7 +2081,7 @@ GameObject:
   - component: {fileID: 2020156767}
   - component: {fileID: 2020156766}
   - component: {fileID: 2020156765}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: InteractDialog
   m_TagString: Untagged
   m_Icon: {fileID: 0}
