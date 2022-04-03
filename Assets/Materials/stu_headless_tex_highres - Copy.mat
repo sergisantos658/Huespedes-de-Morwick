@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: stu_headless_tex_highres
+  m_Name: stu_headless_tex_highres - Copy
   m_Shader: {fileID: 4800000, guid: a9131f3e610467d4aa971505a5c5c92e, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
