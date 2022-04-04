@@ -39,6 +39,6 @@ public class DialogueActivate : Interactable
 
     public override void Observation()
     {
-        player.DialogueUI.ShowDialogue(o_DialogueObject);
+            player.DialogueUI.ShowDialogue(o_DialogueObject);
     }
 }

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Necesito acercarme m\xE1s."
+    - Necesito un interruptor
     whoTalk: 0
   responses: []
