@@ -1,49 +1,12 @@
 fileFormatVersion: 2
-guid: 119108bcabda3774c85fb5eccd42f571
+guid: 494712514aed37246b6bcdfe560c301c
 ModelImporter:
   serializedVersion: 21100
-  internalIDToNameTable: []
-  externalObjects:
+  internalIDToNameTable:
   - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PEPE_MESH_BIGODE_Malla.001_MAT_PEPE_CABELOMat
-    second: {fileID: 2100000, guid: 2b57da604bf1b354fbbbfffc5dfc0c3d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PEPE_MESH_CABELO_Malla.008_MAT_PEPE_CABELOMat
-    second: {fileID: 2100000, guid: 2b57da604bf1b354fbbbfffc5dfc0c3d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PEPE_MESH_CALCA_Malla.015_MAT_PEPE_ROUPA1Mat
-    second: {fileID: 2100000, guid: e0f3ce66d995c954ba83014800bb4380, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PEPE_MESH_CAMISA_Malla.012_MAT_PEPE_ROUPA1Mat
-    second: {fileID: 2100000, guid: e0f3ce66d995c954ba83014800bb4380, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PEPE_MESH_CINTO_Malla.004_MAT_PEPE_ROUPA1Mat
-    second: {fileID: 2100000, guid: e0f3ce66d995c954ba83014800bb4380, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PEPE_MESH_CORPO_Malla_MAT_PEPE_CORPOMat
-    second: {fileID: 2100000, guid: 61e7a7304e2acc942bb3a9f9c5208786, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PEPE_MESH_DENTES_BAIXO_Malla.002_DENTEMat
-    second: {fileID: 2100000, guid: 2b57da604bf1b354fbbbfffc5dfc0c3d, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PEPE_MESH_DENTES_BAIXO_Malla.002_GENGIVAMat
-    second: {fileID: 2100000, guid: 7b7333a04be9a934b99334dbc15935db, type: 2}
+      74: -203655887218126122
+    second: mixamo.com
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -74,20 +37,20 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 1.5
+    globalScale: 1
     meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
     importVisibility: 1
     importBlendShapes: 1
-    importCameras: 0
-    importLights: 0
+    importCameras: 1
+    importLights: 1
     fileIdsGeneration: 2
     swapUVChannels: 0
     generateSecondaryUV: 0
     useFileUnits: 1
-    keepQuads: 1
+    keepQuads: 0
     weldVertices: 1
     bakeAxisConversion: 0
     preserveHierarchy: 0
@@ -125,7 +88,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 1.5
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
