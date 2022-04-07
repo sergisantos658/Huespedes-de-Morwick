@@ -46,12 +46,6 @@ public class PlayerInteraction : MonoBehaviour
     private Vector2 normalCursorHotspot;
     #endregion
 
-    [Space(10)]
-    #region DefaultDialogue
-    private DialogueDefault d_Default;
-    private Interactable default_Answer;
-    #endregion
-
     [Space(20)]
     public GameObject interactionHoldGO; // the ui parent to disable when not interacting
     public UnityEngine.UI.Image interactionHoldProgress; // the progress bar for hold interaction type
@@ -61,8 +55,6 @@ public class PlayerInteraction : MonoBehaviour
     {
         mainCameraC = mainCamera.GetComponent<Camera>();
 
-        //d_Default = GetComponent<DialogueDefault>();
-        //default_Answer = d_Default.GetComponent<Interactable>();
 
         CursorSettings();
     }
@@ -70,7 +62,7 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.GetComponent<PlayerController>().DialogueUI.isOpen) return;
+        if (gameObject.GetComponent<PlayerController>()) { if (gameObject.GetComponent<PlayerController>().DialogueUI.isOpen) { return; } }
 
         mpS = Input.mousePosition;
         mpS = new Vector3(mpS.x, mpS.y, mainCameraC.nearClipPlane);
@@ -115,7 +107,7 @@ public class PlayerInteraction : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Mouse1)) // Observation
             {
-                interactable.Observation();
+                interactable?.Observation();
                 interactable = null;
             }
 
@@ -157,7 +149,6 @@ public class PlayerInteraction : MonoBehaviour
             {
                 if (onlyTwice)
                 {
-                    Debug.Log("A ");
                     gameObject.GetComponent<InteractDialogueOrObjects>().StopInteract();
                     ResetHoldTime();
                     onlyTwice = false;
@@ -180,7 +171,7 @@ public class PlayerInteraction : MonoBehaviour
         Debug.DrawLine(gameObject.transform.position, hitInfo.point, Color.green);
 
         // Line from Camera To World
-        Debug.DrawLine(ray.origin, ray.origin + ray.direction * (hitSomething ? hitInfo.distance : 100), hitSomething ? Color.green : Color.red);
+        //Debug.DrawLine(ray.origin, ray.origin + ray.direction * (hitSomething ? hitInfo.distance : 100), hitSomething ? Color.green : Color.red);
     }
 
     void HandleInteraction(Interactable interactable)
