@@ -670,7 +670,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09f406e15e65ab42afedd05fe1ceabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayDistance: 3
+  rayDistance: 1
   raysphereRadius: 0.25
   interactableLayer:
     serializedVersion: 2
@@ -4451,7 +4451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdTime: 1
-  interactionType: 1
+  interactionType: 0
   sceneChange: {fileID: 1360471548}
 --- !u!4 &1110533884 stripped
 Transform:
@@ -11316,7 +11316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdTime: 1
-  interactionType: 1
+  interactionType: 0
   sceneChange: {fileID: 1909014976}
 --- !u!65 &1931487377
 BoxCollider:
