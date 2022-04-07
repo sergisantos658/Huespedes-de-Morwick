@@ -10,6 +10,5 @@ public class ChangeScene : MonoBehaviour
     public void SceneLoad()
     {
         SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
-        Time.timeScale = 1;
     }
 }
