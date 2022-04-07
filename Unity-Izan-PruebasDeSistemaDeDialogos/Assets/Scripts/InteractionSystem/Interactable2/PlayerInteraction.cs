@@ -62,7 +62,7 @@ public class PlayerInteraction : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (gameObject.GetComponent<PlayerController>().DialogueUI.isOpen) return;
+        if (gameObject.GetComponent<PlayerController>()) { if (gameObject.GetComponent<PlayerController>().DialogueUI.isOpen) { return; } }
 
         mpS = Input.mousePosition;
         mpS = new Vector3(mpS.x, mpS.y, mainCameraC.nearClipPlane);
@@ -107,7 +107,7 @@ public class PlayerInteraction : MonoBehaviour
 
             if (Input.GetKeyDown(KeyCode.Mouse1)) // Observation
             {
-                interactable.Observation();
+                interactable?.Observation();
                 interactable = null;
             }
 

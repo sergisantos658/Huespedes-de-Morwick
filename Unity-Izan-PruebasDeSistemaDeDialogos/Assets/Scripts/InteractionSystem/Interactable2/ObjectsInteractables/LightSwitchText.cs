@@ -12,7 +12,9 @@ public class LightSwitchText : Interactable
     [SerializeField] private bool lightSwitch = false;
     [SerializeField] private bool allLightsOff = false;
 
+    private bool onlyOnce = false;
     private PlayerController player;
+
     private void OnEnable()
     {
         PlayerController.WhoIsPlayerController += WhoIsPlayerController;
@@ -38,22 +40,39 @@ public class LightSwitchText : Interactable
             {
                 //m_light.enabled = !m_light.enabled;
 
-                if (!m_light.activeInHierarchy)
+                //if (!m_light.activeInHierarchy)
+                //{
+                //    m_light.gameObject.SetActive(true);
+                //    allLightsOff = false;
+                //}
+                //else
+                //{
+                //    m_light.gameObject.SetActive(false);
+                //}
+
+                if (m_light.GetComponent<Light>())
                 {
-                    m_light.gameObject.SetActive(true);
-                    allLightsOff = false;
+                    m_light.GetComponent<Light>().enabled = onlyOnce;
+                    if (m_light.GetComponent<Light>().enabled == true) 
+                    { 
+                        allLightsOff = false; 
+                    }
                 }
                 else
                 {
-                    m_light.gameObject.SetActive(false);
+                    m_light.SetActive(onlyOnce);
                 }
+
+                
+
             }
             
             foreach (TextMeshPro number in numbersText)
             {
                 number.color = new Color(number.color.r, number.color.g, number.color.b, allLightsOff ? 1 : 0);            
             }
-            
+
+            onlyOnce = !onlyOnce;
 
         }
         else
