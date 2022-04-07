@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657898, g: 0.4964133, b: 0.5748178, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657874, g: 0.49641258, b: 0.5748172, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -315,6 +315,7 @@ GameObject:
   m_Component:
   - component: {fileID: 165011113}
   - component: {fileID: 165011112}
+  - component: {fileID: 165011114}
   m_Layer: 0
   m_Name: Lens
   m_TagString: Untagged
@@ -351,6 +352,28 @@ Transform:
   m_Father: {fileID: 963194228}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: -0.03, y: -438.8, z: 0}
+--- !u!114 &165011114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 165011111}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e09f406e15e65ab42afedd05fe1ceabe, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rayDistance: 10
+  raysphereRadius: 0.2
+  interactableLayer:
+    serializedVersion: 2
+    m_Bits: 128
+  mainCamera: {fileID: 963194225}
+  interactCursor: {fileID: 2800000, guid: 62494d04d0f460d4ca868f57a95ca2c6, type: 3}
+  normalCursor: {fileID: 2800000, guid: 1d19e74876010df4a9b42cb9ddda1f53, type: 3}
+  interactionHoldGO: {fileID: 0}
+  interactionHoldProgress: {fileID: 0}
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -375,7 +398,7 @@ Light:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 10
   m_Type: 1
   m_Shape: 0
@@ -455,6 +478,7 @@ GameObject:
   - component: {fileID: 963194228}
   - component: {fileID: 963194227}
   - component: {fileID: 963194226}
+  - component: {fileID: 963194229}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -528,6 +552,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: -78.8, z: 0}
+--- !u!114 &963194229
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 963194225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3c2e5fdb012cba441bd5f09ce9e2e8d9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneIndex: 0
 --- !u!1 &984539477
 GameObject:
   m_ObjectHideFlags: 0
@@ -541,7 +578,8 @@ GameObject:
   - component: {fileID: 984539482}
   - component: {fileID: 984539481}
   - component: {fileID: 984539479}
-  m_Layer: 5
+  - component: {fileID: 984539483}
+  m_Layer: 7
   m_Name: Image
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -676,6 +714,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1e79c1ea5f71b542bf7ca1c2ad09386, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &984539483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 984539477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9ffe571a5c93e4499a5fbc3d82e6ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdTime: 0
+  interactionType: 0
+  sceneChange: {fileID: 963194229}
 --- !u!1 &1298497584
 GameObject:
   m_ObjectHideFlags: 0
@@ -688,7 +741,8 @@ GameObject:
   - component: {fileID: 1298497587}
   - component: {fileID: 1298497586}
   - component: {fileID: 1298497585}
-  m_Layer: 6
+  - component: {fileID: 1298497589}
+  m_Layer: 7
   m_Name: Sphere
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -719,6 +773,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -771,6 +826,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1298497589
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1298497584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d9ffe571a5c93e4499a5fbc3d82e6ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdTime: 0
+  interactionType: 0
+  sceneChange: {fileID: 963194229}
 --- !u!1 &1376402881
 GameObject:
   m_ObjectHideFlags: 0
@@ -815,6 +885,7 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
