@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 7504e543c0a5b704a845f3c49199c654
+=======
+<<<<<<< HEAD:Assets/Sprites/Characters/Standing Idle.prefab.meta
+guid: a008f9ac2e69b8a4085303bb0193a467
+=======
+guid: 196970f2c16d32e4b94fd09cd6df7ae9
+>>>>>>> parent of 5035a666 (scene working):Assets/Tools/3DTargetCursor/Prefabs/Player.prefab.meta
+>>>>>>> parent of 5035a666 (scene working)
 PrefabImporter:
   externalObjects: {}
   userData: 
