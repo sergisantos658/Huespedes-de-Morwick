@@ -27,6 +27,11 @@ public class DoorChangeScene : Interactable
 
     public override void Interact()
     {
+        if(SceneManager.GetActiveScene().buildIndex + jumpIntoScene < 0)
+        {
+            Application.Quit();
+        }
+
         if(jumpIntoScene != 0)
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + jumpIntoScene);
         else

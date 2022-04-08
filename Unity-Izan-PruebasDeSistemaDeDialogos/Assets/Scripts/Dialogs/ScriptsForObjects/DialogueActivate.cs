@@ -7,6 +7,7 @@ public class DialogueActivate : Interactable
     [SerializeField] private DialogueObject dialogueObject;
     [SerializeField] private DialogueObject o_DialogueObject;
 
+
     private PlayerController player;
 
     private void OnEnable()
@@ -40,5 +41,9 @@ public class DialogueActivate : Interactable
     public override void Observation()
     {
             player.DialogueUI.ShowDialogue(o_DialogueObject);
+    }
+    public void UpdateDialogueObject(DialogueObject updateDialogue)
+    {
+        dialogueObject = updateDialogue;
     }
 }

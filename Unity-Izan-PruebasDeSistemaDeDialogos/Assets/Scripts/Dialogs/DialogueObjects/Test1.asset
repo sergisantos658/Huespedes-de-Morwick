@@ -1,0 +1,34 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
+  m_Name: Test1
+  m_EditorClassIdentifier: 
+  dialogueTyping:
+  - dialogue:
+    - 'Probando, Test 2....!!!!
+
+      No encuentro mis gafas...'
+    - Me ayudas???
+    whoTalk: 1
+  - dialogue:
+    - No. Porque deberia ayudarte??
+    whoTalk: 0
+  - dialogue:
+    - Porque, si no me ayudas nunca saldras de aqui
+    whoTalk: 1
+  responses:
+  - responseText: Si
+    dialogueObject: {fileID: 11400000, guid: a5aabcaddbd1c6345913d81223b85652, type: 2}
+  - responseText: "A s\xED viejo?"
+    dialogueObject: {fileID: 11400000, guid: 6d7b586a9990853428c2ed4c42dab83b, type: 2}
+  - responseText: Que haces Bobo?
+    dialogueObject: {fileID: 11400000, guid: 6d7b586a9990853428c2ed4c42dab83b, type: 2}
