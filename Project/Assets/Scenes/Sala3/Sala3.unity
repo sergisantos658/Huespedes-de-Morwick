@@ -4648,8 +4648,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdTime: 2
   interactionType: 1
-  NotCompleted: {fileID: 11400000, guid: 694ee9d2f839173488d07e08ded50f85, type: 2}
-  observation: {fileID: 11400000, guid: f2ed69458a6fa7543996ae4bd52a3a5a, type: 2}
+  NotCompleted: {fileID: 0}
+  observation: {fileID: 0}
   jumpIntoScene: -1
 --- !u!4 &823282971 stripped
 Transform:
@@ -8022,8 +8022,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdTime: 2
   interactionType: 1
-  NotCompleted: {fileID: 11400000, guid: 694ee9d2f839173488d07e08ded50f85, type: 2}
-  observation: {fileID: 11400000, guid: f2ed69458a6fa7543996ae4bd52a3a5a, type: 2}
+  NotCompleted: {fileID: 0}
+  observation: {fileID: 0}
   jumpIntoScene: 0
 --- !u!1001 &1428004867
 PrefabInstance:
@@ -12217,12 +12217,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 1931487375}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d9ffe571a5c93e4499a5fbc3d82e6ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 57a01bde18727df46a3fc23d4c316cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 1
+  holdTime: 0
   interactionType: 0
-  sceneChange: {fileID: 1931487378}
+  dialogueObject: {fileID: 11400000, guid: 2074da9f07195764daff1d86573e37cf, type: 2}
+  o_DialogueObject: {fileID: 0}
 --- !u!65 &1931487377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12236,19 +12237,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &1931487378
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1931487375}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3c2e5fdb012cba441bd5f09ce9e2e8d9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneIndex: 2
 --- !u!4 &1952336423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8707025466779033249, guid: bbd85e700f0f23546bfd0547bf83ad02, type: 3}
