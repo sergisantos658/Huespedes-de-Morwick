@@ -37,6 +37,8 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float distance;
 
+    bool onlyOnce = false;
+    Vector3 sampleVector;
     Rigidbody rb;
     NavMeshAgent agent;
     Camera m_Camera;
@@ -53,7 +55,7 @@ public class PlayerController : MonoBehaviour
 
     private void Start()
     {
-        //rb = GetComponent<Rigidbody>();
+        rb = GetComponent<Rigidbody>();
 
         agent = GetComponent<NavMeshAgent>();
 
@@ -67,7 +69,23 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (dialogueUI.isOpen) { /*rb.velocity = Vector3.zero;*/ agent.isStopped = true; return; }
+        Vector3 tempV = new Vector3(transform.position.x, 0, transform.position.z) - new Vector3(sampleVector.x, 0, sampleVector.z);
+        float tempOffset = tempV.magnitude;
+
+        if ( tempOffset <= 2f && onlyOnce == true)
+        {
+            agent.isStopped = true;
+            transform.position = transform.position;
+
+            onlyOnce = false;
+        }
+
+        if (dialogueUI.isOpen) {
+            /*rb.velocity = Vector3.zero;*/ 
+            agent.isStopped = true; 
+
+            return; 
+        }
         Move();
 
     }
@@ -90,9 +108,12 @@ public class PlayerController : MonoBehaviour
                     return;
 
                 ShowPointer(navHit.position);
+                sampleVector = navHit.position;
 
                 if (agent.isStopped) agent.isStopped = false;
-        
+
+                onlyOnce = true;
+
                 agent.SetPath(path);
             }
 
