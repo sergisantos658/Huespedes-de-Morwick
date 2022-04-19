@@ -133,7 +133,7 @@ public class PlayerInteraction : MonoBehaviour
 
         if (interactable != null && !iInteract)
         {
-            distancePlayer = Vector3.Distance(interactable.transform.position, gameObject.transform.position);
+            distancePlayer = Vector3.Distance(interactable.GetComponent<Collider>().ClosestPoint(gameObject.transform.position), gameObject.transform.position);
 
             bool closeEnought = distancePlayer < rayDistance;
 

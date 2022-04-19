@@ -2013,7 +2013,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09f406e15e65ab42afedd05fe1ceabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayDistance: 2
+  rayDistance: 1
   raysphereRadius: 0.25
   interactableLayer:
     serializedVersion: 2
@@ -4746,6 +4746,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1981658229}
     m_Modifications:
+    - target: {fileID: 1233465126470888814, guid: cb9bc6b96d830b64293c9fdff99b1743, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 7432622557476056704, guid: cb9bc6b96d830b64293c9fdff99b1743, type: 3}
       propertyPath: m_Name
       value: Shelf
@@ -4802,8 +4806,7 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7432622557476056707, guid: cb9bc6b96d830b64293c9fdff99b1743, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb9bc6b96d830b64293c9fdff99b1743, type: 3}
 --- !u!4 &395249223 stripped
 Transform:
@@ -9020,8 +9023,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606707326}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.61, y: 7.07, z: 14.91}
-  m_LocalScale: {x: 7.5, y: 0.1, z: 24.015999}
+  m_LocalPosition: {x: 1.93, y: 6.72, z: 14.91}
+  m_LocalScale: {x: 12.018263, y: 0.1, z: 24.015999}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -12027,8 +12030,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdTime: 2
   interactionType: 1
-  defaultDialogue: {fileID: 11400000, guid: 2aa3ba309cfdda84c8c05520851f7cc4, type: 2}
-  observation: {fileID: 11400000, guid: f137c4d806dadf74184974064ed89c1e, type: 2}
+  defaultDialogue: {fileID: 0}
+  observation: {fileID: 0}
   m_Lights:
   - {fileID: 1992034482}
   - {fileID: 1249700049}
@@ -14886,8 +14889,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdTime: 0
   interactionType: 0
-  NotCompleted: {fileID: 11400000, guid: 694ee9d2f839173488d07e08ded50f85, type: 2}
-  observation: {fileID: 11400000, guid: f2ed69458a6fa7543996ae4bd52a3a5a, type: 2}
+  NotCompleted: {fileID: 0}
+  observation: {fileID: 0}
   jumpIntoScene: -1
 --- !u!1001 &1072189333
 PrefabInstance:
@@ -17119,8 +17122,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdTime: 2
   interactionType: 1
-  NotCompleted: {fileID: 11400000, guid: 694ee9d2f839173488d07e08ded50f85, type: 2}
-  observation: {fileID: 11400000, guid: f2ed69458a6fa7543996ae4bd52a3a5a, type: 2}
+  NotCompleted: {fileID: 0}
+  observation: {fileID: 0}
   jumpIntoScene: 1
 --- !u!1 &1353151823
 GameObject:
@@ -22111,7 +22114,7 @@ PrefabInstance:
       value: -360
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7432622557476056707, guid: cb9bc6b96d830b64293c9fdff99b1743, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: cb9bc6b96d830b64293c9fdff99b1743, type: 3}
 --- !u!4 &1929526606 stripped
 Transform:
@@ -23146,7 +23149,7 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 7432622557476056707, guid: cb9bc6b96d830b64293c9fdff99b1743, type: 3}
+    - {fileID: 0}
   m_SourcePrefab: {fileID: 100100000, guid: cb9bc6b96d830b64293c9fdff99b1743, type: 3}
 --- !u!4 &2054772744 stripped
 Transform:
@@ -23286,7 +23289,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09f406e15e65ab42afedd05fe1ceabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rayDistance: 3
+  rayDistance: 1
   raysphereRadius: 0.2
   interactableLayer:
     serializedVersion: 2
