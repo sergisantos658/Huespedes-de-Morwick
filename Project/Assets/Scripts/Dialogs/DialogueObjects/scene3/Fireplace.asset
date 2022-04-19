@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "la chimenea, ese sitio donde una vez al a\xF1o permites un a hombre gordo 
+    - "La chimenea, ese sitio donde una vez al a\xF1o permites a un hombre gordo
       darle regalos a tus hijos, los cuales ha estado acosando durante todo el a\xF1o..."
-    - En fin... Papa Noel me da miedo
+    - "En fin... Pap\xE1 Noel me da miedo."
     whoTalk: 0
   responses: []

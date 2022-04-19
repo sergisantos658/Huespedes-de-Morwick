@@ -14,9 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Me pregunto que habra dentro de estas bolsas
-    - puede que un cadaver,
+    - "Me pregunto que habr\xE1 dentro de estas bolsas."
+    - Puede que un cadaver,
     - a lo mejor esta mi suegra...
-    - ojala sea mi suegra
+    - "ojal\xE1 sea mi suegra."
     whoTalk: 0
   responses: []

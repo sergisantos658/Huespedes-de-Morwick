@@ -15,7 +15,8 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - Tan solo es una mesa sucia.
-    - Vaya, alitas de pollo, por algun motivo tengo la asquerosa necesidad de comermelas....
-    - creo que estoy enfermo
+    - "Vaya, alitas de pollo, por alg\xFAn motivo tengo la asquerosa necesidad de
+      comermelas..."
+    - Creo que estoy enfermo.
     whoTalk: 0
   responses: []
