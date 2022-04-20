@@ -72,7 +72,7 @@ public class PlayerController : MonoBehaviour
         Vector3 tempV = new Vector3(transform.position.x, 0, transform.position.z) - new Vector3(sampleVector.x, 0, sampleVector.z);
         float tempOffset = tempV.magnitude;
 
-        if ( tempOffset <= 2f && onlyOnce == true)
+        if ( tempOffset <= 0.75f && onlyOnce == true)
         {
             agent.isStopped = true;
             transform.position = transform.position;
