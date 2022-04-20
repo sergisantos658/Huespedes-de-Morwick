@@ -3284,6 +3284,10 @@ PrefabInstance:
       propertyPath: m_Center.z
       value: 0.20997441
       objectReference: {fileID: 0}
+    - target: {fileID: 7432622557473861696, guid: cb9bc6b96d830b64293c9fdff99b1743, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: abfde070456fb3a4d9ac39f5d5e3373f, type: 2}
     - target: {fileID: 7432622557476056704, guid: cb9bc6b96d830b64293c9fdff99b1743, type: 3}
       propertyPath: m_Name
       value: Shelf

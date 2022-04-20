@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
   m_Name: Buu
   m_EditorClassIdentifier: 
-  dialogueTyping: []
+  dialogueTyping:
+  - dialogue:
+    - ' Ho ho ho, mira quien tenemos aqui un joven muy  apuesto y guapo'
+    whoTalk: 1
+  - dialogue:
+    - "Tengo 43 a\xF1os eso de joven creo que esta algo desfasado"
+    whoTalk: 0
   responses: []
