@@ -93,6 +93,8 @@
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\FlexibleUIElement.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\FlexibleUI.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\MainMenuNew.cs" />
+    <Compile Include="Assets\Scripts\Menu\Exit.cs" />
+    <Compile Include="Assets\Scripts\Menu\SFX.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
