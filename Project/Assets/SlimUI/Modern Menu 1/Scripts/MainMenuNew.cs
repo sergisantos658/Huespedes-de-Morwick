@@ -79,12 +79,6 @@ namespace SlimUI.ModernMenu{
 			playMenu.SetActive(false);
 		}
 
-		public void NewGame(){
-			if(sceneName != ""){
-				StartCoroutine(LoadAsynchronously(sceneName));
-				//SceneManager.LoadScene(sceneName, LoadSceneMode.Single);
-			}
-		}
 
 		public void  DisablePlayCampaign(){
 			playMenu.SetActive(false);
@@ -135,26 +129,5 @@ namespace SlimUI.ModernMenu{
 		}
 
 
-		IEnumerator LoadAsynchronously(string sceneName){ // scene name is just the name of the current scene being loaded
-			AsyncOperation operation = SceneManager.LoadSceneAsync(sceneName);
-			operation.allowSceneActivation = false;
-			mainCanvas.SetActive(false);
-			loadingMenu.SetActive(true);
-
-			while (!operation.isDone){
-				float progress = Mathf.Clamp01(operation.progress / .9f);
-				loadBar.value = progress;
-
-				if(operation.progress >= 0.9f){
-					finishedLoadingText.gameObject.SetActive(true);
-
-					if(Input.anyKeyDown){
-						operation.allowSceneActivation = true;
-					}
-				}
-				
-				yield return null;
-			}
-		}
 	}
 }
