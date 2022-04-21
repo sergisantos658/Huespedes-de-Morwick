@@ -13054,38 +13054,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 2015093864}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5d9ffe571a5c93e4499a5fbc3d82e6ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 57a01bde18727df46a3fc23d4c316cca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 1
+  holdTime: 0
   interactionType: 0
-  sceneChange: {fileID: 1360471548}
---- !u!114 &2015093868
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2015093864}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fa608590177334948863f9de7714852f, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 11400000, guid: 4625ebea46823be499aba2bc0d9409bf, type: 2}
-  events:
-  - name: Si
-    onPickedResponse:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: "A s\xED viejo?"
-    onPickedResponse:
-      m_PersistentCalls:
-        m_Calls: []
-  - name: Que haces Bobo?
-    onPickedResponse:
-      m_PersistentCalls:
-        m_Calls: []
+  dialogueObject: {fileID: 11400000, guid: 585d15b7b8bb89a4b82b5ef645663049, type: 2}
+  o_DialogueObject: {fileID: 0}
 --- !u!208 &2015093870
 NavMeshObstacle:
   m_ObjectHideFlags: 0

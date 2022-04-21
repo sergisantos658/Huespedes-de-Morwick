@@ -14,9 +14,23 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - ' Ho ho ho, mira quien tenemos aqui un joven muy  apuesto y guapo'
+    - ' Ho ho ho, que tenemos aqui un joven muy apuesto y guapo'
     whoTalk: 1
   - dialogue:
-    - "Tengo 43 a\xF1os eso de joven creo que esta algo desfasado"
+    - "Tengo 43 a\xF1os eso de joven creo que no es lo mas adecuado, pero lo de guapo
+      no te lo quito"
     whoTalk: 0
-  responses: []
+  - dialogue:
+    - "tengo mas de 300 a\xF1os eso para mi eres un carameito"
+    whoTalk: 1
+  responses:
+  - responseText: "vale, no se si me acabas de dar ganas de vomitar o de escupir
+      un ri\xF1on"
+    dialogueObject: {fileID: 0}
+  - responseText: Dios sacame de aqui porfavor
+    dialogueObject: {fileID: 0}
+  - responseText: vale, creo acabo de perder por completo las ganas de vivir
+    dialogueObject: {fileID: 0}
+  - responseText: "quien diria que un se\xF1or con cabeza de calabaza intentria tirarme
+      los cejos"
+    dialogueObject: {fileID: 0}
