@@ -2,19 +2,15 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GoScene : Interactable
+public class GoScene : MonoBehaviour
 {
     public ChangeScene sceneChange;
-    public override void Interact()
+    public void changeScene()
     {
         Debug.Log("Change");
         sceneChange.SceneLoad();
     }
 
-    public override void Observation()
-    {
-        
-    }
 
    
 }
