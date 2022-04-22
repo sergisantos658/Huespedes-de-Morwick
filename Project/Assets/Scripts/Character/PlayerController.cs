@@ -34,11 +34,14 @@ public class PlayerController : MonoBehaviour
     [SerializeField]
     private float angleRotate;
 
+    [SerializeField] private float tempVectorOffset = 0.75f;
+
     [SerializeField]
     private float distance;
 
     bool onlyOnce = false;
-    Vector3 sampleVector;
+    Vector3 groundVector; // Vector which the player will move using navMesh agent
+    Vector3 selectedVector; // Vector which you click on, counts to interactable objects
     Rigidbody rb;
     NavMeshAgent agent;
     Camera m_Camera;
@@ -69,16 +72,29 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        Vector3 tempV = new Vector3(transform.position.x, 0, transform.position.z) - new Vector3(sampleVector.x, 0, sampleVector.z);
+
+        Vector3 tempV = new Vector3(selectedVector.x, 0, selectedVector.z) - new Vector3(transform.position.x, 0, transform.position.z);
         float tempOffset = tempV.magnitude;
 
-        if ( tempOffset <= 0.75f && onlyOnce == true)
+        if (tempOffset <= tempVectorOffset && onlyOnce)
         {
-            agent.isStopped = true;
+            agent.isStopped = true; 
             transform.position = transform.position;
+
+            float angle = Mathf.Atan2(tempV.z, tempV.x) * Mathf.Rad2Deg -90;
+
+            Quaternion rotObj = Quaternion.AngleAxis(angle, Vector3.up);
+
+            Debug.Log("Rotation: " + tempV + " 2: " + angle + " True rotation: " + transform.rotation.eulerAngles);
+
+            //transform.rotation = rotObj;
+            transform.eulerAngles = Vector3.up * angle;
+
 
             onlyOnce = false;
         }
+            Debug.DrawRay(transform.position, tempV, Color.green);
+
 
         if (dialogueUI.isOpen) {
             /*rb.velocity = Vector3.zero;*/ 
@@ -87,6 +103,19 @@ public class PlayerController : MonoBehaviour
             return; 
         }
         Move();
+
+
+    }
+
+    void OnDrawGizmos()
+    {
+        Gizmos.color = Color.yellow;
+
+        Gizmos.DrawWireSphere(groundVector, tempVectorOffset);
+        
+        Gizmos.color = Color.red;
+
+        Gizmos.DrawWireSphere(selectedVector, tempVectorOffset);
 
     }
 
@@ -108,7 +137,10 @@ public class PlayerController : MonoBehaviour
                     return;
 
                 ShowPointer(navHit.position);
-                sampleVector = navHit.position;
+                
+                groundVector = navHit.position;
+
+                selectedVector = hit.point;
 
                 if (agent.isStopped) agent.isStopped = false;
 
