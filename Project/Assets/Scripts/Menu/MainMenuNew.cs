@@ -76,7 +76,7 @@ namespace SlimUI.ModernMenu{
 
 
 		public void ReturnMenu(){
-			playMenu.SetActive(false);
+			exitMenu.SetActive(false);
 		}
 
 
