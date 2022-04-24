@@ -43,6 +43,7 @@ public class PlayerController : MonoBehaviour
     Vector3 groundVector; // Vector which the player will move using navMesh agent
     Vector3 selectedVector; // Vector which you click on, counts to interactable objects
     Rigidbody rb;
+    Animator animator;
     NavMeshAgent agent;
     Camera m_Camera;
 
@@ -61,6 +62,8 @@ public class PlayerController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
 
         agent = GetComponent<NavMeshAgent>();
+
+        animator = GetComponent<Animator>();
 
         m_Camera = mainCamera.GetComponent<Camera>();
 
@@ -95,8 +98,9 @@ public class PlayerController : MonoBehaviour
         }
             Debug.DrawRay(transform.position, tempV, Color.green);
 
+        Animators();
 
-        if (dialogueUI.isOpen) {
+        if (dialogueUI.isOpen || PauseMenu.pause) {
             /*rb.velocity = Vector3.zero;*/ 
             agent.isStopped = true; 
 
@@ -171,6 +175,12 @@ public class PlayerController : MonoBehaviour
         //var dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
 
         //rb.velocity = dir * speed;
+    }
+
+    void Animators()
+    {
+        // Animation to move
+        animator.SetFloat("velocity", Mathf.Abs(agent.velocity.x) + Mathf.Abs(agent.velocity.z));
     }
 
     void StopInteractingDialogue()
