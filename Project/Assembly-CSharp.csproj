@@ -76,7 +76,6 @@
     <Compile Include="Assets\Scripts\Light\DissolvantManager.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\Interactable.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ExtraLinks.cs" />
-    <Compile Include="Assets\Scripts\Menu\PauseMenu.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\ObjectsInteractables\DoorChangeScene.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\ObjectsInteractables\GoScene.cs" />
