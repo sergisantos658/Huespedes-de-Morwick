@@ -10,11 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
-  m_Name: buu6
+  m_Name: Buu6
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Vale, eso ha sido bastante grosero por tu parte
-    - mira voy a hacerte un favor y voy a decirte como salir de aqui
+    - "empezemos con un peque\xF1o acertijo que se que te gustan"
+    whoTalk: 1
+  - dialogue:
+    - Me estoy sintiendo acosado
+    whoTalk: 0
+  - dialogue:
+    - "voy a ense\xF1arte 3 imagenes y vas a tener que adivinar caul se sale del
+      patron"
     whoTalk: 1
   responses: []
