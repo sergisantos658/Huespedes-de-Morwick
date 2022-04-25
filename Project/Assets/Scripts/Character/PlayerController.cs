@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
 
         Animators();
 
-        if (dialogueUI.isOpen || PauseMenu.pause) {
+        if (dialogueUI.isOpen || MenuManager.pause) {
             /*rb.velocity = Vector3.zero;*/ 
             agent.isStopped = true; 
 

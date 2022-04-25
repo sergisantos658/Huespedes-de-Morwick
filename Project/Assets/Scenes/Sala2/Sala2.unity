@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 1855695156}
-  m_IndirectSpecularColor: {r: 0.11937977, g: 0.1010839, b: 0.08306535, a: 1}
+  m_IndirectSpecularColor: {r: 0.45060408, g: 0.5005787, b: 0.57502514, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 112000000, guid: 82e317dc279b8b448910a8b2240b03b6, type: 2}
+  m_LightingDataAsset: {fileID: 112000000, guid: 870ec97d4fc90c2438afee9019e4b75b, type: 2}
   m_LightingSettings: {fileID: 1789605329}
 --- !u!196 &4
 NavMeshSettings:
@@ -3073,7 +3073,7 @@ Light:
   m_Cookie: {fileID: 0}
   m_DrawHalo: 0
   m_Flare: {fileID: 0}
-  m_RenderMode: 0
+  m_RenderMode: 1
   m_CullingMask:
     serializedVersion: 2
     m_Bits: 4294967295
@@ -4211,6 +4211,10 @@ PrefabInstance:
     - target: {fileID: 113386648, guid: c559a22601843db4c927941c06a8b94b, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 113386650, guid: c559a22601843db4c927941c06a8b94b, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 113386650, guid: c559a22601843db4c927941c06a8b94b, type: 3}
       propertyPath: m_BounceIntensity
@@ -6573,6 +6577,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 113386650, guid: c559a22601843db4c927941c06a8b94b, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 21966546408553906, guid: c559a22601843db4c927941c06a8b94b, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -8032,6 +8040,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1327858540}
     m_Modifications:
+    - target: {fileID: 1114773739493970588, guid: 34534f9a2d6df1c4f8dee201f8d50aaa, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2149857149831209931, guid: 34534f9a2d6df1c4f8dee201f8d50aaa, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2992976193325264541, guid: 34534f9a2d6df1c4f8dee201f8d50aaa, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8266949716707160795, guid: 34534f9a2d6df1c4f8dee201f8d50aaa, type: 3}
       propertyPath: m_Name
       value: Candelier_Triple
@@ -10268,6 +10288,10 @@ PrefabInstance:
     - target: {fileID: 178350209378922962, guid: 2b5f6b76f1ed47f4f8bc90c9aff3184b, type: 3}
       propertyPath: m_Layer
       value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 257036739135621294, guid: 2b5f6b76f1ed47f4f8bc90c9aff3184b, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 324392412200070650, guid: 2b5f6b76f1ed47f4f8bc90c9aff3184b, type: 3}
       propertyPath: m_Layer
@@ -13810,6 +13834,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 113386650, guid: c559a22601843db4c927941c06a8b94b, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 113386650, guid: c559a22601843db4c927941c06a8b94b, type: 3}
       propertyPath: m_Shadows.m_NearPlane
       value: 0.1
       objectReference: {fileID: 0}
@@ -15272,17 +15300,21 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 2147483647
       objectReference: {fileID: 0}
+    - target: {fileID: 2922107562325671189, guid: 55320ad6284175349b1008aaf7238c7a, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2922107562325671190, guid: 55320ad6284175349b1008aaf7238c7a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.00105
+      value: -0.001
       objectReference: {fileID: 0}
     - target: {fileID: 2922107562325671190, guid: 55320ad6284175349b1008aaf7238c7a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.00353
+      value: 0.889
       objectReference: {fileID: 0}
     - target: {fileID: 2922107562325671190, guid: 55320ad6284175349b1008aaf7238c7a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.00348
+      value: 0.742
       objectReference: {fileID: 0}
     - target: {fileID: 2922107563029984134, guid: 55320ad6284175349b1008aaf7238c7a, type: 3}
       propertyPath: m_RootOrder
@@ -15896,6 +15928,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 113386650, guid: c559a22601843db4c927941c06a8b94b, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 21966546408553906, guid: c559a22601843db4c927941c06a8b94b, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -15966,6 +16002,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1327858540}
     m_Modifications:
+    - target: {fileID: 113386650, guid: c559a22601843db4c927941c06a8b94b, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4725356937742542618, guid: c559a22601843db4c927941c06a8b94b, type: 3}
       propertyPath: m_Name
       value: Candle_Wall (5)
@@ -16349,6 +16389,10 @@ PrefabInstance:
     - target: {fileID: 257036739135621294, guid: 2b5f6b76f1ed47f4f8bc90c9aff3184b, type: 3}
       propertyPath: m_Intensity
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 257036739135621294, guid: 2b5f6b76f1ed47f4f8bc90c9aff3184b, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 257036739135621294, guid: 2b5f6b76f1ed47f4f8bc90c9aff3184b, type: 3}
       propertyPath: m_Shadows.m_NearPlane
@@ -16907,6 +16951,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 113386650, guid: c559a22601843db4c927941c06a8b94b, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 21966546408553906, guid: c559a22601843db4c927941c06a8b94b, type: 3}
       propertyPath: m_Layer
       value: 7
@@ -17442,6 +17490,10 @@ PrefabInstance:
     - target: {fileID: 3918751411058678636, guid: bf7a7fc00791eb945a5412768a68fffc, type: 3}
       propertyPath: m_Name
       value: Candelier_Small
+      objectReference: {fileID: 0}
+    - target: {fileID: 8349788399866395221, guid: bf7a7fc00791eb945a5412768a68fffc, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bf7a7fc00791eb945a5412768a68fffc, type: 3}
@@ -18520,6 +18572,10 @@ PrefabInstance:
       value: 2.5
       objectReference: {fileID: 0}
     - target: {fileID: 113386650, guid: c559a22601843db4c927941c06a8b94b, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 113386650, guid: c559a22601843db4c927941c06a8b94b, type: 3}
       propertyPath: m_Shadows.m_Bias
       value: 0
       objectReference: {fileID: 0}
@@ -19299,6 +19355,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5981562312196831680, guid: 9219eeec429c86b459f29c67fd3e5e05, type: 3}
   m_PrefabInstance: {fileID: 1554594290}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1562558092
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1562558094}
+  - component: {fileID: 1562558093}
+  m_Layer: 0
+  m_Name: ReplicateObjectController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1562558093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562558092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54b6eb39a71303b469938d8bc2cd8367, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - prefab: {fileID: 100000, guid: c97a961f8ab237a4785b57abd59514f4, type: 3}
+    mesh: {fileID: 0}
+    materials: []
+    settings:
+    - position: {x: 0, y: 2, z: 13}
+      rotation: {x: 0, y: 0, z: 0}
+      escale: {x: 1, y: 1, z: 1}
+    - position: {x: 2, y: 2, z: 13}
+      rotation: {x: 0, y: 90, z: 0}
+      escale: {x: 1, y: 1, z: 1}
+    - position: {x: -2, y: 2, z: 10}
+      rotation: {x: 90, y: 0, z: 0}
+      escale: {x: 1, y: 1, z: 1}
+    matrix: []
+  - prefab: {fileID: 100000, guid: b08e173721554e44285d4e3ab0acda13, type: 3}
+    mesh: {fileID: 0}
+    materials: []
+    settings:
+    - position: {x: 1, y: 2, z: 13}
+      rotation: {x: 0, y: 0, z: 0}
+      escale: {x: 1, y: 1, z: 1}
+    - position: {x: -3, y: 2, z: 13}
+      rotation: {x: 0, y: 90, z: 0}
+      escale: {x: 1, y: 1, z: 1}
+    - position: {x: -3, y: 2, z: 10}
+      rotation: {x: 90, y: 0, z: 0}
+      escale: {x: 1, y: 1, z: 1}
+    matrix: []
+--- !u!4 &1562558094
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562558092}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 20
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1564471981
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20022,6 +20150,10 @@ PrefabInstance:
     - target: {fileID: 257036739135621294, guid: 2b5f6b76f1ed47f4f8bc90c9aff3184b, type: 3}
       propertyPath: m_Intensity
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 257036739135621294, guid: 2b5f6b76f1ed47f4f8bc90c9aff3184b, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1821300323071963912, guid: 2b5f6b76f1ed47f4f8bc90c9aff3184b, type: 3}
       propertyPath: m_Name
@@ -21175,7 +21307,7 @@ LightingSettings:
   m_Name: Settings.lighting
   serializedVersion: 3
   m_GIWorkflowMode: 1
-  m_EnableBakedLightmaps: 0
+  m_EnableBakedLightmaps: 1
   m_EnableRealtimeLightmaps: 1
   m_RealtimeEnvironmentLighting: 1
   m_BounceScale: 1
@@ -22500,6 +22632,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1327858540}
     m_Modifications:
+    - target: {fileID: 5725037847605902684, guid: 4b437f1c2454a2c409b1b7f35e69d661, type: 3}
+      propertyPath: m_RenderMode
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5725037847605902684, guid: 4b437f1c2454a2c409b1b7f35e69d661, type: 3}
       propertyPath: m_Shadows.m_NearPlane
       value: 0.1
