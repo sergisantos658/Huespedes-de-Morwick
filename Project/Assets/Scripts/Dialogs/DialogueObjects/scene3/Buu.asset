@@ -26,11 +26,11 @@ MonoBehaviour:
   responses:
   - responseText: "vale, no se si me acabas de dar ganas de vomitar o de escupir
       un ri\xF1on"
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: 90fea80c151a4d24793e407a8fc97907, type: 2}
   - responseText: Dios sacame de aqui porfavor
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: 90fea80c151a4d24793e407a8fc97907, type: 2}
   - responseText: vale, creo acabo de perder por completo las ganas de vivir
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: 90fea80c151a4d24793e407a8fc97907, type: 2}
   - responseText: "quien diria que un se\xF1or con cabeza de calabaza intentria tirarme
       los cejos"
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: 90fea80c151a4d24793e407a8fc97907, type: 2}

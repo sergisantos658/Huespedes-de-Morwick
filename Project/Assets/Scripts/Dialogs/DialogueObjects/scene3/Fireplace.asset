@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "La chimenea, ese sitio donde una vez al a\xF1o permites a un hombre gordo
-      darle regalos a tus hijos, los cuales ha estado acosando durante todo el a\xF1o..."
-    - "En fin... Pap\xE1 Noel me da miedo."
+    - Bolsas y una chimenea
+    - cada vez se confirma mas que esto ha sido  obra de mi archienemigo papa noel
     whoTalk: 0
   responses: []

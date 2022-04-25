@@ -14,9 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Me pregunto que habr\xE1 dentro de estas bolsas."
-    - Puede que un cadaver,
-    - a lo mejor esta mi suegra...
-    - "ojal\xE1 sea mi suegra."
+    - Bolsas...
+    - No se por que me dan mala espina
     whoTalk: 0
   responses: []

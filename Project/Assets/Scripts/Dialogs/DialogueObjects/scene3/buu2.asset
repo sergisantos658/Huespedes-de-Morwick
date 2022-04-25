@@ -12,5 +12,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
   m_Name: buu2
   m_EditorClassIdentifier: 
-  dialogueTyping: []
-  responses: []
+  dialogueTyping:
+  - dialogue:
+    - "No tienes por que ser tan grossero mi peque\xF1o jimmy "
+    - "Solo quiero ser cari\xF1oso "
+    whoTalk: 1
+  responses:
+  - responseText: No me llamo jimmy
+    dialogueObject: {fileID: 11400000, guid: fc995b75d861c04429f8be1f6d8f20c8, type: 2}
+  - responseText: Dios dime como salir de aqui antes de que me de un ataque
+    dialogueObject: {fileID: 11400000, guid: 2f464cdf8530f8943baa397dde5b0966, type: 2}
