@@ -16,6 +16,7 @@ namespace SlimUI.ModernMenu{
 		[Header("Theme Settings")]
 		public Theme theme;
 		int themeIndex;
+		private bool optionMenu = false;
 		public FlexibleUIData themeController;
 
 		[Header("Panels")]
@@ -87,10 +88,12 @@ namespace SlimUI.ModernMenu{
 		public void Position2(){
 			DisablePlayCampaign();
 			CameraObject.SetFloat("Animate",1);
+			optionMenu = true;
 		}
 
 		public void Position1(){
 			CameraObject.SetFloat("Animate",0);
+			optionMenu = false;
 		}
 
 		void DisablePanels(){
@@ -128,6 +131,12 @@ namespace SlimUI.ModernMenu{
 			exitMenu.SetActive(true);
 		}
 
-
-	}
+        public void Update()
+        {
+            if(optionMenu == true && Input.GetKeyDown(KeyCode.Escape))
+			{
+				Position1();
+            }
+        }
+    }
 }
