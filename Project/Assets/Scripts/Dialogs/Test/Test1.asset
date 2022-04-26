@@ -27,8 +27,8 @@ MonoBehaviour:
     whoTalk: 1
   responses:
   - responseText: Si
-    dialogueObject: {fileID: 11400000, guid: a5aabcaddbd1c6345913d81223b85652, type: 2}
+    dialogueObject: {fileID: 11400000, guid: 192eeea8cce049440947fb917de04db0, type: 2}
   - responseText: "A s\xED viejo?"
-    dialogueObject: {fileID: 11400000, guid: 6d7b586a9990853428c2ed4c42dab83b, type: 2}
+    dialogueObject: {fileID: 11400000, guid: 9d336245edd050a4da72b4e14b5eb251, type: 2}
   - responseText: Que haces Bobo?
-    dialogueObject: {fileID: 11400000, guid: 6d7b586a9990853428c2ed4c42dab83b, type: 2}
+    dialogueObject: {fileID: 0}

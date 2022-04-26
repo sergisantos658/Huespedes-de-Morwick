@@ -13,11 +13,13 @@ public class DialogueActivate : Interactable
     private void OnEnable()
     {
         PlayerController.WhoIsPlayerController += WhoIsPlayerController;
+        DialogueUI.CheckResponseDialogue += ResponseEventsCheck;
     }
 
     private void OnDisable()
     {
         PlayerController.WhoIsPlayerController -= WhoIsPlayerController;
+        DialogueUI.CheckResponseDialogue -= ResponseEventsCheck;
     }
 
     void WhoIsPlayerController(PlayerController target)
@@ -27,14 +29,8 @@ public class DialogueActivate : Interactable
 
     public override void Interact()
     {
-        foreach (DialogueResponseEvents responseEvents in GetComponents<DialogueResponseEvents>())
-        {
-            if (responseEvents.DialogueObject == dialogueObject)
-           {
-                player.DialogueUI.AddResponseEvents(responseEvents.Events);
-                break;
-            }
-        }
+        ResponseEventsCheck(dialogueObject);
+
         player.DialogueUI.ShowDialogue(dialogueObject);
     }
 
@@ -42,6 +38,19 @@ public class DialogueActivate : Interactable
     {
             player.DialogueUI.ShowDialogue(o_DialogueObject);
     }
+
+    void ResponseEventsCheck(DialogueObject dinamicDialogueObject)
+    {
+        foreach (DialogueResponseEvents responseEvents in GetComponents<DialogueResponseEvents>())
+        {
+            if (responseEvents.DialogueObject == dinamicDialogueObject)
+            {
+                player.DialogueUI.AddResponseEvents(responseEvents.Events);
+                break;
+            }
+        }
+    }
+
     public void UpdateDialogueObject(DialogueObject updateDialogue)
     {
         dialogueObject = updateDialogue;

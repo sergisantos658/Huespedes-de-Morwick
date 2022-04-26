@@ -15,6 +15,8 @@ public class ResponsableHandler : MonoBehaviour
 
     private ResponseEvent[] responseEvents;
 
+    private List<ResponseEvent[]> responseEventsList = new List<ResponseEvent[]>();
+
     private List<GameObject> temporalResponseButton = new List<GameObject>();
 
     private void Start()
@@ -24,7 +26,7 @@ public class ResponsableHandler : MonoBehaviour
 
     public void AddResponseEvents(ResponseEvent[] responseEvents)
     {
-        this.responseEvents = responseEvents;
+        responseEventsList.Add(responseEvents);
 
     }
     
@@ -62,9 +64,18 @@ public class ResponsableHandler : MonoBehaviour
             Destroy(button);
         }
 
-        if (responseEvents != null && responseIndex <= responseEvents.Length)
+        //if (responseEvents != null && responseIndex <= responseEvents.Length)
+        //{
+        //    responseEvents[responseIndex].OnPickedResponse?.Invoke();
+        //}
+
+        for (int i = 0; i < responseEventsList.Count; i++)
         {
-            responseEvents[responseIndex].OnPickedResponse?.Invoke();
+            if (responseEventsList != null && responseIndex <= responseEventsList[i].Length)
+            {
+                responseEventsList[i][responseIndex].OnPickedResponse?.Invoke();
+            }
+
         }
 
         if (response.DialogueObject)
@@ -76,6 +87,6 @@ public class ResponsableHandler : MonoBehaviour
             dialogueUI.CloseDialogueBox();
         }
 
-
+        responseEventsList.Clear();
     }
 }

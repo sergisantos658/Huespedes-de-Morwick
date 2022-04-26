@@ -17,6 +17,7 @@ public class DialogueUI : MonoBehaviour
     Image iSilhouetteNPC;
 
     public static event Action StopDialogue = delegate { };
+    public static event Action<DialogueObject> CheckResponseDialogue = delegate { };
 
     public bool isOpen { get; private set; }
 
@@ -53,6 +54,7 @@ public class DialogueUI : MonoBehaviour
 
     IEnumerator StepThroughDialogue(DialogueObject dialogueObject)
     {
+
         for (int i = 0; i < dialogueObject.DialogueTyping.Length; i++)
         {
             // Image conversation
@@ -90,8 +92,12 @@ public class DialogueUI : MonoBehaviour
 
         }
 
+        // Check if has some responses
         if (dialogueObject.HasResponses)
         {
+            //TODO Put an event which check if someone in the event have the same dialogueObject like dialogueUI
+            CheckResponseDialogue.Invoke(dialogueObject);
+
             responseHandler.ShowResponses(dialogueObject.Responses);
         }
         else

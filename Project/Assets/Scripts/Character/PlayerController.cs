@@ -180,7 +180,7 @@ public class PlayerController : MonoBehaviour
     void Animators()
     {
         // Animation to move
-        animator.SetFloat("velocity", Mathf.Abs(agent.velocity.x) + Mathf.Abs(agent.velocity.z));
+        animator?.SetFloat("velocity", Mathf.Abs(agent.velocity.x) + Mathf.Abs(agent.velocity.z));
     }
 
     void StopInteractingDialogue()
