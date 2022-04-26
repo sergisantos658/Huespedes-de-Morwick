@@ -5,14 +5,20 @@ using UnityEngine;
 public class RotateNpc : MonoBehaviour
 {
     // Start is called before the first frame update
-    void Start()
+    private void OnEnable()
     {
-        
+        DialogueActivate.LookPlayer += LookPlayer;
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnDisable()
     {
-        
+        DialogueActivate.LookPlayer -= LookPlayer;
+    }
+
+    private void LookPlayer(PlayerController target)
+    {
+        Vector3 relativePos = target.transform.position - transform.position;
+        Quaternion rotation = Quaternion.LookRotation(-relativePos);
+        transform.rotation = rotation;
     }
 }
