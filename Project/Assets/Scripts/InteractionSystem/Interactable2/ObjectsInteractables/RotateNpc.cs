@@ -2,16 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class RoteNPC : Interactable
+public class RotateNpc : MonoBehaviour
 {
     // Start is called before the first frame update
-    public override void Interact()
+    void Start()
     {
-        Debug.Log("prueba");
-
+        
     }
 
-    public override void Observation()
+    // Update is called once per frame
+    void Update()
     {
         
     }
