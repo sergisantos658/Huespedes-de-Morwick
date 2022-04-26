@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11937977, g: 0.1010839, b: 0.08306535, a: 1}
+  m_IndirectSpecularColor: {r: 0.11937981, g: 0.10108391, b: 0.08306547, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -14456,21 +14456,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 1, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &2015093871
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 919132148004828120}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1d1c0d2e39723084eb31002741f1188d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  holdTime: 0
-  interactionType: 0
-  player: {fileID: 0}
 --- !u!1001 &2024097320
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16719,8 +16704,8 @@ GameObject:
   - component: {fileID: 2015093865}
   - component: {fileID: 2015093870}
   - component: {fileID: 2015093868}
-  - component: {fileID: 2015093871}
   - component: {fileID: 2015093867}
+  - component: {fileID: 919132148004828121}
   m_Layer: 6
   m_Name: ghost
   m_TagString: Untagged
@@ -16728,6 +16713,18 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!114 &919132148004828121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148004828120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: acd37a6605790b944924480f64206efa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &968658699316089767 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7963677795723374696, guid: 112215925bb5334408b09b15b0f2d939, type: 3}
