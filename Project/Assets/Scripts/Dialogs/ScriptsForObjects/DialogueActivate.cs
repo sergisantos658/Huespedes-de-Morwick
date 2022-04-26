@@ -9,7 +9,7 @@ public class DialogueActivate : Interactable
 
 
     private PlayerController player;
-    public static event Action<PlayerController> LookPlayer = delegate { };
+    public  event Action<PlayerController> LookPlayer = delegate { };
 
     private void OnEnable()
     {
@@ -30,7 +30,8 @@ public class DialogueActivate : Interactable
 
     public override void Interact()
     {
-        LookPlayer(player);
+
+        LookPlayer?.Invoke(player);
         ResponseEventsCheck(dialogueObject);
         player.DialogueUI.ShowDialogue(dialogueObject);
     }
