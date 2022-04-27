@@ -1,9 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-//[System.Serializable]
-
+using UnityEditor;
 
 [System.Serializable]
 public struct SettingsOfObject
@@ -60,5 +58,36 @@ public class ReplicateObjectsController : MonoBehaviour
             }
         }
         
+    }
+}
+
+
+[CustomEditor(typeof(ReplicateObjectsController)), CanEditMultipleObjects]
+public class FreeMoveHandleExampleEditor : Editor
+{
+    ReplicateObjectsController rObjects;
+
+    private void OnEnable()
+    {
+        rObjects = (ReplicateObjectsController)target;
+    }
+
+    public override void OnInspectorGUI()
+    {
+        DrawDefaultInspector();
+    }
+
+    void OnSceneGUI()
+    {
+
+        for (int i = 0; i < rObjects.objects.Length; i++)
+        {
+            for (int o = 0; o < rObjects.objects[i].settings.Length; o++)
+            {
+                rObjects.objects[i].settings[o].position = Handles.PositionHandle(rObjects.objects[i].settings[o].position, Quaternion.identity);
+
+                //rObjects.objects[i].settings[o].rotation = Handles.RotationHandle(Quaternion.Euler(rObjects.objects[i].settings[o].rotation), rObjects.objects[i].settings[o].rotation);
+            }
+        }
     }
 }
