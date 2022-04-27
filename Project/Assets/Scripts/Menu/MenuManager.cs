@@ -53,8 +53,12 @@ public class MenuManager : MonoBehaviour
 		}
 		else
         {
-			Time.timeScale = 1;
-			pause = false;
+			if(PlanetPuzle.Planets == false)
+            {
+				Time.timeScale = 1;
+				pause = false;
+			}
+
 		}
 	}
 

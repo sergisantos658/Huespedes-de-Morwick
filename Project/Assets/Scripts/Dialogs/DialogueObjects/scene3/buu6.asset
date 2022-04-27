@@ -23,4 +23,6 @@ MonoBehaviour:
     - "voy a ense\xF1arte 3 imagenes y vas a tener que adivinar caul se sale del
       patron"
     whoTalk: 1
-  responses: []
+  responses:
+  - responseText: Adelante entonces.
+    dialogueObject: {fileID: 0}

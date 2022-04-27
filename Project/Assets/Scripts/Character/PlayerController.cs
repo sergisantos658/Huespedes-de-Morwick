@@ -100,7 +100,7 @@ public class PlayerController : MonoBehaviour
 
         Animators();
 
-        if (dialogueUI.isOpen || MenuManager.pause) {
+        if (dialogueUI.isOpen || MenuManager.pause || PlanetPuzle.Planets) {
             /*rb.velocity = Vector3.zero;*/ 
             agent.isStopped = true; 
 
