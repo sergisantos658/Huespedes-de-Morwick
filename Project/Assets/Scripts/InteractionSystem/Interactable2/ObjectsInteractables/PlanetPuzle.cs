@@ -6,35 +6,36 @@ using UnityEngine;
 public class PlanetPuzle : MonoBehaviour
 {
     // Start is called before the first frame update
-    public GameObject canvasPlanet;
+    public GameObject objectPlanet;
     public PlayerController player;
     public static bool Planets = false;
+    private bool correct = false;
 
     [SerializeField]
-    private DialogueObject dialogueCorrect;
-
-    [SerializeField]
-    private DialogueObject dialogueIncorrect;
+    private DialogueObject[] dialoguePlanets;
 
     public List<GameObject> listaPlanet = new List<GameObject>();
 
 
     public void activatepuzzle()
     {
-        canvasPlanet.SetActive(true);
+        objectPlanet.SetActive(true);
         Planets = true;
         Time.timeScale = 0;
 
     }
     public void touchPlanet(int num)
     {
-        if (listaPlanet[num] == listaPlanet[2])
+        objectPlanet.SetActive(false);
+        Planets = false;
+        Time.timeScale = 1;
+        if (listaPlanet[num] == listaPlanet[num])
         {
-            player.DialogueUI.ShowDialogue(dialogueCorrect);
+            player.DialogueUI.ShowDialogue(dialoguePlanets[num]);
         }
-        else
+        if (listaPlanet[num] == listaPlanet[0])
         {
-            player.DialogueUI.ShowDialogue(dialogueIncorrect);
+            correct = true;
         }
     }
 }
