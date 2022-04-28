@@ -70,24 +70,42 @@ public class FreeMoveHandleExampleEditor : Editor
     private void OnEnable()
     {
         rObjects = (ReplicateObjectsController)target;
+
+        for (int i = 0; i < rObjects.objects.Length; i++)
+        {
+            if(EditorApplication.isPlaying == false)
+            {
+                rObjects.objects[i].mesh = rObjects.objects[i].prefab.GetComponent<MeshFilter>().sharedMesh;
+            }
+            
+        }
     }
 
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
+
+
     }
 
     void OnSceneGUI()
     {
-
-        for (int i = 0; i < rObjects.objects.Length; i++)
+        if (EditorApplication.isPlaying == false || Application.isPlaying)
         {
-            for (int o = 0; o < rObjects.objects[i].settings.Length; o++)
+            for (int i = 0; i < rObjects.objects.Length; i++)
             {
-                rObjects.objects[i].settings[o].position = Handles.PositionHandle(rObjects.objects[i].settings[o].position, Quaternion.identity);
+                for (int o = 0; o < rObjects.objects[i].settings.Length; o++)
+                {
 
-                //rObjects.objects[i].settings[o].rotation = Handles.RotationHandle(Quaternion.Euler(rObjects.objects[i].settings[o].rotation), rObjects.objects[i].settings[o].rotation);
+                    rObjects.objects[i].settings[o].position = Handles.PositionHandle(rObjects.objects[i].settings[o].position, Quaternion.Euler(rObjects.objects[i].settings[o].rotation) );
+
+                    rObjects.objects[i].settings[o].rotation = Handles.RotationHandle(Quaternion.Euler(rObjects.objects[i].settings[o].rotation), rObjects.objects[i].settings[o].position).eulerAngles;
+
+
+
+                }
             }
         }
     }
+
 }
