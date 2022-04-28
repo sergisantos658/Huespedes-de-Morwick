@@ -5,8 +5,12 @@ using UnityEngine.UI;
 
 public class FollowMouse : MonoBehaviour
 {
+    public Texture2D cursor;
+    private Vector2 cursorSize;
     void Update()
     {
+        cursorSize = new Vector2(cursor.width / 2 -2, cursor.height / 2 -6);
+        Cursor.SetCursor(cursor, cursorSize, CursorMode.ForceSoftware);
         Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
         Vector3 point = ray.GetPoint(5);
         transform.position = point;
