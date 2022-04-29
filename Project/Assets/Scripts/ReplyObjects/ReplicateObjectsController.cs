@@ -32,9 +32,12 @@ public class ReplicateObjectsController : MonoBehaviour
         {
             objects[i].mesh = objects[i].prefab.GetComponent<MeshFilter>().sharedMesh;
 
-            Debug.Log("Mesh: " + " " + i + " " + objects[i].mesh);
-
             objects[i].materials = objects[i].prefab.GetComponent<MeshRenderer>().sharedMaterials;
+
+            for (int o = 0; o < objects[i].mesh.subMeshCount; o++)
+            { 
+                Debug.Log("Mesh: " + " " + i + " " + objects[i].mesh + " material " + objects[i].materials[o]);
+            }
 
             for (int o = 0; o < objects[i].settings.Length; o++)
             {
@@ -51,9 +54,9 @@ public class ReplicateObjectsController : MonoBehaviour
     {
         for (int i = 0; i < objects.Length; i++)
         {
-            for (int o = 0; o < objects[i].materials.Length; o++)
+            for (int o = 0; o < objects[i].mesh.subMeshCount; o++)
             {
-                Graphics.DrawMeshInstanced(objects[i].mesh, 0, objects[i].materials[o], objects[i].matrix);
+                Graphics.DrawMeshInstanced(objects[i].mesh, o, objects[i].materials[o], objects[i].matrix);
 
             }
         }
@@ -75,7 +78,7 @@ public class FreeMoveHandleExampleEditor : Editor
         {
             if(EditorApplication.isPlaying == false)
             {
-                rObjects.objects[i].mesh = rObjects.objects[i].prefab.GetComponent<MeshFilter>().sharedMesh;
+                rObjects.objects[i].mesh = rObjects.objects[i].prefab.GetComponent<Mesh>();
             }
             
         }
@@ -90,7 +93,7 @@ public class FreeMoveHandleExampleEditor : Editor
 
     void OnSceneGUI()
     {
-        if (EditorApplication.isPlaying == false || Application.isPlaying)
+        if (EditorApplication.isPlaying == false || !Application.isPlaying)
         {
             for (int i = 0; i < rObjects.objects.Length; i++)
             {
