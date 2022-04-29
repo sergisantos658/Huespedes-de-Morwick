@@ -9,7 +9,7 @@ public class PlanetPuzle : MonoBehaviour
     public GameObject objectPlanet;
     public PlayerController player;
     public static bool Planets = false;
-    private bool correct = false;
+    public static bool correct = false;
 
     [SerializeField]
     private DialogueObject[] dialoguePlanets;
