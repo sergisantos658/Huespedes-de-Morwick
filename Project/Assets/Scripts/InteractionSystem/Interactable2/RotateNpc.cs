@@ -26,31 +26,25 @@ public class RotateNpc : MonoBehaviour
         originalRot = transform.rotation;
         player = target;
         interact = true;
-        temp = 1f;
-        
-        
     }
 
     private void Update()
     {
         if(player != null)
         {
-            if (temp <= 0)
-            {
+
                 if (interact == true && !player.DialogueUI.isOpen)
                 {
                     interact = false;
-                    temp = 1f;
-                    Debug.Log("hola");
                 }
-            }
+            
             else
             {
                 temp -= Time.deltaTime;
 
             }
 
-            if (!player.DialogueUI.isOpen && interact == false && temp > 0)
+            if (!player.DialogueUI.isOpen && interact == false)
             {
                 transform.rotation = Quaternion.Lerp(transform.rotation, originalRot, speed * Time.deltaTime);
 

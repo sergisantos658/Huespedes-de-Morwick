@@ -5,8 +5,7 @@ using UnityEngine.UI;
 
 public class FollowMouse : MonoBehaviour
 {
-    public Texture2D cursor;
-    private Vector2 cursorSize;
+
     void Update()
     {
         if(!MenuManager.pause)

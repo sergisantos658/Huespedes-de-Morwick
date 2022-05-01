@@ -17,7 +17,6 @@ public class ActivateLen : MonoBehaviour
         if(PlanetPuzle.correct == true && Input.GetKeyDown(KeyCode.E))
         {
             Active = !Active;
-            Debug.Log("LUPA");
             if(Active == true)
             {
                 player.SetActive(false);

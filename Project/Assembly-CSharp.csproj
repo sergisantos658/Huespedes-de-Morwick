@@ -116,6 +116,7 @@
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\CheckMusicVolume.cs" />
     <Compile Include="Assets\Scenes\Sala1\DoorsManager\Scripts\DoorScript.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\ObjectsInteractables\LightSwitchText.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\ObjectsInteractables\InteractDoor.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

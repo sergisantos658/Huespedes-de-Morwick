@@ -10,15 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
-  m_Name: Buu4
+  m_Name: DoorScene3
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Perfecto
-    - asi podras pasar mas tiempo conmigo
-    whoTalk: 1
-  responses:
-  - responseText: creo que no sabes pillar la ironia
-    dialogueObject: {fileID: 11400000, guid: 2f464cdf8530f8943baa397dde5b0966, type: 2}
-  - responseText: era broma, dale a la lengua de una vez!!
-    dialogueObject: {fileID: 11400000, guid: 2f464cdf8530f8943baa397dde5b0966, type: 2}
+    - Esta cerrada
+    - Tiene que haber una llave
+    whoTalk: 0
+  responses: []

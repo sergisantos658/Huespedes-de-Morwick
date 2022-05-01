@@ -30,7 +30,7 @@ MonoBehaviour:
   - responseText: "Voy a ignorar que sigas invent\xE1ndote mi nombre, gracias."
     dialogueObject: {fileID: 0}
   - responseText: "Okay, pero no me vuelvas a llamar cari\xF1o, es m\xE1s, no me
-      dirijas m\xE1s la palabra."
+      vuelva a hablar"
     dialogueObject: {fileID: 0}
   - responseText: Lupa de rayos UVA. Por fin dices algo interesante jijijiji.
     dialogueObject: {fileID: 0}

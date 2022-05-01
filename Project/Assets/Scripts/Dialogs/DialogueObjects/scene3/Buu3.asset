@@ -21,7 +21,7 @@ MonoBehaviour:
   - responseText: dios pensaba que nunca ibas a decir eso
     dialogueObject: {fileID: 11400000, guid: 2f464cdf8530f8943baa397dde5b0966, type: 2}
   - responseText: si eso estaria bastante bien la verdad
-    dialogueObject: {fileID: 11400000, guid: 2074da9f07195764daff1d86573e37cf, type: 2}
+    dialogueObject: {fileID: 11400000, guid: 2f464cdf8530f8943baa397dde5b0966, type: 2}
   - responseText: no, la verdad es que me apetece seguir viendo como una calabaza
       liga conmigo
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: ab0400b78bf46784eaf904de4e72fc95, type: 2}

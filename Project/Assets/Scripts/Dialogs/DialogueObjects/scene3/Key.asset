@@ -12,5 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
   m_Name: Key
   m_EditorClassIdentifier: 
-  dialogueTyping: []
+  dialogueTyping:
+  - dialogue:
+    - Una Llave
+    - Vale, supongo que con esto al fin podre abrir esa puerta de ahi
+    whoTalk: 0
   responses: []

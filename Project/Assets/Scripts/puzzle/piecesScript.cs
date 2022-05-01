@@ -10,6 +10,7 @@ public class piecesScript : MonoBehaviour
     public bool Selected;
     public DragAndDrop_ Drag;
     public ChangeScene change;
+    public static bool puzzleCompleted;
     private static int pieceCorrect;
 
 
@@ -37,7 +38,8 @@ public class piecesScript : MonoBehaviour
         }
         if(pieceCorrect == Drag.numPieces)
         {
-            change.SceneLoad();
+            puzzleCompleted = true;
+            Drag.finshPuzzle();
         }
         
     }
