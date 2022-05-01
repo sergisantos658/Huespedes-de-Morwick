@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Bolsas y una chimenea
-    - cada vez se confirma mas que esto ha sido  obra de mi archienemigo papa noel
+    - Bolsas y una chimenea.
+    - "Cada vez se confirma m\xE1s que esto ha sido obra de mi archienemigo Pap\xE1
+      Noel."
     whoTalk: 0
   responses: []

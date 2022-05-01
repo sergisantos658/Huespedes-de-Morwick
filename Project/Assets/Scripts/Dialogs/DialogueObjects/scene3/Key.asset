@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Una Llave
-    - Vale, supongo que con esto al fin podre abrir esa puerta de ahi
+    - Una llave.
+    - "Vale, supongo que con esto al fin podr\xE9 abrir esa puerta de ah\xED."
     whoTalk: 0
   responses: []

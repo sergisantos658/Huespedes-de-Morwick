@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Al fin
-    - Parece que la puerta se ha abierto
+    - Al fin.
+    - Parece que la puerta se ha abierto.
     whoTalk: 0
   responses: []

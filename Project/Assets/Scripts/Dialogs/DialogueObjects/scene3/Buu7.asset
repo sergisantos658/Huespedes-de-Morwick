@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - 'Que pasa? '
-    - quieres quedarte un rato mas intimando conmigo
-    whoTalk: 0
+    - "\xBFQu\xE9 pasa? "
+    - "\xBFQuieres quedarte un rato m\xE1s intimando conmigo?"
+    whoTalk: 1
   responses:
-  - responseText: No gracias
+  - responseText: No, gracias.
     dialogueObject: {fileID: 0}
-  - responseText: De echo cuanto antes te pierda de mi vista mejor
+  - responseText: De hecho cuanto antes te pierda de mi vista mejor.
     dialogueObject: {fileID: 0}
-  - responseText: Antes muerto
+  - responseText: Antes muerto.
     dialogueObject: {fileID: 0}

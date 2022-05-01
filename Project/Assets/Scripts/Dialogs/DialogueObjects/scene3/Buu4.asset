@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Perfecto
-    - asi podras pasar mas tiempo conmigo
+    - Perfecto.
+    - "As\xED podr\xE1s pasar m\xE1s tiempo conmigo."
     whoTalk: 1
   responses:
-  - responseText: creo que no sabes pillar la ironia
+  - responseText: "Creo que no sabes pillar la iron\xEDa."
     dialogueObject: {fileID: 11400000, guid: 2f464cdf8530f8943baa397dde5b0966, type: 2}
-  - responseText: era broma, dale a la lengua de una vez!!
+  - responseText: "Era broma, \xA1\xA1dale a la lengua de una vez!!"
     dialogueObject: {fileID: 11400000, guid: 2f464cdf8530f8943baa397dde5b0966, type: 2}

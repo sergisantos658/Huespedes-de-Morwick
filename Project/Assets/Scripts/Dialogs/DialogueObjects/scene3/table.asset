@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - Tan solo es una mesa sucia.
-    - alguien a comido aqui recentemente
-    - debe ser alguien bastante inteligente por que ha dejado las zanahorias intactas
+    - "Alguien ha comido aqu\xED reci\xE9ntemente."
+    - Debe ser alguien bastante inteligente porque ha dejado las zanahorias intactas.
     whoTalk: 0
   responses: []

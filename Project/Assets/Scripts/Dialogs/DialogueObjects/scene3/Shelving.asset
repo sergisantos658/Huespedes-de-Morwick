@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Es una estanteria con medicinas.
+    - "Es una estanter\xEDa con medicinas."
     - "No s\xE9 qu\xE9 te esperabas que fuera, la verdad."
     whoTalk: 0
   responses: []

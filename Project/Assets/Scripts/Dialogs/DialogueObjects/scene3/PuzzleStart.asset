@@ -15,8 +15,8 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - Mmmmm...
-    - Parece que se ha abierto este mecanismo de aqui
-    - un puzzle?
-    - supongo que con esto podre abrir la puerta
+    - "Parece que se ha abierto este mecanismo de aqu\xED."
+    - "\xBFUn puzle?"
+    - "Supongo que con esto podr\xE9 abrir la puerta."
     whoTalk: 0
   responses: []

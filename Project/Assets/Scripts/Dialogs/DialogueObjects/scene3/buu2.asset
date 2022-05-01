@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "No tienes por que ser tan grossero mi peque\xF1o jimmy "
-    - "Solo quiero ser cari\xF1oso "
+    - "No tienes por qu\xE9 ser tan grosero mi peque\xF1o Jimmy "
+    - "Solo quiero ser cari\xF1oso."
     whoTalk: 1
   responses:
-  - responseText: No me llamo jimmy
+  - responseText: No me llamo Jimmy.
     dialogueObject: {fileID: 11400000, guid: fc995b75d861c04429f8be1f6d8f20c8, type: 2}
-  - responseText: Dios dime como salir de aqui antes de que me de un ataque
+  - responseText: "Dios, dime c\xF3mo salir de aqu\xED antes de que me d\xE9 un ataque."
     dialogueObject: {fileID: 11400000, guid: 2f464cdf8530f8943baa397dde5b0966, type: 2}

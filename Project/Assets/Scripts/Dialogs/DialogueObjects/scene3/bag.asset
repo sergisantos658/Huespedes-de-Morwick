@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - Bolsas...
-    - No se por que me dan mala espina
+    - "No s\xE9 por qu\xE9 me dan mala espina."
     whoTalk: 0
   responses: []

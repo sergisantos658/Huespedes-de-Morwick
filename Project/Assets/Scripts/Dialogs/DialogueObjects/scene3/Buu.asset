@@ -14,24 +14,24 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - ' Ho ho ho, que tenemos aqui. '
-    - Un joven muy apuesto y guapo
+    - " Ho ho ho, que tenemos aqu\xED. "
+    - Un joven muy apuesto y guapo.
     whoTalk: 1
   - dialogue:
-    - "Tengo 43 a\xF1os eso de joven creo que no es lo mas adecuado, pero lo de guapo
-      no te lo quito"
+    - "Tengo 43 a\xF1os eso de joven creo que no es lo m\xE1s adecuado, pero lo de
+      guapo no te lo quito."
     whoTalk: 0
   - dialogue:
-    - "tengo mas de 300 a\xF1os eso para mi eres un carameito"
+    - "Tengo m\xE1s de 300 a\xF1os,  para m\xED eres un caramelito"
     whoTalk: 1
   responses:
-  - responseText: "vale, no se si me acabas de dar ganas de vomitar o de escupir
-      un ri\xF1on"
+  - responseText: "Vale, no s\xE9 si me acabas de dar ganas de vomitar o de escupir
+      un ri\xF1\xF3n."
     dialogueObject: {fileID: 11400000, guid: 90fea80c151a4d24793e407a8fc97907, type: 2}
-  - responseText: Dios sacame de aqui porfavor
+  - responseText: "Dios s\xE1came de aqui porfavor."
     dialogueObject: {fileID: 11400000, guid: 90fea80c151a4d24793e407a8fc97907, type: 2}
-  - responseText: vale, creo acabo de perder por completo las ganas de vivir
+  - responseText: Vale, creo acabo de perder por completo las ganas de vivir.
     dialogueObject: {fileID: 11400000, guid: 90fea80c151a4d24793e407a8fc97907, type: 2}
-  - responseText: "quien diria que un se\xF1or con cabeza de calabaza intentria tirarme
-      los cejos"
+  - responseText: "Quien dir\xEDa que un se\xF1or con cabeza de calabaza intentaria
+      tirarme los tejos."
     dialogueObject: {fileID: 11400000, guid: 90fea80c151a4d24793e407a8fc97907, type: 2}

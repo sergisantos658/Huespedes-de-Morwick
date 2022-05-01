@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Esta cerrada
-    - Tiene que haber una llave
+    - Esta cerrada.
+    - Tiene que haber una llave.
     whoTalk: 0
   responses: []
