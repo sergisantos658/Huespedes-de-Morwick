@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657767, g: 0.4964143, b: 0.5748175, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -309,30 +309,6 @@ Transform:
   m_Father: {fileID: 1187594671}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 50.000004, y: 219.549, z: 0}
---- !u!1 &109333245 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 4021467230806756047, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-  m_PrefabInstance: {fileID: 398654252}
-  m_PrefabAsset: {fileID: 0}
---- !u!95 &109333250
-Animator:
-  serializedVersion: 3
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 109333245}
-  m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 1bdb1aff05078b046a1710fe01cf7dfb, type: 2}
-  m_CullingMode: 0
-  m_UpdateMode: 0
-  m_ApplyRootMotion: 0
-  m_LinearVelocityBlending: 0
-  m_WarningMessage: 
-  m_HasTransformHierarchy: 1
-  m_AllowConstantClipSamplingOptimization: 1
-  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &398654252
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -388,78 +364,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 4486920273599370618, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486920273599370618, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.00000008146034
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486920273599370618, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486920273599370618, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486920273599370618, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486920273599370618, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4486920273599370618, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 1080
-      objectReference: {fileID: 0}
-    - target: {fileID: 8025324976199497260, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: max
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 8025324976199497260, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
       propertyPath: Door
       value: 
       objectReference: {fileID: 1254900065}
-    - target: {fileID: 8025324976199497260, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: Ramp
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 8025324976199497260, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: speed
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8025324976199497260, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: CanOpen
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8025324976199497260, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: isValve
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8025324976199497260, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: CanClose
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8025324976199497260, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: xRotation
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8025324976199497260, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: yPosition
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8025324976199497260, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: RampObject
-      value: 
-      objectReference: {fileID: 1032727362916197333}
-    - target: {fileID: 8025324976199497260, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
-      propertyPath: ValveSpeed
-      value: 100
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ed77bee00f19eb7419ea483b781779b6, type: 3}
 --- !u!1001 &515261214
@@ -834,11 +742,6 @@ Transform:
   m_Father: {fileID: 1187594671}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!4 &1032727362916197333 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 2543079112057991174, guid: ac4501ccdcc232141885926250c02bd0, type: 3}
-  m_PrefabInstance: {fileID: 3251080967126553555}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2189870819370408474
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 3892460804671490641}
   - component: {fileID: 4028874723192598727}
   - component: {fileID: 8025324976199497260}
+  - component: {fileID: 109333250}
   m_Layer: 0
   m_Name: Valve
   m_TagString: Untagged
@@ -64,7 +65,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 3036862408743611690}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 1080}
 --- !u!33 &3892460804671490641
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -84,10 +85,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -114,6 +117,7 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
 --- !u!114 &8025324976199497260
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -126,21 +130,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 354a378e82f9d224d8c66706ecf4f493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  isValsve: 1
-  ValveSpeed: 10
-  isLever: 0
   Locked: 0
-  DoorObject: {fileID: 0}
-  RampObject: {fileID: 0}
-  CanOpen: 1
-  CanClose: 1
+  Door: {fileID: 0}
   isOpened: 0
-  xRotation: 1
-  yPosition: 0
-  max: 89
-  min: 0
-  speed: 15
-  valveBool: 1
+--- !u!95 &109333250
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4021467230806756047}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 1bdb1aff05078b046a1710fe01cf7dfb, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &5790873268593514898
 GameObject:
   m_ObjectHideFlags: 0
@@ -192,10 +203,12 @@ MeshRenderer:
   m_CastShadows: 1
   m_ReceiveShadows: 1
   m_DynamicOccludee: 1
+  m_StaticShadowCaster: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -220,3 +233,4 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}

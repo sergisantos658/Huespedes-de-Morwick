@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -56,10 +56,10 @@
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\MusicS.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\CheckSFXVolume.cs" />
     <Compile Include="Assets\Scripts\Light\TriggerGetTransformToCamera.cs" />
-    <Compile Include="Assets\Scenes\Sala1\Scripts\KeyPadController.cs" />
-    <Compile Include="Assets\Scenes\Sala1\Scripts\KeyController.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\ObjectsInteractables\OpenChestByKey.cs" />
-    <Compile Include="Assets\Scenes\Sala1\Scripts\KeyPadRay.cs" />
+    <Compile Include="Assets\Scripts\Keypad\KeyPadController.cs" />
+    <Compile Include="Assets\Scripts\Keypad\KeyController.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\OpenChestByKey.cs" />
+    <Compile Include="Assets\Scripts\Keypad\KeyPadRay.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ResetDemo.cs" />
     <Compile Include="Assets\Scripts\Dialogs\ResponseEvent.cs" />
     <Compile Include="Assets\Scripts\Menu\MenuManager.cs" />
@@ -72,33 +72,33 @@
     <Compile Include="Assets\Scripts\Menu\ButtonFunction.cs" />
     <Compile Include="Assets\Scripts\Light\LensInfoDrawer.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\FlexibleUI.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\PlayerInteraction.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\PlayerInteraction.cs" />
     <Compile Include="Assets\Scripts\Keypad\Keypad.cs" />
     <Compile Include="Assets\Scripts\Dialogs\DialogueResponseEvents.cs" />
     <Compile Include="Assets\Scenes\Sala1\DoorsManager\Scripts\AN_HeroController.cs" />
     <Compile Include="Assets\Scripts\Dialogs\NonUsable\NonDialogueSystem.cs" />
     <Compile Include="Assets\Scenes\Sala1\DoorsManager\Scripts\LeverSystem.cs" />
     <Compile Include="Assets\Scripts\Light\DissolvantManager.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\Interactable.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\ObjectsInteractables\InteractDoor.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\ObjectsInteractables\DoorInteraction.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\Interactable.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\InteractDoor.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\DoorInteraction.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ExtraLinks.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\RotateNpc.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\RotateNpc.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\ObjectsInteractables\DoorChangeScene.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\ObjectsInteractables\GoScene.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\DoorChangeScene.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\GoScene.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\FlexibleUIData.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\ObjectsInteractables\CauchObjectLent.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\CauchObjectLent.cs" />
     <Compile Include="Assets\Scripts\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\puzzle\DragAndDrop_.cs" />
     <Compile Include="Assets\Scripts\Light\FollowMouse.cs" />
     <Compile Include="Assets\Scripts\Light\SphereMaskController.cs" />
     <Compile Include="Assets\Scripts\Dialogs\ScriptsForObjects\DialogueDefault.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\FlexibleUIElement.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\ObjectsInteractables\PlanetPuzle.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\PlanetPuzle.cs" />
     <Compile Include="Assets\Scripts\Menu\MainMenuNew.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\ObjectsInteractables\LightSwitch.cs" />
-    <Compile Include="Assets\Scenes\Sala1\Scripts\CanvasInteract.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\LightSwitch.cs" />
+    <Compile Include="Assets\Scripts\Keypad\CanvasInteract.cs" />
     <Compile Include="Assets\Scripts\puzzle\piecesScript.cs" />
     <Compile Include="Assets\Scripts\Light\MaskObject.cs" />
     <Compile Include="Assets\Scripts\Dialogs\ResponsableHandler.cs" />
@@ -106,14 +106,15 @@
     <Compile Include="Assets\Scripts\Dialogs\TypewritterEffect.cs" />
     <Compile Include="Assets\Scripts\Light\ActivateLen.cs" />
     <Compile Include="Assets\Scenes\Sala1\DoorsManager\Scripts\DoorKey.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\ObjectsInteractables\KeyDoorInteraction.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\KeyDoorInteraction.cs" />
     <Compile Include="Assets\Scripts\Menu\Exit.cs" />
     <Compile Include="Assets\Scripts\Character\InteractDialogueOrObjects.cs" />
     <Compile Include="Assets\Scripts\Dialogs\Response.cs" />
     <Compile Include="Assets\Scripts\ReplyObjects\ReplicateObjectsController.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\CheckMusicVolume.cs" />
     <Compile Include="Assets\Scenes\Sala1\DoorsManager\Scripts\DoorScript.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\Interactable2\ObjectsInteractables\LightSwitchText.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\LightSwitchText.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\LeverInteract.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

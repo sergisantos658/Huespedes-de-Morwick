@@ -31,7 +31,7 @@ public class DoorScript : MonoBehaviour
 
 	void Update()
 	{
-		if ( !Remote && Input.GetKeyDown(KeyCode.E))
+		if (!Remote)
 			Action();
 	}
 
