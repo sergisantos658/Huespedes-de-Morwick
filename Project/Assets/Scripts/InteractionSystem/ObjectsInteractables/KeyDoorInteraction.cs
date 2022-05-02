@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DoorInteraction : Interactable
+public class KeyDoorInteraction : Interactable
 {
     public bool isRedKey = true;
 
@@ -15,6 +15,7 @@ public class DoorInteraction : Interactable
 
     private PlayerController player;
     private PlayerInteraction pInteract;
+
     private void OnEnable()
     {
         PlayerController.WhoIsPlayerController += WhoIsPlayerController;
