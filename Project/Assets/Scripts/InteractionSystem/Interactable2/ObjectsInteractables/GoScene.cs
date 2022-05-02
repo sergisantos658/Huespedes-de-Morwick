@@ -10,7 +10,4 @@ public class GoScene : MonoBehaviour
         Debug.Log("Change");
         sceneChange.SceneLoad();
     }
-
-
-   
 }

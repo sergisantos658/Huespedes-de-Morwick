@@ -5,6 +5,9 @@ using UnityEngine;
 using UnityEditor;
 public class PlayerInteraction : MonoBehaviour
 {
+    public bool RedKey = false, BlueKey = false;
+    public Transform GoalPosition;
+
     [Header("Ray settings"), Space(5)]
     #region Data&Settings
 

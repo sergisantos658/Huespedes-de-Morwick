@@ -5,7 +5,7 @@ using UnityEngine;
 public class DoorKey : MonoBehaviour
 {
     public bool isRedKey = true;
-    PlayerInteractive player;
+    PlayerInteraction player;
 
     float distance;
     float angleView;
@@ -13,7 +13,7 @@ public class DoorKey : MonoBehaviour
 
     private void Start()
     {
-        player = FindObjectOfType<PlayerInteractive>();
+        player = FindObjectOfType<PlayerInteraction>();
     }
 
     void Update()

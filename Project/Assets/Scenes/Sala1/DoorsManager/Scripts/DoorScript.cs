@@ -13,7 +13,7 @@ public class DoorScript : MonoBehaviour
 	public bool RedLocked = false;
 	public bool BlueLocked = false;
 
-	PlayerInteractive playerInteractive;
+	PlayerInteraction playerInteractive;
 
 	public bool isOpened = false;
 
@@ -26,7 +26,7 @@ public class DoorScript : MonoBehaviour
 	void Start()
 	{
 		anim = GetComponent<Animator>();
-		playerInteractive = FindObjectOfType<PlayerInteractive>();
+		playerInteractive = FindObjectOfType<PlayerInteraction>();
 	}
 
 	void Update()
@@ -39,26 +39,6 @@ public class DoorScript : MonoBehaviour
 	{
 		if (!Locked)
 		{
-			//if (playerInteractive != null && RedLocked && playerInteractive.RedKey)
-			//{
-			//	RedLocked = false;
-			//	playerInteractive.RedKey = false;
-			//}
-			//else if (playerInteractive != null && BlueLocked && playerInteractive.BlueKey)
-			//{
-			//	BlueLocked = false;
-			//	playerInteractive.BlueKey = false;
-			//}
-
-			//if (isOpened && CanClose && !RedLocked && !BlueLocked)
-			//{
-			//	isOpened = false;
-			//}
-			//else if (!isOpened && CanOpen && !RedLocked && !BlueLocked)
-			//{
-			//	isOpened = true;
-			//	rbDoor.AddRelativeTorque(new Vector3(0, 0, 20f)); 
-			//}
 			isOpened = !isOpened;
 			anim.SetBool("opened", isOpened);
 		}
