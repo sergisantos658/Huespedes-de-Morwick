@@ -69,17 +69,16 @@ public class ReplicateObjectsController : MonoBehaviour
 public class FreeMoveHandleExampleEditor : Editor
 {
     ReplicateObjectsController rObjects;
-
+    int lastRenderedFrame;
     private void OnEnable()
     {
+        SceneView.duringSceneGui += OnSceneGUI;
+
         rObjects = (ReplicateObjectsController)target;
 
         for (int i = 0; i < rObjects.objects.Length; i++)
         {
-            if(EditorApplication.isPlaying == false)
-            {
-                rObjects.objects[i].mesh = rObjects.objects[i].prefab.GetComponent<Mesh>();
-            }
+            rObjects.objects[i].mesh = rObjects.objects[i].prefab.GetComponent<Mesh>();
             
         }
     }
@@ -91,7 +90,7 @@ public class FreeMoveHandleExampleEditor : Editor
 
     }
 
-    void OnSceneGUI()
+    void OnSceneGUI(SceneView view)
     {
         if (EditorApplication.isPlaying == false || !Application.isPlaying)
         {
@@ -104,6 +103,15 @@ public class FreeMoveHandleExampleEditor : Editor
 
                     rObjects.objects[i].settings[o].rotation = Handles.RotationHandle(Quaternion.Euler(rObjects.objects[i].settings[o].rotation), rObjects.objects[i].settings[o].position).eulerAngles;
 
+                    if (Event.current.type == EventType.Layout)
+                    {
+
+                        if (lastRenderedFrame != Time.renderedFrameCount)
+                        {
+                            Graphics.DrawMeshNow(rObjects.objects[i].mesh, rObjects.objects[i].settings[o].position, Quaternion.Euler(rObjects.objects[i].settings[o].rotation), 0);
+                            lastRenderedFrame = Time.renderedFrameCount;
+                        }
+                    }
 
 
                 }
