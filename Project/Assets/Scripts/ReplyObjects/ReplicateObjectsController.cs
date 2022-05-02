@@ -70,16 +70,27 @@ public class FreeMoveHandleExampleEditor : Editor
 {
     ReplicateObjectsController rObjects;
     int lastRenderedFrame;
+    GameObject[] gameObjects;
+    Mesh[] meshesReplyObjects;
+
     private void OnEnable()
     {
         SceneView.duringSceneGui += OnSceneGUI;
 
         rObjects = (ReplicateObjectsController)target;
 
+        gameObjects = null;
+        meshesReplyObjects = null;
+
+        gameObjects = new GameObject[rObjects.objects.Length];
+
+        meshesReplyObjects = new Mesh[rObjects.objects.Length];
+
         for (int i = 0; i < rObjects.objects.Length; i++)
         {
-            rObjects.objects[i].mesh = rObjects.objects[i].prefab.GetComponent<Mesh>();
-            
+            gameObjects[i] = rObjects.objects[i].prefab;
+            meshesReplyObjects[i] = gameObjects[i].GetComponent<MeshFilter>().sharedMesh;
+            Debug.Log("meshName " + meshesReplyObjects[i].bounds);
         }
     }
 
@@ -94,26 +105,30 @@ public class FreeMoveHandleExampleEditor : Editor
     {
         if (EditorApplication.isPlaying == false || !Application.isPlaying)
         {
-            for (int i = 0; i < rObjects.objects.Length; i++)
+            if (Event.current.type == EventType.Layout)
             {
-                for (int o = 0; o < rObjects.objects[i].settings.Length; o++)
+
+                if (lastRenderedFrame != Time.renderedFrameCount)
                 {
-
-                    rObjects.objects[i].settings[o].position = Handles.PositionHandle(rObjects.objects[i].settings[o].position, Quaternion.Euler(rObjects.objects[i].settings[o].rotation) );
-
-                    rObjects.objects[i].settings[o].rotation = Handles.RotationHandle(Quaternion.Euler(rObjects.objects[i].settings[o].rotation), rObjects.objects[i].settings[o].position).eulerAngles;
-
-                    if (Event.current.type == EventType.Layout)
+                    for (int i = 0; i < rObjects.objects.Length; i++)
                     {
+                        EditorUtility.SetDirty(gameObjects[i]);
 
-                        if (lastRenderedFrame != Time.renderedFrameCount)
+                        for (int o = 0; o < rObjects.objects[i].settings.Length; o++)
                         {
-                            Graphics.DrawMeshNow(rObjects.objects[i].mesh, rObjects.objects[i].settings[o].position, Quaternion.Euler(rObjects.objects[i].settings[o].rotation), 0);
-                            lastRenderedFrame = Time.renderedFrameCount;
+
+                            rObjects.objects[i].settings[o].position = Handles.PositionHandle(rObjects.objects[i].settings[o].position, Quaternion.Euler(rObjects.objects[i].settings[o].rotation) );
+
+                            rObjects.objects[i].settings[o].rotation = Handles.RotationHandle(Quaternion.Euler(rObjects.objects[i].settings[o].rotation), rObjects.objects[i].settings[o].position).eulerAngles;
+
+                            Graphics.DrawMeshNow(meshesReplyObjects[i], rObjects.objects[i].settings[o].position, Quaternion.Euler(rObjects.objects[i].settings[o].rotation), 0);
+
+                            Debug.Log("Alo! ");
+
                         }
                     }
 
-
+                    lastRenderedFrame = Time.renderedFrameCount;
                 }
             }
         }
