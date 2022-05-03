@@ -61,6 +61,7 @@ public class LightSwitchText : Interactable
                 else
                 {
                     m_light.SetActive(onlyOnce);
+                    Debug.Log("A ");
                 }
 
                 

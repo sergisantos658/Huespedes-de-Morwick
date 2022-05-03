@@ -17,7 +17,7 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private GameObject mainCamera;
     Camera mainCameraC;
 
-    public float height;
+    float height;
 
     float holdTime; // the time updating until the holdTime interactable complete
 
@@ -60,6 +60,7 @@ public class PlayerInteraction : MonoBehaviour
     {
         mainCameraC = mainCamera.GetComponent<Camera>();
 
+        height = GetComponent<CapsuleCollider>().height;
 
         CursorSettings();
     }
