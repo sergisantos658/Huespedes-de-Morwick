@@ -7,14 +7,6 @@ public class DoorInteraction : Interactable
     public bool Locked = false;
     public bool Remote = false;
 
-    public bool CanOpen = true;
-    public bool CanClose = true;
-
-    public bool RedLocked = false;
-    public bool BlueLocked = false;
-
-    PlayerInteraction playerInteractive;
-
     public bool isOpened = false;
 
     public float OpenSpeed = 3f;

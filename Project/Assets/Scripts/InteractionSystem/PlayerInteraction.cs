@@ -196,6 +196,8 @@ public class PlayerInteraction : MonoBehaviour
     {
         //KeyCode key = KeyCode.Mouse0;
 
+        Debug.Log("interacting");
+
         switch (interactable.interactionType)
         {
             case Interactable.InteractionType.Click:
