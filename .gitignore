@@ -8,3 +8,4 @@ Project/Assembly-CSharp-Editor.csproj
 Project/.vs/Project/v16/.suo
 Project/.vs/Project/v16/.suo
 Project/Assembly-CSharp-Editor.csproj
+*.csproj
