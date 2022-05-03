@@ -96,7 +96,7 @@ public class PlayerController : MonoBehaviour
 
             onlyOnce = false;
         }
-            Debug.DrawRay(transform.position, tempV, Color.green);
+            //Debug.DrawRay(transform.position, tempV, Color.green);
 
         Animators();
 

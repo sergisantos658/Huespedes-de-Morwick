@@ -17,6 +17,8 @@ public class PlayerInteraction : MonoBehaviour
     [SerializeField] private GameObject mainCamera;
     Camera mainCameraC;
 
+    public float height;
+
     float holdTime; // the time updating until the holdTime interactable complete
 
     float timeToUseAgain = 0f; // Time to interact again after interact with an object
@@ -136,7 +138,19 @@ public class PlayerInteraction : MonoBehaviour
 
         if (interactable != null && !iInteract)
         {
-            distancePlayer = Vector3.Distance(interactable.GetComponent<Collider>().ClosestPoint(gameObject.transform.position), gameObject.transform.position);
+            Vector3 closePoint = interactable.GetComponent<Collider>().ClosestPoint(gameObject.transform.position);
+            float heightDifference = 0;
+
+            if(closePoint.y < gameObject.transform.position.y)
+            {
+                heightDifference = closePoint.y - gameObject.transform.position.y;
+            }
+            else if(closePoint.y > gameObject.transform.position.y + height)
+            {
+                heightDifference = closePoint.y - (gameObject.transform.position.y + height);
+            }
+
+            distancePlayer = Vector3.Distance(new Vector3(closePoint.x, heightDifference, closePoint.z), transform.position - Vector3.up * transform.position.y);
 
             bool closeEnought = distancePlayer < rayDistance;
 
@@ -174,7 +188,7 @@ public class PlayerInteraction : MonoBehaviour
         Debug.DrawLine(gameObject.transform.position, hitInfo.point, Color.green);
 
         // Line from Camera To World
-        //Debug.DrawLine(ray.origin, ray.origin + ray.direction * (hitSomething ? hitInfo.distance : 100), hitSomething ? Color.green : Color.red);
+        Debug.DrawLine(ray.origin, ray.origin + ray.direction * (hitSomething ? distancePlayer : 100), hitSomething ? Color.green : Color.red);
     }
 
     void HandleInteraction(Interactable interactable)
