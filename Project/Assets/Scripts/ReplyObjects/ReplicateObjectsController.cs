@@ -103,6 +103,7 @@ public class FreeMoveHandleExampleEditor : Editor
     {
         DrawDefaultInspector();
 
+        Debug.Log("S " + Event.current.GetTypeForControl(lastRenderedFrame) + "  ");
 
     }
 
@@ -133,7 +134,9 @@ public class FreeMoveHandleExampleEditor : Editor
                     //    }
                     //}
                 }
+
             }
+
 
         }
     }
