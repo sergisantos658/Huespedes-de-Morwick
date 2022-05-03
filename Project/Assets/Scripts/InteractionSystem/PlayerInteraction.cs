@@ -111,7 +111,7 @@ public class PlayerInteraction : MonoBehaviour
                 interactable = hitInfo.collider.GetComponent<Interactable>();
             }
 
-            if (Input.GetKeyDown(KeyCode.Mouse1)) // Observation
+            if (Input.GetKeyDown(KeyCode.Mouse1) && !MenuManager.pause) // Observation
             {
                 interactable?.Observation();
                 interactable = null;
