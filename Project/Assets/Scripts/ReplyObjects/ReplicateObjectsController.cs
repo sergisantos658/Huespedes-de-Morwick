@@ -11,6 +11,7 @@ public struct SettingsOfObject
     public Vector3 escale;
 }
 
+[ExecuteInEditMode]
 public class ReplicateObjectsController : MonoBehaviour
 {
     [System.Serializable]
@@ -52,15 +53,35 @@ public class ReplicateObjectsController : MonoBehaviour
 
     void Update()
     {
-        for (int i = 0; i < objects.Length; i++)
+        if (EditorApplication.isPlaying == true || Application.isPlaying)
         {
-            for (int o = 0; o < objects[i].mesh.subMeshCount; o++)
+            for (int i = 0; i < objects.Length; i++)
             {
-                Graphics.DrawMeshInstanced(objects[i].mesh, o, objects[i].materials[o], objects[i].matrix);
+                for (int o = 0; o < objects[i].mesh.subMeshCount; o++)
+                {
+                    Graphics.DrawMeshInstanced(objects[i].mesh, o, objects[i].materials[o], objects[i].matrix);
 
+                }
             }
         }
-        
+    }
+
+    void OnDrawGizmos()
+    {
+        if (EditorApplication.isPlaying == false || !Application.isPlaying)
+        {
+            for (int i = 0; i < objects.Length; i++)
+            {
+                for (int o = 0; o < objects[i].settings.Length; o++)
+                {
+                    for (int l = 0; l < objects[i].mesh.subMeshCount; l++)
+                    {
+                        objects[i].materials[l].SetPass(0);
+                        Graphics.DrawMeshNow(objects[i].mesh, Matrix4x4.TRS(objects[i].settings[o].position, Quaternion.Euler(objects[i].settings[o].rotation), objects[i].settings[o].escale));
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -103,7 +124,7 @@ public class FreeMoveHandleExampleEditor : Editor
     {
         DrawDefaultInspector();
 
-        Debug.Log("S " + Event.current.GetTypeForControl(lastRenderedFrame) + "  ");
+        //Debug.Log("S " + Event.current.GetTypeForControl(lastRenderedFrame) + "  ");
 
     }
 
@@ -120,19 +141,6 @@ public class FreeMoveHandleExampleEditor : Editor
                     rObjects.objects[i].settings[o].position = Handles.PositionHandle(rObjects.objects[i].settings[o].position, Quaternion.Euler(rObjects.objects[i].settings[o].rotation) );
 
                     rObjects.objects[i].settings[o].rotation = Handles.RotationHandle(Quaternion.Euler(rObjects.objects[i].settings[o].rotation), rObjects.objects[i].settings[o].position).eulerAngles;
-
-                    //if (Event.current.type == EventType.Layout)
-                    //{
-
-                    //    if (lastRenderedFrame != Time.renderedFrameCount)
-                    //    {
-                    //                //Graphics.DrawMeshNow(meshesReplyObjects[i], rObjects.objects[i].settings[o].position, Quaternion.Euler(rObjects.objects[i].settings[o].rotation), 0);
-
-                    //                Debug.Log("Alo! ");
-
-                    //        lastRenderedFrame = Time.renderedFrameCount;
-                    //    }
-                    //}
                 }
 
             }
