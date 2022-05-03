@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11937977, g: 0.1010839, b: 0.08306535, a: 1}
+  m_IndirectSpecularColor: {r: 0.11937981, g: 0.10108391, b: 0.08306547, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4234,8 +4234,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdTime: 0
   interactionType: 0
-  dialogueObject: {fileID: 11400000, guid: 1839d820aaa01cf4e952fd0b8566c84e, type: 2}
-  o_DialogueObject: {fileID: 0}
+  dialogueObject: {fileID: 0}
+  o_DialogueObject: {fileID: 11400000, guid: 1839d820aaa01cf4e952fd0b8566c84e, type: 2}
 --- !u!1 &205967939
 GameObject:
   m_ObjectHideFlags: 0
@@ -4655,6 +4655,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09f406e15e65ab42afedd05fe1ceabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RedKey: 0
+  BlueKey: 0
+  GoalPosition: {fileID: 0}
   rayDistance: 1
   raysphereRadius: 0.25
   interactableLayer:
@@ -6192,6 +6195,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09f406e15e65ab42afedd05fe1ceabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RedKey: 0
+  BlueKey: 0
+  GoalPosition: {fileID: 0}
   rayDistance: 30
   raysphereRadius: 0.25
   interactableLayer:
@@ -11509,7 +11515,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9074594807983055083, guid: 15745f8b70e5d524183539fa272d90a3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 15745f8b70e5d524183539fa272d90a3, type: 3}
 --- !u!1 &821056629 stripped
 GameObject:
@@ -11533,6 +11540,19 @@ MonoBehaviour:
   NotCompleted: {fileID: 0}
   observation: {fileID: 0}
   jumpIntoScene: -1
+--- !u!65 &821056631
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821056629}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3448641, y: 2.1738925, z: 0.32937062}
+  m_Center: {x: 0.64469135, y: 1.1131961, z: 0.05084342}
 --- !u!4 &823282971 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3240652757347418161, guid: 4e50b9f00a96eb744a04921c3be28bbd, type: 3}
@@ -13890,6 +13910,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e09f406e15e65ab42afedd05fe1ceabe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  RedKey: 0
+  BlueKey: 0
+  GoalPosition: {fileID: 0}
   rayDistance: 0.75
   raysphereRadius: 0.25
   interactableLayer:
@@ -18121,8 +18144,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdTime: 0
   interactionType: 0
-  dialogueObject: {fileID: 11400000, guid: 0006c5df27ab46243a7c9db0cccb5337, type: 2}
-  o_DialogueObject: {fileID: 0}
+  dialogueObject: {fileID: 0}
+  o_DialogueObject: {fileID: 11400000, guid: 0006c5df27ab46243a7c9db0cccb5337, type: 2}
 --- !u!1001 &1402128621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18620,7 +18643,8 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 9074594807983055083, guid: 15745f8b70e5d524183539fa272d90a3, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 15745f8b70e5d524183539fa272d90a3, type: 3}
 --- !u!1 &1413954184 stripped
 GameObject:
@@ -18646,6 +18670,19 @@ MonoBehaviour:
   finishscene: {fileID: 11400000, guid: 9d77cbf77d1bad84588aa666c3101ddc, type: 2}
   camera0: {fileID: 1360471544}
   camera1: {fileID: 887073993}
+--- !u!65 &1413954186
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1413954184}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3448641, y: 2.1738925, z: 0.32937062}
+  m_Center: {x: 0.64469135, y: 1.1131961, z: 0.05084342}
 --- !u!1 &1416210253
 GameObject:
   m_ObjectHideFlags: 0
@@ -22324,8 +22361,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdTime: 0
   interactionType: 0
-  dialogueObject: {fileID: 11400000, guid: 454bcfe6825ca0a4a93b9ae5dcd0a473, type: 2}
-  o_DialogueObject: {fileID: 0}
+  dialogueObject: {fileID: 0}
+  o_DialogueObject: {fileID: 11400000, guid: 454bcfe6825ca0a4a93b9ae5dcd0a473, type: 2}
 --- !u!65 &1718294836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -25772,8 +25809,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdTime: 0
   interactionType: 0
-  dialogueObject: {fileID: 11400000, guid: 2074da9f07195764daff1d86573e37cf, type: 2}
-  o_DialogueObject: {fileID: 0}
+  dialogueObject: {fileID: 0}
+  o_DialogueObject: {fileID: 11400000, guid: 2074da9f07195764daff1d86573e37cf, type: 2}
 --- !u!65 &1931487377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26842,7 +26879,7 @@ MonoBehaviour:
   holdTime: 0
   interactionType: 0
   dialogueObject: {fileID: 11400000, guid: 585d15b7b8bb89a4b82b5ef645663049, type: 2}
-  o_DialogueObject: {fileID: 0}
+  o_DialogueObject: {fileID: 11400000, guid: b0127fb5c95b3aa4f88989076bbe9766, type: 2}
 --- !u!95 &2015093868
 Animator:
   serializedVersion: 3
