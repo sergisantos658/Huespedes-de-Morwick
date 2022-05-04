@@ -52,7 +52,7 @@ public class LightSwitchText : Interactable
 
                 if (m_light.GetComponent<Light>())
                 {
-                    m_light.GetComponent<Light>().enabled = onlyOnce;
+                    m_light.GetComponent<Light>().enabled = !m_light.GetComponent<Light>().enabled;
                     if (m_light.GetComponent<Light>().enabled == true) 
                     { 
                         allLightsOff = false; 
@@ -70,7 +70,7 @@ public class LightSwitchText : Interactable
             
             foreach (TextMeshPro number in numbersText)
             {
-                number.color = new Color(number.color.r, number.color.g, number.color.b, allLightsOff ? 1 : 0);            
+                number.color = new Color(number.color.r, number.color.g, number.color.b, allLightsOff ? 1 : 0);
             }
 
             onlyOnce = !onlyOnce;

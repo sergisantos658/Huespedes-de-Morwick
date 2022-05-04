@@ -82,16 +82,16 @@ public class PlayerController : MonoBehaviour
         if (tempOffset <= tempVectorOffset && onlyOnce)
         {
             agent.isStopped = true; 
-            transform.position = transform.position;
+            //transform.position = transform.position;
 
-            float angle = Mathf.Atan2(tempV.z, tempV.x) * Mathf.Rad2Deg -90;
+            //float angle = Mathf.Atan2(tempV.z, tempV.x) * Mathf.Rad2Deg -90;
 
-            Quaternion rotObj = Quaternion.AngleAxis(angle, Vector3.up);
+            //Quaternion rotObj = Quaternion.AngleAxis(angle, Vector3.up);
 
-            Debug.Log("Rotation: " + tempV + " 2: " + angle + " True rotation: " + transform.rotation.eulerAngles);
+            //Debug.Log("Rotation: " + tempV + " 2: " + angle + " True rotation: " + transform.rotation.eulerAngles);
 
-            //transform.rotation = rotObj;
-            transform.eulerAngles = Vector3.up * angle;
+            ////transform.rotation = rotObj;
+            //transform.eulerAngles = Vector3.up * angle;
 
 
             onlyOnce = false;

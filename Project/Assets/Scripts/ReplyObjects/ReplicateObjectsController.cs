@@ -35,15 +35,6 @@ public class ReplicateObjectsController : MonoBehaviour
 
             objects[i].materials = objects[i].prefab.GetComponent<MeshRenderer>().sharedMaterials;
 
-            if (EditorApplication.isPlaying == true || Application.isPlaying) { 
-
-                for (int o = 0; o < objects[i].mesh.subMeshCount; o++)
-                { 
-                    Debug.Log("Mesh: " + " " + i + " " + objects[i].mesh + " material " + objects[i].materials[o]);
-                }
-            
-            }
-
             for (int o = 0; o < objects[i].settings.Length; o++)
             {
                 Matrix4x4 objectMatrix = Matrix4x4.Translate(objects[i].settings[o].position) * Matrix4x4.Rotate(Quaternion.Euler(objects[i].settings[o].rotation)) *
@@ -89,39 +80,19 @@ public class ReplicateObjectsController : MonoBehaviour
     }
 }
 
-
+#if UNITY_EDITOR
 [CustomEditor(typeof(ReplicateObjectsController)), CanEditMultipleObjects]
 public class FreeMoveHandleExampleEditor : Editor
 {
     ReplicateObjectsController rObjects;
-    int lastRenderedFrame;
-    GameObject[] gameObjects;
-    Mesh[] meshesReplyObjects;
 
-    SerializedObject GetTarget;
-    SerializedProperty ThisArray;
+    bool activatePositionHandle;
+    bool activateRotationHandle;
 
     private void OnEnable()
     {
 
         rObjects = (ReplicateObjectsController)target;
-
-        gameObjects = null;
-        meshesReplyObjects = null;
-
-        gameObjects = new GameObject[rObjects.objects.Length];
-
-        meshesReplyObjects = new Mesh[rObjects.objects.Length];
-
-        GetTarget = new SerializedObject(rObjects);
-        ThisArray = GetTarget.FindProperty("objects");
-
-        for (int i = 0; i < rObjects.objects.Length; i++)
-        {
-            gameObjects[i] = rObjects.objects[i].prefab;
-            meshesReplyObjects[i] = gameObjects[i].GetComponent<MeshFilter>().sharedMesh;
-            Debug.Log("meshName " + meshesReplyObjects[i].name);
-        }
     }
 
     public override void OnInspectorGUI()
@@ -134,8 +105,11 @@ public class FreeMoveHandleExampleEditor : Editor
 
     void OnSceneGUI()
     {
-        if (EditorApplication.isPlaying == false || !Application.isPlaying)
+        Debug.Log("a " + Event.current.keyCode);
+        if ((EditorApplication.isPlaying == false || !Application.isPlaying))
         {
+
+
             for (int i = 0; i < rObjects.objects.Length; i++)
             {
 
@@ -154,3 +128,4 @@ public class FreeMoveHandleExampleEditor : Editor
     }
 
 }
+#endif
