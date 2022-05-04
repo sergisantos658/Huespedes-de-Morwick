@@ -152,6 +152,7 @@
     <Compile Include="Assets\DoorsManager\Scripts\DoorScript.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\LightSwitchText.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\InteractKeypad.cs" />
+    <Compile Include="Assets\Scripts\Menu\Credits.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
