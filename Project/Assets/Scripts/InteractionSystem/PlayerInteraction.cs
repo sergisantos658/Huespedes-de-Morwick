@@ -78,7 +78,10 @@ public class PlayerInteraction : MonoBehaviour
         rayOrigin = mainCameraC.transform.position;
         rayDirection = (mpW - mainCameraC.transform.position);
 
-        hitAndInteraction();
+        if (!MenuManager.pause)
+        {
+            hitAndInteraction();
+        }
     }
 
     void CursorSettings()
@@ -111,7 +114,7 @@ public class PlayerInteraction : MonoBehaviour
                 interactable = hitInfo.collider.GetComponent<Interactable>();
             }
 
-            if (Input.GetKeyDown(KeyCode.Mouse1) && !MenuManager.pause) // Observation
+            if (Input.GetKeyDown(KeyCode.Mouse1)) // Observation
             {
                 interactable?.Observation();
                 interactable = null;

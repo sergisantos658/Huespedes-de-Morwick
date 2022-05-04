@@ -14,7 +14,15 @@ public class CameraManager : MonoBehaviour
     public static CameraManager camManager;
     public Camera cam;
 
-    
+#if UNITY_EDITOR
+
+    private void OnValidate()
+    {
+        Awake();
+    }
+
+#endif
+
     void Awake()
     {
         cam = GetComponent<Camera>();
@@ -27,6 +35,7 @@ public class CameraManager : MonoBehaviour
         camManager.lastPosition = camManager.currentPosition;
         camManager.currentPosition = index;
         camManager.cam.transform.position = camManager.camPos[index].position;
+        camManager.cam.transform.rotation = camManager.camPos[index].rotation;
     }
 
     public static void SetCameraPosition(Transform transform)

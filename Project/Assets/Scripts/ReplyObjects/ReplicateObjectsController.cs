@@ -35,9 +35,13 @@ public class ReplicateObjectsController : MonoBehaviour
 
             objects[i].materials = objects[i].prefab.GetComponent<MeshRenderer>().sharedMaterials;
 
-            for (int o = 0; o < objects[i].mesh.subMeshCount; o++)
-            { 
-                Debug.Log("Mesh: " + " " + i + " " + objects[i].mesh + " material " + objects[i].materials[o]);
+            if (EditorApplication.isPlaying == true || Application.isPlaying) { 
+
+                for (int o = 0; o < objects[i].mesh.subMeshCount; o++)
+                { 
+                    Debug.Log("Mesh: " + " " + i + " " + objects[i].mesh + " material " + objects[i].materials[o]);
+                }
+            
             }
 
             for (int o = 0; o < objects[i].settings.Length; o++)
@@ -53,17 +57,17 @@ public class ReplicateObjectsController : MonoBehaviour
 
     void Update()
     {
-        if (EditorApplication.isPlaying == true || Application.isPlaying)
-        {
-            for (int i = 0; i < objects.Length; i++)
-            {
-                for (int o = 0; o < objects[i].mesh.subMeshCount; o++)
-                {
-                    Graphics.DrawMeshInstanced(objects[i].mesh, o, objects[i].materials[o], objects[i].matrix);
+        if (EditorApplication.isPlaying == false || !Application.isPlaying) return;
 
-                }
+        for (int i = 0; i < objects.Length; i++)
+        {
+            for (int o = 0; o < objects[i].mesh.subMeshCount; o++)
+            {
+                Graphics.DrawMeshInstanced(objects[i].mesh, o, objects[i].materials[o], objects[i].matrix);
+
             }
         }
+        
     }
 
     void OnDrawGizmos()
