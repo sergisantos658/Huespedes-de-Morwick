@@ -19,8 +19,8 @@ TagManager:
   - Furniture
   - InteractableLent
   - IgnoreBake
-  - 
-  - 
+  - invisibleWall
+  - invisibleWallCameraMain
   - 
   - 
   - 
