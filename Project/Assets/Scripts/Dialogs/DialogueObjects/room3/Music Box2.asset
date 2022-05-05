@@ -14,25 +14,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Esta caja de musica tiene una pinta curiosa
+    - "Esta caja de m\xFAsica tiene una pinta curiosa."
     - No tiene la llave...
     whoTalk: 0
   - dialogue:
-    - Ju Ju Ju No se si deveria decirte esto, pero asi podremos salir de aqui juntitos
-    - y tener una vida larga y feliz
+    - "Jujuju, no s\xE9 si deber\xEDa decirte esto, pero, as\xED podremos salir de
+      aqu\xED juntitos y tener una vida larga y feliz."
     whoTalk: 1
   - dialogue:
-    - La verdad es que eso no entra en mis planes
+    - La verdad es que eso no entra en mis planes.
     whoTalk: 1
   - dialogue:
-    - 'Morwick tiene la llave '
-    - con la llave de esa caja podras volver al mundo humano
-    - y por fin seremos felices juntos Angel
+    - Morwick tiene la llave.
+    - "Con la llave de esa caja podr\xE1s volver al mundo humano."
+    - "Y por fin seremos felices juntos \xC1ngel."
     whoTalk: 1
   - dialogue:
-    - Ya estamos
-    - No me llamo Angel
-    - ose Angel es nombre de hombre barbudo con aires a jesucristo
-    - Y creo que soy mas guapo
+    - Ya estamos.
+    - "No me llamo \xC1ngel."
+    - "O sea, \xC1ngel es nombre de hombre barbudo con aires a Jesucristo."
+    - "Y creo que soy m\xE1s guapo."
     whoTalk: 1
   responses: []

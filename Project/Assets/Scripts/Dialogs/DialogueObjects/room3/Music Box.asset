@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Parece una caja de musica
-    - Sera por que es una caja de musica
+    - "Parece una caja de m\xFAsica."
+    - "Ser\xE1 porque es una caja de m\xFAsica."
     whoTalk: 0
   responses: []
