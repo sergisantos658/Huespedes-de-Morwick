@@ -25,7 +25,7 @@ Transform:
   m_GameObject: {fileID: 2678727306239475843}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1.03, y: 0.95, z: 1}
   m_Children:
   - {fileID: 8296686746469984768}
   m_Father: {fileID: 0}
@@ -43,9 +43,10 @@ GameObject:
   - component: {fileID: 8703558394453212025}
   - component: {fileID: 4077172378906517964}
   - component: {fileID: 6200662137476766098}
-  - component: {fileID: 6200662137476766102}
   - component: {fileID: 2006790758}
-  m_Layer: 0
+  - component: {fileID: 599906294}
+  - component: {fileID: 599906290}
+  m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -128,32 +129,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5815388445836955371}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.382631, y: 0.14154589, z: 2.3121815}
-  m_Center: {x: -0.64181715, y: 0.035573713, z: 1.1560907}
---- !u!114 &6200662137476766102
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5815388445836955371}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a23d7804d5e3a0d4cb0e72ed2f7c6837, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Locked: 0
-  Remote: 1
-  CanOpen: 1
-  CanClose: 1
-  RedLocked: 0
-  BlueLocked: 0
-  isOpened: 0
-  OpenSpeed: 3
-  useAnimation: 0
+  m_Size: {x: 0.40534586, y: 0.27161777, z: 1.640126}
+  m_Center: {x: -1.1304611, y: -0.029462239, z: 0.8200587}
 --- !u!95 &2006790758
 Animator:
   serializedVersion: 3
@@ -173,3 +153,38 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!208 &599906294
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5815388445836955371}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Shape: 1
+  m_Extents: {x: 0.69100004, y: 0.071, z: 1.156}
+  m_MoveThreshold: 0.1
+  m_Carve: 1
+  m_CarveOnlyStationary: 1
+  m_Center: {x: -0.642, y: 0.036000002, z: 1.156}
+  m_TimeToStationary: 0.5
+--- !u!114 &599906290
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5815388445836955371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 047a82366db90b94fb233ee5a881f249, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdTime: 0
+  interactionType: 0
+  Locked: 0
+  Remote: 0
+  isOpened: 0
+  OpenSpeed: 3
+  useAnimation: 0

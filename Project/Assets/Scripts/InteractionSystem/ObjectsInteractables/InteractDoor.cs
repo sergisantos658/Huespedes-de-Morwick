@@ -11,6 +11,7 @@ public class InteractDoor : Interactable
     public GameObject camera0;
     public GameObject camera1;
     bool finishDialogue;
+    bool scenefinish = false;
 
     private PlayerController player;
     private void OnEnable()
@@ -30,13 +31,9 @@ public class InteractDoor : Interactable
 
     public override void Interact()
     {
-        if(!CauchObjectLent.keyS3)
+        if (!CauchObjectLent.keyS3)
         {
             player.DialogueUI.ShowDialogue(close);
-        }
-        else if(CauchObjectLent.keyS3 && piecesScript.puzzleCompleted)
-        {
-            player.DialogueUI.ShowDialogue(finishscene);
         }
         else
         {
@@ -54,6 +51,20 @@ public class InteractDoor : Interactable
             camera1.SetActive(true);
             player.gameObject.SetActive(false);
             finishDialogue = false;
+        }
+        if (CauchObjectLent.keyS3 && piecesScript.puzzleCompleted)
+        {
+            if(scenefinish == false)
+            {
+                player.DialogueUI.ShowDialogue(finishscene);
+                scenefinish = true;
+            }
+            if(!player.DialogueUI.isOpen)
+            {
+                gameObject.AddComponent<DoorInteraction>();
+                Destroy(this);
+            }
+
         }
     }
     public override void Observation()
