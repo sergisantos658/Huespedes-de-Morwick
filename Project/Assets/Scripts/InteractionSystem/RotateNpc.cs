@@ -11,6 +11,8 @@ public class RotateNpc : MonoBehaviour
     bool interact;
     Quaternion originalRot;
     float temp = 0;
+    public bool buu;
+    private Quaternion rotation;
     private void OnEnable()
     {
         GetComponent<DialogueActivate>().LookPlayer += LookPlayer;
@@ -53,7 +55,15 @@ public class RotateNpc : MonoBehaviour
             if (interact == true)
             {
                 Vector3 relativePos = player.transform.position - transform.position;
-                Quaternion rotation = Quaternion.LookRotation(-relativePos);
+                if(buu == false)
+                {
+                   rotation = Quaternion.LookRotation(relativePos);
+                }
+                else
+                {
+                   rotation = Quaternion.LookRotation(-relativePos);
+                }
+                
                 transform.rotation = Quaternion.Lerp(transform.rotation, rotation, speed * Time.deltaTime);
             }
         }
