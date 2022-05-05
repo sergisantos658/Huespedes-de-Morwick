@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Sala3/Puzzler.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Menus/CreditsScreen.unity
+    guid: a78189d607401ca4ebc9b18e26cd9511
   m_configObjects: {}
