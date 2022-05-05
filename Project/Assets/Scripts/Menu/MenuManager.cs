@@ -8,6 +8,8 @@ using UnityEngine.UI;
 public class MenuManager : MonoBehaviour
 {
 	public static bool pause;
+	public AudioSource NormalMusic;
+	public AudioSource MusicMenu;
 
 	public GameObject mainPauseMenu;
 
@@ -28,6 +30,8 @@ public class MenuManager : MonoBehaviour
 		if (IsPause)
 		{
 			Time.timeScale = 0;
+			NormalMusic.Stop();
+			MusicMenu.Play();
 			pause = true;
 			
 			
@@ -56,6 +60,8 @@ public class MenuManager : MonoBehaviour
 			if(PlanetPuzle.Planets == false)
             {
 				Time.timeScale = 1;
+				NormalMusic.Play();
+				MusicMenu.Stop();
 				pause = false;
 			}
 
