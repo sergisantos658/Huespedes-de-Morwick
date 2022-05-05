@@ -4,17 +4,43 @@ using UnityEngine;
 
 public class InteractKeypad : Interactable
 {
-	public Transform camPos;
+	public Transform camKeypad;
+	public Transform camZone;
+
 	public GameObject activeNum;
+
+	public DialogueObject dialog;
+
 	public bool camOn;
-	void Start()
+
+	private PlayerController playerC;
+
+	private void OnEnable()
 	{
-	   
+		PlayerController.WhoIsPlayerController += WhoIsPlayerController;
 	}
+
+	private void OnDisable()
+	{
+		PlayerController.WhoIsPlayerController -= WhoIsPlayerController;
+	}
+
+	void WhoIsPlayerController(PlayerController target)
+	{
+		playerC = target;
+	}
+
+	void Update()
+    {
+		if (Input.GetKeyDown(KeyCode.Return))
+        {
+			CameraManager.SetCameraPosition(camZone);
+		}
+    }
 
 	public override void Interact()
 	{
-		CameraManager.SetCameraPosition(camPos);
+		CameraManager.SetCameraPosition(camKeypad);
 
 		if(camOn)
         {
@@ -29,7 +55,7 @@ public class InteractKeypad : Interactable
 
 	public override void Observation()
 	{
-
+		playerC.DialogueUI.ShowDialogue(dialog);
 	}
 
 	public void Action()
