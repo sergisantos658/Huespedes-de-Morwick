@@ -16,4 +16,12 @@ public class Credits : MonoBehaviour
     {
         changeToMain.SceneLoad();
     }
+
+    public void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.Escape) || Input.GetKeyDown(KeyCode.Return))
+        {
+            WaitToEnd();
+        }
+    }
 }
