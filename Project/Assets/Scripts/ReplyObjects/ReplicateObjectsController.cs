@@ -63,7 +63,7 @@ public class ReplicateObjectsController : MonoBehaviour
 
     void OnDrawGizmos()
     {
-        if (EditorApplication.isPlaying == false || !Application.isPlaying)
+        if (/*EditorApplication.isPlaying == false ||*/  !Application.isPlaying)
         {
             for (int i = 0; i < objects.Length; i++)
             {
