@@ -4795,8 +4795,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 317796569}
-  m_LocalRotation: {x: -0, y: 0.99067074, z: -0.13627723, w: 0}
-  m_LocalPosition: {x: 11.594513, y: 2.8040571, z: -10.291591}
+  m_LocalRotation: {x: 0.0030962138, y: 0.99009824, z: -0.13858828, w: 0.02211988}
+  m_LocalPosition: {x: 0.09186125, y: 2.43, z: 0.60999966}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -4819,7 +4819,7 @@ MonoBehaviour:
   - {fileID: 1916805678}
   - {fileID: 1984197650}
   - {fileID: 1008469873}
-  currentPosition: 0
+  currentPosition: 2
   lastPosition: 0
   cam: {fileID: 317796571}
 --- !u!4 &326867775 stripped
@@ -9171,8 +9171,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0de5d4156994cf4f9e8cdbbd639f865, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NormalMusic: {fileID: 0}
-  MusicMenu: {fileID: 0}
   mainPauseMenu: {fileID: 178118990}
 --- !u!4 &665137179 stripped
 Transform:
@@ -15027,13 +15025,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1168110561}
-  m_LocalRotation: {x: -0, y: 0.99067074, z: -0.13627723, w: 0}
-  m_LocalPosition: {x: 10.78, y: 0.765, z: 4.078}
+  m_LocalRotation: {x: -0.18053442, y: 0.68197674, z: -0.17957653, w: -0.68561465}
+  m_LocalPosition: {x: 12.368486, y: 0.84094286, z: 0.71859074}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 316820819}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 15.665, y: 180, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 172.879, z: 0}
 --- !u!4 &1168447248 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4161654591382310748, guid: c7af5921109b94141afd37e9fdd75443, type: 3}
@@ -25059,14 +25057,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1936690635}
-  m_LocalRotation: {x: -0.09549047, y: -0, z: -0, w: 0.99543035}
-  m_LocalPosition: {x: 16.03, y: 2.59, z: 2.58}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 16.03, y: 1.53, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1984197650}
   m_Father: {fileID: 206967317}
   m_RootOrder: 2
-  m_LocalEulerAnglesHint: {x: -10.959, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1936690637
 BoxCollider:
   m_ObjectHideFlags: 0
