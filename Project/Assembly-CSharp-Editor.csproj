@@ -58,7 +58,6 @@
   <ItemGroup>
     <Compile Include="Assets\SlimUI\Modern Menu 1\Editor\SlimUIWindow.cs" />
     <Compile Include="Assets\Scripts\Dialogs\Editor\DialogueResponseEventsEditor.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Editor\Misc\PositionAnimatorEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

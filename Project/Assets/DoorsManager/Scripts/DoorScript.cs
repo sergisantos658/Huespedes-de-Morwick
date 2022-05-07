@@ -7,12 +7,6 @@ public class DoorScript : MonoBehaviour
 	public bool Locked = false;
 	public bool Remote = false;
 
-	public bool CanOpen = true;
-	public bool CanClose = true;
-
-	public bool RedLocked = false;
-	public bool BlueLocked = false;
-
 	PlayerInteraction playerInteractive;
 
 	public bool isOpened = false;
@@ -29,12 +23,6 @@ public class DoorScript : MonoBehaviour
 		playerInteractive = FindObjectOfType<PlayerInteraction>();
 	}
 
-	void Update()
-	{
-		if (!Remote)
-			Action();
-	}
-
 	public void Action()
 	{
 		if (!Locked)
@@ -42,5 +30,10 @@ public class DoorScript : MonoBehaviour
 			isOpened = !isOpened;
 			anim.SetBool("opened", isOpened);
 		}
+	}
+
+	public void Lock(bool value)
+    {
+		Locked = value;
 	}
 }

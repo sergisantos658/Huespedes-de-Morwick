@@ -7,6 +7,8 @@ public class InteractKeypad : Interactable
 	public Transform camKeypad;
 	public Transform camZone;
 
+	public Collider colliderNumpad;
+
 	public GameObject activeNum;
 
 	public DialogueObject dialog;
@@ -32,9 +34,15 @@ public class InteractKeypad : Interactable
 
 	void Update()
     {
+		if (camOn)
+		{
+			activeNum.SetActive(true);
+		}
 		if (Input.GetKeyDown(KeyCode.Return))
         {
-			CameraManager.SetCameraPosition(camZone);
+			camOn = false;
+			activeNum.SetActive(false);
+			Return();
 		}
     }
 
@@ -42,15 +50,8 @@ public class InteractKeypad : Interactable
 	{
 		CameraManager.SetCameraPosition(camKeypad);
 
-		if(camOn)
-        {
-			activeNum.SetActive(true);
-		}
-
-		else
-        {
-			activeNum.SetActive(false);
-		}
+		camOn = true;
+		colliderNumpad.enabled = false;
 	}
 
 	public override void Observation()
@@ -58,9 +59,10 @@ public class InteractKeypad : Interactable
 		playerC.DialogueUI.ShowDialogue(dialog);
 	}
 
-	public void Action()
+	public void Return()
 	{
-		
+		colliderNumpad.enabled = true;
+		CameraManager.SetCameraPosition(camZone);
 	}
 	
 }

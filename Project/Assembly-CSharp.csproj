@@ -57,101 +57,72 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\MusicS.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Input\PointerDragController.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\CheckSFXVolume.cs" />
     <Compile Include="Assets\Scripts\Camera\TriggerGetTransformToCamera.cs" />
-    <Compile Include="Assets\Scripts\Keypad\KeyPadController.cs" />
-    <Compile Include="Assets\Scripts\Keypad\KeyController.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Events\EventTriggerBase.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Events\ToggleableEventTrigger.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\OpenChestByKey.cs" />
-    <Compile Include="Assets\Scripts\Keypad\KeyPadRay.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Input\KeyboardPressController.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ResetDemo.cs" />
-    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\NumpadTimer.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Demo\Scripts\Door.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Input\PressControllerBase.cs" />
     <Compile Include="Assets\Scripts\Dialogs\ResponseEvent.cs" />
     <Compile Include="Assets\Scripts\Menu\MenuManager.cs" />
     <Compile Include="Assets\Scripts\Dialogs\ScriptsForObjects\DialogueActivate.cs" />
     <Compile Include="Assets\Scripts\Dialogs\NonUsable\NonDialogueScript.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Behaviours\ClickButton.cs" />
     <Compile Include="Assets\Scripts\Dialogs\DialogueUI.cs" />
     <Compile Include="Assets\Scripts\Dialogs\DialogueObject.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Events\PressableEventTrigger.cs" />
     <Compile Include="Assets\Scripts\Light\ThunderController.cs" />
     <Compile Include="Assets\Scripts\Menu\ButtonFunction.cs" />
     <Compile Include="Assets\Scripts\Light\LensInfoDrawer.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Misc\EmissionController.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\FlexibleUI.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\PlayerInteraction.cs" />
-    <Compile Include="Assets\Scripts\Keypad\Keypad.cs" />
     <Compile Include="Assets\Scripts\Dialogs\DialogueResponseEvents.cs" />
     <Compile Include="Assets\DoorsManager\Scripts\AN_HeroController.cs" />
     <Compile Include="Assets\Scripts\Dialogs\NonUsable\NonDialogueSystem.cs" />
     <Compile Include="Assets\DoorsManager\Scripts\LeverSystem.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Events\DraggableEventTrigger.cs" />
     <Compile Include="Assets\Scripts\Light\DissolvantManager.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Assets\Scripts\CinematicScripts\TimeLineManager.cs" />
     <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\SimpleLocker.cs" />
     <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\ScreenshotMaker.cs" />
+=======
+>>>>>>> Stashed changes
     <Compile Include="Assets\Scripts\InteractionSystem\Interactable.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\InteractDoor.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\DoorInteraction.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ExtraLinks.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Behaviours\ButtonSwitch.cs" />
     <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\PlayerMovement.cs" />
+=======
+>>>>>>> Stashed changes
     <Compile Include="Assets\Scripts\InteractionSystem\RotateNpc.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Events\PositionableEventTrigger.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Interfaces\IDisable.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Demo\Scripts\FPSController.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Interfaces\IToggleable.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Events\ClickableEventTrigger.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\DoorChangeScene.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\GoScene.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\FlexibleUIData.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\CauchObjectLent.cs" />
     <Compile Include="Assets\Scripts\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\LeverInteract.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Interfaces\IClickable.cs" />
     <Compile Include="Assets\Scripts\puzzle\DragAndDrop_.cs" />
+<<<<<<< Updated upstream
     <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\MouseCamLook.cs" />
     <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\NumPad.cs" />
+=======
+>>>>>>> Stashed changes
     <Compile Include="Assets\Scripts\Light\FollowMouse.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Input\PointerPressController.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Input\PointerCircularDragController.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Events\ButtonEventProcessorBase.cs" />
     <Compile Include="Assets\Scripts\Light\SphereMaskController.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Input\DragControllerBase.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraManager.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Interfaces\IDraggable.cs" />
     <Compile Include="Assets\Scripts\Dialogs\ScriptsForObjects\DialogueDefault.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Interfaces\IPressable.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Behaviours\ToggleButton.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\FlexibleUIElement.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\PlanetPuzle.cs" />
     <Compile Include="Assets\Scripts\Menu\MainMenuNew.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\LightSwitch.cs" />
-    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\NumpadText.cs" />
-    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\INumPad.cs" />
-    <Compile Include="Assets\Scripts\Keypad\CanvasInteract.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\ActiveObject.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\InteractKeypad.cs" />
     <Compile Include="Assets\Scripts\puzzle\piecesScript.cs" />
     <Compile Include="Assets\Scripts\Light\MaskObject.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Misc\PositionAnimator.cs" />
-    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\NumpadTextController.cs" />
     <Compile Include="Assets\Scripts\Dialogs\ResponsableHandler.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Behaviours\Lever.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Behaviours\PressButton.cs" />
     <Compile Include="Assets\Scripts\Menu\SFX.cs" />
     <Compile Include="Assets\Scripts\Dialogs\TypewritterEffect.cs" />
     <Compile Include="Assets\Scripts\Light\ActivateLen.cs" />
     <Compile Include="Assets\DoorsManager\Scripts\DoorKey.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Interfaces\IPositionable.cs" />
     <Compile Include="Assets\Scripts\Menu\Credits.cs" />
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Misc\ColorChanger.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\KeyDoorInteraction.cs" />
     <Compile Include="Assets\Scripts\Menu\Exit.cs" />
     <Compile Include="Assets\Scripts\Character\InteractDialogueOrObjects.cs" />
@@ -160,6 +131,9 @@
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\CheckMusicVolume.cs" />
     <Compile Include="Assets\DoorsManager\Scripts\DoorScript.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\LightSwitchText.cs" />
+    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\Keypad.cs" />
+    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\ButtonKeypad.cs" />
+    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\KeypadText.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -179,7 +153,6 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Shaders\Mask.shader" />
-    <None Include="Assets\BigBlit\KeypadsEntryLocks\README_FIRST.txt" />
     <None Include="Assets\Scenes\Sala1\KeypadsEntryLocks\Resources\Shaders\NumpadText.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
