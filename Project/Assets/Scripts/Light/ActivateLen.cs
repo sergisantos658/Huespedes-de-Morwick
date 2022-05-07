@@ -22,12 +22,14 @@ public class ActivateLen : MonoBehaviour
                 player.SetActive(false);
                 ghost.SetActive(false);
                 Len.SetActive(true);
+                Cursor.visible = false;
             }
             else 
             {
+                Cursor.visible = true;
                 player.SetActive(true);
                 ghost.SetActive(true);
-                Len.SetActive(false);
+                Len.SetActive(false); 
             }
         }
     }

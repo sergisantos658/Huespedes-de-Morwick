@@ -39,6 +39,7 @@ public class CauchObjectLent : Interactable
         ActivateLen.Active = false;
         playerC.DialogueUI.ShowDialogue(obs);
         keyS3 = true;
+        Cursor.visible = true;
         gameObject.SetActive(false);
 
     }
