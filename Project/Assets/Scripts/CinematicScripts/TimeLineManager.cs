@@ -12,7 +12,7 @@ public class TimeLineManager : MonoBehaviour
     // NOTE: the Marker # is not necessarily sequential... Marker # may have to do with the order in which they are created
     public PlayableDirector playableDirector;
     bool pause = false;
-    public static bool isPlaying = false;
+    public static bool isPlaying = true;
     // The # of the Marker you want to go to
     public int markerNum;
     
@@ -36,9 +36,10 @@ public class TimeLineManager : MonoBehaviour
         var timelineAsset = playableDirector.playableAsset as TimelineAsset;
         var markers = timelineAsset.markerTrack.GetMarkers().ToArray();
         //Debug.Log(inputSystem.Skip);
-        if(GetComponent<PlayableDirector>().state == PlayState.Playing)
+        if(GetComponent<PlayableDirector>().state != PlayState.Playing)
         {
-            isPlaying = true;
+            Debug.Log("hi");
+            isPlaying = false;
         }
         if (Input.GetKeyDown(KeyCode.Return) && !pause)
         {
