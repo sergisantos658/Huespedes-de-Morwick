@@ -2211,7 +2211,7 @@ GameObject:
   - component: {fileID: 395045914}
   - component: {fileID: 395045913}
   - component: {fileID: 395045912}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Zona1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5176,7 +5176,7 @@ GameObject:
   - component: {fileID: 880095803}
   - component: {fileID: 880095805}
   - component: {fileID: 880095804}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Zona2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7940,7 +7940,7 @@ GameObject:
   - component: {fileID: 908633470}
   - component: {fileID: 908633472}
   - component: {fileID: 908633471}
-  m_Layer: 6
+  m_Layer: 14
   m_Name: Salida
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10374,7 +10374,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1284487388
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11635,7 +11635,7 @@ GameObject:
   - component: {fileID: 1476235932}
   - component: {fileID: 1476235934}
   - component: {fileID: 1476235933}
-  m_Layer: 0
+  m_Layer: 14
   m_Name: Zona3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
