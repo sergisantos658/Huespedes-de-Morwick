@@ -12,6 +12,8 @@ public class PlayerController : MonoBehaviour
 
     private static GameObject _moveToIndicatorInstance;
 
+    public float speedRotate;
+
     [SerializeField]
     private float _feedbackPointerScale = 1f; // Scale the pointer
 
@@ -133,6 +135,9 @@ public class PlayerController : MonoBehaviour
             {
                 NavMesh.SamplePosition(hit.point, out NavMeshHit navHit, 100, -1);
 
+
+
+                
                 if (!navHit.hit)
                     return;
 
@@ -151,6 +156,9 @@ public class PlayerController : MonoBehaviour
                 onlyOnce = true;
 
                 agent.SetPath(path);
+
+
+
             }
 
 

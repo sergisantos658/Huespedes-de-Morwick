@@ -5,240 +5,276 @@ using UnityEngine;
 using UnityEditor;
 public class PlayerInteraction : MonoBehaviour
 {
-    public bool RedKey = false, BlueKey = false;
-    public Transform GoalPosition;
+	public bool RedKey = false, BlueKey = false;
+	public float speedRotate = 1;
+	public Transform GoalPosition;
+	public bool rotate = false;
+	Quaternion rotation;
+	
+	[Header("Ray settings"), Space(5)]
+	#region Data&Settings
 
-    [Header("Ray settings"), Space(5)]
-    #region Data&Settings
+	public float rayDistance; // Set the distance from the ray 
+	public float raysphereRadius; // Set the Bounds of the interaction Raycast
+	public LayerMask interactableLayer; // Set the layerMask to only interact with
+	[SerializeField] private GameObject mainCamera;
+	Camera mainCameraC;
 
-    public float rayDistance; // Set the distance from the ray 
-    public float raysphereRadius; // Set the Bounds of the interaction Raycast
-    public LayerMask interactableLayer; // Set the layerMask to only interact with
-    [SerializeField] private GameObject mainCamera;
-    Camera mainCameraC;
+	float height;
 
-    float height;
+	float holdTime; // the time updating until the holdTime interactable complete
 
-    float holdTime; // the time updating until the holdTime interactable complete
+	float timeToUseAgain = 0f; // Time to interact again after interact with an object
+	bool iInteract = false; // If i interact with an object before or not
 
-    float timeToUseAgain = 0f; // Time to interact again after interact with an object
-    bool iInteract = false; // If i interact with an object before or not
+	bool onlyOnce = false;
+	bool onlyTwice = false;
 
-    bool onlyOnce = false;
-    bool onlyTwice = false;
+	// Info to use mouse on Camera
+	Vector3 mpS;
+	Vector3 mpW;
+	Vector3 rayOrigin;
+	Vector3 rayDirection;
+	float distancePlayer;
 
-    // Info to use mouse on Camera
-    Vector3 mpS;
-    Vector3 mpW;
-    Vector3 rayOrigin;
-    Vector3 rayDirection;
-    float distancePlayer;
+	Interactable interactable;
 
-    Interactable interactable;
+	void IncreaseHoldTime() => holdTime += Time.deltaTime;
+	void ResetHoldTime() => holdTime = 0f;
 
-    void IncreaseHoldTime() => holdTime += Time.deltaTime;
-    void ResetHoldTime() => holdTime = 0f;
+	#endregion
 
-    #endregion
+	[Header("CursorSettings"), Space(5)]
+	#region Cursor
 
-    [Header("CursorSettings"), Space(5)]
-    #region Cursor
+	[SerializeField] private Texture2D interactCursor;
+	[SerializeField] private Texture2D normalCursor;
 
-    [SerializeField] private Texture2D interactCursor;
-    [SerializeField] private Texture2D normalCursor;
+	private Vector2 interactCursorHotspot;
+	private Vector2 normalCursorHotspot;
+	#endregion
 
-    private Vector2 interactCursorHotspot;
-    private Vector2 normalCursorHotspot;
-    #endregion
-
-    [Space(20)]
-    public GameObject interactionHoldGO; // the ui parent to disable when not interacting
-    public UnityEngine.UI.Image interactionHoldProgress; // the progress bar for hold interaction type
+	[Space(20)]
+	public GameObject interactionHoldGO; // the ui parent to disable when not interacting
+	public UnityEngine.UI.Image interactionHoldProgress; // the progress bar for hold interaction type
 
 
-    void Start()
-    {
-        mainCameraC = mainCamera.GetComponent<Camera>();
+	void Start()
+	{
+		mainCameraC = mainCamera.GetComponent<Camera>();
 
-        height = GetComponent<CapsuleCollider>().height;
+		height = GetComponent<CapsuleCollider>().height;
 
-        CursorSettings();
-    }
+		CursorSettings();
+	}
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (gameObject.GetComponent<PlayerController>()) { if (gameObject.GetComponent<PlayerController>().DialogueUI.isOpen) { return; } }
+	// Update is called once per frame
+	IEnumerator RotationChar(Vector3 dir)
+	{
+		Quaternion originalRotation = transform.rotation;
+		Quaternion rotation = Quaternion.LookRotation(dir);
+		float time = Mathf.DeltaAngle(transform.rotation.eulerAngles.y,rotation.eulerAngles.y) / speedRotate;
+		Debug.Log("Estoy corrutinante = " + dir);
 
-        mpS = Input.mousePosition;
-        mpS = new Vector3(mpS.x, mpS.y, mainCameraC.nearClipPlane);
+		//Provisional hasta que se arregle la rotacion
+		//transform.rotation = rotation;
+		transform.forward = dir;
+		/*for (float timer = 0; timer < time; timer += Time.deltaTime)
+		{
+			Debug.Log("fase");
+			transform.rotation = Quaternion.Lerp(originalRotation, rotation, timer / time);
+			yield return new WaitForEndOfFrame();
+		}*/
+		yield return new WaitForEndOfFrame();
+	}
+	void Update()
+	{
+		if (gameObject.GetComponent<PlayerController>()) { if (gameObject.GetComponent<PlayerController>().DialogueUI.isOpen) { return; } }
 
-        mpW = mainCameraC.ScreenToWorldPoint(mpS);
+		mpS = Input.mousePosition;
+		mpS = new Vector3(mpS.x, mpS.y, mainCameraC.nearClipPlane);
 
-        rayOrigin = mainCameraC.transform.position;
-        rayDirection = (mpW - mainCameraC.transform.position);
+		mpW = mainCameraC.ScreenToWorldPoint(mpS);
 
-        if (!MenuManager.pause)
+		rayOrigin = mainCameraC.transform.position;
+		rayDirection = (mpW - mainCameraC.transform.position);
+
+		if(rotate == true)
         {
-            hitAndInteraction();
-        }
-    }
+			
+			Debug.Log("porque");
+		}
+		if (!MenuManager.pause)
+		{
+			hitAndInteraction();
+		}
+	}
 
-    void CursorSettings()
-    {
-        interactCursorHotspot = new Vector2(interactCursor.width / 2 - 2, interactCursor.height / 2 - 6);
-        normalCursorHotspot = new Vector2(normalCursor.width / 2 - 2, normalCursor.height / 2 - 6);
-        Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);
-    }
+	void CursorSettings()
+	{
+		interactCursorHotspot = new Vector2(interactCursor.width / 2 - 2, interactCursor.height / 2 - 6);
+		normalCursorHotspot = new Vector2(normalCursor.width / 2 - 2, normalCursor.height / 2 - 6);
+		Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);
+	}
 
-    void hitAndInteraction()
-    {
-        Ray ray = new Ray(rayOrigin, rayDirection);
+	void hitAndInteraction()
+	{
+		Ray ray = new Ray(rayOrigin, rayDirection);
 
-        RaycastHit hitInfo;
+		RaycastHit hitInfo;
 
-        bool hitSomething = Physics.SphereCast(ray, raysphereRadius, out hitInfo, Mathf.Infinity, interactableLayer);;
+		bool hitSomething = Physics.SphereCast(ray, raysphereRadius, out hitInfo, Mathf.Infinity, interactableLayer);;
 
-        bool interactMouseButton = Input.GetMouseButtonDown(0) ? true : false;
+		bool interactMouseButton = Input.GetMouseButtonDown(0) ? true : false;
 
-        if (hitSomething)
-        {
-            if (!onlyOnce)
-            {
-                Cursor.SetCursor(interactCursor, interactCursorHotspot, CursorMode.ForceSoftware);
-                onlyOnce = true;
-            }
+		if (hitSomething)
+		{
+			if (!onlyOnce)
+			{
+				Cursor.SetCursor(interactCursor, interactCursorHotspot, CursorMode.ForceSoftware);
+				onlyOnce = true;
+			}
 
-            if (interactMouseButton || Input.GetKeyDown(KeyCode.Mouse1))
-            {
-                interactable = hitInfo.collider.GetComponent<Interactable>();
-            }
+			if (interactMouseButton || Input.GetKeyDown(KeyCode.Mouse1))
+			{
+				interactable = hitInfo.collider.GetComponent<Interactable>();
+			}
 
-            if (Input.GetKeyDown(KeyCode.Mouse1)) // Observation
-            {
-                interactable?.Observation();
-                interactable = null;
-            }
+			if (Input.GetKeyDown(KeyCode.Mouse1)) // Observation
+			{
+				interactable?.Observation();
+				interactable = null;
+			}
 
-        }
-        else
-        {
+		}
+		else
+		{
 
-            if (interactMouseButton)
-            {
-                interactable = null;
-                gameObject.GetComponent<InteractDialogueOrObjects>().StopInteract();
-                ResetHoldTime();
+			if (interactMouseButton)
+			{
+				interactable = null;
+				gameObject.GetComponent<InteractDialogueOrObjects>().StopInteract();
+				ResetHoldTime();
 
-            }
+			}
 
-            if (onlyOnce)
-            {
-                Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);
-                gameObject.GetComponent<InteractDialogueOrObjects>().StopInteract();
-                onlyOnce = false;
-            }
-        }
+			if (onlyOnce)
+			{
+				Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);
+				gameObject.GetComponent<InteractDialogueOrObjects>().StopInteract();
+				onlyOnce = false;
+			}
+		}
 
-        if (interactable != null && !iInteract)
-        {
-            Vector3 closePoint = interactable.GetComponent<Collider>().ClosestPoint(gameObject.transform.position);
-            float heightDifference = 0;
+		if (interactable != null && !iInteract)
+		{
+			Vector3 closePoint = interactable.GetComponent<Collider>().ClosestPoint(gameObject.transform.position);
+			float heightDifference = 0;
 
-            if(closePoint.y < gameObject.transform.position.y)
-            {
-                heightDifference = closePoint.y - gameObject.transform.position.y;
-            }
-            else if(closePoint.y > gameObject.transform.position.y + height)
-            {
-                heightDifference = closePoint.y - (gameObject.transform.position.y + height);
-            }
+			if(closePoint.y < gameObject.transform.position.y)
+			{
+				heightDifference = closePoint.y - gameObject.transform.position.y;
+			}
+			else if(closePoint.y > gameObject.transform.position.y + height)
+			{
+				heightDifference = closePoint.y - (gameObject.transform.position.y + height);
+			}
 
-            distancePlayer = Vector3.Distance(new Vector3(closePoint.x, heightDifference, closePoint.z), transform.position - Vector3.up * transform.position.y);
+			distancePlayer = Vector3.Distance(new Vector3(closePoint.x, heightDifference, closePoint.z), transform.position - Vector3.up * transform.position.y);
 
-            bool closeEnought = distancePlayer < rayDistance;
+			bool closeEnought = distancePlayer < rayDistance;
 
-            interactionHoldGO.SetActive(interactable.interactionType == Interactable.InteractionType.Hold);
+			interactionHoldGO.SetActive(interactable.interactionType == Interactable.InteractionType.Hold);
 
-            if (closeEnought)
-            {
-                gameObject.GetComponent<InteractDialogueOrObjects>().Interacting();
-                HandleInteraction(interactable);
-                onlyTwice = true;
-            }
-            else
-            {
-                if (onlyTwice)
-                {
-                    gameObject.GetComponent<InteractDialogueOrObjects>().StopInteract();
-                    ResetHoldTime();
-                    onlyTwice = false;
-                }
-                
-            }
+			if (closeEnought)
+			{
+				//Llamar al IEnumerator aqui  con esto hitInfo.transform.position - transform.position;
+				//StartCoroutine(RotationChar(hitInfo.transform.position - transform.position));
+				Vector3 relativePos = hitInfo.transform.position - transform.position;
+				rotation = Quaternion.LookRotation(relativePos);
+				transform.rotation = rotation;
+				rotate = true;
 
-        }
-        else
-        {
-            gameObject.GetComponent<InteractDialogueOrObjects>().StopInteract();
-        }
+				
+				
 
-        if (timeToUseAgain <= 0)
-            iInteract = false;
-        else
-            timeToUseAgain -= Time.deltaTime;
+				gameObject.GetComponent<InteractDialogueOrObjects>().Interacting();
+				HandleInteraction(interactable);
+				onlyTwice = true;
+			}
+			else
+			{
+				if (onlyTwice)
+				{
+					gameObject.GetComponent<InteractDialogueOrObjects>().StopInteract();
+					ResetHoldTime();
+					onlyTwice = false;
+				}
+				
+			}
 
-        // Line from Player To HitPoint
-        Debug.DrawLine(gameObject.transform.position, hitInfo.point, Color.green);
+		}
+		else
+		{
+			gameObject.GetComponent<InteractDialogueOrObjects>().StopInteract();
+		}
 
-        // Line from Camera To World
-        Debug.DrawLine(ray.origin, ray.origin + ray.direction * (hitSomething ? distancePlayer : 100), hitSomething ? Color.green : Color.red);
-    }
+		if (timeToUseAgain <= 0)
+			iInteract = false;
+		else
+			timeToUseAgain -= Time.deltaTime;
 
-    void HandleInteraction(Interactable interactable)
-    {
-        //KeyCode key = KeyCode.Mouse0;
+		// Line from Player To HitPoint
+		Debug.DrawLine(gameObject.transform.position, hitInfo.point, Color.green);
 
-        switch (interactable.interactionType)
-        {
-            case Interactable.InteractionType.Click:
-                // interaction type is click and we clicked the button -> interact
-                
-                interactable.Interact();
-                    
-                timeToUseAgain = 1.3f;
-                iInteract = true;
+		// Line from Camera To World
+		Debug.DrawLine(ray.origin, ray.origin + ray.direction * (hitSomething ? distancePlayer : 100), hitSomething ? Color.green : Color.red);
+	}
 
-                this.interactable = null;
+	void HandleInteraction(Interactable interactable)
+	{
+		//KeyCode key = KeyCode.Mouse0;
+
+		switch (interactable.interactionType)
+		{
+			case Interactable.InteractionType.Click:
+				// interaction type is click and we clicked the button -> interact
+				
+				interactable.Interact();
+					
+				timeToUseAgain = 1.3f;
+				iInteract = true;
+
+				this.interactable = null;
 
 
-                break;
-            case Interactable.InteractionType.Hold:
-                
-                // we are holding the key, increase the timer until we reach the max
-                IncreaseHoldTime();
-                if (holdTime >= interactable.GetHoldTime())
-                {
-                    interactable.Interact();
-                    ResetHoldTime();
+				break;
+			case Interactable.InteractionType.Hold:
+				
+				// we are holding the key, increase the timer until we reach the max
+				IncreaseHoldTime();
+				if (holdTime >= interactable.GetHoldTime())
+				{
+					interactable.Interact();
+					ResetHoldTime();
 
-                    timeToUseAgain = 1.3f; // The time until interact with an object again
-                    iInteract = true;
+					timeToUseAgain = 1.3f; // The time until interact with an object again
+					iInteract = true;
 
-                    this.interactable = null;
-                }
+					this.interactable = null;
+				}
 
-                interactionHoldProgress.fillAmount = holdTime / interactable.GetHoldTime();
-                break;
-            // here is started code for your custom interaction :)
-            case Interactable.InteractionType.Minigame:
-                // here you make ur minigame appear
-                break;
+				interactionHoldProgress.fillAmount = holdTime / interactable.GetHoldTime();
+				break;
+			// here is started code for your custom interaction :)
+			case Interactable.InteractionType.Minigame:
+				// here you make ur minigame appear
+				break;
 
-            // helpful error for us in the future
-            default:
-                throw new System.Exception("Unsupported type of interactable.");
-        }
-    }
+			// helpful error for us in the future
+			default:
+				throw new System.Exception("Unsupported type of interactable.");
+		}
+	}
 
 }

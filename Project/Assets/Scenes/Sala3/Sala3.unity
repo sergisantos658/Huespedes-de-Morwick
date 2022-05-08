@@ -4737,6 +4737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7e46b562803fb4cb57c03e72cd1e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedRotate: 0
   _feedbackPointerScale: 8
   _moveToIndicator: {fileID: 3750812764573365532, guid: c3b6040f102868242836d96af1ce7946, type: 3}
   mainCamera: {fileID: 1360471544}
@@ -4761,7 +4762,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RedKey: 0
   BlueKey: 0
+  speedRotate: 1
   GoalPosition: {fileID: 0}
+  rotate: 0
   rayDistance: 1
   raysphereRadius: 0.25
   interactableLayer:
@@ -4976,8 +4979,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   holdTime: 0
   interactionType: 0
-  dialogueObject: {fileID: 11400000, guid: 176de6669f0f34342b3a1a1a47fef602, type: 2}
-  o_DialogueObject: {fileID: 0}
+  dialogueObject: {fileID: 0}
+  o_DialogueObject: {fileID: 11400000, guid: 176de6669f0f34342b3a1a1a47fef602, type: 2}
 --- !u!135 &239652084
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -6301,7 +6304,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RedKey: 0
   BlueKey: 0
+  speedRotate: 1
   GoalPosition: {fileID: 0}
+  rotate: 0
   rayDistance: 30
   raysphereRadius: 0.25
   interactableLayer:
@@ -14020,6 +14025,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c7e46b562803fb4cb57c03e72cd1e37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  speedRotate: 1
   _feedbackPointerScale: 8
   _moveToIndicator: {fileID: 3750812764573365532, guid: c3b6040f102868242836d96af1ce7946, type: 3}
   mainCamera: {fileID: 1360471544}
@@ -14044,7 +14050,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   RedKey: 0
   BlueKey: 0
+  speedRotate: 1
   GoalPosition: {fileID: 0}
+  rotate: 0
   rayDistance: 1.5
   raysphereRadius: 0.25
   interactableLayer:
