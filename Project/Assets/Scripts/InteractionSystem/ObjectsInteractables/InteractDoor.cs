@@ -54,16 +54,10 @@ public class InteractDoor : Interactable
         }
         if (CauchObjectLent.keyS3 && piecesScript.puzzleCompleted)
         {
-            if(scenefinish == false)
-            {
-                player.DialogueUI.ShowDialogue(finishscene);
-                scenefinish = true;
-            }
-            if(!player.DialogueUI.isOpen)
-            {
                 gameObject.AddComponent<DoorInteraction>();
+                gameObject.GetComponent<DoorInteraction>().openDialgue = finishscene;
                 Destroy(this);
-            }
+            
 
         }
     }

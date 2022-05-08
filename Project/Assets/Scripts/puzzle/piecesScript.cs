@@ -10,7 +10,7 @@ public class piecesScript : MonoBehaviour
     public bool Selected;
     public DragAndDrop_ Drag;
     public ChangeScene change;
-    public static bool puzzleCompleted;
+    public static bool puzzleCompleted = true;
     private static int pieceCorrect;
 
 

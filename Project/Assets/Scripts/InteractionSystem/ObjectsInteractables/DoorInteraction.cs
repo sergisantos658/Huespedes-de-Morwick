@@ -9,6 +9,11 @@ public class DoorInteraction : Interactable
 
     public bool isOpened = false;
 
+    public DialogueObject openDialgue;
+    public DialogueObject closeDialgue;
+
+    private PlayerController playerC;
+
     public float OpenSpeed = 3f;
 
     Animator anim;
@@ -19,6 +24,20 @@ public class DoorInteraction : Interactable
     {
         anim = GetComponent<Animator>();
     }
+    private void OnEnable()
+    {
+        PlayerController.WhoIsPlayerController += WhoIsPlayerController;
+    }
+
+    private void OnDisable()
+    {
+        PlayerController.WhoIsPlayerController -= WhoIsPlayerController;
+    }
+
+    void WhoIsPlayerController(PlayerController target)
+    {
+        playerC = target;
+    }
 
     public override void Interact()
     {
@@ -28,7 +47,14 @@ public class DoorInteraction : Interactable
 
     public override void Observation()
     {
-       
+       if(Locked == true && closeDialgue != null)
+        {
+            playerC.DialogueUI.ShowDialogue(closeDialgue);
+        }
+       else if(Locked == false && openDialgue != null)
+        {
+            playerC.DialogueUI.ShowDialogue(openDialgue);
+        }
     }
 
     public void Action()
