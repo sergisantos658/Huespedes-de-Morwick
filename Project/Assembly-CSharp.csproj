@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -53,9 +53,6 @@
     <UnityVersion>2021.1.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\MusicS.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\CheckSFXVolume.cs" />
     <Compile Include="Assets\Scripts\Camera\TriggerGetTransformToCamera.cs" />
@@ -77,21 +74,10 @@
     <Compile Include="Assets\Scripts\Dialogs\NonUsable\NonDialogueSystem.cs" />
     <Compile Include="Assets\DoorsManager\Scripts\LeverSystem.cs" />
     <Compile Include="Assets\Scripts\Light\DissolvantManager.cs" />
-<<<<<<< Updated upstream
-    <Compile Include="Assets\Scripts\CinematicScripts\TimeLineManager.cs" />
-    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\SimpleLocker.cs" />
-    <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\ScreenshotMaker.cs" />
-=======
->>>>>>> Stashed changes
     <Compile Include="Assets\Scripts\InteractionSystem\Interactable.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\InteractDoor.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\DoorInteraction.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ExtraLinks.cs" />
-<<<<<<< Updated upstream
-    <Compile Include="Assets\BigBlit\ActivePack\Scripts\Runtime\Behaviours\ButtonSwitch.cs" />
-    <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\PlayerMovement.cs" />
-=======
->>>>>>> Stashed changes
     <Compile Include="Assets\Scripts\InteractionSystem\RotateNpc.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\DoorChangeScene.cs" />
@@ -101,11 +87,6 @@
     <Compile Include="Assets\Scripts\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\LeverInteract.cs" />
     <Compile Include="Assets\Scripts\puzzle\DragAndDrop_.cs" />
-<<<<<<< Updated upstream
-    <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\MouseCamLook.cs" />
-    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\NumPad.cs" />
-=======
->>>>>>> Stashed changes
     <Compile Include="Assets\Scripts\Light\FollowMouse.cs" />
     <Compile Include="Assets\Scripts\Light\SphereMaskController.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraManager.cs" />
@@ -134,6 +115,10 @@
     <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\Keypad.cs" />
     <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\ButtonKeypad.cs" />
     <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\KeypadText.cs" />
+    <Compile Include="Assets\Scripts\CinematicScripts\TimeLineManager.cs" />
+    <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\PlayerMovement.cs" />
+    <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\ScreenshotMaker.cs" />
+    <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\MouseCamLook.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
