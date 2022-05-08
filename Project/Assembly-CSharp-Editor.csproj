@@ -55,6 +55,14 @@
   <ItemGroup>
     <Compile Include="Assets\SlimUI\Modern Menu 1\Editor\SlimUIWindow.cs" />
     <Compile Include="Assets\Scripts\Dialogs\Editor\DialogueResponseEventsEditor.cs" />
+    <Compile Include="Assets\InventoryMaster\Editor\InventoryDesignEditor.cs" />
+    <Compile Include="Assets\InventoryMaster\Editor\EquipmentSystemEditor.cs" />
+    <Compile Include="Assets\InventoryMaster\Editor\IM_Manager.cs" />
+    <Compile Include="Assets\InventoryMaster\Editor\HotbarEditor.cs" />
+    <Compile Include="Assets\InventoryMaster\Editor\CraftSystemEditor.cs" />
+    <Compile Include="Assets\InventoryMaster\Editor\StorageInventoryEditor.cs" />
+    <Compile Include="Assets\InventoryMaster\Editor\InventoryEditor.cs" />
+    <Compile Include="Assets\InventoryMaster\Editor\TooltipEditor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

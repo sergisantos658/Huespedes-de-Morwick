@@ -89,7 +89,6 @@
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\CauchObjectLent.cs" />
     <Compile Include="Assets\Scripts\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\LeverInteract.cs" />
-    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\Keypad.cs" />
     <Compile Include="Assets\Scripts\puzzle\DragAndDrop_.cs" />
     <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\MouseCamLook.cs" />
     <Compile Include="Assets\Scripts\Light\FollowMouse.cs" />
@@ -98,7 +97,6 @@
     <Compile Include="Assets\Scripts\Dialogs\ScriptsForObjects\DialogueDefault.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\FlexibleUIElement.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\PlanetPuzle.cs" />
-    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\KeypadText.cs" />
     <Compile Include="Assets\Scripts\Menu\MainMenuNew.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\LightSwitch.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\InteractKeypad.cs" />
@@ -116,9 +114,11 @@
     <Compile Include="Assets\Scripts\Dialogs\Response.cs" />
     <Compile Include="Assets\Scripts\ReplyObjects\ReplicateObjectsController.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\CheckMusicVolume.cs" />
-    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\ButtonKeypad.cs" />
     <Compile Include="Assets\DoorsManager\Scripts\DoorScript.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\LightSwitchText.cs" />
+    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\ButtonKeypad.cs" />
+    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\Keypad.cs" />
+    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\KeypadText.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\PickValve.cs" />
   </ItemGroup>
   <ItemGroup>
