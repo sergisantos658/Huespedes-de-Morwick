@@ -17,6 +17,9 @@ public class ThunderController : MonoBehaviour
     private int thunderCount = 0;
     bool IsThunder = false;
 
+    public float Intensity => intensity;
+    public Light ThunderLight => thunderLight;
+
     void Start()
     {
         timerToThunder = thunderTimer;
@@ -32,7 +35,9 @@ public class ThunderController : MonoBehaviour
             timer -= Time.deltaTime * intensity;
             thunderLight.intensity = timer;
 
-            if(thunderCount == 0 && thunderLight.intensity <= umbral+0.1f) // Make thunder Twice
+            Debug.Log("intensity " + (thunderLight.intensity / intensity));
+
+            if(thunderCount == 0 && thunderLight.intensity <= umbral) // Make thunder Twice
             {
                 IsThunder = false;
                 thunderCount++;

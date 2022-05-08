@@ -14,7 +14,15 @@ public abstract class Interactable : MonoBehaviour
 
     [SerializeField] private float holdTime;
 
+    [SerializeField] private bool interactOpction;
+
+    [SerializeField] private bool observationOpction;
+
     public InteractionType interactionType;
+
+    public bool InteractOpction => interactOpction;
+
+    public bool ObservationOpction => observationOpction;
 
     public abstract void Interact();
 

@@ -105,7 +105,7 @@ public class FreeMoveHandleExampleEditor : Editor
 
     void OnSceneGUI()
     {
-        Debug.Log("a " + Event.current.keyCode);
+        //Debug.Log("a " + Event.current.keyCode);
         if ((EditorApplication.isPlaying == false || !Application.isPlaying))
         {
 

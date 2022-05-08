@@ -12,8 +12,6 @@ public class PlayerController : MonoBehaviour
 
     private static GameObject _moveToIndicatorInstance;
 
-    public float speedRotate;
-
     [SerializeField]
     private float _feedbackPointerScale = 1f; // Scale the pointer
 
@@ -189,6 +187,8 @@ public class PlayerController : MonoBehaviour
     {
         // Animation to move
         animator?.SetFloat("velocity", Mathf.Abs(agent.velocity.x) + Mathf.Abs(agent.velocity.z));
+
+        animator?.SetBool("talking", dialogueUI.isOpen ? true : false);
     }
 
     void StopInteractingDialogue()
