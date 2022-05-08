@@ -190,10 +190,10 @@ public class PlayerInteraction : MonoBehaviour
 			{
 				//Llamar al IEnumerator aqui  con esto hitInfo.transform.position - transform.position;
 				//StartCoroutine(RotationChar(hitInfo.transform.position - transform.position));
-				Vector3 relativePos = hitInfo.transform.position - transform.position;
+				/*Vector3 relativePos = hitInfo.transform.position - transform.position;
 				rotation = Quaternion.LookRotation(relativePos);
 				transform.rotation = rotation;
-				rotate = true;
+				rotate = true;*/
 
 				
 				
