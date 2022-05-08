@@ -48,6 +48,8 @@ public class PlayerInteraction : MonoBehaviour
 	#region Cursor
 
 	[SerializeField] private Texture2D interactCursor;
+	[SerializeField] private Texture2D ObservationCursor;
+	[SerializeField] private Texture2D inteAndObservCursor;
 	[SerializeField] private Texture2D normalCursor;
 
 	private Vector2 interactCursorHotspot;
@@ -131,7 +133,20 @@ public class PlayerInteraction : MonoBehaviour
 		{
 			if (!onlyOnce)
 			{
-				Cursor.SetCursor(interactCursor, interactCursorHotspot, CursorMode.ForceSoftware);
+				Interactable interactableDinamic = hitInfo.collider.GetComponent<Interactable>();
+				if (interactableDinamic.InteractOpction && interactableDinamic.ObservationOpction)
+                {
+					Cursor.SetCursor(inteAndObservCursor, interactCursorHotspot, CursorMode.ForceSoftware);
+                }
+				else if (interactableDinamic.InteractOpction)
+                {
+					Cursor.SetCursor(interactCursor, interactCursorHotspot, CursorMode.ForceSoftware);
+				}
+				else if (interactableDinamic.ObservationOpction)
+                {
+					Cursor.SetCursor(ObservationCursor, interactCursorHotspot, CursorMode.ForceSoftware);
+				}
+
 				onlyOnce = true;
 			}
 
