@@ -53,6 +53,7 @@ public class DoorInteraction : Interactable
         }
        else if(Locked == false && openDialgue != null)
         {
+            Debug.Log(openDialgue);
             playerC.DialogueUI.ShowDialogue(openDialgue);
         }
     }
