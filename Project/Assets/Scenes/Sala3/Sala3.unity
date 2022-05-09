@@ -182,7 +182,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: a60fc0df69eed7b4da00fe547fab108a, type: 3}
+  m_Texture: {fileID: 2800000, guid: 0effe455b8b45a543a43ce49ea980d25, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -2320,7 +2320,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 11.6, y: -46.800003}
+  m_AnchoredPosition: {x: 11.6, y: -53.30001}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &31814753
@@ -3989,7 +3989,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 16.7, y: -50.9}
+  m_AnchoredPosition: {x: 16.7, y: -57.40001}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &163986382
@@ -4304,6 +4304,19 @@ MonoBehaviour:
   interactionType: 0
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: 1839d820aaa01cf4e952fd0b8566c84e, type: 2}
+--- !u!65 &177504257
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 177504255}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.6446815, y: 2.328848, z: 0.5685753}
+  m_Center: {x: 0.17485899, y: 1.1524997, z: -0.0003632307}
 --- !u!1 &205967939
 GameObject:
   m_ObjectHideFlags: 0
@@ -5047,8 +5060,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdTime: 0
-  interactOpction: 1
-  observationOpction: 0
+  interactOpction: 0
+  observationOpction: 1
   interactionType: 0
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: 176de6669f0f34342b3a1a1a47fef602, type: 2}
@@ -7821,7 +7834,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: af9ad4efbe2b56b4ea579747febb6008, type: 3}
+  m_Texture: {fileID: 2800000, guid: 74b8ce24ddc8ce741996bf1d4d9adb86, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -8343,7 +8356,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 755d8470d546d514cad67c132349a5bd, type: 3}
+  m_Texture: {fileID: 2800000, guid: 8fc702963cca7dd428bc59d0fc8b7775, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -8641,6 +8654,10 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 7432622557476056707, guid: cb9bc6b96d830b64293c9fdff99b1743, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7432622557476287136, guid: cb9bc6b96d830b64293c9fdff99b1743, type: 3}
       propertyPath: m_RootOrder
       value: 11
@@ -8697,7 +8714,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7432622557476056707, guid: cb9bc6b96d830b64293c9fdff99b1743, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cb9bc6b96d830b64293c9fdff99b1743, type: 3}
 --- !u!1001 &526182774
 PrefabInstance:
@@ -8830,6 +8848,10 @@ PrefabInstance:
     - target: {fileID: 2317576605586580694, guid: 5adaedd4c0081614da171fecdf6bbd37, type: 3}
       propertyPath: m_Name
       value: Barrel_Closed (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2317576605586580694, guid: 5adaedd4c0081614da171fecdf6bbd37, type: 3}
+      propertyPath: m_Layer
+      value: 15
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5adaedd4c0081614da171fecdf6bbd37, type: 3}
@@ -11161,7 +11183,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 12.6, y: -50.9}
+  m_AnchoredPosition: {x: 12.6, y: -57.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &791104023
@@ -13241,7 +13263,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 012bcdce278bc0140a9dcab1773a48c9, type: 3}
+  m_Texture: {fileID: 2800000, guid: 6ef72aa9893031543913153d524f4441, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -14194,7 +14216,7 @@ MonoBehaviour:
   raysphereRadius: 0.25
   interactableLayer:
     serializedVersion: 2
-    m_Bits: 64
+    m_Bits: 32832
   mainCamera: {fileID: 1360471544}
   interactCursor: {fileID: 2800000, guid: 7ec1dbfa4ac227442ae8e6e238233e41, type: 3}
   ObservationCursor: {fileID: 2800000, guid: 9cda48e378d35dc4ab62c87729c084dd, type: 3}
@@ -20001,8 +20023,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.19916013, y: 0.15482384, z: 0.17273585}
-  m_Center: {x: 0.03622302, y: 0.075431615, z: -0.011259735}
+  m_Size: {x: 0.1684646, y: 0.057480156, z: 0.14953196}
+  m_Center: {x: 0.051570803, y: 0.026759773, z: -0.022861678}
 --- !u!1001 &1545151650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -20737,7 +20759,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 15.8, y: -50.899994}
+  m_AnchoredPosition: {x: 15.8, y: -57.4}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1619532252
@@ -22946,8 +22968,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.586103, y: 2.3582642, z: 0.5524035}
-  m_Center: {x: -1.2178301e-14, y: -0.9037641, z: 0.2762018}
+  m_Size: {x: 1.586103, y: 0.68700135, z: 0.5524035}
+  m_Center: {x: -1.2178301e-14, y: -0.06813246, z: 0.2762018}
 --- !u!1001 &1721558672
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26162,6 +26184,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Dungeon_Passage
       objectReference: {fileID: 0}
+    - target: {fileID: 370700119055577111, guid: b89b3b3efb3070240952a3335d270247, type: 3}
+      propertyPath: m_Layer
+      value: 15
+      objectReference: {fileID: 0}
     - target: {fileID: 370700119056002103, guid: b89b3b3efb3070240952a3335d270247, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -26455,8 +26481,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1.409269, z: 0.75432914}
-  m_Center: {x: -1.9444527e-10, y: 0.20463449, z: -0.12283561}
+  m_Size: {x: 1, y: 0.9516274, z: 0.7148221}
+  m_Center: {x: -1.4926638e-10, y: 0.4334553, z: -0.14258496}
 --- !u!1 &1933654696 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4179086729700039233, guid: ce285a7430946e24ca0a9218777a7805, type: 3}
@@ -27413,10 +27439,10 @@ CapsuleCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.4593948
+  m_Radius: 0.2648294
   m_Height: 1.8528783
   m_Direction: 1
-  m_Center: {x: 0, y: 0.92760503, z: 0.07569134}
+  m_Center: {x: 0, y: 0.92760503, z: -0.011428595}
 --- !u!54 &2015093866
 Rigidbody:
   m_ObjectHideFlags: 0

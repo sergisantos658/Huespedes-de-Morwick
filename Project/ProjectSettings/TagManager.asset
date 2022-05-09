@@ -6,6 +6,10 @@ TagManager:
   tags:
   - Interact
   - Puzzle
+  - Canvas
+  - Hotbar
+  - Slots
+  - Slot
   layers:
   - Default
   - TransparentFX
@@ -22,7 +26,7 @@ TagManager:
   - invisibleWall
   - invisibleWallCameraMain
   - CameraZones
-  - 
+  - WallRaycast
   - 
   - 
   - 
