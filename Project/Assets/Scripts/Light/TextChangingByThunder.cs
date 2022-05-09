@@ -24,6 +24,11 @@ public class TextChangingByThunder : MonoBehaviour
                 (thunderC.ThunderLight.intensity / thunderC.Intensity));
 
         }
+        else
+        {
+            m_text.color = new Color(m_text.color.r, m_text.color.g, m_text.color.b,
+                0);
+        }
 
 
     }
