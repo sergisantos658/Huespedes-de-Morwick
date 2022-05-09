@@ -35,8 +35,6 @@ public class ThunderController : MonoBehaviour
             timer -= Time.deltaTime * intensity;
             thunderLight.intensity = timer;
 
-            Debug.Log("intensity " + (thunderLight.intensity / intensity));
-
             if(thunderCount == 0 && thunderLight.intensity <= umbral) // Make thunder Twice
             {
                 IsThunder = false;

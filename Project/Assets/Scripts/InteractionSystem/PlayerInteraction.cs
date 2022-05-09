@@ -131,24 +131,21 @@ public class PlayerInteraction : MonoBehaviour
 
 		if (hitSomething)
 		{
-			if (!onlyOnce)
-			{
-				Interactable interactableDinamic = hitInfo.collider.GetComponent<Interactable>();
-				if (interactableDinamic.InteractOpction && interactableDinamic.ObservationOpction)
-                {
-					Cursor.SetCursor(inteAndObservCursor, interactCursorHotspot, CursorMode.ForceSoftware);
-                }
-				else if (interactableDinamic.InteractOpction)
-                {
-					Cursor.SetCursor(interactCursor, interactCursorHotspot, CursorMode.ForceSoftware);
-				}
-				else if (interactableDinamic.ObservationOpction)
-                {
-					Cursor.SetCursor(ObservationCursor, interactCursorHotspot, CursorMode.ForceSoftware);
-				}
-
-				onlyOnce = true;
+			Interactable interactableDinamic = hitInfo.collider.GetComponent<Interactable>();
+			if (interactableDinamic.InteractOpction && interactableDinamic.ObservationOpction)
+            {
+				Cursor.SetCursor(inteAndObservCursor, interactCursorHotspot, CursorMode.ForceSoftware);
+            }
+			else if (interactableDinamic.InteractOpction)
+            {
+				Cursor.SetCursor(interactCursor, interactCursorHotspot, CursorMode.ForceSoftware);
 			}
+			else if (interactableDinamic.ObservationOpction)
+            {
+				Cursor.SetCursor(ObservationCursor, interactCursorHotspot, CursorMode.ForceSoftware);
+			}
+
+			onlyOnce = true;
 
 			if (interactMouseButton || Input.GetKeyDown(KeyCode.Mouse1))
 			{
