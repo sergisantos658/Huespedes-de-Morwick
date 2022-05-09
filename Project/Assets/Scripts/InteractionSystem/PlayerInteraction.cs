@@ -178,7 +178,7 @@ public class PlayerInteraction : MonoBehaviour
 			}
 		}
 
-		if (interactable != null && !iInteract)
+		if (interactable != null && !iInteract && interactable.InteractOpction)
 		{
 			Vector3 closePoint = interactable.GetComponent<Collider>().ClosestPoint(gameObject.transform.position);
 			float heightDifference = 0;
