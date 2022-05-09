@@ -38,6 +38,7 @@ public class PlayerInteraction : MonoBehaviour
 	float distancePlayer;
 
 	Interactable interactable;
+	Interactable interactableDinamic;
 
 	void IncreaseHoldTime() => holdTime += Time.deltaTime;
 	void ResetHoldTime() => holdTime = 0f;
@@ -131,19 +132,31 @@ public class PlayerInteraction : MonoBehaviour
 
 		if (hitSomething)
 		{
-			Interactable interactableDinamic = hitInfo.collider.GetComponent<Interactable>();
-			if (interactableDinamic.InteractOpction && interactableDinamic.ObservationOpction)
+			
+			if(hitInfo.collider.GetComponent<Interactable>() != interactableDinamic)
             {
-				Cursor.SetCursor(inteAndObservCursor, interactCursorHotspot, CursorMode.ForceSoftware);
+				interactableDinamic = hitInfo.collider.GetComponent<Interactable>();
+
+				if (interactableDinamic)
+				{
+					if (interactableDinamic.InteractOpction && interactableDinamic.ObservationOpction)
+					{
+						Cursor.SetCursor(inteAndObservCursor, interactCursorHotspot, CursorMode.ForceSoftware);
+					}
+					else if (interactableDinamic.InteractOpction)
+					{
+						Cursor.SetCursor(interactCursor, interactCursorHotspot, CursorMode.ForceSoftware);
+					}
+					else if (interactableDinamic.ObservationOpction)
+					{
+						Cursor.SetCursor(ObservationCursor, interactCursorHotspot, CursorMode.ForceSoftware);
+				}
+					}
+				else
+				{
+					Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);
+				}
             }
-			else if (interactableDinamic.InteractOpction)
-            {
-				Cursor.SetCursor(interactCursor, interactCursorHotspot, CursorMode.ForceSoftware);
-			}
-			else if (interactableDinamic.ObservationOpction)
-            {
-				Cursor.SetCursor(ObservationCursor, interactCursorHotspot, CursorMode.ForceSoftware);
-			}
 
 			onlyOnce = true;
 

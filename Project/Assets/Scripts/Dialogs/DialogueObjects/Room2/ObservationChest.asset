@@ -14,7 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Es un cofre.
-    - "Esta abierto, crei que necesitaria una llave.\nExtra\xF1o."
+    - Es un cofre con cerradura.
+    - "Cuenta la leyenda que si te encuentras con un cofre cerrado un poder oculto
+      aguarda y una espada sagrada oculta aparecera... pero.\t"
+    - Esta cerrado, parece que necesitare primero una llave para saber que tiene
+      dentro.
     whoTalk: 0
   responses: []
