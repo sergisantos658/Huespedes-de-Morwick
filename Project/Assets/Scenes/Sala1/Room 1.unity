@@ -2376,28 +2376,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 591bed4d8c69b824c81e7261d794d9f5, type: 3}
---- !u!1 &389558897 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5815388445836955371, guid: 4ecf6aa2a2182cf4c843c0d565e94cd0, type: 3}
+--- !u!114 &389558899 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 389558899, guid: 4ecf6aa2a2182cf4c843c0d565e94cd0, type: 3}
   m_PrefabInstance: {fileID: 1986101687}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &389558899
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 389558897}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a23d7804d5e3a0d4cb0e72ed2f7c6837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Locked: 1
-  Remote: 0
-  isOpened: 0
-  OpenSpeed: 3
-  useAnimation: 0
 --- !u!1 &395045911
 GameObject:
   m_ObjectHideFlags: 0
@@ -8346,7 +8335,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 908633469}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.729, y: -1.45, z: -1.363}
+  m_LocalPosition: {x: 4.729, y: -1.45, z: -1.075}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 1020137083}
@@ -8365,7 +8354,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdTime: 0
-  interactOpction: 0
+  interactOpction: 1
   observationOpction: 0
   interactionType: 0
   NotCompleted: {fileID: 0}
@@ -12291,7 +12280,7 @@ MonoBehaviour:
   speedRotate: 1
   GoalPosition: {fileID: 0}
   rotate: 0
-  rayDistance: 1.2
+  rayDistance: 1.3
   raysphereRadius: 0.25
   interactableLayer:
     serializedVersion: 2
@@ -16522,8 +16511,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Door_Prefab_Opened
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 599906290, guid: 4ecf6aa2a2182cf4c843c0d565e94cd0, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4ecf6aa2a2182cf4c843c0d565e94cd0, type: 3}
 --- !u!1001 &1996649202
 PrefabInstance:
@@ -18993,14 +18981,6 @@ PrefabInstance:
       propertyPath: camKeypad
       value: 
       objectReference: {fileID: 1648180221}
-    - target: {fileID: 641728920, guid: 545ddde45b6d601498197347902d2ba7, type: 3}
-      propertyPath: interactOpction
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 641728920, guid: 545ddde45b6d601498197347902d2ba7, type: 3}
-      propertyPath: observationOpction
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7708716374858169450, guid: 545ddde45b6d601498197347902d2ba7, type: 3}
       propertyPath: m_Name
       value: KEL_02

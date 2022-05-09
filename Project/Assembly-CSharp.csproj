@@ -88,7 +88,6 @@
     <Compile Include="Assets\DoorsManager\Scripts\LeverSystem.cs" />
     <Compile Include="Assets\Scripts\Light\DissolvantManager.cs" />
     <Compile Include="Assets\Scripts\CinematicScripts\TimeLineManager.cs" />
-    <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\ScreenshotMaker.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\Interactable.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\InteractDoor.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\ExampleScript\RandomLootSystem.cs" />
@@ -96,7 +95,6 @@
     <Compile Include="Assets\InventoryMaster\Scripts\Tooltip\Tooltip.cs" />
     <Compile Include="Assets\Scripts\Light\TextChangingByThunder.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\ExtraLinks.cs" />
-    <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\PlayerMovement.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\RotateNpc.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Item\PickUpItem.cs" />
@@ -105,11 +103,10 @@
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\GoScene.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\FlexibleUIData.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\CauchObjectLent.cs" />
-    <Compile Include="Assets\Scripts\ChangeScene.cs" />
+    <Compile Include="Assets\Scripts\Menu\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\LeverInteract.cs" />
-    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\Keypad.cs" />
-    <Compile Include="Assets\Scripts\puzzle\DragAndDrop_.cs" />
-    <Compile Include="Assets\BrokenVector\LowPolyDungeon\Demo Scenes\MouseCamLook.cs" />
+    <Compile Include="Assets\Scripts\Keypad\Keypad.cs" />
+    <Compile Include="Assets\Scripts\Puzzle\DragAndDrop_.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\Blueprint.cs" />
     <Compile Include="Assets\Scripts\Light\FollowMouse.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\RightClick.cs" />
@@ -124,14 +121,14 @@
     <Compile Include="Assets\InventoryMaster\Scripts\Item\CreateAttributeDatabase.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\FlexibleUIElement.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\PlanetPuzle.cs" />
-    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\KeypadText.cs" />
+    <Compile Include="Assets\Scripts\Keypad\KeypadText.cs" />
     <Compile Include="Assets\Scripts\Menu\MainMenuNew.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\EquipmentSystem.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\DragInventory.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Item\ItemDataBaseList.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\LeftClick.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\InteractKeypad.cs" />
-    <Compile Include="Assets\Scripts\puzzle\piecesScript.cs" />
+    <Compile Include="Assets\Scripts\Puzzle\piecesScript.cs" />
     <Compile Include="Assets\Scripts\Light\MaskObject.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\FirstPerson\FirstPersonController.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\Inventory.cs" />
@@ -154,7 +151,7 @@
     <Compile Include="Assets\Scripts\Dialogs\Response.cs" />
     <Compile Include="Assets\Scripts\ReplyObjects\ReplicateObjectsController.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\CheckMusicVolume.cs" />
-    <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\ButtonKeypad.cs" />
+    <Compile Include="Assets\Scripts\Keypad\ButtonKeypad.cs" />
     <Compile Include="Assets\DoorsManager\Scripts\DoorScript.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\InputManager.cs" />
   </ItemGroup>
@@ -178,9 +175,9 @@
     <None Include="Assets\Shaders\Mask.shader" />
     <None Include="Assets\Scenes\Sala1\KeypadsEntryLocks\Resources\Shaders\NumpadText.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\PolygonHorrorMansion\Materials\Shaders\SyntyStudios_Ghost.shader" />
+    <None Include="Assets\Escenario-Props\PolygonHorrorMansion\Materials\Shaders\SyntyStudios_Ghost.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\PolygonHorrorMansion\Materials\Shaders\SyntyStudios_Grunge.shader" />
+    <None Include="Assets\Escenario-Props\PolygonHorrorMansion\Materials\Shaders\SyntyStudios_Grunge.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
     <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile.shader" />

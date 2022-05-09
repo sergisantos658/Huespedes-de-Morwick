@@ -45,7 +45,8 @@ GameObject:
   - component: {fileID: 6200662137476766098}
   - component: {fileID: 2006790758}
   - component: {fileID: 599906294}
-  - component: {fileID: 599906290}
+  - component: {fileID: 389558899}
+  - component: {fileID: 389558905}
   m_Layer: 6
   m_Name: Door
   m_TagString: Untagged
@@ -169,7 +170,7 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: -0.642, y: 0.036000002, z: 1.156}
   m_TimeToStationary: 0.5
---- !u!114 &599906290
+--- !u!114 &389558899
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -178,13 +179,29 @@ MonoBehaviour:
   m_GameObject: {fileID: 5815388445836955371}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 047a82366db90b94fb233ee5a881f249, type: 3}
+  m_Script: {fileID: 11500000, guid: a23d7804d5e3a0d4cb0e72ed2f7c6837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  holdTime: 0
-  interactionType: 0
-  Locked: 0
+  Locked: 1
   Remote: 0
   isOpened: 0
   OpenSpeed: 3
   useAnimation: 0
+--- !u!114 &389558905
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5815388445836955371}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a01bde18727df46a3fc23d4c316cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdTime: 0
+  interactOpction: 0
+  observationOpction: 1
+  interactionType: 0
+  dialogueObject: {fileID: 0}
+  o_DialogueObject: {fileID: 11400000, guid: 6cbc4d5cb0202c64a8373c61078ca7a8, type: 2}

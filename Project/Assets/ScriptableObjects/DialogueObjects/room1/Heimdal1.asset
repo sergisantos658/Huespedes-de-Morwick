@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
+  m_Name: Heimdal1
+  m_EditorClassIdentifier: 
+  dialogueTyping:
+  - dialogue:
+    - "No prodr\xEDa el jefe secuestrar alguna chica... para que necesita a un hombre,
+      con problemas de vista, claramente en mala forma y lo peor de todo, ingles...
+      engrill\xE9talo y vig\xEDlalo me dice...  "
+    - No pienso vigilarlo, que haga lo que le plazca, no creo que llegue muy lejos,
+      lleva 4 horas babeando el suelo y dando un discurso sobre el terrapanismo.
+    whoTalk: 1
+  responses:
+  - responseText: "Esa baba estaba ahi cuando llegu\xE9."
+    dialogueObject: {fileID: 11400000, guid: db7a89211539d7943aa4b1beb39f3546, type: 2}
+  - responseText: Quien eres, donde estoy?
+    dialogueObject: {fileID: 11400000, guid: db7a89211539d7943aa4b1beb39f3546, type: 2}

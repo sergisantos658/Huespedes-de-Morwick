@@ -1607,6 +1607,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdTime: 0
+  interactOpction: 1
+  observationOpction: 1
   interactionType: 0
   camKeypad: {fileID: 0}
   camZone: {fileID: 0}
