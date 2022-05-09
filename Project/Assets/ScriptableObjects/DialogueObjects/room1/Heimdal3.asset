@@ -21,4 +21,6 @@ MonoBehaviour:
     whoTalk: 1
   responses:
   - responseText: Culos y portales? Me interesa.
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: 3a9bde3083480c246b34a8facf1ea439, type: 2}
+  - responseText: "Por casualidad esas pruebas no tendr\xE1n como recompesa una tarta?"
+    dialogueObject: {fileID: 11400000, guid: 3a9bde3083480c246b34a8facf1ea439, type: 2}

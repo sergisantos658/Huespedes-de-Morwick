@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Como te has quitado los grilletes?
+    - "Cuanto tiempo llevas ah\xED, como te has quitado los grilletes ?"
     whoTalk: 1
   responses:
   - responseText: Una calabaza flotante me ha dejado un cuchara afilada para cortar

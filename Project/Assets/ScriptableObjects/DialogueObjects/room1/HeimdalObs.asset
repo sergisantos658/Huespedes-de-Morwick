@@ -15,6 +15,7 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - "No recuerdo muy bien como he llegado aqu\xED, pero si recuerdo unas escaleras
-      oscuras y el llevandome en brazos"
+      oscuras y a dos fantasmas llevadome en brazos. Estoy seguro de que uno de ellos
+      era el."
     whoTalk: 0
   responses: []

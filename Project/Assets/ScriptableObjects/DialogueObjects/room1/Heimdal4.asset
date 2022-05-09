@@ -15,8 +15,10 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - "Adem\xE1s de ciego, sordo... Me impresiona que hayas podido conducir hasta
-      el hotel... y entre tus cosas jurar\xEDa haber visto un titulo que acredita
-      un doctorado en astrofisica. "
-    - 
-    whoTalk: 0
+      el hotel... "
+    - "Entre tus cosas jurar\xEDa haber visto un anillo de incalculable valor y un
+      dorito con forma de Elvis Presley... Si resuelves un acertijo, te dar\xE9 una
+      llave y si fallas... me quedar\xE9 con el dorito."
+    - Que me dices?
+    whoTalk: 1
   responses: []

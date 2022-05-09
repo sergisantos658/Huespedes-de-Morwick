@@ -10,11 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
-  m_Name: DoorObs
+  m_Name: SpoonObs
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Esta bloqueada, tengo que abrirla de alguna forma y ese fantasma no creo que
-      impida que me escape.
+    - "Me han dejado algo de comida, aunque esa sopa parece m\xE1s bien ectoplasma
+      de Slime, que gran pelicula... Bueno no creo que coma nada."
+    - "Tambi\xE9n me han dejado una cuchara... extra\xF1amente afilada, tengo vagos
+      recuerdos de una calabaza ligando conmigo... En todo caso gracias a la cuchara
+      he podido soltarme cortando esa cuerda."
     whoTalk: 0
   responses: []

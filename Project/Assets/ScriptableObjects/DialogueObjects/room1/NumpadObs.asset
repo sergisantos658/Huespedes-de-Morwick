@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - 'Seguramente sea para abrir la puerta, necesito 4 digitos. '
-    - Seguire buscando.
+    - "Seguir\xE9 buscando."
     whoTalk: 0
   responses: []

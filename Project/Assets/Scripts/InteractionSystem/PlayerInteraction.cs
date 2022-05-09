@@ -115,8 +115,10 @@ public class PlayerInteraction : MonoBehaviour
 
 	void CursorSettings()
 	{
-		interactCursorHotspot = new Vector2(interactCursor.width / 2 - 2, interactCursor.height / 2 - 6);
-		normalCursorHotspot = new Vector2(normalCursor.width / 2 - 2, normalCursor.height / 2 - 6);
+		//interactCursorHotspot = new Vector2(interactCursor.width / 2 - 2, interactCursor.height / 2 - 6);
+		interactCursorHotspot = new Vector2(20, 10);
+		//normalCursorHotspot = new Vector2(normalCursor.width / 2 - 2, normalCursor.height / 2 - 6);
+		normalCursorHotspot = new Vector2(20, 10);
 		Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);
 	}
 
@@ -250,7 +252,7 @@ public class PlayerInteraction : MonoBehaviour
 			timeToUseAgain -= Time.deltaTime;
 
 		// Line from Player To HitPoint
-		Debug.DrawLine(gameObject.transform.position, hitInfo.point, Color.green);
+		//Debug.DrawLine(gameObject.transform.position, hitInfo.point, Color.green);
 
 		// Line from Camera To World
 		Debug.DrawLine(ray.origin, ray.origin + ray.direction * (hitSomething ? distancePlayer : 100), hitSomething ? Color.green : Color.red);
