@@ -14196,10 +14196,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 64
   mainCamera: {fileID: 1360471544}
-  interactCursor: {fileID: 2800000, guid: f1e920af7058243458bfac230784b6f1, type: 3}
-  ObservationCursor: {fileID: 2800000, guid: 7825633d016559249ade03ab1979c7b6, type: 3}
-  inteAndObservCursor: {fileID: 2800000, guid: c37a3cd6aac5ac24d90f974c7e86407a, type: 3}
-  normalCursor: {fileID: 2800000, guid: 1991885a008f56d40b57502219ff97a0, type: 3}
+  interactCursor: {fileID: 2800000, guid: 7ec1dbfa4ac227442ae8e6e238233e41, type: 3}
+  ObservationCursor: {fileID: 2800000, guid: 9cda48e378d35dc4ab62c87729c084dd, type: 3}
+  inteAndObservCursor: {fileID: 2800000, guid: e43eb6dc9e9ce1f47bac91c53a5246fc, type: 3}
+  normalCursor: {fileID: 2800000, guid: a9ae0267b06e7b24d90f188a4370cce3, type: 3}
   interactionHoldGO: {fileID: 1739831077}
   interactionHoldProgress: {fileID: 1739831079}
 --- !u!95 &1065212922

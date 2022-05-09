@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -52,6 +52,9 @@
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2021.1.12f1</UnityVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\InventoryMaster\Scripts\Item\CreateItemDatabase.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Item\ItemAttribute.cs" />
@@ -117,6 +120,7 @@
     <Compile Include="Assets\Scripts\Light\SphereMaskController.cs" />
     <Compile Include="Assets\Scripts\Camera\CameraManager.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\PickValve.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\ObservationInteractable.cs" />
     <Compile Include="Assets\Scripts\Dialogs\ScriptsForObjects\DialogueDefault.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\CraftResultSlot.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Item\ItemAttributeList.cs" />
@@ -157,7 +161,6 @@
     <Compile Include="Assets\BigBlit\KeypadsEntryLocks\Scripts\ButtonKeypad.cs" />
     <Compile Include="Assets\DoorsManager\Scripts\DoorScript.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\InputManager.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\ObservationInteractable.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
