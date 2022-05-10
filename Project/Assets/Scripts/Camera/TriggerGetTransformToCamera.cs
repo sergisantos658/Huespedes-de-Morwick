@@ -23,6 +23,7 @@ public class TriggerGetTransformToCamera : MonoBehaviour
 	}
 }
 
+#if UNITY_EDITOR
 [CustomEditor(typeof(TriggerGetTransformToCamera))]
 public class TriggerGetCameraEditor : Editor
 {
@@ -43,3 +44,5 @@ public class TriggerGetCameraEditor : Editor
 	}
 
 }
+
+#endif

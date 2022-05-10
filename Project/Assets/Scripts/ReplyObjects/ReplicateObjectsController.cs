@@ -53,16 +53,15 @@ public class ReplicateObjectsController : MonoBehaviour
 
     void Update()
     {
-        #if UNITY_EDITOR
+       #if UNITY_EDITOR
         if (EditorApplication.isPlaying == false || !Application.isPlaying) return;
-        #endif
+#endif
 
         for (int i = 0; i < objects.Length; i++)
         {
-            for (int o = 0; o < objects[i].mesh.subMeshCount; o++)
+            for (int o = 0; o < objects[i].materials.Length; o++)
             {
                 Graphics.DrawMeshInstanced(objects[i].mesh, o, objects[i].materials[o], objects[i].matrix);
-
             }
         }
         
@@ -78,7 +77,7 @@ public class ReplicateObjectsController : MonoBehaviour
             {
                 for (int o = 0; o < objects[i].settings.Length; o++)
                 {
-                    for (int l = 0; l < objects[i].mesh.subMeshCount; l++)
+                    for (int l = 0; l < objects[i].materials.Length; l++)
                     {
                         objects[i].materials[l].SetPass(0);
                         Graphics.DrawMeshNow(objects[i].mesh, Matrix4x4.TRS(objects[i].settings[o].position, Quaternion.Euler(objects[i].settings[o].rotation), objects[i].settings[o].escale));
