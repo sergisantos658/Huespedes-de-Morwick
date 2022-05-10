@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
+using UnityEngine.EventSystems;
 
 [RequireComponent(typeof(NavMeshAgent), typeof(InteractDialogueOrObjects))]
 public class PlayerController : MonoBehaviour
@@ -126,7 +127,6 @@ public class PlayerController : MonoBehaviour
     {
 		if(isRotating)
         {
-			Debug.Log("llamadaRotate");
 			StopAllCoroutines();
 			StartCoroutine(RotationChar(pos - transform.position));
 		}
@@ -173,18 +173,16 @@ public class PlayerController : MonoBehaviour
 		if (Input.GetMouseButtonDown(0))
 		{
 			Ray ray = m_Camera.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_Camera.nearClipPlane));
-			if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+			if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask) && !EventSystem.current.IsPointerOverGameObject())
 			{
 				NavMesh.SamplePosition(hit.point, out NavMeshHit navHit, 100, -1);
 
-				var turnTowardNavSteeringTarget = agent.steeringTarget;
 				if(!isRotating)
 				{
 					StartCoroutine(RotationChar(hit.transform.position - transform.position));
 					//Debug.Log(hit.transform.name);
 				}
 
-				Debug.Log(transform.rotation);
 				
 
 

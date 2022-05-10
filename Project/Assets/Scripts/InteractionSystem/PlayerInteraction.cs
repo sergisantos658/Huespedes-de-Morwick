@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 using UnityEditor;
 public class PlayerInteraction : MonoBehaviour
@@ -121,7 +122,7 @@ public class PlayerInteraction : MonoBehaviour
 		if (hitSomething)
 		{
 			
-			if(hitInfo.collider.GetComponent<Interactable>() != interactableDinamic)
+			if(hitInfo.collider.GetComponent<Interactable>() != interactableDinamic && !EventSystem.current.IsPointerOverGameObject() && !PlanetPuzle.Planets )
             {
 				interactableDinamic = hitInfo.collider.GetComponent<Interactable>();
 
