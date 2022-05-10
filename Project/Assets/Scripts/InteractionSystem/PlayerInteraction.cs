@@ -10,7 +10,8 @@ public class PlayerInteraction : MonoBehaviour
 	public Transform GoalPosition;
 	public bool rotate = false;
 	Quaternion rotation;
-	
+
+	PlayerController pControl;
 	[Header("Ray settings"), Space(5)]
 	#region Data&Settings
 
@@ -61,35 +62,20 @@ public class PlayerInteraction : MonoBehaviour
 	public GameObject interactionHoldGO; // the ui parent to disable when not interacting
 	public UnityEngine.UI.Image interactionHoldProgress; // the progress bar for hold interaction type
 
-
+	PlayerController PController;
 	void Start()
 	{
 		mainCameraC = mainCamera.GetComponent<Camera>();
 
 		height = GetComponent<CapsuleCollider>().height;
 
+		PController = GetComponent<PlayerController>();
+
 		CursorSettings();
 	}
 
 	// Update is called once per frame
-	IEnumerator RotationChar(Vector3 dir)
-	{
-		Quaternion originalRotation = transform.rotation;
-		Quaternion rotation = Quaternion.LookRotation(dir);
-		float time = Mathf.DeltaAngle(transform.rotation.eulerAngles.y,rotation.eulerAngles.y) / speedRotate;
-		Debug.Log("Estoy corrutinante = " + dir);
 
-		//Provisional hasta que se arregle la rotacion
-		//transform.rotation = rotation;
-		transform.forward = dir;
-		/*for (float timer = 0; timer < time; timer += Time.deltaTime)
-		{
-			Debug.Log("fase");
-			transform.rotation = Quaternion.Lerp(originalRotation, rotation, timer / time);
-			yield return new WaitForEndOfFrame();
-		}*/
-		yield return new WaitForEndOfFrame();
-	}
 	void Update()
 	{
 		if (gameObject.GetComponent<PlayerController>()) { if (gameObject.GetComponent<PlayerController>().DialogueUI.isOpen) { return; } }
@@ -215,14 +201,15 @@ public class PlayerInteraction : MonoBehaviour
 
 			if (closeEnought)
 			{
-                //Llamar al IEnumerator aqui  con esto hitInfo.transform.position - transform.position;
-                //StartCoroutine(RotationChar(hitInfo.transform.position - transform.position));
-                /*Vector3 relativePos = hitInfo.transform.position - transform.position;
+				//Llamar al IEnumerator aqui  con esto hitInfo.transform.position - transform.position;
+				//StartCoroutine(RotationChar(hitInfo.transform.position - transform.position));
+				/*Vector3 relativePos = hitInfo.transform.position - transform.position;
 				rotation = Quaternion.LookRotation(relativePos);
 				transform.rotation = rotation;
 				rotate = true;*/
+				
 
-                if (interactionHoldGO.activeSelf)
+				if (interactionHoldGO.activeSelf)
                 {
 					gameObject.GetComponent<InteractDialogueOrObjects>().Interacting();
                 }
@@ -262,6 +249,7 @@ public class PlayerInteraction : MonoBehaviour
 	void HandleInteraction(Interactable interactable)
 	{
 		//KeyCode key = KeyCode.Mouse0;
+		PController.RotateTo(interactable.transform.position);
 
 		switch (interactable.interactionType)
 		{

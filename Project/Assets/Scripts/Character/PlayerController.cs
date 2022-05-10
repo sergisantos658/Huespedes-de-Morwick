@@ -7,219 +7,267 @@ using UnityEngine.AI;
 [RequireComponent(typeof(NavMeshAgent), typeof(InteractDialogueOrObjects))]
 public class PlayerController : MonoBehaviour
 {
-    //[SerializeField] private float speed = 5.0f;
-    //[SerializeField] private float speedRotation = 5.0f;
+	//[SerializeField] private float speed = 5.0f;
+	//[SerializeField] private float speedRotation = 5.0f;
 
-    private static GameObject _moveToIndicatorInstance;
+	private static GameObject _moveToIndicatorInstance;
 
-    [SerializeField]
-    private float _feedbackPointerScale = 1f; // Scale the pointer
+	[SerializeField]
+	private float _feedbackPointerScale = 1f; // Scale the pointer
 
-    [SerializeField]
-    private GameObject _moveToIndicator; // Prefab of the pointer 3D
+	[SerializeField]
+	private GameObject _moveToIndicator; // Prefab of the pointer 3D
 
-    [SerializeField]
-    private GameObject mainCamera; // Main camera
+	[SerializeField]
+	private GameObject mainCamera; // Main camera
 
-    [SerializeField] 
-    private DialogueUI dialogueUI;
+	[SerializeField] 
+	private DialogueUI dialogueUI;
 
-    [SerializeField] 
-    private LayerMask layerMask;
+	[SerializeField] 
+	private LayerMask layerMask;
 
-    public DialogueUI DialogueUI => dialogueUI;
+	public DialogueUI DialogueUI => dialogueUI;
 
-    public static event Action<PlayerController> WhoIsPlayerController = delegate { };
+	public static event Action<PlayerController> WhoIsPlayerController = delegate { };
 
-    [SerializeField]
-    private float angleRotate;
+	[SerializeField]
+	private float angleRotate;
 
-    [SerializeField] private float tempVectorOffset = 0.75f;
+	[SerializeField] private float tempVectorOffset = 0.75f;
 
-    [SerializeField]
-    private float distance;
+	[SerializeField]
+	private float distance;
 
-    bool onlyOnce = false;
-    Vector3 groundVector; // Vector which the player will move using navMesh agent
-    Vector3 selectedVector; // Vector which you click on, counts to interactable objects
-    Rigidbody rb;
-    Animator animator;
-    NavMeshAgent agent;
-    Camera m_Camera;
+	bool onlyOnce = false;
+	Vector3 groundVector; // Vector which the player will move using navMesh agent
+	Vector3 selectedVector; // Vector which you click on, counts to interactable objects
+	Rigidbody rb;
+	Animator animator;
+	public float speedRotate = 1;
+	NavMeshAgent agent;
+	RaycastHit hit;
+	Camera m_Camera;
 
-    public static PlayerController currentPlayer;
+	[HideInInspector]
+	public bool isRotating = false;
 
-    private void OnEnable()
+	public static PlayerController currentPlayer;
+
+	private void OnEnable()
+	{
+		DialogueUI.StopDialogue += StopInteractingDialogue;
+	}
+
+	private void OnDisable()
+	{
+		DialogueUI.StopDialogue -= StopInteractingDialogue;
+	}
+
+	private void Start()
+	{
+		rb = GetComponent<Rigidbody>();
+
+		agent = GetComponent<NavMeshAgent>();
+
+		agent.updateRotation = false;
+
+		animator = GetComponent<Animator>();
+
+		currentPlayer = this;
+
+		m_Camera = mainCamera.GetComponent<Camera>();
+
+		WhoIsPlayerController(this);
+
+		PreparePointer(_moveToIndicator, _feedbackPointerScale);
+	}
+
+
+	void Update()
+	{
+
+		Vector3 tempV = new Vector3(selectedVector.x, 0, selectedVector.z) - new Vector3(transform.position.x, 0, transform.position.z);
+		float tempOffset = tempV.magnitude;
+
+		if (tempOffset <= tempVectorOffset && onlyOnce)
+		{
+			agent.isStopped = true; 
+			//transform.position = transform.position;
+
+			//float angle = Mathf.Atan2(tempV.z, tempV.x) * Mathf.Rad2Deg -90;
+
+			//Quaternion rotObj = Quaternion.AngleAxis(angle, Vector3.up);
+
+			//Debug.Log("Rotation: " + tempV + " 2: " + angle + " True rotation: " + transform.rotation.eulerAngles);
+
+			////transform.rotation = rotObj;
+			//transform.eulerAngles = Vector3.up * angle;
+
+
+			onlyOnce = false;
+		}
+			//Debug.DrawRay(transform.position, tempV, Color.green);
+
+		Animators();
+
+		if (dialogueUI.isOpen || MenuManager.pause || PlanetPuzle.Planets /*|| TimeLineManager.isPlaying*/) {
+			/*rb.velocity = Vector3.zero;*/ 
+			agent.isStopped = true; 
+
+			return; 
+		}
+		Move();
+
+
+	}
+
+	public void RotateTo(Vector3 pos)
     {
-        DialogueUI.StopDialogue += StopInteractingDialogue;
-    }
-
-    private void OnDisable()
-    {
-        DialogueUI.StopDialogue -= StopInteractingDialogue;
-    }
-
-    private void Start()
-    {
-        rb = GetComponent<Rigidbody>();
-
-        agent = GetComponent<NavMeshAgent>();
-
-        animator = GetComponent<Animator>();
-
-        currentPlayer = this;
-
-        m_Camera = mainCamera.GetComponent<Camera>();
-
-        WhoIsPlayerController(this);
-
-        PreparePointer(_moveToIndicator, _feedbackPointerScale);
-    }
-
-
-    void Update()
-    {
-
-        Vector3 tempV = new Vector3(selectedVector.x, 0, selectedVector.z) - new Vector3(transform.position.x, 0, transform.position.z);
-        float tempOffset = tempV.magnitude;
-
-        if (tempOffset <= tempVectorOffset && onlyOnce)
+		if(isRotating)
         {
-            agent.isStopped = true; 
-            //transform.position = transform.position;
-
-            //float angle = Mathf.Atan2(tempV.z, tempV.x) * Mathf.Rad2Deg -90;
-
-            //Quaternion rotObj = Quaternion.AngleAxis(angle, Vector3.up);
-
-            //Debug.Log("Rotation: " + tempV + " 2: " + angle + " True rotation: " + transform.rotation.eulerAngles);
-
-            ////transform.rotation = rotObj;
-            //transform.eulerAngles = Vector3.up * angle;
-
-
-            onlyOnce = false;
-        }
-            //Debug.DrawRay(transform.position, tempV, Color.green);
-
-        Animators();
-
-        if (dialogueUI.isOpen || MenuManager.pause || PlanetPuzle.Planets /*|| TimeLineManager.isPlaying*/) {
-            /*rb.velocity = Vector3.zero;*/ 
-            agent.isStopped = true; 
-
-            return; 
-        }
-        Move();
-
-
-    }
-
-    void OnDrawGizmos()
-    {
-        Gizmos.color = Color.yellow;
-
-        Gizmos.DrawWireSphere(groundVector, tempVectorOffset);
-        
-        Gizmos.color = Color.red;
-
-        Gizmos.DrawWireSphere(selectedVector, tempVectorOffset);
-
-    }
-
-    void Move()
-    {
-        if (Input.GetMouseButtonDown(0))
+			Debug.Log("llamadaRotate");
+			StopAllCoroutines();
+			StartCoroutine(RotationChar(pos - transform.position));
+		}
+        else
         {
-            RaycastHit hit;
-            Ray ray = m_Camera.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_Camera.nearClipPlane));
-            if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
-            {
-                NavMesh.SamplePosition(hit.point, out NavMeshHit navHit, 100, -1);
-
-
-
-                
-                if (!navHit.hit)
-                    return;
-
-                var path = new NavMeshPath();
-                if (!agent.CalculatePath(navHit.position, path) || path.status == NavMeshPathStatus.PathInvalid)
-                    return;
-
-                ShowPointer(navHit.position);
-                
-                groundVector = navHit.position;
-
-                selectedVector = hit.point;
-
-                if (agent.isStopped) agent.isStopped = false;
-
-                onlyOnce = true;
-
-                agent.SetPath(path);
-
-
-
-            }
-
-
+			StartCoroutine(RotationChar(pos - transform.position));
         }
-
-        //if(angleRotate > 5.0f)
-        //{
-
-        //}
-        //else
-        //{
-        //    if(distance > 0.1f)
-        //    {
-        //        agent.Move(ray.position);
-        //    }
-        //    else
-        //    {
-        //        agent.isStopped = true;
-        //    }
-        //}
-
-        //var dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-
-        //rb.velocity = dir * speed;
     }
 
-    void Animators()
-    {
-        // Animation to move
-        animator?.SetFloat("velocity", Mathf.Abs(agent.velocity.x) + Mathf.Abs(agent.velocity.z));
+	IEnumerator RotationChar(Vector3 dir)
+	{
+		isRotating = true;
+		Quaternion originalRotation = transform.rotation;
+		Quaternion rotation = Quaternion.LookRotation(dir);
+		float time = Mathf.Abs(Mathf.DeltaAngle(transform.rotation.eulerAngles.y, rotation.eulerAngles.y) / speedRotate);
+		//Debug.Log("Estoy corrutinante = " + Mathf.DeltaAngle(transform.rotation.eulerAngles.y, rotation.eulerAngles.y));
+		//Provisional hasta que se arregle la rotacion
+		//transform.rotation = rotation;
+		transform.forward = dir;
+		for (float timer = 0; timer < time; timer += Time.deltaTime)
+		{
+			//Debug.Log("fase");
+			transform.rotation = Quaternion.Lerp(originalRotation, rotation, timer / time);
+			yield return new WaitForEndOfFrame();
+		}
+		isRotating = false;
 
-        animator?.SetBool("talking", dialogueUI.isOpen ? true : false);
-    }
+	}
 
-    void StopInteractingDialogue()
-    {
-        GetComponent<InteractDialogueOrObjects>().StopInteract();
-    }
+	void OnDrawGizmos()
+	{
+		Gizmos.color = Color.yellow;
+
+		Gizmos.DrawWireSphere(groundVector, tempVectorOffset);
+		
+		Gizmos.color = Color.red;
+
+		Gizmos.DrawWireSphere(selectedVector, tempVectorOffset);
+
+	}
+
+	void Move()
+	{  
+		if (Input.GetMouseButtonDown(0))
+		{
+			Ray ray = m_Camera.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_Camera.nearClipPlane));
+			if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+			{
+				NavMesh.SamplePosition(hit.point, out NavMeshHit navHit, 100, -1);
+
+				var turnTowardNavSteeringTarget = agent.steeringTarget;
+				if(!isRotating)
+				{
+					StartCoroutine(RotationChar(hit.transform.position - transform.position));
+					//Debug.Log(hit.transform.name);
+				}
+
+				Debug.Log(transform.rotation);
+				
+
+
+				if (!navHit.hit)
+					return;
+
+				var path = new NavMeshPath();
+				if (!agent.CalculatePath(navHit.position, path) || path.status == NavMeshPathStatus.PathInvalid)
+					return;
+
+				ShowPointer(navHit.position);
+				
+				groundVector = navHit.position;
+
+				selectedVector = hit.point;
+
+				if (agent.isStopped) agent.isStopped = false;
+
+				onlyOnce = true;
+
+				agent.SetPath(path);
 
 
 
-    public void PreparePointer(GameObject prefabInstance, float scale)
-    {
-        if (prefabInstance == null) return;
+			}
 
-        if (_moveToIndicatorInstance == null)
-            _moveToIndicatorInstance = GameObject.Instantiate(prefabInstance);
 
-        _moveToIndicatorInstance.SetActive(false);
-        _moveToIndicatorInstance.transform.localScale = Vector3.one * scale;
+		}
 
-        GameObject.DontDestroyOnLoad(_moveToIndicatorInstance);
-    }
+		//if(angleRotate > 5.0f)
+		//{
 
-    public void ShowPointer(Vector3 position)
-    {
-        _moveToIndicatorInstance?.SetActive(false);
-        if (_moveToIndicatorInstance != null) _moveToIndicatorInstance.transform.position = position;
-        _moveToIndicatorInstance?.SetActive(true);
-    }
+		//}
+		//else
+		//{
+		//    if(distance > 0.1f)
+		//    {
+		//        agent.Move(ray.position);
+		//    }
+		//    else
+		//    {
+		//        agent.isStopped = true;
+		//    }
+		//}
+
+		//var dir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+
+		//rb.velocity = dir * speed;
+	}
+
+	void Animators()
+	{
+		// Animation to move
+		animator?.SetFloat("velocity", Mathf.Abs(agent.velocity.x) + Mathf.Abs(agent.velocity.z));
+
+		animator?.SetBool("talking", dialogueUI.isOpen ? true : false);
+	}
+
+	void StopInteractingDialogue()
+	{
+		GetComponent<InteractDialogueOrObjects>().StopInteract();
+	}
+
+
+
+	public void PreparePointer(GameObject prefabInstance, float scale)
+	{
+		if (prefabInstance == null) return;
+
+		if (_moveToIndicatorInstance == null)
+			_moveToIndicatorInstance = GameObject.Instantiate(prefabInstance);
+
+		_moveToIndicatorInstance.SetActive(false);
+		_moveToIndicatorInstance.transform.localScale = Vector3.one * scale;
+
+		GameObject.DontDestroyOnLoad(_moveToIndicatorInstance);
+	}
+
+	public void ShowPointer(Vector3 position)
+	{
+		_moveToIndicatorInstance?.SetActive(false);
+		if (_moveToIndicatorInstance != null) _moveToIndicatorInstance.transform.position = position;
+		_moveToIndicatorInstance?.SetActive(true);
+	}
 
 }
