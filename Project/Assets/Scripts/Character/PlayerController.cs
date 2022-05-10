@@ -177,11 +177,6 @@ public class PlayerController : MonoBehaviour
 			{
 				NavMesh.SamplePosition(hit.point, out NavMeshHit navHit, 100, -1);
 
-				if(!isRotating)
-				{
-					StartCoroutine(RotationChar(hit.transform.position - transform.position));
-					//Debug.Log(hit.transform.name);
-				}
 
 				
 
@@ -204,6 +199,13 @@ public class PlayerController : MonoBehaviour
 				onlyOnce = true;
 
 				agent.SetPath(path);
+				
+				if (!isRotating)
+				{
+					StartCoroutine(RotationChar(navHit.position - transform.position));
+					//Debug.Log(hit.transform.name);
+				}
+
 
 
 
