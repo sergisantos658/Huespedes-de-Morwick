@@ -23,7 +23,7 @@ MonoBehaviour:
     whoTalk: 1
   - dialogue:
     - La verdad es que eso no entra en mis planes.
-    whoTalk: 1
+    whoTalk: 0
   - dialogue:
     - Morwick tiene la llave.
     - "Con la llave de esa caja podr\xE1s volver al mundo humano."
@@ -34,5 +34,5 @@ MonoBehaviour:
     - "No me llamo \xC1ngel."
     - "O sea, \xC1ngel es nombre de hombre barbudo con aires a Jesucristo."
     - "Y creo que soy m\xE1s guapo."
-    whoTalk: 1
+    whoTalk: 0
   responses: []
