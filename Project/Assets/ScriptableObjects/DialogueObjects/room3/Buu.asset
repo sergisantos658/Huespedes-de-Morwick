@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - " Ho ho ho, que tenemos aqu\xED. "
-    - Un joven muy apuesto y guapo.
+    - " Ho ho ho, que tenemos aqu\xED. Un joven muy apuesto y guapo."
+    - Veo que pudiste escapar sin la ayuda de nadie ni de ninguna cuchara.
     whoTalk: 1
   - dialogue:
-    - "Tengo 43 a\xF1os eso de joven creo que no es lo m\xE1s adecuado, pero lo de
-      guapo no te lo quito."
+    - "Ya... y yo veo que no sabes mentir a dem\xE1s Tengo 43 a\xF1os eso de joven
+      creo que no es lo m\xE1s adecuado, pero lo de guapo no te lo quito."
     whoTalk: 0
   - dialogue:
     - "Tengo m\xE1s de 300 a\xF1os,  para m\xED eres un caramelito"

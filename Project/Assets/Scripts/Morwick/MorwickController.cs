@@ -18,6 +18,7 @@ public class MorwickController : MonoBehaviour
     [SerializeField] float lenght = 5.57f;
     [SerializeField] LayerMask playerlayer;
     bool targetDirectionLook;
+    Animator animator;
 
     Rigidbody rb;
 
@@ -71,7 +72,8 @@ public class MorwickController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-        target = GameObject.Find("Player");
+        animator = GetComponent<Animator>();
+        target = PlayerController.currentPlayer.gameObject;
     }
 
     private void FixedUpdate()
@@ -88,7 +90,11 @@ public class MorwickController : MonoBehaviour
     {
         if (targetDirectionLook)
         {
-            
+            animator.SetBool("Run", true);
+        }
+        else
+        {
+            animator.SetBool("Walk", true);
         }
     }
 

@@ -47,6 +47,8 @@ public class PlayerController : MonoBehaviour
     NavMeshAgent agent;
     Camera m_Camera;
 
+    public static PlayerController currentPlayer;
+
     private void OnEnable()
     {
         DialogueUI.StopDialogue += StopInteractingDialogue;
@@ -64,6 +66,8 @@ public class PlayerController : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
 
         animator = GetComponent<Animator>();
+
+        currentPlayer = this;
 
         m_Camera = mainCamera.GetComponent<Camera>();
 
