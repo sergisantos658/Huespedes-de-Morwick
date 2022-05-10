@@ -128,7 +128,7 @@ public class PlayerInteraction : MonoBehaviour
 
 		RaycastHit hitInfo;
 
-		bool hitSomething = Physics.SphereCast(ray, raysphereRadius, out hitInfo, Mathf.Infinity, interactableLayer);;
+		bool hitSomething = Physics.Raycast(ray, out hitInfo, Mathf.Infinity, interactableLayer);
 
 		bool interactMouseButton = Input.GetMouseButtonDown(0) ? true : false;
 
@@ -215,17 +215,18 @@ public class PlayerInteraction : MonoBehaviour
 
 			if (closeEnought)
 			{
-				//Llamar al IEnumerator aqui  con esto hitInfo.transform.position - transform.position;
-				//StartCoroutine(RotationChar(hitInfo.transform.position - transform.position));
-				/*Vector3 relativePos = hitInfo.transform.position - transform.position;
+                //Llamar al IEnumerator aqui  con esto hitInfo.transform.position - transform.position;
+                //StartCoroutine(RotationChar(hitInfo.transform.position - transform.position));
+                /*Vector3 relativePos = hitInfo.transform.position - transform.position;
 				rotation = Quaternion.LookRotation(relativePos);
 				transform.rotation = rotation;
 				rotate = true;*/
 
-				
-				
+                if (interactionHoldGO.activeSelf)
+                {
+					gameObject.GetComponent<InteractDialogueOrObjects>().Interacting();
+                }
 
-				gameObject.GetComponent<InteractDialogueOrObjects>().Interacting();
 				HandleInteraction(interactable);
 				onlyTwice = true;
 			}
@@ -255,7 +256,7 @@ public class PlayerInteraction : MonoBehaviour
 		//Debug.DrawLine(gameObject.transform.position, hitInfo.point, Color.green);
 
 		// Line from Camera To World
-		Debug.DrawLine(ray.origin, ray.origin + ray.direction * (hitSomething ? distancePlayer : 100), hitSomething ? Color.green : Color.red);
+		Debug.DrawLine(ray.origin, ray.origin + ray.direction * 50, interactableDinamic != null ? Color.green : Color.red);
 	}
 
 	void HandleInteraction(Interactable interactable)

@@ -1,7 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
 using UnityEditor;
+#endif
 
 [System.Serializable]
 public struct SettingsOfObject
@@ -11,7 +13,10 @@ public struct SettingsOfObject
     public Vector3 escale;
 }
 
+#if UNITY_EDITOR
 [ExecuteInEditMode]
+#endif
+
 public class ReplicateObjectsController : MonoBehaviour
 {
     [System.Serializable]
@@ -48,7 +53,9 @@ public class ReplicateObjectsController : MonoBehaviour
 
     void Update()
     {
+        #if UNITY_EDITOR
         if (EditorApplication.isPlaying == false || !Application.isPlaying) return;
+        #endif
 
         for (int i = 0; i < objects.Length; i++)
         {
@@ -61,9 +68,11 @@ public class ReplicateObjectsController : MonoBehaviour
         
     }
 
+
+#if UNITY_EDITOR
     void OnDrawGizmos()
     {
-        if (/*EditorApplication.isPlaying == false ||*/  !Application.isPlaying)
+        if (EditorApplication.isPlaying == false ||  !Application.isPlaying)
         {
             for (int i = 0; i < objects.Length; i++)
             {
@@ -78,6 +87,7 @@ public class ReplicateObjectsController : MonoBehaviour
             }
         }
     }
+#endif
 }
 
 #if UNITY_EDITOR
