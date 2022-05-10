@@ -27,6 +27,7 @@ public class MorwickController : MonoBehaviour
     [Header("Pathfinding by points")]
     public bool pathByPointsEnabled = true;
     public List<Transform> points;
+
     //The int value for the next point in list
     public int nextId;
     // The value of the current point
