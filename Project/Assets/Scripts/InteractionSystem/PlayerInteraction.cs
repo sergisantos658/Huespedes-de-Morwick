@@ -126,7 +126,7 @@ public class PlayerInteraction : MonoBehaviour
             {
 				interactableDinamic = hitInfo.collider.GetComponent<Interactable>();
 
-				if (interactableDinamic)
+				if (interactableDinamic && Time.timeScale == 1)
 				{
 					if (interactableDinamic.InteractOpction && interactableDinamic.ObservationOpction)
 					{
@@ -139,8 +139,8 @@ public class PlayerInteraction : MonoBehaviour
 					else if (interactableDinamic.ObservationOpction)
 					{
 						Cursor.SetCursor(ObservationCursor, interactCursorHotspot, CursorMode.ForceSoftware);
-				}
 					}
+				}
 				else
 				{
 					Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);

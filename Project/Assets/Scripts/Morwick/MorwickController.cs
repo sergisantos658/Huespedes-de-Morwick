@@ -154,7 +154,7 @@ public class MorwickController : MonoBehaviour
         RaycastHit hit;
         Physics.Raycast(viewpoint.position, Vector3.forward, out hit, lenght, playerlayer);
 
-        if (hit.collider != null && hit.collider.CompareTag("Player"))
+        if (hit.collider != null && hit.collider.GetComponent<PlayerController>() != null )
         {
             return true;
         }
