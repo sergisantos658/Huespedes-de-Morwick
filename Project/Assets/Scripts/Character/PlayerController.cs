@@ -208,11 +208,8 @@ public class PlayerController : MonoBehaviour
 
 
 			}
-			if (!isRotating)
-			{
-				StartCoroutine(RotationChar(navHit.position - transform.position));
-				//Debug.Log(hit.transform.name);
-			}
+
+			StartCoroutine(RotationChar(navHit.position - transform.position));
 
 
 		}
