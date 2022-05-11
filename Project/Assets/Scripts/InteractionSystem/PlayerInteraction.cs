@@ -98,7 +98,13 @@ public class PlayerInteraction : MonoBehaviour
 		{
 			hitAndInteraction();
 		}
+        else
+        {
+			Cursor.SetCursor(PlayerSettings.defaultCursor, normalCursorHotspot, CursorMode.ForceSoftware);
+			if (interactableDinamic != null) interactableDinamic = null;
+		}
 	}
+
 
 	void CursorSettings()
 	{
@@ -146,7 +152,7 @@ public class PlayerInteraction : MonoBehaviour
 					Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);
 				}
             }
-
+			
 			onlyOnce = true;
 
 			if (interactMouseButton || Input.GetKeyDown(KeyCode.Mouse1))
