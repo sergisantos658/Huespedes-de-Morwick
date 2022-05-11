@@ -10622,7 +10622,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   CameraGame: {fileID: 1360471544}
-  player: {fileID: 0}
+  player: {fileID: 138209389}
   numPieces: 36
   cursor: {fileID: 2800000, guid: 1991885a008f56d40b57502219ff97a0, type: 3}
 --- !u!4 &887073998
@@ -15501,8 +15501,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   holdTime: 2
-  interactOpction: 0
-  observationOpction: 1
+  interactOpction: 1
+  observationOpction: 0
   interactionType: 1
   NotCompleted: {fileID: 0}
   observation: {fileID: 0}
@@ -15528,7 +15528,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1335326353}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.895, y: 0.8159702, z: 7}
+  m_LocalPosition: {x: -8.895, y: 0.8159702, z: 6.8}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
