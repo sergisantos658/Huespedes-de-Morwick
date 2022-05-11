@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
+  m_Name: BoatM1
+  m_EditorClassIdentifier: 
+  dialogueTyping:
+  - dialogue:
+    - "Eso hace un total de 5 jornadas y media, \xBFque pareja, fue la siguiente
+      en recorrer el trayecto con la pata de palo?"
+    whoTalk: 0
+  responses:
+  - responseText: George Stobbart y Manny Grim
+    dialogueObject: {fileID: 11400000, guid: e87aee31872ceaf42b659447830f3458, type: 2}
+  - responseText: G.Threepwood y Manny Grim
+    dialogueObject: {fileID: 11400000, guid: bf76eca412c8ce54789dfa38fef7422b, type: 2}
+  - responseText: G.Threepwood y George Stobbart
+    dialogueObject: {fileID: 11400000, guid: b98e884a724a3a8439e33956681703de, type: 2}

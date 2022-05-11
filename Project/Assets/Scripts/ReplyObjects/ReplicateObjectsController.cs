@@ -27,7 +27,7 @@ public class ReplicateObjectsController : MonoBehaviour
         [HideInInspector] public Material[] materials;
         public SettingsOfObject[] settings;
 
-        [HideInInspector] public List<Matrix4x4> matrix = new List<Matrix4x4>();
+        [HideInInspector] public Matrix4x4[] matrix;
     }
 
     public ObjectToReplicate[] objects;
@@ -45,7 +45,7 @@ public class ReplicateObjectsController : MonoBehaviour
                 Matrix4x4 objectMatrix = Matrix4x4.Translate(objects[i].settings[o].position) * Matrix4x4.Rotate(Quaternion.Euler(objects[i].settings[o].rotation)) *
                 Matrix4x4.Scale(objects[i].settings[o].escale);
 
-                objects[i].matrix.Add(objectMatrix);
+                objects[i].matrix[o] = objectMatrix;
             }
 
         }
