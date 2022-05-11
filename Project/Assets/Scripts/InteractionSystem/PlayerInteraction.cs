@@ -127,8 +127,8 @@ public class PlayerInteraction : MonoBehaviour
 
 		if (hitSomething)
 		{
-			
-			if(hitInfo.collider.GetComponent<Interactable>() != interactableDinamic && !EventSystem.current.IsPointerOverGameObject() && !PlanetPuzle.Planets )
+
+			if (hitInfo.collider.GetComponent<Interactable>() != interactableDinamic && !EventSystem.current.IsPointerOverGameObject() && !PlanetPuzle.Planets && !ActivateLen.Active; )
             {
 				interactableDinamic = hitInfo.collider.GetComponent<Interactable>();
 
