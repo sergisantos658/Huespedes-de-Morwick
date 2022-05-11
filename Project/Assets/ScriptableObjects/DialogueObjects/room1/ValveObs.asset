@@ -10,15 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
-  m_Name: Heimdal4
+  m_Name: ValveObs
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Adem\xE1s de ciego, sordo... Me impresiona que hayas podido conducir hasta
-      el hotel... "
-    - "Entre tus cosas jurar\xEDa haber visto un anillo de incalculable valor y un
-      dorito con forma de Elvis Presley... Si resuelves un acertijo, te dar\xE9 una
-      llave y si fallas... me quedar\xE9 con el dorito."
-    - Que me dices?
-    whoTalk: 1
+    - "Un bastidor de armas con algunos escudos y... \xBFlo que parece ser algun
+      tipo de valvula? "
+    whoTalk: 0
   responses: []
