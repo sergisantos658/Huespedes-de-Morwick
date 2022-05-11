@@ -10,6 +10,7 @@ public class PlanetPuzle : MonoBehaviour
     public PlayerController player;
     public static bool Planets = false;
     public static bool correct = false;
+    [SerializeField] private Texture2D normalCursor;
 
     [SerializeField]
     private DialogueObject[] dialoguePlanets;
@@ -20,6 +21,8 @@ public class PlanetPuzle : MonoBehaviour
     public void activatepuzzle()
     {
         objectPlanet.SetActive(true);
+        Vector2 normalCursorHotspot = new Vector2(20, 10);
+        Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);
         Planets = true;
         Time.timeScale = 0;
 

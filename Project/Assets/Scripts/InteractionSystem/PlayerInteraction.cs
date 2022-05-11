@@ -126,7 +126,7 @@ public class PlayerInteraction : MonoBehaviour
             {
 				interactableDinamic = hitInfo.collider.GetComponent<Interactable>();
 
-				if (interactableDinamic && Time.timeScale == 1)
+				if (interactableDinamic)
 				{
 					if (interactableDinamic.InteractOpction && interactableDinamic.ObservationOpction)
 					{

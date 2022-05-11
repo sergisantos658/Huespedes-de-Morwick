@@ -10,6 +10,7 @@ public class MenuManager : MonoBehaviour
 	public static bool pause;
 	public AudioSource NormalMusic;
 	public AudioSource MusicMenu;
+	//[SerializeField] private Texture2D normalCursor;
 
 	public GameObject mainPauseMenu;
 
@@ -30,6 +31,8 @@ public class MenuManager : MonoBehaviour
 		if (IsPause)
 		{
 			Time.timeScale = 0;
+			/*Vector2 normalCursorHotspot = new Vector2(20, 10);
+			Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);*/
 			NormalMusic.Stop();
 			MusicMenu.Play();
 			pause = true;
