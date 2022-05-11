@@ -14,11 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Y para eso vinieron a tardar... 3 jornadas, ahora dime \xBFcual de los dos
-      volvi\xF3 a Cueva Lenteja?\n"
-    whoTalk: 1
-  responses:
-  - responseText: Sam Max
-    dialogueObject: {fileID: 11400000, guid: 265b5042d3a30fc4d8c9fa93ccdfb7f6, type: 2}
-  - responseText: Manny Grim
-    dialogueObject: {fileID: 11400000, guid: c7f740882964c2f48ae6912ad4abbb40, type: 2}
+    - "Eso hace un total de 10 jornadas, me quedo con tu dorito, pero quiero ver
+      como sufres, as\xED que puedes seguir intentando resolver el acertijo."
+    whoTalk: 0
+  responses: []

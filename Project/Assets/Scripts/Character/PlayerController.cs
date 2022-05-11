@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
 	NavMeshAgent agent;
 	RaycastHit hit;
 	Camera m_Camera;
+	NavMeshHit navHit;
 
 	[HideInInspector]
 	public bool isRotating = false;
@@ -169,13 +170,14 @@ public class PlayerController : MonoBehaviour
 	}
 
 	void Move()
-	{  
+	{
+
 		if (Input.GetMouseButtonDown(0))
 		{
 			Ray ray = m_Camera.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_Camera.nearClipPlane));
 			if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask) && !EventSystem.current.IsPointerOverGameObject())
 			{
-				NavMesh.SamplePosition(hit.point, out NavMeshHit navHit, 100, -1);
+				NavMesh.SamplePosition(hit.point, out navHit, 100, -1);
 
 
 				
@@ -200,16 +202,14 @@ public class PlayerController : MonoBehaviour
 
 				agent.SetPath(path);
 				
-				if (!isRotating)
-				{
-					StartCoroutine(RotationChar(navHit.position - transform.position));
-					//Debug.Log(hit.transform.name);
-				}
+
 
 
 
 
 			}
+
+			StartCoroutine(RotationChar(navHit.position - transform.position));
 
 
 		}

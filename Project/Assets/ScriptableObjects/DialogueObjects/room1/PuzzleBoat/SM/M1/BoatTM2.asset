@@ -10,15 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
-  m_Name: BoatSM1
+  m_Name: BoatTM2
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Y para eso vinieron a tardar... 3 jornadas, ahora dime \xBFcual de los dos
-      volvi\xF3 a Cueva Lenteja?\n"
+    - "Eso hace un total de 9 jornadas, me quedo con tu dorito, pero quiero ver como
+      sufres, as\xED que puedes seguir intentando resolver el acertijo.\n"
     whoTalk: 1
-  responses:
-  - responseText: Sam Max
-    dialogueObject: {fileID: 11400000, guid: 265b5042d3a30fc4d8c9fa93ccdfb7f6, type: 2}
-  - responseText: Manny Grim
-    dialogueObject: {fileID: 11400000, guid: c7f740882964c2f48ae6912ad4abbb40, type: 2}
+  responses: []

@@ -21,6 +21,6 @@ MonoBehaviour:
   - responseText: Sam Max y G.Threepwood
     dialogueObject: {fileID: 11400000, guid: 069391606bc34414392ebf4abe991086, type: 2}
   - responseText: Sam Max y Manny Grim
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: b6a8713da33b9424bbd781e82d0e965f, type: 2}
   - responseText: G.Threepwood y Sam Max
     dialogueObject: {fileID: 0}

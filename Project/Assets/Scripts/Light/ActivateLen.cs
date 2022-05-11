@@ -10,11 +10,15 @@ public class ActivateLen : MonoBehaviour
     public GameObject ghost;
     public GameObject Len;
     public static bool Active = false;
-    
+    public bool lenActive;
+    public void ActiveLen()
+    {
+        lenActive = true;
+    }
     // Update is called once per frame
     void Update()
     {
-        if(PlanetPuzle.correct == true && Input.GetKeyDown(KeyCode.E))
+        if(lenActive && Input.GetKeyDown(KeyCode.E))
         {
             Active = !Active;
             if(Active == true)
