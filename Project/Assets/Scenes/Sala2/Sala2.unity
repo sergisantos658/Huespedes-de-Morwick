@@ -98330,6 +98330,10 @@ PrefabInstance:
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 814647928}
+    - target: {fileID: 7069821695779106865, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: normalCursor
+      value: 
+      objectReference: {fileID: 2800000, guid: a9ae0267b06e7b24d90f188a4370cce3, type: 3}
     - target: {fileID: 7069821695779106866, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: dialogueUI
       value: 
