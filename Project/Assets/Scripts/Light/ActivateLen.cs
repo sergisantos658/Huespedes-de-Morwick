@@ -11,14 +11,8 @@ public class ActivateLen : MonoBehaviour
     public GameObject Len;
     public static bool Active = false;
     public bool lenActive;
-    [SerializeField] private Texture2D PointCursor;
 
-    private Vector2 interactCursorHotspot;
-    private Vector2 normalCursorHotspot;
-    public void Start()
-    {
-        normalCursorHotspot = new Vector2(10, 10);
-    }
+
     public void ActiveLen()
     {
         lenActive = true;
@@ -34,12 +28,11 @@ public class ActivateLen : MonoBehaviour
                 player.SetActive(false);
                 ghost.SetActive(false);
                 Len.SetActive(true);
-                //Cursor.visible = false;
-                Cursor.SetCursor(PointCursor, normalCursorHotspot, CursorMode.ForceSoftware);
+                Cursor.visible = false;
             }
             else 
             {
-                //Cursor.visible = true;
+                Cursor.visible = true;
                 player.SetActive(true);
                 ghost.SetActive(true);
                 Len.SetActive(false); 
