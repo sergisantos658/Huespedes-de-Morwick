@@ -250,7 +250,11 @@ public class PlayerInteraction : MonoBehaviour
 	void HandleInteraction(Interactable interactable)
 	{
 		//KeyCode key = KeyCode.Mouse0;
-		PController.RotateTo(interactable.transform.position);
+		if(PController != null)
+        {
+			PController.RotateTo(interactable.transform.position);
+		}
+		
 
 		switch (interactable.interactionType)
 		{
