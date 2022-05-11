@@ -40,7 +40,7 @@ public class PlayerInteraction : MonoBehaviour
 	float distancePlayer;
 
 	Interactable interactable;
-	Interactable interactableDinamic;
+	public static Interactable interactableDinamic;
 
 	void IncreaseHoldTime() => holdTime += Time.deltaTime;
 	void ResetHoldTime() => holdTime = 0f;
@@ -79,7 +79,7 @@ public class PlayerInteraction : MonoBehaviour
 
 	void Update()
 	{
-		if (gameObject.GetComponent<PlayerController>()) { if (gameObject.GetComponent<PlayerController>().DialogueUI.isOpen) { return; } }
+		if (gameObject.GetComponent<PlayerController>()) { if (PController.DialogueUI.isOpen) { return; } }
 
 		mpS = Input.mousePosition;
 		mpS = new Vector3(mpS.x, mpS.y, mainCameraC.nearClipPlane);
@@ -88,18 +88,14 @@ public class PlayerInteraction : MonoBehaviour
 
 		rayOrigin = mainCameraC.transform.position;
 		rayDirection = (mpW - mainCameraC.transform.position);
-
-		if(rotate == true)
-        {
-			
-			Debug.Log("porque");
-		}
-		if (!MenuManager.pause)
+		if (!MenuManager.pause || PlanetPuzle.Planets)
 		{
 			hitAndInteraction();
+			Debug.Log(PController.DialogueUI.isOpen);
 		}
         else
         {
+			Debug.Log("cursor");
 			Cursor.SetCursor(PlayerSettings.defaultCursor, normalCursorHotspot, CursorMode.ForceSoftware);
 			if (interactableDinamic != null) interactableDinamic = null;
 		}

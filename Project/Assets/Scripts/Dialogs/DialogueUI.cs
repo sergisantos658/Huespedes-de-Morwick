@@ -4,7 +4,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.EventSystems;
 
+using UnityEditor;
 public class DialogueUI : MonoBehaviour
 {
     [SerializeField] private GameObject dialogueBox;
@@ -24,6 +26,7 @@ public class DialogueUI : MonoBehaviour
     private ResponsableHandler responseHandler;
     private TypewritterEffect typewriterEffect;
 
+    private Vector2 normalCursorHotspot;
     void Start()
     {
         typewriterEffect = GetComponent<TypewritterEffect>();
@@ -34,6 +37,7 @@ public class DialogueUI : MonoBehaviour
 
         iSilhouettePlayer = silhouettePlayer.GetComponent<Image>();
         iSilhouetteNPC = silhouetteNPC.GetComponent<Image>();
+        normalCursorHotspot = new Vector2(20, 10);
 
         CloseDialogueBox();
     }
@@ -44,6 +48,8 @@ public class DialogueUI : MonoBehaviour
 
         isOpen = true;
         dialogueBox.SetActive(true);
+        Cursor.SetCursor(PlayerSettings.defaultCursor, normalCursorHotspot, CursorMode.ForceSoftware);
+        if (PlayerInteraction.interactableDinamic != null) PlayerInteraction.interactableDinamic = null;
         StartCoroutine(StepThroughDialogue(dialogueObject));
     }
 

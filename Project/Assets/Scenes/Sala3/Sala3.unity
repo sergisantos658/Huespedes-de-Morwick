@@ -22301,7 +22301,6 @@ MonoBehaviour:
   ghost: {fileID: 919132148004828120}
   Len: {fileID: 370547814}
   lenActive: 0
-  PointCursor: {fileID: 2800000, guid: f71672eb4a873fd49a8eb3697d76d1cd, type: 3}
 --- !u!1 &1767461384 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7069821695468808185, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
@@ -24534,8 +24533,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 0.9516274, z: 0.7148221}
-  m_Center: {x: -1.4926638e-10, y: 0.4334553, z: -0.14258496}
+  m_Size: {x: 1, y: 1.047797, z: 1.1826339}
+  m_Center: {x: -3.9224063e-10, y: 0.3853705, z: 0.091320775}
 --- !u!1 &1933654696 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4179086729700039233, guid: ce285a7430946e24ca0a9218777a7805, type: 3}
