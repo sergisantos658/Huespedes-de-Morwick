@@ -16854,6 +16854,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2f2ff5c103656c94ca51d5bbd62d1ca9, type: 3}
+--- !u!1 &1304713687
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1304713688}
+  m_Layer: 0
+  m_Name: ResetPosition
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1304713688
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1304713687}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 12.612, y: 0.2805438, z: -13.637}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 19
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1308793595
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -22379,6 +22409,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 317796569}
     - target: {fileID: 7069821695779106865, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: GoalPosition
+      value: 
+      objectReference: {fileID: 1304713688}
+    - target: {fileID: 7069821695779106865, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: normalCursor
       value: 
       objectReference: {fileID: 2800000, guid: a9ae0267b06e7b24d90f188a4370cce3, type: 3}
@@ -22400,7 +22434,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7320517779906380969, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 12.545
+      value: 12.33
       objectReference: {fileID: 0}
     - target: {fileID: 7320517779906380969, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22408,7 +22442,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7320517779906380969, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -13.67
+      value: -13.99
       objectReference: {fileID: 0}
     - target: {fileID: 7320517779906380969, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: m_LocalRotation.w
@@ -26567,8 +26601,8 @@ MonoBehaviour:
   useRigidBody: 0
   rotateSpeed: 5
   viewpoint: {fileID: 582262165}
-  visionToCatch: 5.57
-  visionToSee: 5.57
+  visionToCatch: 1.5
+  visionToSee: 5.6
   playerlayer:
     serializedVersion: 2
     m_Bits: 8

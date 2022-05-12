@@ -16,7 +16,7 @@ public class MorwickController : MonoBehaviour
 
     [Header("TargetInView enemy")]
     [SerializeField] Transform viewpoint;
-    [SerializeField] float visionToCatch = 5.57f;
+    [SerializeField] float visionToCatch = 2.0f;
     // if morwick see you he will increase the velocity to catch you
     [SerializeField] float visionToSee = 5.57f;
     [SerializeField] LayerMask playerlayer;
@@ -166,7 +166,21 @@ public class MorwickController : MonoBehaviour
 
     void RunTowardsThePlayer()
     {
-        Debug.Log("I'm comming for you");
+        //Debug.Log("I'm comming for you");
+
+        // --> Rotation
+
+        Vector3 _direction = (target.transform.position - transform.position).normalized;
+
+        //create the rotation we need to be in to look at the target
+        Quaternion _lookRotation = Quaternion.LookRotation(_direction);
+
+        //rotate us over time according to speed until we are in the required rotation
+        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotateSpeed);
+
+        // <--
+
+        // --> Move
 
         if (useRigidBody)
         {
@@ -175,8 +189,19 @@ public class MorwickController : MonoBehaviour
         }
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speedByFollowPathPoint * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, (speedByFollowPathPoint * 2) * Time.deltaTime);
 
+        }
+
+        // <--
+
+        if (TargetInView(visionToCatch))
+        {
+            // -->
+            target.transform.position = target.GetComponent<PlayerInteraction>().GoalPosition.position;
+
+            // <--
+            timeToForgetPlayer = 0;
         }
     }
 
@@ -187,7 +212,7 @@ public class MorwickController : MonoBehaviour
 
         if (hit.collider != null && hit.collider.GetComponent<PlayerController>() != null )
         {
-            timeToForgetPlayer = 30f;
+            timeToForgetPlayer = 5f;
             return true;
         }
         return false;
@@ -196,7 +221,8 @@ public class MorwickController : MonoBehaviour
     // OnDrawGizmos
     private void OnDrawGizmos()
     {
-        Debug.DrawLine(viewpoint.position, viewpoint.position + viewpoint.forward * visionToCatch);
+        Debug.DrawLine(viewpoint.position, viewpoint.position + viewpoint.forward * visionToSee, Color.blue);
+        Debug.DrawLine(viewpoint.position, viewpoint.position + viewpoint.forward * visionToCatch, Color.red);
     }
 
 }

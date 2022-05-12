@@ -17,7 +17,6 @@ public class PlayerInteraction : MonoBehaviour
 	#region Data&Settings
 
 	public float rayDistance; // Set the distance from the ray 
-	public float raysphereRadius; // Set the Bounds of the interaction Raycast
 	public LayerMask interactableLayer; // Set the layerMask to only interact with
 	[SerializeField] private GameObject mainCamera;
 	Camera mainCameraC;
