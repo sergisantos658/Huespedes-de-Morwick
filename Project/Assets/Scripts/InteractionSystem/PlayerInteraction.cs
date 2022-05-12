@@ -88,14 +88,13 @@ public class PlayerInteraction : MonoBehaviour
 
 		rayOrigin = mainCameraC.transform.position;
 		rayDirection = (mpW - mainCameraC.transform.position);
+
 		if (!MenuManager.pause || PlanetPuzle.Planets)
 		{
 			hitAndInteraction();
-			Debug.Log(PController.DialogueUI.isOpen);
 		}
         else
         {
-			Debug.Log("cursor");
 			Cursor.SetCursor(PlayerSettings.defaultCursor, normalCursorHotspot, CursorMode.ForceSoftware);
 			if (interactableDinamic != null) interactableDinamic = null;
 		}

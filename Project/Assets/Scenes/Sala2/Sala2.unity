@@ -3652,8 +3652,9 @@ GameObject:
   - component: {fileID: 416698430}
   - component: {fileID: 416698432}
   - component: {fileID: 416698431}
+  - component: {fileID: 416698433}
   m_Layer: 0
-  m_Name: bookText16
+  m_Name: BookNumberNumpad
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3812,6 +3813,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!114 &416698433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 416698429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3bfc201af5afd44aad590765088f050, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  switchLight: {fileID: 828389925}
+  thunderC: {fileID: 1451249906}
 --- !u!1001 &424905107
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7176,7 +7191,7 @@ Light:
     serializedVersion: 2
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
-  m_Lightmapping: 1
+  m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
   m_BounceIntensity: 1
@@ -16051,7 +16066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f44f3d609c500d74ab1647eaba424e2c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thunderTimer: 3
+  thunderTimer: 10
   intensity: 1000
   umbral: 0.5
   thunderLight: {fileID: 661908727}
@@ -16383,16 +16398,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1487817455}
-  m_LocalRotation: {x: -0, y: 0.7071068, z: -0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: -8.15}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1832950519}
   m_RootOrder: 15
-  m_LocalEulerAnglesHint: {x: 0, y: 90, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -9.7807, y: 11.297}
+  m_AnchoredPosition: {x: -9.7807, y: 11.291}
   m_SizeDelta: {x: 0.2, y: 0.2}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1487817457

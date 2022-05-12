@@ -38,6 +38,9 @@ public class ThunderController : MonoBehaviour
             if(thunderCount == 0 && thunderLight.intensity <= umbral) // Make thunder Twice
             {
                 IsThunder = false;
+                timer = intensity;
+                thunderLight.intensity = intensity;
+
                 thunderCount++;
             }
 

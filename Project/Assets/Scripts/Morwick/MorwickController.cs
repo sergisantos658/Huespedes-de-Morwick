@@ -10,14 +10,18 @@ public class MorwickController : MonoBehaviour
     [Header("Custom Behavior")]
     public bool followEnabled = true;
     public bool direccionLookEnabled = true;
+    public bool useRigidBody = false;
     public float rotateSpeed = 10;
 
 
     [Header("TargetInView enemy")]
     [SerializeField] Transform viewpoint;
-    [SerializeField] float lenght = 5.57f;
+    [SerializeField] float visionToCatch = 5.57f;
+    // if morwick see you he will increase the velocity to catch you
+    [SerializeField] float visionToSee = 5.57f;
     [SerializeField] LayerMask playerlayer;
     bool targetDirectionLook;
+    [HideInInspector] public float timeToForgetPlayer;
     Animator animator;
 
     Rigidbody rb;
@@ -79,23 +83,33 @@ public class MorwickController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        targetDirectionLook = TargetInView();
 
-        if (followEnabled)
+        if (!TargetInView(visionToSee) && timeToForgetPlayer <= 0)
         {
             MoveToNextPoint();
+        }
+        else
+        {
+            RunTowardsThePlayer();
+        }
+
+        if(timeToForgetPlayer >= 0)
+        {
+            timeToForgetPlayer -= Time.deltaTime;
         }
     }
 
     void Update()
     {
-        if (targetDirectionLook)
+        if (TargetInView(visionToSee))
         {
             animator.SetBool("Run", true);
+            animator.SetBool("Walk", false);
         }
         else
         {
             animator.SetBool("Walk", true);
+            animator.SetBool("Run", false);
         }
     }
 
@@ -103,31 +117,32 @@ public class MorwickController : MonoBehaviour
     {
         Transform goalPoint = points[nextId];
 
-        // -->
-        //Vector3 relative = transform.InverseTransformPoint(goalPoint.position);
-        //float angle = Mathf.Atan2(goalPoint.position.x, goalPoint.position.z) * Mathf.Rad2Deg;
-        //transform.eulerAngles = new Vector3(0, angle -90 , 0);
+        // --> Rotation
+
+        Vector3 _direction = (goalPoint.position - transform.position).normalized;
+
+        //create the rotation we need to be in to look at the target
+        Quaternion _lookRotation = Quaternion.LookRotation(_direction);
+
+        //rotate us over time according to speed until we are in the required rotation
+        transform.rotation = Quaternion.Slerp(transform.rotation, _lookRotation, Time.deltaTime * rotateSpeed);
+
         // <--
 
-        // --> 
-        Vector3 targetDir = goalPoint.position - transform.position;
-        Vector3 forward = transform.forward;
+        // --> Move
 
-        float angle = Vector3.SignedAngle(forward, targetDir, Vector3.up);
-        float angleToApply = (angle > 0 ? rotateSpeed : -rotateSpeed) * Time.deltaTime;
-        if (
-            ((angle > 0) && (angleToApply > angle)) ||
-            ((angle < 0) && (angleToApply < angle))
-            )
-        { angleToApply = angle; }
+        if (useRigidBody)
+        {
+            rb.velocity = transform.forward * (speedByFollowPathPoint * 50) * Time.deltaTime;
 
-        Quaternion rotationToApply = Quaternion.AngleAxis(angleToApply, Vector3.up);
-        transform.rotation = rotationToApply * transform.rotation;
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, goalPoint.position, speedByFollowPathPoint * Time.deltaTime);
+
+        }
+
         // <--
-
-        transform.position = Vector3.MoveTowards(transform.position, goalPoint.position, speedByFollowPathPoint * Time.deltaTime);
-        //rb.MovePosition(goalPoint.position * speedByFollowPathPoint * Time.deltaTime);
-
 
         if (Vector3.Distance(new Vector3(transform.position.x, 0, transform.position.z), new Vector3(goalPoint.position.x, 0, goalPoint.position.z)) < 0.2f)
         {
@@ -149,13 +164,30 @@ public class MorwickController : MonoBehaviour
 
     }
 
-    private bool TargetInView()
+    void RunTowardsThePlayer()
+    {
+        Debug.Log("I'm comming for you");
+
+        if (useRigidBody)
+        {
+            rb.velocity = transform.forward * (speedByFollowPathPoint * 50) * Time.deltaTime;
+
+        }
+        else
+        {
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, speedByFollowPathPoint * Time.deltaTime);
+
+        }
+    }
+
+    private bool TargetInView(float lenght)
     {
         RaycastHit hit;
-        Physics.Raycast(viewpoint.position, Vector3.forward, out hit, lenght, playerlayer);
+        Physics.Raycast(viewpoint.position, viewpoint.forward, out hit, lenght, playerlayer);
 
         if (hit.collider != null && hit.collider.GetComponent<PlayerController>() != null )
         {
+            timeToForgetPlayer = 30f;
             return true;
         }
         return false;
@@ -164,7 +196,7 @@ public class MorwickController : MonoBehaviour
     // OnDrawGizmos
     private void OnDrawGizmos()
     {
-        Debug.DrawLine(viewpoint.position, viewpoint.position + Vector3.forward * lenght);
+        Debug.DrawLine(viewpoint.position, viewpoint.position + viewpoint.forward * visionToCatch);
     }
 
 }
