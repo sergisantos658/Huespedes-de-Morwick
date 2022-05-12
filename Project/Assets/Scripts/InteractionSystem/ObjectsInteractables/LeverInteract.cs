@@ -10,10 +10,15 @@ public class LeverInteract : Interactable
 
     public bool isOpened = false;
 
-    Animator anim; 
+    Animator anim;
+
+    public DialogueObject dialog;
+
+    private PlayerController playerC;
 
     void Start()
     {
+        playerC = PlayerController.currentPlayer;
         anim = GetComponent<Animator>();
         anim.SetBool("LeverUp", !Door.isOpened);
     }
@@ -34,6 +39,6 @@ public class LeverInteract : Interactable
 
     public override void Observation()
     {
-
+        playerC.DialogueUI.ShowDialogue(dialog);
     }
 }
