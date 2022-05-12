@@ -3748,7 +3748,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &581596779
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3789,7 +3789,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: ae180c1c5d5644641b34c8238e9b3720, type: 3}
+  m_Texture: {fileID: 2800000, guid: 84bdc10895f8e194290faaf68de33f15, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -10698,7 +10698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1284487388
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12683,8 +12683,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Resulta que volviendo de la convenci\xF3n se me estropea el coche y decido
-    pasar la idea en este hotel que no da para nada, nada de miedo"
+  m_text: "Resulta que volviendo de la convenci\xF3n se me estrope\xF3 el coche y
+    decido pasar la idea en este hotel que no da para nada, nada de miedo"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9d24e6b3ecd1d2b479a31d3d0e7b1f9e, type: 2}
   m_sharedMaterial: {fileID: 21148088844906328, guid: 9d24e6b3ecd1d2b479a31d3d0e7b1f9e, type: 2}
