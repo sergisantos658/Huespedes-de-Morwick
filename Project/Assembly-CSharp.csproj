@@ -156,6 +156,7 @@
     <Compile Include="Assets\Scripts\Keypad\ButtonKeypad.cs" />
     <Compile Include="Assets\DoorsManager\Scripts\DoorScript.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\InputManager.cs" />
+    <Compile Include="Assets\Scripts\Morwick\FadeIn.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
