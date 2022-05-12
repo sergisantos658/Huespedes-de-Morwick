@@ -107,7 +107,7 @@
     <Compile Include="Assets\Scripts\Menu\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\LeverInteract.cs" />
     <Compile Include="Assets\Scripts\Keypad\Keypad.cs" />
-    <Compile Include="Assets\Scripts\puzzle\DragAndDrop_.cs" />
+    <Compile Include="Assets\Scripts\Puzzle\DragAndDrop_.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\Blueprint.cs" />
     <Compile Include="Assets\Scripts\Light\FollowMouse.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\RightClick.cs" />
@@ -130,7 +130,7 @@
     <Compile Include="Assets\InventoryMaster\Scripts\Item\ItemDataBaseList.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\LeftClick.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\InteractKeypad.cs" />
-    <Compile Include="Assets\Scripts\puzzle\piecesScript.cs" />
+    <Compile Include="Assets\Scripts\Puzzle\piecesScript.cs" />
     <Compile Include="Assets\Scripts\Light\MaskObject.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\FirstPerson\FirstPersonController.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\Inventory.cs" />
@@ -157,6 +157,8 @@
     <Compile Include="Assets\DoorsManager\Scripts\DoorScript.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\InputManager.cs" />
     <Compile Include="Assets\Scripts\Morwick\FadeIn.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\f.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\PutValve.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

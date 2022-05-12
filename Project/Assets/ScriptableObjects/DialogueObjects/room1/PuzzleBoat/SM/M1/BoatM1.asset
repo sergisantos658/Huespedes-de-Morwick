@@ -16,7 +16,7 @@ MonoBehaviour:
   - dialogue:
     - "Eso hace un total de 5 jornadas y media, \xBFque pareja, fue la siguiente
       en recorrer el trayecto con la pata de palo?"
-    whoTalk: 0
+    whoTalk: 1
   responses:
   - responseText: George Stobbart y Manny Grim
     dialogueObject: {fileID: 11400000, guid: e87aee31872ceaf42b659447830f3458, type: 2}

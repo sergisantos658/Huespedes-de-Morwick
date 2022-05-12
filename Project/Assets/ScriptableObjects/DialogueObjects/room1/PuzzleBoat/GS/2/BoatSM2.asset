@@ -16,5 +16,5 @@ MonoBehaviour:
   - dialogue:
     - "Eso hace un total de 9 jornadas y media, me quedo con tu dorito, pero quiero
       ver como sufres, as\xED que puedes seguir intentando resolver el acertijo."
-    whoTalk: 0
+    whoTalk: 1
   responses: []
