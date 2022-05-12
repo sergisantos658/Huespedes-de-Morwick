@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Eso hace un total de 7 jornadas y media, me quedo con tu dorito, pero quiero
-      ver como sufres, as\xED que puedes seguir intentando resolver el acertijo."
+    - "Eso hace un total de 7 jornadas y media, ahora dime \xBFcual de los dos volvi\xF3
+      a Cueva Lenteja?"
     whoTalk: 1
   responses:
-  - responseText: 
-    dialogueObject: {fileID: 0}
-  - responseText: 
-    dialogueObject: {fileID: 0}
+  - responseText: Sam Max
+    dialogueObject: {fileID: 11400000, guid: d2065c5712f3a5b40b9b2e1ae4f6d7ff, type: 2}
+  - responseText: G.Threepwood
+    dialogueObject: {fileID: 11400000, guid: cd8038cb71755f94090b44b43050b39d, type: 2}
