@@ -1,8 +1,9 @@
-Shader "Custom/OwnMask"
+ Shader "Custom/OwnMask"
 {
 	Properties
 	{
 		_Color ("Color", Color) = (1,1,1,1)
+		_Emission("Emission", Color) = (0,0,0,0)
 		_MainTex ("Albedo (RGB)", 2D) = "white" {}
 		_Glossiness ("Smoothness", Range(0,1)) = 0.5
 		_Metallic ("Metallic", Range(0,1)) = 0.0
@@ -27,11 +28,13 @@ Shader "Custom/OwnMask"
 		{
             float2 uv_MainTex;
             float3 worldPos;
+			float4 color : COLOR;
         };
 
 		half _Glossiness;
 		half _Metallic;
 		fixed4 _Color;
+		fixed4 _Emission;
 
 		int _LensCount = 1;
 		float4x4 _GLOBALMaskTransform[10];
@@ -51,7 +54,7 @@ Shader "Custom/OwnMask"
 		void surf (Input IN, inout SurfaceOutputStandard o)
 		{
 			// Albedo comes from a texture tinted by color
-			fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color;
+			fixed4 c = tex2D(_MainTex, IN.uv_MainTex) * _Color * IN.color;
 
 			float squares = step(0.5, 1);
 
@@ -76,9 +79,10 @@ Shader "Custom/OwnMask"
 				}
 			}
 
-			clip(alpha - 0.1); // esto hace la verdadera magia
+			clip(alpha * c.a - 0.1); // esto hace la verdadera magia
 
 			o.Albedo = c.rgb;
+			o.Emission = _Emission * alpha * _Emission.a;
 			// Metallic and smoothness come from slider variables
 			o.Metallic = _Metallic;
 			o.Smoothness = _Glossiness;
