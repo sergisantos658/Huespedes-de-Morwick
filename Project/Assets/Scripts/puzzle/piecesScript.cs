@@ -29,10 +29,7 @@ public class piecesScript : MonoBehaviour
             {
                 if (!InRightPosition)
                 {
-                    transform.position = RightPosition;
-                    InRightPosition = true;
-                    pieceCorrect++;
-                    GetComponent<SortingGroup>().sortingOrder = 0;                    
+                    colocePuzzle();
                 }
             }
         }
@@ -41,6 +38,17 @@ public class piecesScript : MonoBehaviour
             puzzleCompleted = true;
             Drag.finshPuzzle();
         }
-        
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+            colocePuzzle();
+        }
     }
+    public void colocePuzzle()
+    {
+        transform.position = RightPosition;
+        InRightPosition = true;
+        pieceCorrect++;
+        GetComponent<SortingGroup>().sortingOrder = 0;
+    }
+
 }
