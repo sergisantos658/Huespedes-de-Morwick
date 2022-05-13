@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
-  m_Name: DefaultAnswer
+  m_Name: SwitchLightPutTheSwitch
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Necesito un interruptor
+    - "Ya esta, he colocado la tapa en este interruptor, podr\xE9 apagar las luces
+      ahora?"
     whoTalk: 0
   responses: []

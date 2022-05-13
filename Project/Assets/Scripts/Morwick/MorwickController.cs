@@ -16,17 +16,25 @@ public class MorwickController : MonoBehaviour
 
     [Header("TargetInView enemy")]
     [SerializeField] Transform viewpoint;
-    [SerializeField] float visionToCatch = 2.0f;
-    // if morwick see you he will increase the velocity to catch you
-    [SerializeField] float visionToSee = 5.57f;
     [SerializeField] LayerMask playerlayer;
     bool targetDirectionLook;
     [HideInInspector] public float timeToForgetPlayer;
+    Collider[] colliders = new Collider[5];
     Animator animator;
 
     Rigidbody rb;
 
     //------------------------------------------------
+
+    [Header("Gizmos and settings")]
+
+    [SerializeField] float visionToCatch = 2.0f;
+    // if morwick see you he will increase the velocity to catch you
+    [SerializeField] float visionToSee = 5.57f;
+    [SerializeField] private float radiusCapsuleView;
+    [SerializeField] private Color colorGizmos;
+    [SerializeField] private bool activateGizmos;
+    //-----------------------------------------------
 
     [Header("Pathfinding by points")]
     public bool pathByPointsEnabled = true;
@@ -198,8 +206,8 @@ public class MorwickController : MonoBehaviour
         if (TargetInView(visionToCatch))
         {
             // -->
-            target.transform.position = target.GetComponent<PlayerInteraction>().GoalPosition.position;
-
+            //target.transform.position = target.GetComponent<PlayerInteraction>().GoalPosition.position;
+            Debug.Log("Muerto");
             // <--
             timeToForgetPlayer = 0;
         }
@@ -207,22 +215,38 @@ public class MorwickController : MonoBehaviour
 
     private bool TargetInView(float lenght)
     {
-        RaycastHit hit;
-        Physics.Raycast(viewpoint.position, viewpoint.forward, out hit, lenght, playerlayer);
+        colliders = Physics.OverlapCapsule(viewpoint.position, viewpoint.position + viewpoint.forward * lenght, radiusCapsuleView, playerlayer);
 
-        if (hit.collider != null && hit.collider.GetComponent<PlayerController>() != null )
+        foreach (var item in colliders)
         {
-            timeToForgetPlayer = 5f;
-            return true;
+            if (item != null && item.GetComponent<PlayerController>() != null)
+            {
+                Debug.Log("A");
+                timeToForgetPlayer = 5f;
+
+                colliders = null;
+                return true;
+            }
+
         }
+
+        colliders = null;
         return false;
+        
     }
 
     // OnDrawGizmos
     private void OnDrawGizmos()
     {
-        Debug.DrawLine(viewpoint.position, viewpoint.position + viewpoint.forward * visionToSee, Color.blue);
-        Debug.DrawLine(viewpoint.position, viewpoint.position + viewpoint.forward * visionToCatch, Color.red);
+        if (activateGizmos)
+        {
+            Gizmos.color = colorGizmos;
+            Gizmos.DrawCube(viewpoint.position + ((viewpoint.forward * visionToSee)/2), Vector3.one + viewpoint.forward * visionToSee);
+            Gizmos.DrawSphere(viewpoint.position + viewpoint.forward * visionToSee, radiusCapsuleView);
+            Gizmos.color = Color.blue;
+            Gizmos.DrawCube(viewpoint.position + ((viewpoint.forward * visionToCatch) / 2), new Vector3(1f, 1, 0.3f));
+
+        }
     }
 
 }

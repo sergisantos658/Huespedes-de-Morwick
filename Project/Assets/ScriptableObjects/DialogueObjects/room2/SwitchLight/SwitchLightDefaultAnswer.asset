@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
-  m_Name: ObservationChest
+  m_Name: SwitchLightDefaultAnswer
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Es un cofre.
-    - "Esta abierto, crei que necesitaria una llave.\nExtra\xF1o."
+    - No puedo presionar esto sin la tapa del interruptor.
+    - "Me podria electrocutar y quedarme igual de tieso que la fantasma de esta habitaci\xF3n."
     whoTalk: 0
   responses: []

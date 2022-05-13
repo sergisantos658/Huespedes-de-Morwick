@@ -5,6 +5,7 @@ using TMPro;
 public class LightsSwitch : Interactable
 {
     public DialogueObject defaultDialogue;
+    public DialogueObject getSwitchCoverDialogue;
 
     [SerializeField] private GameObject[] m_Lights;
 
@@ -12,16 +13,19 @@ public class LightsSwitch : Interactable
     public bool allLightsOff = false;
 
     private bool onlyOnce = false;
+    private bool lights = false;
     private PlayerController player;
 
     private void OnEnable()
     {
         PlayerController.WhoIsPlayerController += WhoIsPlayerController;
+        DialogueUI.CheckResponseDialogue += ResponseEventsCheck;
     }
 
     private void OnDisable()
     {
         PlayerController.WhoIsPlayerController -= WhoIsPlayerController;
+        DialogueUI.CheckResponseDialogue -= ResponseEventsCheck;
     }
 
     void WhoIsPlayerController(PlayerController target)
@@ -29,9 +33,9 @@ public class LightsSwitch : Interactable
         player = target;
     }
 
-    void UpdateLight()
+    public void UpdateLight()
     {
-        if (lightSwitch)
+        if (!onlyOnce)
         {
             allLightsOff = true;
 
@@ -48,25 +52,51 @@ public class LightsSwitch : Interactable
                 }
                 else
                 {
-                    m_light.SetActive(onlyOnce);
+                    m_light.SetActive(lights);
                 }
 
             }
 
-            onlyOnce = !onlyOnce;
+            lights = !lights;
 
+            onlyOnce = true;
+        }
+        
+    }
+
+    public void UpdateDialogueObject(DialogueObject newDialogue)
+    {
+        getSwitchCoverDialogue = newDialogue;
+    }
+
+    void ResponseEventsCheck(DialogueObject dinamicDialogueObject)
+    {
+        foreach (DialogueResponseEvents responseEvents in GetComponents<DialogueResponseEvents>())
+        {
+            if (responseEvents.DialogueObject == dinamicDialogueObject)
+            {
+                player.DialogueUI.AddResponseEvents(responseEvents.Events);
+                break;
+            }
+        }
+    }
+
+    public override void Interact()
+    {
+        if (lightSwitch)
+        {
+            onlyOnce = false;
+
+            ResponseEventsCheck(getSwitchCoverDialogue);
+
+            player.DialogueUI.ShowDialogue(getSwitchCoverDialogue);
         }
         else
         {
             player.DialogueUI.ShowDialogue(defaultDialogue);
         }
-        
     }
 
-    public override void Interact()
-    {
-        UpdateLight();
-    }
     public override void Observation()
     {
 

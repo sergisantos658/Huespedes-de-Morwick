@@ -10,10 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
-  m_Name: ObservationLight
+  m_Name: SwitchLightGetItCoverSwitch
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Es solo una lampara
+    - Parece que la tapa del interruptor encaja con este interruptor sin tapa.
+    - "Deberia colocar aqu\xED la tapa?"
     whoTalk: 0
-  responses: []
+  responses:
+  - responseText: Si
+    dialogueObject: {fileID: 11400000, guid: 46b4731a012f577439682e68b9c279db, type: 2}
+  - responseText: No
+    dialogueObject: {fileID: 0}
