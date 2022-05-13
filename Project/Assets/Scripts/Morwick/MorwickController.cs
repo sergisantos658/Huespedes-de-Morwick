@@ -197,7 +197,7 @@ public class MorwickController : MonoBehaviour
         }
         else
         {
-            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, (speedByFollowPathPoint * 2) * Time.deltaTime);
+            transform.position = Vector3.MoveTowards(transform.position, target.transform.position, (speedByFollowPathPoint * 1.5f) * Time.deltaTime);
 
         }
 
@@ -206,8 +206,8 @@ public class MorwickController : MonoBehaviour
         if (TargetInView(visionToCatch))
         {
             // -->
-            //target.transform.position = target.GetComponent<PlayerInteraction>().GoalPosition.position;
-            Debug.Log("Muerto");
+            target.transform.position = target.GetComponent<PlayerInteraction>().GoalPosition.position;
+            //Debug.Log("Muerto");
             // <--
             timeToForgetPlayer = 0;
         }
@@ -221,7 +221,6 @@ public class MorwickController : MonoBehaviour
         {
             if (item != null && item.GetComponent<PlayerController>() != null)
             {
-                Debug.Log("A");
                 timeToForgetPlayer = 5f;
 
                 colliders = null;
@@ -241,10 +240,11 @@ public class MorwickController : MonoBehaviour
         if (activateGizmos)
         {
             Gizmos.color = colorGizmos;
-            Gizmos.DrawCube(viewpoint.position + ((viewpoint.forward * visionToSee)/2), Vector3.one + viewpoint.forward * visionToSee);
             Gizmos.DrawSphere(viewpoint.position + viewpoint.forward * visionToSee, radiusCapsuleView);
+            Gizmos.matrix = Matrix4x4.Translate(transform.position + Vector3.up) * Matrix4x4.Rotate(transform.rotation);
+            Gizmos.DrawCube(Vector3.zero + ((Vector3.forward * visionToSee)/2), new Vector3(0.5f, 1, 0.3f) + Vector3.forward * visionToSee);
             Gizmos.color = Color.blue;
-            Gizmos.DrawCube(viewpoint.position + ((viewpoint.forward * visionToCatch) / 2), new Vector3(1f, 1, 0.3f));
+            Gizmos.DrawCube(Vector3.zero + ((Vector3.forward * visionToCatch) / 2), new Vector3(0.5f, 1, 0.1f));
 
         }
     }
