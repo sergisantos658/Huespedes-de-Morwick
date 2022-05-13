@@ -6,6 +6,21 @@ using UnityEngine.SceneManagement;
 
 public class PlayerCheckPoint : MonoBehaviour
 {
+    private static PlayerCheckPoint _instance;
+    public static PlayerCheckPoint Instance
+    {
+        get
+        {
+            if (_instance == null)
+            {
+                _instance = FindObjectOfType<PlayerCheckPoint>();
+
+            }
+            return _instance;
+
+        }
+    }
+
     // Posicion donde empieza el personaje en la sala
     public GameObject posicionDeInicio;
     // Posicion donde aparece el personaje despues de volver de la siguiente sala
