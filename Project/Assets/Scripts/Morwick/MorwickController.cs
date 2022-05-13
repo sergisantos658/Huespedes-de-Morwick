@@ -40,12 +40,16 @@ public class MorwickController : MonoBehaviour
     [Header("Pathfinding by points")]
     public bool pathByPointsEnabled = true;
     public List<Transform> points;
+    public GameObject fadein;
 
     //The int value for the next point in list
     public int nextId;
     // The value of the current point
     int idChargesValue = 1;
 
+    public AudioSource normalMusic;
+    public AudioSource persecutionMusic;
+    public AudioSource cauchSound;
     public float speedByFollowPathPoint = 2;
 
     private void Reset()
@@ -88,6 +92,7 @@ public class MorwickController : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         animator = GetComponent<Animator>();
         target = PlayerController.currentPlayer.gameObject;
+        normalMusic.Play();
     }
 
     private void FixedUpdate()
@@ -110,13 +115,36 @@ public class MorwickController : MonoBehaviour
 
     void Update()
     {
-        if (TargetInView(visionToSee,radioustosee))
+        if (TargetInView(visionToSee,radioustosee) && !TargetInView(visionToCatch, radioustocauch))
         {
+            if(!persecutionMusic.isPlaying)
+            {
+                normalMusic.Stop();
+                persecutionMusic.Play();
+            }
+
             animator.SetBool("Run", true);
             animator.SetBool("Walk", false);
         }
-        else
+        else if(TargetInView(visionToSee, radioustosee) && TargetInView(visionToCatch, radioustocauch))
         {
+            animator.SetBool("Walk", false);
+            animator.SetBool("Run", false);
+            animator.SetBool("Idle", true);
+
+            
+
+        }
+        else
+         {
+            if(!normalMusic.isPlaying)
+            {
+                normalMusic.Play();
+                persecutionMusic.Stop();
+            }
+
+            
+            
             animator.SetBool("Walk", true);
             animator.SetBool("Run", false);
         }
@@ -207,7 +235,15 @@ public class MorwickController : MonoBehaviour
         if (TargetInView(visionToCatch,radioustocauch))
         {
             // -->
-            target.transform.position = target.GetComponent<PlayerInteraction>().GoalPosition.position;
+            // target.transform.position = target.GetComponent<PlayerInteraction>().GoalPosition.position;
+            if (persecutionMusic.isPlaying)
+            {
+                persecutionMusic.Stop();
+                cauchSound.Play();
+            }
+            speedByFollowPathPoint = 0;
+            Cursor.visible = false;
+            fadein.SetActive(true);
             Debug.Log("Muerto");
             // <--
             timeToForgetPlayer = 0;

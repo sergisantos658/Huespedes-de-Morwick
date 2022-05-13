@@ -7,17 +7,19 @@ public class FadeIn : MonoBehaviour
 {
     // Start is called before the first frame update
     Image render;
+    public ChangeScene change;
     void Start()
     {
         render = GetComponent<Image>();
         Color c = render.color;
         c.a = 0f;
         render.color = c;
+        StartCoroutine(fadein());
     }
 
-    IEnumerator fazdein()
+    IEnumerator fadein()
     {
-        for(float alf = 0.05f; alf < 1; alf += 0.05f)
+        for(float alf = 0.05f; alf <= 1.1; alf += 0.05f)
         {
             Color c = render.color;
             c.a = alf;
@@ -25,6 +27,8 @@ public class FadeIn : MonoBehaviour
             yield return new WaitForSeconds(0.05f);
 
         }
+        Cursor.visible = true;
+        change.SceneLoad();
     }
 
     // Update is called once per frame
