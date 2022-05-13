@@ -31,7 +31,8 @@ public class MorwickController : MonoBehaviour
     [SerializeField] float visionToCatch = 2.0f;
     // if morwick see you he will increase the velocity to catch you
     [SerializeField] float visionToSee = 5.57f;
-    [SerializeField] private float radiusCapsuleView;
+    [SerializeField] private float radioustosee;
+    [SerializeField] private float radioustocauch;
     [SerializeField] private Color colorGizmos;
     [SerializeField] private bool activateGizmos;
     //-----------------------------------------------
@@ -92,7 +93,7 @@ public class MorwickController : MonoBehaviour
     private void FixedUpdate()
     {
 
-        if (!TargetInView(visionToSee) && timeToForgetPlayer <= 0)
+        if (!TargetInView(visionToSee,radioustosee) && timeToForgetPlayer <= 0)
         {
             MoveToNextPoint();
         }
@@ -109,7 +110,7 @@ public class MorwickController : MonoBehaviour
 
     void Update()
     {
-        if (TargetInView(visionToSee))
+        if (TargetInView(visionToSee,radioustosee))
         {
             animator.SetBool("Run", true);
             animator.SetBool("Walk", false);
@@ -203,19 +204,19 @@ public class MorwickController : MonoBehaviour
 
         // <--
 
-        if (TargetInView(visionToCatch))
+        if (TargetInView(visionToCatch,radioustocauch))
         {
             // -->
             target.transform.position = target.GetComponent<PlayerInteraction>().GoalPosition.position;
-            //Debug.Log("Muerto");
+            Debug.Log("Muerto");
             // <--
             timeToForgetPlayer = 0;
         }
     }
 
-    private bool TargetInView(float lenght)
+    private bool TargetInView(float lenght, float radious)
     {
-        colliders = Physics.OverlapCapsule(viewpoint.position, viewpoint.position + viewpoint.forward * lenght, radiusCapsuleView, playerlayer);
+        colliders = Physics.OverlapCapsule(viewpoint.position, viewpoint.position + viewpoint.forward * lenght, radious, playerlayer);
 
         foreach (var item in colliders)
         {
@@ -240,11 +241,11 @@ public class MorwickController : MonoBehaviour
         if (activateGizmos)
         {
             Gizmos.color = colorGizmos;
-            Gizmos.DrawSphere(viewpoint.position + viewpoint.forward * visionToSee, radiusCapsuleView);
+            Gizmos.DrawSphere(viewpoint.position + viewpoint.forward * visionToSee, radioustosee);
             Gizmos.matrix = Matrix4x4.Translate(transform.position + Vector3.up) * Matrix4x4.Rotate(transform.rotation);
             Gizmos.DrawCube(Vector3.zero + ((Vector3.forward * visionToSee)/2), new Vector3(0.5f, 1, 0.3f) + Vector3.forward * visionToSee);
             Gizmos.color = Color.blue;
-            Gizmos.DrawCube(Vector3.zero + ((Vector3.forward * visionToCatch) / 2), new Vector3(0.5f, 1, 0.1f));
+            Gizmos.DrawCube(Vector3.zero + ((Vector3.forward * visionToCatch)), new Vector3(0.5f, 1, 0.1f));
 
         }
     }

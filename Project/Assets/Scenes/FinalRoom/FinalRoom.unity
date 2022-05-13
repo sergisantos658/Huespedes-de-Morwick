@@ -26712,9 +26712,10 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 8
   timeToForgetPlayer: 0
-  visionToCatch: 1.5
+  visionToCatch: 0
   visionToSee: 8
-  radiusCapsuleView: 2
+  radioustosee: 2.5
+  radioustocauch: 1
   colorGizmos: {r: 0.13836467, g: 1, b: 0.2001247, a: 0.62352943}
   activateGizmos: 1
   pathByPointsEnabled: 1
