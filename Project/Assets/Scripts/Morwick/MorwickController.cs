@@ -12,6 +12,7 @@ public class MorwickController : MonoBehaviour
     public bool direccionLookEnabled = true;
     public bool useRigidBody = false;
     public float rotateSpeed = 10;
+    public static bool MorwickCauch;
 
 
     [Header("TargetInView enemy")]
@@ -236,6 +237,7 @@ public class MorwickController : MonoBehaviour
         {
             // -->
             // target.transform.position = target.GetComponent<PlayerInteraction>().GoalPosition.position;
+            MorwickCauch = true;
             if (persecutionMusic.isPlaying)
             {
                 persecutionMusic.Stop();
@@ -244,7 +246,6 @@ public class MorwickController : MonoBehaviour
             speedByFollowPathPoint = 0;
             Cursor.visible = false;
             fadein.SetActive(true);
-            Debug.Log("Muerto");
             // <--
             timeToForgetPlayer = 0;
         }

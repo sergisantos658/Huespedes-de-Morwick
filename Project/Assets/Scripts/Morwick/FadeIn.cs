@@ -28,6 +28,7 @@ public class FadeIn : MonoBehaviour
 
         }
         Cursor.visible = true;
+        MorwickController.MorwickCauch = false;
         change.SceneLoad();
     }
 

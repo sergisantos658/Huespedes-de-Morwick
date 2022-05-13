@@ -73,6 +73,7 @@ public class PlayerController : MonoBehaviour
 		agent = GetComponent<NavMeshAgent>();
 
 		agent.updateRotation = false;
+		agent.isStopped = true;
 
 		animator = GetComponent<Animator>();
 
@@ -88,10 +89,13 @@ public class PlayerController : MonoBehaviour
 
 	void Update()
 	{
-
+		
 		Vector3 tempV = new Vector3(selectedVector.x, 0, selectedVector.z) - new Vector3(transform.position.x, 0, transform.position.z);
 		float tempOffset = tempV.magnitude;
-
+		if(MorwickController.MorwickCauch == true)
+        {
+			agent.isStopped = true;
+        }
 		if (tempOffset <= tempVectorOffset && onlyOnce)
 		{
 			agent.isStopped = true; 
@@ -171,16 +175,22 @@ public class PlayerController : MonoBehaviour
 
 	void Move()
 	{
-
+		
+		if(agent.isStopped == false)
+        {
+			StartCoroutine(RotationChar(navHit.position - transform.position));
+		}
+		
 		if (Input.GetMouseButtonDown(0))
 		{
 			Ray ray = m_Camera.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_Camera.nearClipPlane));
 			if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask) && !EventSystem.current.IsPointerOverGameObject())
 			{
+				agent.isStopped = false;
 				NavMesh.SamplePosition(hit.point, out navHit, 100, -1);
 
 
-				
+
 
 
 				if (!navHit.hit)
@@ -209,7 +219,7 @@ public class PlayerController : MonoBehaviour
 
 			}
 
-			StartCoroutine(RotationChar(navHit.position - transform.position));
+			
 
 
 		}
