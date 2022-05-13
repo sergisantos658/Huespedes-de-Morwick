@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -57,6 +57,7 @@
     <Compile Include="Assets\InventoryMaster\Scripts\Item\ItemAttribute.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Item\CreateInputManager.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\MusicS.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\PutValve.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\CheckSFXVolume.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Item\ItemType.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\StorageInventory.cs" />
@@ -74,6 +75,7 @@
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\LightsSwitch.cs" />
     <Compile Include="Assets\Scripts\Dialogs\ScriptsForObjects\DialogueActivate.cs" />
     <Compile Include="Assets\Scripts\Dialogs\NonUsable\NonDialogueScript.cs" />
+    <Compile Include="Assets\Scripts\Morwick\FadeIn.cs" />
     <Compile Include="Assets\Scripts\Dialogs\DialogueUI.cs" />
     <Compile Include="Assets\Scripts\Dialogs\DialogueObject.cs" />
     <Compile Include="Assets\Scripts\Menu\FoldInventory.cs" />
@@ -99,6 +101,7 @@
     <Compile Include="Assets\Scripts\InteractionSystem\RotateNpc.cs" />
     <Compile Include="Assets\Scripts\Character\PlayerController.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Item\PickUpItem.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\f.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\ExampleScript\PlayerInventory.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\DoorChangeScene.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\GoScene.cs" />
@@ -156,9 +159,6 @@
     <Compile Include="Assets\Scripts\Keypad\ButtonKeypad.cs" />
     <Compile Include="Assets\DoorsManager\Scripts\DoorScript.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\InputManager.cs" />
-    <Compile Include="Assets\Scripts\Morwick\FadeIn.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\f.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\PutValve.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

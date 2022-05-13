@@ -19,6 +19,6 @@ MonoBehaviour:
     whoTalk: 1
   responses:
   - responseText: Sam Max
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: c0e65666af84d13419aedd684ef77313, type: 2}
   - responseText: G.Threepwood
-    dialogueObject: {fileID: 11400000, guid: 0c4d117690ee2f54dbd4dd1870558ed5, type: 2}
+    dialogueObject: {fileID: 11400000, guid: 768aeaf63af0fdc4b9d1a11e03c1268a, type: 2}
