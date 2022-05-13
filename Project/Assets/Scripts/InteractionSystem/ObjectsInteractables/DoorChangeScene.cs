@@ -33,9 +33,15 @@ public class DoorChangeScene : Interactable
         }
 
         if(jumpIntoScene != 0)
+        {
+            player.GetComponent<PlayerCheckPoint>().CheckPointSave();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + jumpIntoScene);
+
+        }
         else
+        {
             player.DialogueUI.ShowDialogue(NotCompleted);
+        }
     }
 
     public override void Observation()
