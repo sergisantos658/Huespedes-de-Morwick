@@ -935,6 +935,19 @@ MonoBehaviour:
   posicionDeInicio: {fileID: 0}
   posicionDeRetorno: {fileID: 2027287098}
   level: 0
+--- !u!114 &111566986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 111566975}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6d6e0ddf18e5644a92ce5b75236cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosRecogidos: []
 --- !u!1001 &112608690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2363,7 +2376,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8, y: 0.02, z: 8.575705}
+  m_Size: {x: 8, y: 0.01, z: 8.575705}
   m_Center: {x: 0, y: 0, z: 0.2878523}
 --- !u!4 &395045914
 Transform:
@@ -5496,7 +5509,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 12.015011, y: 0.02, z: 7.099498}
+  m_Size: {x: 12.015011, y: 0.01, z: 7.099498}
   m_Center: {x: 2.0075054, y: 0, z: 0.4502511}
 --- !u!1001 &881741491
 PrefabInstance:
@@ -12019,7 +12032,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 11.766386, y: 0.02, z: 7.2526407}
+  m_Size: {x: 11.766386, y: 0.01, z: 7.2526407}
   m_Center: {x: 13.942321, y: 0, z: 0.37367964}
 --- !u!4 &1487317672 stripped
 Transform:
@@ -12119,6 +12132,7 @@ MonoBehaviour:
   colliderHole: {fileID: 1491355744}
   valve: {fileID: 1610743699}
   dialogObj: {fileID: 11400000, guid: 37042a998447f554cba722aadca256c8, type: 2}
+  item: {fileID: 11400000, guid: 9a5613041e7b8ca4b8ba560ae1b167b8, type: 2}
 --- !u!65 &1491355744
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12521,7 +12535,7 @@ GameObject:
   - component: {fileID: 1558892591}
   - component: {fileID: 1558892590}
   - component: {fileID: 1558892588}
-  - component: {fileID: 1558892589}
+  - component: {fileID: 1558892593}
   m_Layer: 6
   m_Name: ValveOnRack
   m_TagString: Untagged
@@ -12542,24 +12556,6 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1.1770599, y: 1.1185098, z: 0.6966056}
   m_Center: {x: 0.3289595, y: 0.12624465, z: 0.3892427}
---- !u!114 &1558892589
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1558892587}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: be51413d45750fc4ab857dfbb37c326b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  holdTime: 0
-  interactOpction: 1
-  observationOpction: 1
-  interactionType: 0
-  valve: {fileID: 1558892587}
-  dialog: {fileID: 11400000, guid: 45f4ea0483b2a2a48ac17177d15485f1, type: 2}
 --- !u!23 &1558892590
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12626,6 +12622,24 @@ Transform:
   m_Father: {fileID: 1161818285}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 5, y: 100, z: 0}
+--- !u!114 &1558892593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1558892587}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39b10e0242433394fa33faec6d05d499, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdTime: 0
+  interactOpction: 1
+  observationOpction: 1
+  interactionType: 0
+  item: {fileID: 11400000, guid: 9a5613041e7b8ca4b8ba560ae1b167b8, type: 2}
+  dialog: {fileID: 11400000, guid: 45f4ea0483b2a2a48ac17177d15485f1, type: 2}
 --- !u!1001 &1559471452
 PrefabInstance:
   m_ObjectHideFlags: 0

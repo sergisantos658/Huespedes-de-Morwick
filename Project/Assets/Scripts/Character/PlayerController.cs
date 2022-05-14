@@ -66,7 +66,7 @@ public class PlayerController : MonoBehaviour
 		DialogueUI.StopDialogue -= StopInteractingDialogue;
 	}
 
-	private void Start()
+	private void Awake()
 	{
 		rb = GetComponent<Rigidbody>();
 

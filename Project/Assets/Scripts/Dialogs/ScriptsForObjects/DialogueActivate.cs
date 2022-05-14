@@ -7,26 +7,8 @@ public class DialogueActivate : Interactable
     [SerializeField] private DialogueObject dialogueObject;
     [SerializeField] private DialogueObject o_DialogueObject;
 
-
-    private PlayerController player;
+    private PlayerController player => PlayerController.currentPlayer;
     public  event Action<PlayerController> LookPlayer = delegate { };
-
-    private void OnEnable()
-    {
-        PlayerController.WhoIsPlayerController += WhoIsPlayerController;
-        DialogueUI.CheckResponseDialogue += ResponseEventsCheck;
-    }
-
-    private void OnDisable()
-    {
-        PlayerController.WhoIsPlayerController -= WhoIsPlayerController;
-        DialogueUI.CheckResponseDialogue -= ResponseEventsCheck;
-    }
-
-    void WhoIsPlayerController(PlayerController target)
-    {
-        player = target; 
-    }
 
     public override void Interact()
     {
