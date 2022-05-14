@@ -29,12 +29,22 @@ public class LightsSwitch : Interactable
     private void Start()
     {
         player = PlayerController.currentPlayer;
+        if (player.GetComponent<PlayerCheckPoint>().puzzle2 == 0)
+        {
+            lightSwitch = false;
+        }
+        else if(player.GetComponent<PlayerCheckPoint>().puzzle2 == 1)
+        {
+            lightSwitch = true;
+        }
     }
 
     public void UpdateLight()
     {
         if (!onlyOnce)
         {
+            player.GetComponent<PlayerCheckPoint>().puzzle2 = 1;
+
             allLightsOff = true;
 
             foreach (GameObject m_light in m_Lights)

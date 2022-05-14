@@ -24,6 +24,9 @@ public class ChangeScene : MonoBehaviour
 
     public void LoadGame()
     {
+        DBManager.CreateDB();
+        DBManager.InsertPlayerData();
+
         int levelState = DBManager.GetLevelState();
         if (levelState != -1)
         {
