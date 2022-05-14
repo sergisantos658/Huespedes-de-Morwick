@@ -16,6 +16,16 @@ public class LightsSwitch : Interactable
     private bool lights = false;
     private PlayerController player;
 
+    private void OnEnable()
+    {
+        DialogueUI.CheckResponseDialogue += ResponseEventsCheck;
+    }
+
+    private void OnDisable()
+    {
+        DialogueUI.CheckResponseDialogue += ResponseEventsCheck;
+    }
+
     private void Start()
     {
         player = PlayerController.currentPlayer;

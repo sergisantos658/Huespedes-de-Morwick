@@ -10,6 +10,16 @@ public class DialogueActivate : Interactable
     private PlayerController player => PlayerController.currentPlayer;
     public  event Action<PlayerController> LookPlayer = delegate { };
 
+    private void OnEnable()
+    {
+        DialogueUI.CheckResponseDialogue += ResponseEventsCheck;
+    }
+
+    private void OnDisable()
+    {
+        DialogueUI.CheckResponseDialogue -= ResponseEventsCheck;
+    }
+
     public override void Interact()
     {
 

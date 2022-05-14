@@ -9832,7 +9832,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 919132149561965784}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: HideMenu
         m_Mode: 1
@@ -10134,26 +10134,6 @@ MonoBehaviour:
   interactionType: 0
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: c5478f39e49c8744e8ad50689a952475, type: 2}
---- !u!1 &865830247 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7988370400263282195, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
-  m_PrefabInstance: {fileID: 7069821695837086404}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &865830257
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865830247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7afc0a2755531804e9021e40cc969253, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  posicionDeInicio: {fileID: 113151041}
-  posicionDeRetorno: {fileID: 1948068279}
-  level: 0
 --- !u!1 &873033366
 GameObject:
   m_ObjectHideFlags: 0
@@ -11268,7 +11248,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 919132149561965784}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: HideMenu
         m_Mode: 1
@@ -97429,17 +97409,6 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 0
   m_Center: {x: 0, y: 0.5, z: 0}
   m_TimeToStationary: 0.5
---- !u!114 &919132149561965784 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 7988370400263282204, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
-  m_PrefabInstance: {fileID: 7069821695837086404}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 865830247}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0de5d4156994cf4f9e8cdbbd639f865, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &940319169145342241
 GameObject:
   m_ObjectHideFlags: 0
@@ -98365,6 +98334,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3221098072880903380, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: posicionDeInicio
+      value: 
+      objectReference: {fileID: 113151041}
+    - target: {fileID: 3221098072880903380, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: posicionDeRetorno
+      value: 
+      objectReference: {fileID: 1948068279}
     - target: {fileID: 7069821695779106865, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: mainCamera
       value: 

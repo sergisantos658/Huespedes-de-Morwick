@@ -38,6 +38,7 @@ public class PlayerCheckPoint : MonoBehaviour
         if (data != null && data.level != level)
         {
             LoadGame();
+            CheckPointSave();
         }
         else
         {
@@ -57,7 +58,6 @@ public class PlayerCheckPoint : MonoBehaviour
     public void CheckPointSave()
     {
         DBManager.UpdatePlayerData(this);
-        LoadGame();
     }
 
     void LoadGame()

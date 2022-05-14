@@ -950,21 +950,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7988370400263282195, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
   m_PrefabInstance: {fileID: 996653915}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &111566976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111566975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7afc0a2755531804e9021e40cc969253, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  posicionDeInicio: {fileID: 70339498}
-  posicionDeRetorno: {fileID: 2027287098}
-  level: 0
 --- !u!114 &111566986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9275,6 +9260,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3221098072880903380, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: posicionDeInicio
+      value: 
+      objectReference: {fileID: 70339498}
+    - target: {fileID: 3221098072880903380, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: posicionDeRetorno
+      value: 
+      objectReference: {fileID: 2027287098}
     - target: {fileID: 7069821695779106865, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: mainCamera
       value: 

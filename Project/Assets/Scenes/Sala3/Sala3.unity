@@ -3616,6 +3616,14 @@ PrefabInstance:
       propertyPath: posicionDeRetorno
       value: 
       objectReference: {fileID: 561570497}
+    - target: {fileID: 3221098072880903380, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: posicionDeInicio
+      value: 
+      objectReference: {fileID: 1820965964}
+    - target: {fileID: 3221098072880903380, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: posicionDeRetorno
+      value: 
+      objectReference: {fileID: 561570497}
     - target: {fileID: 7069821695779106865, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: mainCamera
       value: 

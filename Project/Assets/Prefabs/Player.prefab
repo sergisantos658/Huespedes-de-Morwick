@@ -5382,7 +5382,7 @@ GameObject:
   - component: {fileID: 7069821695779106866}
   - component: {fileID: 7069821695779106867}
   - component: {fileID: 7069821695779106876}
-  - component: {fileID: 138209391}
+  - component: {fileID: 3221098072880903380}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -5605,7 +5605,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &138209391
+--- !u!114 &3221098072880903380
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
