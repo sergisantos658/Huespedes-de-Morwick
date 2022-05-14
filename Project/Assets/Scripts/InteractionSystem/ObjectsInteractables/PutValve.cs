@@ -10,28 +10,21 @@ public class PutValve : Interactable
 
 	public DialogueObject dialogObj;
 
-	private PlayerController playerC;
+	private ControlObjects inventory;
+	private PlayerController player => PlayerController.currentPlayer;
 
-	private void OnEnable()
-	{
-		PlayerController.WhoIsPlayerController += WhoIsPlayerController;
-	}
+	public Items item;
 
-	private void OnDisable()
+	void Start()
 	{
-		PlayerController.WhoIsPlayerController -= WhoIsPlayerController;
-	}
-
-	void WhoIsPlayerController(PlayerController target)
-	{
-		playerC = target;
+		inventory = player.GetComponent<ControlObjects>();
 	}
 
 	public override void Interact()
 	{
-		if (PickValve.valveOn)
+		if(inventory.ObjectOn(item))
 		{
-			PickValve.valveOn = false;
+			inventory.RemoveObject(item);
 			valve.SetActive(true);
 			colliderHole.enabled = false;
 		}
@@ -39,7 +32,6 @@ public class PutValve : Interactable
 
 	public override void Observation()
 	{
-		Debug.Log(dialogObj);
-		playerC.DialogueUI.ShowDialogue(dialogObj);
+		player.DialogueUI.ShowDialogue(dialogObj);
 	}
 }

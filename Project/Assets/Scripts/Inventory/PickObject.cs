@@ -2,17 +2,27 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PickObject : MonoBehaviour
+public class PickObject : Interactable
 {
-    ControlObjects controlObjects;
+	ControlObjects controlObjects;
+	public Items item;
+	private PlayerController playerC;
+	public DialogueObject dialog;
 
-    void awake()
-    {
-        controlObjects = GetComponent<ControlObjects>();
-    }
+	void Start()
+	{
+		playerC = PlayerController.currentPlayer;
+		controlObjects = playerC.GetComponent<ControlObjects>();
+	}
 
-    void OnMouseDown()
-    {
-        controlObjects.AddObject(transform.gameObject);
-    }
+	public override void Interact()
+	{
+		controlObjects.AddObject(item);
+		gameObject.SetActive(false);
+	}
+
+	public override void Observation()
+	{
+		playerC.DialogueUI.ShowDialogue(dialog);
+	}
 }

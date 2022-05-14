@@ -4,26 +4,19 @@ using UnityEngine;
 
 public class ControlObjects : MonoBehaviour
 {
-	public List<GameObject> objetosRecogidos = new List<GameObject>();
+	public List<Items> objetosRecogidos = new List<Items>();
 
-	public void AddObject(GameObject obj)
+	public void AddObject(Items obj)
 	{
-		if(ObjectOn(obj))
-		{
-			LeftObject(obj);
-		}
-		else
-		{
-			objetosRecogidos.Add(obj);
-		}
+		objetosRecogidos.Add(obj);
 	}
 
-	public void LeftObject(GameObject obj)
+	public void RemoveObject(Items obj)
 	{
 		objetosRecogidos.Remove(obj);
 	}
 
-	public bool ObjectOn(GameObject obj)
+	public bool ObjectOn(Items obj)
 	{
 		return objetosRecogidos.Contains(obj);
 	}
