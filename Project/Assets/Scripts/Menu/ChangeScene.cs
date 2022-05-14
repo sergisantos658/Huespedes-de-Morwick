@@ -22,19 +22,29 @@ public class ChangeScene : MonoBehaviour
 
     }
 
-    public void LoadGame()
+    public void NewGame()
     {
         DBManager.CreateDB();
+        DBManager.DeletePlayerData();
+
         DBManager.InsertPlayerData();
 
+        MenuManager.pause = false;
+        Time.timeScale = 1;
+
+        SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
+    }
+
+    public void LoadGame()
+    {
         int levelState = DBManager.GetLevelState();
         if (levelState != -1)
         {
-            SceneManager.LoadScene(levelState);
+            SceneManager.LoadScene(levelState, LoadSceneMode.Single);
         }
         else
         {
-            SceneManager.LoadScene(sceneIndex);
+            SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
         }
     }
 }

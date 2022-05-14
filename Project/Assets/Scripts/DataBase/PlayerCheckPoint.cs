@@ -65,7 +65,6 @@ public class PlayerCheckPoint : MonoBehaviour
     public void CheckPointSave()
     {
         DBManager.UpdatePlayerData(this);
-        LoadGame();
     }
 
     void LoadGame()
