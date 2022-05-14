@@ -48,7 +48,9 @@ public class DialogueUI : MonoBehaviour
 
         isOpen = true;
         dialogueBox.SetActive(true);
+        #if UNITY_EDITOR
         Cursor.SetCursor(PlayerSettings.defaultCursor, normalCursorHotspot, CursorMode.ForceSoftware);
+#endif
         if (PlayerInteraction.interactableDinamic != null) PlayerInteraction.interactableDinamic = null;
         StartCoroutine(StepThroughDialogue(dialogueObject));
     }

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>8.0</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -52,6 +52,9 @@
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2021.1.22f1</UnityVersion>
   </PropertyGroup>
+  <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\InventoryMaster\Scripts\Item\CreateItemDatabase.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Item\ItemAttribute.cs" />
@@ -160,11 +163,11 @@
     <Compile Include="Assets\Scripts\Inventory\ControlObjects.cs" />
     <Compile Include="Assets\Scripts\Dialogs\Response.cs" />
     <Compile Include="Assets\Scripts\ReplyObjects\ReplicateObjectsController.cs" />
+    <Compile Include="Assets\Scripts\InteractionSystem\TextToInteractableOrObservation.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\CheckMusicVolume.cs" />
     <Compile Include="Assets\Scripts\Keypad\ButtonKeypad.cs" />
     <Compile Include="Assets\DoorsManager\Scripts\DoorScript.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\InputManager.cs" />
-    <Compile Include="Assets\Scripts\InteractionSystem\TextToInteractableOrObservation.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -187,6 +190,7 @@
     <None Include="Assets\Scenes\Sala1\KeypadsEntryLocks\Resources\Shaders\NumpadText.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Escenario-Props\PolygonHorrorMansion\Materials\Shaders\SyntyStudios_Ghost.shader" />
+    <None Include="Assets\Sprites\Orange.Juice\ReadMe.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Escenario-Props\PolygonHorrorMansion\Materials\Shaders\SyntyStudios_Grunge.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />
