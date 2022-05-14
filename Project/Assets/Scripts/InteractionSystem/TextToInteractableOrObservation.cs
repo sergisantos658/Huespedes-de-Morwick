@@ -32,15 +32,15 @@ public class TextToInteractableOrObservation : MonoBehaviour
     {
 		if(interactOption == InteractionOptions.Both)
         {
-            m_text.text = "Interactable y Observable (Click left or click right)";
+            m_text.text = "Interactuable y Observable (Click izquierdo o click derecho)";
         }
         else if (interactOption == InteractionOptions.Interactable)
         {
-            m_text.text = "Interactable (Click left)";
+            m_text.text = "Interactuable (Click izquierdo)";
         }
         else if (interactOption == InteractionOptions.Observation)
         {
-            m_text.text = "Observable (Click right)";
+            m_text.text = "Observable (Click derecho)";
         }
         else if(interactOption == InteractionOptions.none)
         {

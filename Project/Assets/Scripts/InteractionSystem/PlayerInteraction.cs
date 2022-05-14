@@ -80,7 +80,7 @@ public class PlayerInteraction : MonoBehaviour
 
 	void Update()
 	{
-		if (gameObject.GetComponent<PlayerController>()) { if (PController.DialogueUI.isOpen) { return; } }
+		if (PController) { if (PController.DialogueUI.isOpen) { return; } }
 
 		mpS = Input.mousePosition;
 		mpS = new Vector3(mpS.x, mpS.y, mainCameraC.nearClipPlane);
@@ -167,6 +167,7 @@ public class PlayerInteraction : MonoBehaviour
 			if (Input.GetKeyDown(KeyCode.Mouse1)) // Observation
 			{
 				interactable?.Observation();
+				PController.RotateTo(interactable.transform.position);
 				interactable = null;
 			}
 
