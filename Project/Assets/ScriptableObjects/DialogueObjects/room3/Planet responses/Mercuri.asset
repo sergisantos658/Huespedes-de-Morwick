@@ -10,14 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
-  m_Name: Pluto
+  m_Name: Mercuri
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
     - Mmmmmm...
-    - "Plut\xF3n, Porque no es un planeta."
+    - Mercurio, por que es un planeta helado
     whoTalk: 0
   - dialogue:
-    - Pero sigue siendo un cuerpo celseste.
+    - "La tierra tambi\xE9n tiene hielo"
+    whoTalk: 1
+  - dialogue:
+    - "Esa respuesta es demasiado est\xFApida."
     whoTalk: 1
   responses: []
