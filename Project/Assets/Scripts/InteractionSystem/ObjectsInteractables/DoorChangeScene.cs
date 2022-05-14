@@ -25,7 +25,7 @@ public class DoorChangeScene : Interactable
 
         if(jumpIntoScene != 0)
         {
-            player.GetComponent<PlayerCheckPoint>().CheckPointSave();
+            //player.GetComponent<PlayerCheckPoint>().CheckPointSave();
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + jumpIntoScene);
 
         }

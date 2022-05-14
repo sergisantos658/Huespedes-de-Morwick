@@ -9358,6 +9358,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7988370400263282204, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+    - {fileID: 3221098072880903380, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
 --- !u!1 &1010525377
 GameObject:
@@ -18397,6 +18398,7 @@ MonoBehaviour:
   textLabel: {fileID: 3580866465918122724}
   silhouettePlayer: {fileID: 639276763}
   silhouetteNPC: {fileID: 799595304}
+  normalCursor: {fileID: 2800000, guid: a9ae0267b06e7b24d90f188a4370cce3, type: 3}
 --- !u!1 &1387146740606310513
 GameObject:
   m_ObjectHideFlags: 0

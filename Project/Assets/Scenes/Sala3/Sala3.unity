@@ -3688,7 +3688,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 3221098072880903380, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
 --- !u!1001 &288245168
 PrefabInstance:
@@ -5936,7 +5937,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Texture: {fileID: 2800000, guid: 74b8ce24ddc8ce741996bf1d4d9adb86, type: 3}
+  m_Texture: {fileID: 2800000, guid: f370b97f24136484992bab9165f7775f, type: 3}
   m_UVRect:
     serializedVersion: 2
     x: 0
@@ -9352,7 +9353,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Pluton
+  m_text: Mercurio
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -28543,6 +28544,7 @@ MonoBehaviour:
   textLabel: {fileID: 3580866465918122724}
   silhouettePlayer: {fileID: 459297348}
   silhouetteNPC: {fileID: 926292575}
+  normalCursor: {fileID: 0}
 --- !u!1 &777963925682778875
 GameObject:
   m_ObjectHideFlags: 0
@@ -31449,7 +31451,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objectPlanet: {fileID: 1011447537}
   player: {fileID: 1832851235}
-  normalCursor: {fileID: 2800000, guid: bb57a4c5a1ec38a41949d0975ede9ac1, type: 3}
+  normalCursor: {fileID: 2800000, guid: a9ae0267b06e7b24d90f188a4370cce3, type: 3}
   dialoguePlanets:
   - {fileID: 11400000, guid: 36ea4677985092246a20f8c5ab6f7be0, type: 2}
   - {fileID: 11400000, guid: de5aa8da7c88d5341bc32f85dda70f87, type: 2}

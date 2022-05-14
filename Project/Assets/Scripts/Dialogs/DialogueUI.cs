@@ -27,6 +27,7 @@ public class DialogueUI : MonoBehaviour
     private TypewritterEffect typewriterEffect;
 
     private Vector2 normalCursorHotspot;
+    public Texture2D normalCursor;
     void Start()
     {
         typewriterEffect = GetComponent<TypewritterEffect>();
@@ -49,7 +50,7 @@ public class DialogueUI : MonoBehaviour
         isOpen = true;
         dialogueBox.SetActive(true);
         #if UNITY_EDITOR
-        Cursor.SetCursor(PlayerSettings.defaultCursor, normalCursorHotspot, CursorMode.ForceSoftware);
+        Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);
 #endif
         if (PlayerInteraction.interactableDinamic != null) PlayerInteraction.interactableDinamic = null;
         StartCoroutine(StepThroughDialogue(dialogueObject));

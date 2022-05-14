@@ -49,6 +49,8 @@ namespace SlimUI.ModernMenu{
 		public GameObject loadingMenu;
 		public Slider loadBar;
 		public TMP_Text finishedLoadingText;
+		[SerializeField] private Texture2D normalCursor;
+		private Vector2 normalCursorHotspot;
 
 		void Start(){
 			CameraObject = transform.GetComponent<Animator>();
@@ -57,6 +59,7 @@ namespace SlimUI.ModernMenu{
 			exitMenu.SetActive(false);
 
 			SetThemeColors();
+			Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);
 		}
 
 		void SetThemeColors(){

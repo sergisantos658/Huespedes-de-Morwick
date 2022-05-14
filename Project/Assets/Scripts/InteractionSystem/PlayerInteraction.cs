@@ -97,7 +97,7 @@ public class PlayerInteraction : MonoBehaviour
         else
         {
 			#if UNITY_EDITOR
-			Cursor.SetCursor(PlayerSettings.defaultCursor, normalCursorHotspot, CursorMode.ForceSoftware);
+			Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);
 #endif
 			if (interactableDinamic != null) interactableDinamic = null;
 		}

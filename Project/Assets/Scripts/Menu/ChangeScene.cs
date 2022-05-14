@@ -19,7 +19,7 @@ public class ChangeScene : MonoBehaviour
         }
 
         SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
-        
+
     }
 
     public void LoadGame()

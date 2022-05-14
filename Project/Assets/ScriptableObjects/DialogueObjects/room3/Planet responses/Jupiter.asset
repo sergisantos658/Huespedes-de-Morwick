@@ -18,19 +18,7 @@ MonoBehaviour:
     - "Porque es el \xFAnico planeta de estos que es gaseoso."
     whoTalk: 0
   - dialogue:
-    - Respuesta correcta, Bueno.. en realidad habia 3 respuestas correctas, pero
-      es que queria que pasaras el maximo tiempo conmigo.
-    whoTalk: 1
-  - dialogue:
-    - Cada vez me repugnas mas
-    whoTalk: 1
-  - dialogue:
-    - Yo tambien te quiero.
-    whoTalk: 1
-  - dialogue:
-    - Creo que no he dicho eso,
-    whoTalk: 1
-  - dialogue:
+    - Respuesta Correcta.
     - Bien, ahora podemos pasar a la siguiente parte.
     whoTalk: 1
   - dialogue:

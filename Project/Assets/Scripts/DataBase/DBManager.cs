@@ -97,7 +97,7 @@ public static class DBManager
     }
 
     // Para Recoger la informacion de la base de datos y ser enviado a traves de una clase
-    
+
     public static PlayerData SelectPlayerData(PlayerCheckPoint player )
     {
         PlayerData data = new PlayerData(player);
@@ -135,7 +135,7 @@ public static class DBManager
 
         return data;
     }
-    
+
     public static int GetLevelState()
     {
         level = -1;
