@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -40,6 +41,7 @@ public class PlayerInteraction : MonoBehaviour
 
 	Interactable interactable;
 	public static Interactable interactableDinamic;
+	public static event Action<InteractionOptions> TextThatInteract = delegate { };
 
 	void IncreaseHoldTime() => holdTime += Time.deltaTime;
 	void ResetHoldTime() => holdTime = 0f;
@@ -131,19 +133,27 @@ public class PlayerInteraction : MonoBehaviour
 					if (interactableDinamic.InteractOpction && interactableDinamic.ObservationOpction)
 					{
 						Cursor.SetCursor(inteAndObservCursor, interactCursorHotspot, CursorMode.ForceSoftware);
+
+						TextThatInteract?.Invoke(InteractionOptions.Both);
 					}
 					else if (interactableDinamic.InteractOpction)
 					{
 						Cursor.SetCursor(interactCursor, interactCursorHotspot, CursorMode.ForceSoftware);
+
+						TextThatInteract?.Invoke(InteractionOptions.Interactable);
 					}
 					else if (interactableDinamic.ObservationOpction)
 					{
 						Cursor.SetCursor(ObservationCursor, interactCursorHotspot, CursorMode.ForceSoftware);
+
+						TextThatInteract?.Invoke(InteractionOptions.Observation);
 					}
 				}
 				else
 				{
 					Cursor.SetCursor(normalCursor, normalCursorHotspot, CursorMode.ForceSoftware);
+
+					TextThatInteract?.Invoke(InteractionOptions.none);
 				}
             }
 			

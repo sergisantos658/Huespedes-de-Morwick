@@ -30,8 +30,6 @@ public class PlayerController : MonoBehaviour
 
 	public DialogueUI DialogueUI => dialogueUI;
 
-	public static event Action<PlayerController> WhoIsPlayerController = delegate { };
-
 	[SerializeField]
 	private float angleRotate;
 
@@ -80,8 +78,6 @@ public class PlayerController : MonoBehaviour
 		currentPlayer = this;
 
 		m_Camera = mainCamera.GetComponent<Camera>();
-
-		WhoIsPlayerController(this);
 
 		PreparePointer(_moveToIndicator, _feedbackPointerScale);
 	}

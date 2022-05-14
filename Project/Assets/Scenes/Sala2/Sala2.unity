@@ -4419,114 +4419,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3875462458774534196, guid: f70ad1fd5f3819b42aaeca6741dfa8c2, type: 3}
   m_PrefabInstance: {fileID: 449912824}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &457316147 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 3580866466648617700, guid: acc2b4d164f10414b82686f61e6407e1, type: 3}
+--- !u!82 &457316149 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 457316149, guid: acc2b4d164f10414b82686f61e6407e1, type: 3}
   m_PrefabInstance: {fileID: 1485532413}
   m_PrefabAsset: {fileID: 0}
---- !u!82 &457316149
-AudioSource:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457316147}
-  m_Enabled: 1
-  serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: ad7770b049838724ca4e193da230e52e, type: 3}
-  m_PlayOnAwake: 0
-  m_Volume: 1
-  m_Pitch: 1
-  Loop: 1
-  Mute: 0
-  Spatialize: 0
-  SpatializePostEffects: 0
-  Priority: 128
-  DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 500
-  Pan2D: 0
-  rolloffMode: 0
-  BypassEffects: 0
-  BypassListenerEffects: 0
-  BypassReverbZones: 0
-  rolloffCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    - serializedVersion: 3
-      time: 1
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  panLevelCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  spreadCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 0
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
-  reverbZoneMixCustomCurve:
-    serializedVersion: 2
-    m_Curve:
-    - serializedVersion: 3
-      time: 0
-      value: 1
-      inSlope: 0
-      outSlope: 0
-      tangentMode: 0
-      weightedMode: 0
-      inWeight: 0.33333334
-      outWeight: 0.33333334
-    m_PreInfinity: 2
-    m_PostInfinity: 2
-    m_RotationOrder: 4
---- !u!114 &457316155
+--- !u!114 &457316155 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 457316155, guid: acc2b4d164f10414b82686f61e6407e1, type: 3}
+  m_PrefabInstance: {fileID: 1485532413}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457316147}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ad149d53679afc04782ee02fa3e008d8, type: 3}
@@ -16452,30 +16355,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 3580866466790467500, guid: acc2b4d164f10414b82686f61e6407e1, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580866466790467500, guid: acc2b4d164f10414b82686f61e6407e1, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580866466790467500, guid: acc2b4d164f10414b82686f61e6407e1, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580866467533945383, guid: acc2b4d164f10414b82686f61e6407e1, type: 3}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580866467533945383, guid: acc2b4d164f10414b82686f61e6407e1, type: 3}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3580866467533945383, guid: acc2b4d164f10414b82686f61e6407e1, type: 3}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: acc2b4d164f10414b82686f61e6407e1, type: 3}
 --- !u!114 &1485532414 stripped
@@ -16483,7 +16362,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 764091600259772524, guid: acc2b4d164f10414b82686f61e6407e1, type: 3}
   m_PrefabInstance: {fileID: 1485532413}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 457316147}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6bbc1556f8bf10944acd0c7daac0f6f0, type: 3}
@@ -17375,7 +17254,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1562558093
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -72646,7 +72525,7 @@ MonoBehaviour:
       rotation: {x: -0, y: 0, z: 0}
       escale: {x: 1, y: 1, z: 1}
     - position: {x: -6.387, y: 2.9379997, z: 14.296999}
-      rotation: {x: 24.678917, y: 43.458645, z: 244.0079}
+      rotation: {x: 24.678913, y: 43.45864, z: 244.0079}
       escale: {x: 1, y: 1, z: 1}
     - position: {x: -4.849, y: 1.7009993, z: 9.549}
       rotation: {x: -0, y: 0, z: 0}
@@ -72671,16 +72550,16 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: -0.5762546
-      e01: 0.5265915
-      e02: 0.6250056
+    - e00: -0.5762547
+      e01: 0.5265916
+      e02: 0.6250057
       e03: -6.387
-      e10: -0.8167549
-      e11: -0.39821845
-      e12: -0.41753274
+      e10: -0.816755
+      e11: -0.39821857
+      e12: -0.41753268
       e13: 2.9379997
-      e20: 0.029019564
-      e21: -0.7510815
+      e20: 0.029019654
+      e21: -0.7510816
       e22: 0.65957135
       e23: 14.296999
       e30: 0
@@ -97511,8 +97390,8 @@ GameObject:
   - component: {fileID: 1527409418}
   - component: {fileID: 919132148904347690}
   - component: {fileID: 919132148904347689}
-  - component: {fileID: 1527409416}
   - component: {fileID: 1527409417}
+  - component: {fileID: 1527409416}
   m_Layer: 6
   m_Name: NPCShyne
   m_TagString: Untagged

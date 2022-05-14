@@ -15,20 +15,12 @@ public class CauchObjectLent : Interactable
 
 
     private PlayerController playerC;
-    private void OnEnable()
+
+    private void Start()
     {
-        PlayerController.WhoIsPlayerController += WhoIsPlayerController;
+        playerC = PlayerController.currentPlayer;
     }
 
-    private void OnDisable()
-    {
-        PlayerController.WhoIsPlayerController -= WhoIsPlayerController;
-    }
-
-    void WhoIsPlayerController(PlayerController target)
-    {
-        playerC = target;
-    }
     public override void Interact()
     {
         player.transform.position = Pose;

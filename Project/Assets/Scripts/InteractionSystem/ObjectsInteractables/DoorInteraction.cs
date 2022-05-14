@@ -23,20 +23,7 @@ public class DoorInteraction : Interactable
     void Start()
     {
         anim = GetComponent<Animator>();
-    }
-    private void OnEnable()
-    {
-        PlayerController.WhoIsPlayerController += WhoIsPlayerController;
-    }
-
-    private void OnDisable()
-    {
-        PlayerController.WhoIsPlayerController -= WhoIsPlayerController;
-    }
-
-    void WhoIsPlayerController(PlayerController target)
-    {
-        playerC = target;
+        playerC = PlayerController.currentPlayer;
     }
 
     public override void Interact()

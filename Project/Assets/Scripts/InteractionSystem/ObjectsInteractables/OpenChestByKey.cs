@@ -10,19 +10,9 @@ public class OpenChestByKey : Interactable
     bool onlyOnce = true;
 
     private PlayerController player;
-    private void OnEnable()
+    private void Start()
     {
-        PlayerController.WhoIsPlayerController += WhoIsPlayerController;
-    }
-
-    private void OnDisable()
-    {
-        PlayerController.WhoIsPlayerController -= WhoIsPlayerController;
-    }
-
-    void WhoIsPlayerController(PlayerController target)
-    {
-        player = target;
+        player = PlayerController.currentPlayer;
     }
 
     public override void Interact()

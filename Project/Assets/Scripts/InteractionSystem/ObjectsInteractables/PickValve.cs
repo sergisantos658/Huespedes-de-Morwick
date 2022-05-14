@@ -17,22 +17,12 @@ public class PickValve : Interactable
 
 	private PlayerController playerC;
 
-	private void OnEnable()
-	{
-		PlayerController.WhoIsPlayerController += WhoIsPlayerController;
-	}
+    private void Start()
+    {
+		playerC = PlayerController.currentPlayer;
+    }
 
-	private void OnDisable()
-	{
-		PlayerController.WhoIsPlayerController -= WhoIsPlayerController;
-	}
-
-	void WhoIsPlayerController(PlayerController target)
-	{
-		playerC = target;
-	}
-
-	void Update()
+    void Update()
 	{
 		//if (camOn)
 		//{

@@ -14,19 +14,10 @@ public class InteractDoor : Interactable
     bool scenefinish = false;
 
     private PlayerController player;
-    private void OnEnable()
-    {
-        PlayerController.WhoIsPlayerController += WhoIsPlayerController;
-    }
 
-    private void OnDisable()
+    private void Start()
     {
-        PlayerController.WhoIsPlayerController -= WhoIsPlayerController;
-    }
-
-    void WhoIsPlayerController(PlayerController target)
-    {
-        player = target;
+        player = PlayerController.currentPlayer;   
     }
 
     public override void Interact()

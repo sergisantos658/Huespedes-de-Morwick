@@ -16,21 +16,9 @@ public class LightsSwitch : Interactable
     private bool lights = false;
     private PlayerController player;
 
-    private void OnEnable()
+    private void Start()
     {
-        PlayerController.WhoIsPlayerController += WhoIsPlayerController;
-        DialogueUI.CheckResponseDialogue += ResponseEventsCheck;
-    }
-
-    private void OnDisable()
-    {
-        PlayerController.WhoIsPlayerController -= WhoIsPlayerController;
-        DialogueUI.CheckResponseDialogue -= ResponseEventsCheck;
-    }
-
-    void WhoIsPlayerController(PlayerController target)
-    {
-        player = target;
+        player = PlayerController.currentPlayer;
     }
 
     public void UpdateLight()
