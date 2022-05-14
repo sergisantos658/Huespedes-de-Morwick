@@ -9068,7 +9068,7 @@ MonoBehaviour:
   - {fileID: 1849741242}
   - {fileID: 169316739}
   - {fileID: 805537468}
-  lightSwitch: 1
+  lightSwitch: 0
   allLightsOff: 0
 --- !u!114 &828389926
 MonoBehaviour:

@@ -28,6 +28,13 @@ public class PlayerCheckPoint : MonoBehaviour
 
     public int level;
 
+    [Range(0,1)]
+    public int puzzle1;
+    [Range(0, 1)]
+    public int puzzle2;
+    [Range(0, 1)]
+    public int puzzle3;
+
     PlayerData data;
 
     private void Awake()
@@ -71,6 +78,10 @@ public class PlayerCheckPoint : MonoBehaviour
         {
             transform.position = posicionDeInicio.transform.position;
         }
+
+        puzzle1 = data.puzzle1;
+        puzzle2 = data.puzzle2;
+        puzzle3 = data.puzzle3;
 
     }
 
