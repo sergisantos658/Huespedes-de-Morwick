@@ -53,6 +53,9 @@
     <UnityVersion>2021.1.22f1</UnityVersion>
   </PropertyGroup>
   <ItemGroup>
+    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
     <Compile Include="Assets\InventoryMaster\Scripts\Item\CreateItemDatabase.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Item\ItemAttribute.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Item\CreateInputManager.cs" />
@@ -111,7 +114,7 @@
     <Compile Include="Assets\Scripts\Menu\ChangeScene.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\LeverInteract.cs" />
     <Compile Include="Assets\Scripts\Keypad\Keypad.cs" />
-    <Compile Include="Assets\Scripts\Puzzle\DragAndDrop_.cs" />
+    <Compile Include="Assets\Scripts\puzzle\DragAndDrop_.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\Blueprint.cs" />
     <Compile Include="Assets\Scripts\Light\FollowMouse.cs" />
     <Compile Include="Assets\Scripts\DataBase\PlayerCheckPoint.cs" />
@@ -135,7 +138,7 @@
     <Compile Include="Assets\InventoryMaster\Scripts\Item\ItemDataBaseList.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\LeftClick.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\InteractKeypad.cs" />
-    <Compile Include="Assets\Scripts\Puzzle\piecesScript.cs" />
+    <Compile Include="Assets\Scripts\puzzle\piecesScript.cs" />
     <Compile Include="Assets\Scripts\Light\MaskObject.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\FirstPerson\FirstPersonController.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\Inventory.cs" />
@@ -152,18 +155,18 @@
     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\CreateBlueprintDatabase.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\CloseInventory.cs" />
     <Compile Include="Assets\Scripts\Menu\Credits.cs" />
+    <Compile Include="Assets\Scripts\Inventory\PickObject.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\CraftSystem\CraftSystem.cs" />
     <Compile Include="Assets\Scripts\InteractionSystem\ObjectsInteractables\KeyDoorInteraction.cs" />
     <Compile Include="Assets\Scripts\Menu\Exit.cs" />
     <Compile Include="Assets\Scripts\Character\InteractDialogueOrObjects.cs" />
+    <Compile Include="Assets\Scripts\Inventory\ControlObjects.cs" />
     <Compile Include="Assets\Scripts\Dialogs\Response.cs" />
     <Compile Include="Assets\Scripts\ReplyObjects\ReplicateObjectsController.cs" />
     <Compile Include="Assets\SlimUI\Modern Menu 1\Scripts\CheckMusicVolume.cs" />
     <Compile Include="Assets\Scripts\Keypad\ButtonKeypad.cs" />
     <Compile Include="Assets\DoorsManager\Scripts\DoorScript.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Inventory\InputManager.cs" />
-    <Compile Include="Assets\Scripts\Inventory\ControlObjects.cs" />
-    <Compile Include="Assets\Scripts\Inventory\PickObject.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Assets\TextMesh Pro\Shaders\TMPro.cginc" />

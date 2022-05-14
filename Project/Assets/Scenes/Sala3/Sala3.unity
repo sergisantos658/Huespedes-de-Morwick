@@ -1033,7 +1033,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!65 &56887823
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2001,21 +2001,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7988370400263282195, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
   m_PrefabInstance: {fileID: 285213533}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &138209391
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 138209389}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7afc0a2755531804e9021e40cc969253, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  posicionDeInicio: {fileID: 1820965964}
-  posicionDeRetorno: {fileID: 561570497}
-  level: 0
 --- !u!1 &144958752
 GameObject:
   m_ObjectHideFlags: 0
@@ -3623,18 +3608,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7069821694898084975, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0.69
-      objectReference: {fileID: 0}
+    - target: {fileID: 138209391, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: posicionDeInicio
+      value: 
+      objectReference: {fileID: 1820965964}
+    - target: {fileID: 138209391, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: posicionDeRetorno
+      value: 
+      objectReference: {fileID: 561570497}
     - target: {fileID: 7069821695779106865, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: mainCamera
       value: 
       objectReference: {fileID: 1360471544}
-    - target: {fileID: 7069821695779106865, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
-      propertyPath: normalCursor
-      value: 
-      objectReference: {fileID: 2800000, guid: a9ae0267b06e7b24d90f188a4370cce3, type: 3}
     - target: {fileID: 7069821695779106866, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: dialogueUI
       value: 
@@ -3695,8 +3680,7 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 7988370400263282204, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
 --- !u!1001 &288245168
 PrefabInstance:
