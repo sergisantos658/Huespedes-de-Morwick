@@ -4411,15 +4411,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 1, b: 0.08505559, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
-  m_Type: 1
+  m_Sprite: {fileID: 21300000, guid: acf9d033fba902b4bb8d548edc48c339, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -4453,7 +4453,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7069821694898084974}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 1.334, z: 0.768}
+  m_LocalPosition: {x: 0, y: 1.334, z: 0.69}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 7320517779906380969}
@@ -4661,14 +4661,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0, b: 0, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_RaycastTarget: 0
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: daf4c076cda2ca745a8d665a9c54b2c1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: acf9d033fba902b4bb8d548edc48c339, type: 3}
   m_Type: 3
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5382,7 +5382,7 @@ GameObject:
   - component: {fileID: 7069821695779106866}
   - component: {fileID: 7069821695779106867}
   - component: {fileID: 7069821695779106876}
-  - component: {fileID: 7988370400263282204}
+  - component: {fileID: 138209391}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -5397,7 +5397,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7988370400263282195}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -0.417, y: 1.004, z: 6.354}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
@@ -5535,7 +5535,6 @@ MonoBehaviour:
   GoalPosition: {fileID: 0}
   rotate: 0
   rayDistance: 1
-  raysphereRadius: 0.25
   interactableLayer:
     serializedVersion: 2
     m_Bits: 32833
@@ -5543,10 +5542,9 @@ MonoBehaviour:
   interactCursor: {fileID: 2800000, guid: 7ec1dbfa4ac227442ae8e6e238233e41, type: 3}
   ObservationCursor: {fileID: 2800000, guid: 9cda48e378d35dc4ab62c87729c084dd, type: 3}
   inteAndObservCursor: {fileID: 2800000, guid: e43eb6dc9e9ce1f47bac91c53a5246fc, type: 3}
-  normalCursor: {fileID: 2800000, guid: bb57a4c5a1ec38a41949d0975ede9ac1, type: 3}
+  normalCursor: {fileID: 2800000, guid: a9ae0267b06e7b24d90f188a4370cce3, type: 3}
   interactionHoldGO: {fileID: 7069821695468808185}
   interactionHoldProgress: {fileID: 7069821695468808186}
-  PController: {fileID: 0}
 --- !u!114 &7069821695779106866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5607,7 +5605,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &7988370400263282204
+--- !u!114 &138209391
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -5616,12 +5614,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 7988370400263282195}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0de5d4156994cf4f9e8cdbbd639f865, type: 3}
+  m_Script: {fileID: 11500000, guid: 7afc0a2755531804e9021e40cc969253, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NormalMusic: {fileID: 0}
-  MusicMenu: {fileID: 0}
-  mainPauseMenu: {fileID: 0}
+  posicionDeInicio: {fileID: 0}
+  posicionDeRetorno: {fileID: 0}
+  level: 0
 --- !u!1 &8051654296591093321
 GameObject:
   m_ObjectHideFlags: 0
