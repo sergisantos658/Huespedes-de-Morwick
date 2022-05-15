@@ -13,7 +13,7 @@ public class InteractKeypad : Interactable
 
 	public DialogueObject dialog;
 
-	public bool camOn;
+	public bool camOn = false;
 
 	private PlayerController playerC;
 

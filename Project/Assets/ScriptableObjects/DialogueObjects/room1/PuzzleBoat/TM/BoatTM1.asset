@@ -19,6 +19,6 @@ MonoBehaviour:
     whoTalk: 1
   responses:
   - responseText: G.Threepwood
-    dialogueObject: {fileID: 11400000, guid: 0c4d117690ee2f54dbd4dd1870558ed5, type: 2}
+    dialogueObject: {fileID: 11400000, guid: d61de045dff8c6d438b5450bf96fe14e, type: 2}
   - responseText: Manny Grim
     dialogueObject: {fileID: 11400000, guid: d7187a8bd9638c84a93cd8b9fffb2c96, type: 2}
