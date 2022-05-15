@@ -36,19 +36,28 @@ public class InteractDoor : Interactable
     }
     public void Update()
     {
-        if (!player.DialogueUI.isOpen && finishDialogue == true)
+        if(PlayerCheckPoint.Instance.puzzle3 == 0)
         {
-            camera0.SetActive(false);
-            camera1.SetActive(true);
-            player.gameObject.SetActive(false);
-            finishDialogue = false;
-        }
-        if (CauchObjectLent.keyS3 && piecesScript.puzzleCompleted)
-        {
+            if (!player.DialogueUI.isOpen && finishDialogue == true)
+            {
+                camera0.SetActive(false);
+                camera1.SetActive(true);
+                player.gameObject.SetActive(false);
+                finishDialogue = false;
+            }
+            if (CauchObjectLent.keyS3 && piecesScript.puzzleCompleted)
+            {
+                PlayerCheckPoint.Instance.puzzle3 = 1;
                 gameObject.SetActive(false);
-            
 
+
+            }
         }
+        else
+        {
+            gameObject.SetActive(false);
+        }
+
     }
     public override void Observation()
     {
