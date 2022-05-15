@@ -19,7 +19,7 @@ MonoBehaviour:
     whoTalk: 1
   responses:
   - responseText: G.Threepwood
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: 0bde769e2e4aaf348b4bb93fef534839, type: 2}
   - responseText: George Stobbart
     dialogueObject: {fileID: 11400000, guid: ca1b6d6dea82c3b49aaff97c575f9fe8, type: 2}
   - responseText: Sam Max

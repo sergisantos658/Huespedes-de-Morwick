@@ -17,4 +17,10 @@ MonoBehaviour:
     - "Y para eso vinieron a tardar... 4 jornadas y media, ahora dime \xBFQu\xE9
       pirata volvi\xF3 a Cueva Lenteja?"
     whoTalk: 1
-  responses: []
+  responses:
+  - responseText: Sam Max
+    dialogueObject: {fileID: 11400000, guid: e244b0c722d92d547813e7ce7f287f8a, type: 2}
+  - responseText: Manny Grim
+    dialogueObject: {fileID: 11400000, guid: cf710d4091cbbb9459dd127e66517ef1, type: 2}
+  - responseText: G.Threepwood
+    dialogueObject: {fileID: 11400000, guid: ddf8944507f6a4544b8b72ebdced8f3e, type: 2}
