@@ -4418,7 +4418,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: acf9d033fba902b4bb8d548edc48c339, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 2987e19a5d5db8b4f9ef03a2193272b7, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -5620,6 +5620,9 @@ MonoBehaviour:
   posicionDeInicio: {fileID: 0}
   posicionDeRetorno: {fileID: 0}
   level: 0
+  puzzle1: 0
+  puzzle2: 0
+  puzzle3: 0
 --- !u!1 &8051654296591093321
 GameObject:
   m_ObjectHideFlags: 0
