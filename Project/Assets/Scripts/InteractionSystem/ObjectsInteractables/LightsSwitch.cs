@@ -35,7 +35,7 @@ public class LightsSwitch : Interactable
 
     private void OnDisable()
     {
-        DialogueUI.CheckResponseDialogue += ResponseEventsCheck;
+        DialogueUI.CheckResponseDialogue -= ResponseEventsCheck;
     }
 
     private void Start()
