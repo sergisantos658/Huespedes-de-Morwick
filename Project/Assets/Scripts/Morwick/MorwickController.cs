@@ -13,6 +13,7 @@ public class MorwickController : MonoBehaviour
     public bool useRigidBody = false;
     public float rotateSpeed = 10;
     public static bool MorwickCauch;
+    public static bool cauched;
     public ChangeScene changeScene;
 
 
@@ -239,7 +240,7 @@ public class MorwickController : MonoBehaviour
             // -->
             // target.transform.position = target.GetComponent<PlayerInteraction>().GoalPosition.position;
             PlayerCheckPoint.Instance.level = changeScene.sceneIndex;
-
+            cauched = true;
             MorwickCauch = true;
             if (persecutionMusic.isPlaying)
             {
