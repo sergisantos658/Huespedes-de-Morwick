@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Y para eso vinieron a tardar... 7 jornadas, ahora dime \xBFque pirata volvi\xF3
+    - "Y para eso vinieron a tardar... 7 jornadas, ahora dime \xBFQu\xE9 pirata volvi\xF3
       a Cueva Lenteja?"
     whoTalk: 1
   responses:

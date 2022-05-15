@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Y para eso vinieron a tardar... 6 jornadas y media, ahora dime \xBFcual de
+    - "Y para eso vinieron a tardar... 6 jornadas y media, ahora dime \xBFCual de
       los dos volvi\xF3 a Cueva Lenteja?"
     whoTalk: 1
   responses:
   - responseText: George Stobbart
     dialogueObject: {fileID: 11400000, guid: 09f7dfc07ef0c1e4e84204c9f339671f, type: 2}
   - responseText: Sam Max
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: 4e1083030cb2f1547a17ae5a7c14cec0, type: 2}
+  - responseText: G.Threepwood
+    dialogueObject: {fileID: 11400000, guid: 09f7dfc07ef0c1e4e84204c9f339671f, type: 2}

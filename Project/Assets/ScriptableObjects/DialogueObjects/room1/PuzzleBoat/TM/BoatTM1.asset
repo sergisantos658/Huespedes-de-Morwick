@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Y para eso vinieron a tardar... 3 jornada y media, ahora dime \xBFcual de
+    - "Y para eso vinieron a tardar... 2 jornada y media, ahora dime \xBFCual de
       los dos volvi\xF3 a Cueva Lenteja?"
     whoTalk: 1
   responses:
   - responseText: G.Threepwood
     dialogueObject: {fileID: 11400000, guid: 0c4d117690ee2f54dbd4dd1870558ed5, type: 2}
   - responseText: Manny Grim
-    dialogueObject: {fileID: 0}
+    dialogueObject: {fileID: 11400000, guid: d7187a8bd9638c84a93cd8b9fffb2c96, type: 2}
