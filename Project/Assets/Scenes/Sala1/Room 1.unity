@@ -2212,7 +2212,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &346089447
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3639,9 +3639,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Nada m\xE1s entrar en el hotel, me encontr\xE9 con un recepcionista bastante
-    bien trajeado para tratarse de un hotel casi en ruinas con un cuestionable amor
-    sobre su trabajo."
+  m_text: "Nada m\xE1s entrar en el hotel, me encontr\xE9 con un robot, cosa extra\xF1a
+    para tratarse de un hotel casi en ruinas, solo se que me miraba mal"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9d24e6b3ecd1d2b479a31d3d0e7b1f9e, type: 2}
   m_sharedMaterial: {fileID: 21148088844906328, guid: 9d24e6b3ecd1d2b479a31d3d0e7b1f9e, type: 2}
@@ -10831,7 +10830,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1284487388
 RectTransform:
   m_ObjectHideFlags: 0
