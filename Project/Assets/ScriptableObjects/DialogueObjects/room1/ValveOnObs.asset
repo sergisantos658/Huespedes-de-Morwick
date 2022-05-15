@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Ahora puedo subir y bajar la barrera.
+    - Ahora puedo accionar el mecanismo.
     whoTalk: 0
   responses: []

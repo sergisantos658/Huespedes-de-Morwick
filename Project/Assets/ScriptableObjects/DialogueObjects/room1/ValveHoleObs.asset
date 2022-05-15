@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Parece alg\xFAn tipo de mecanismo... le falte una pieza para poder accionarlo."
+    - "Parece alg\xFAn tipo de mecanismo... le falta una pieza para poder accionarlo."
     whoTalk: 0
   responses: []

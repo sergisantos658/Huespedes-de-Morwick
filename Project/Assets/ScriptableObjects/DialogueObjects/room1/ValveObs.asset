@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Un bastidor de armas con algunos escudos y... \xBFlo que parece ser algun
-      tipo de valvula? "
+    - "Un bastidor de armas con algunos escudos y... \xBFLo que parece ser alg\xFAn
+      tipo de v\xE1lvula? "
     whoTalk: 0
   responses: []

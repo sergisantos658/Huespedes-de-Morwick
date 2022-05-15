@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - 'Seguramente sea para abrir la puerta, necesito 4 digitos. '
+    - "Seguramente sea para abrir la puerta, necesito 4 d\xEDgitos. "
     - "Seguir\xE9 buscando."
     whoTalk: 0
   responses: []
