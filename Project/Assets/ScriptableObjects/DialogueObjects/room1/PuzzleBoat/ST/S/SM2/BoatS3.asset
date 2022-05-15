@@ -14,7 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Eso hace un total de 5 jornadas y media, \xBFque pareja, fue la siguiente
-      en recorrer el trayecto con la pata de palo?"
+    - "Eso hace un total de 4 jornadas y media, pero la con el ultimo recorrido de
+      G.Threepwood y George Stobbar ser\xEDan 11 jornadas. "
+    - "As\xED que me quedo con tu dorito, pero quiero ver como sufres, as\xED que
+      puedes seguir intentando resolver el acertijo."
     whoTalk: 1
   responses: []

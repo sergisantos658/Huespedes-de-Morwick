@@ -14,11 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Y para eso vinieron a tardar... 7 jornadas, ahora dime \xBFcual de los dos
-      volvi\xF3 a Cueva Lenteja?"
+    - "Y para eso vinieron a tardar... 7 jornadas, ahora dime \xBFque pirata volvi\xF3
+      a Cueva Lenteja?"
     whoTalk: 1
   responses:
   - responseText: Sam Max
     dialogueObject: {fileID: 11400000, guid: a81007a274583a74587c59b851808d5e, type: 2}
   - responseText: G.Threepwood
     dialogueObject: {fileID: 11400000, guid: 02da3033a10d17b47862c73d48a5c4c7, type: 2}
+  - responseText: George Stobbart
+    dialogueObject: {fileID: 11400000, guid: abee222998d0b96478adaff8fbf10b48, type: 2}

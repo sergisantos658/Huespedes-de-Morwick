@@ -14,7 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Eso hace un total de 8 jornadas, ahora dime \xBFcual de los dos volvi\xF3
-      a Cueva Lenteja?"
+    - "Eso hace un total de 8 jornadas, ahora dime \xBFque pirata vuelve a Cueva
+      Lenteja?"
     whoTalk: 1
-  responses: []
+  responses:
+  - responseText: Sam Max
+    dialogueObject: {fileID: 11400000, guid: a76bd0650ded00d42911ef066bfb2d96, type: 2}
+  - responseText: Manny Grim
+    dialogueObject: {fileID: 11400000, guid: 536f9fb033374fb45ab5e8ac6353fed1, type: 2}
+  - responseText: George Stobbart
+    dialogueObject: {fileID: 11400000, guid: aebd896bfb3fa42429137ed7d7bb3ffe, type: 2}

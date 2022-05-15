@@ -22,3 +22,5 @@ MonoBehaviour:
     dialogueObject: {fileID: 11400000, guid: c0dd4086bf463fe4c829a0dba6e10241, type: 2}
   - responseText: G.Threepwood
     dialogueObject: {fileID: 11400000, guid: 7e9edafc841255343985e72af25166c4, type: 2}
+  - responseText: George Stobbart
+    dialogueObject: {fileID: 11400000, guid: cfcbc3c370497c245a3cf17ec57d59c8, type: 2}
