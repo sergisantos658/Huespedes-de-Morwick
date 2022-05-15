@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "*piensa en voz alta* No prod\xEDa el jefe secuestrar a alguna chica de vez
-      en cuando... o como minimo a alguien interesante."
+    - "*piensa en voz alta* No podr\xEDa el jefe secuestrar a alguna chica de vez
+      en cuando... o como m\xEDnimo a alguien interesante."
     - "Para que necesita a un tipo raro e inadaptado, con problemas de vista, claramente
-      en mala forma y lo peor de todo, habla dormido... engrill\xE9talo y vig\xEDlalo
-      dice...  "
+      en mala forma y lo peor de todo, habla dormido... ponle los grilletes y vig\xEDlalo
+      dice..."
     - No pienso vigilarlo, que haga lo que quiera, no creo que llegue muy lejos,
       lleva 4 horas babeando el suelo y dando un discurso sobre no se que de terrapanismo.
     whoTalk: 1
   responses:
   - responseText: "Esa baba estaba ah\xED cuando llegu\xE9."
     dialogueObject: {fileID: 11400000, guid: db7a89211539d7943aa4b1beb39f3546, type: 2}
-  - responseText: "\xBFQuien eres y donde estoy?"
+  - responseText: "\xBFQui\xE9n eres y d\xF3nde estoy?"
     dialogueObject: {fileID: 11400000, guid: db7a89211539d7943aa4b1beb39f3546, type: 2}
-  - responseText: "No se quien esta m\xE1s ciego de los dos."
+  - responseText: "No s\xE9 qui\xE9n est\xE1 m\xE1s ciego de los dos."
     dialogueObject: {fileID: 11400000, guid: db7a89211539d7943aa4b1beb39f3546, type: 2}

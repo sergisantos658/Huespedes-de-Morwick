@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Esta bloqueada, tengo que abrirla de alguna forma y ese fantasma no creo que
-      impida que me escape.
+    - "Est\xE1 bloqueada, tengo que abrirla de alguna forma y ese fantasma no creo
+      que impida que me escape."
     whoTalk: 0
   responses: []

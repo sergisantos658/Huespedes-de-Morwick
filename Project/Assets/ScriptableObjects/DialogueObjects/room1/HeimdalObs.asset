@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "No recuerdo muy bien como he llegado aqu\xED, pero si recuerdo unas escaleras
-      oscuras y a dos fantasmas llevadome en brazos. Estoy seguro de que uno de ellos
-      era el."
+    - "No recuerdo muy bien c\xF3mo llegu\xE9 aqu\xED, pero si recuerdo unas escaleras
+      oscuras y a dos fantasmas llev\xE1ndome en brazos. Estoy seguro de que uno
+      de ellos era el."
     whoTalk: 0
   responses: []
