@@ -6,6 +6,7 @@ public class DialogueActivate : Interactable
 {
     [SerializeField] private DialogueObject dialogueObject;
     [SerializeField] private DialogueObject o_DialogueObject;
+    [SerializeField] private DialogueObject MorwickdialgueObject;
 
     private PlayerController player => PlayerController.currentPlayer;
     public  event Action<PlayerController> LookPlayer = delegate { };
@@ -22,10 +23,17 @@ public class DialogueActivate : Interactable
 
     public override void Interact()
     {
+        if(MorwickController.cauched == false || MorwickdialgueObject == null)
+        {
+            LookPlayer?.Invoke(player);
+            ResponseEventsCheck(dialogueObject);
+            player.DialogueUI.ShowDialogue(dialogueObject);
+        }
+        else
+        {
+            player.DialogueUI.ShowDialogue(MorwickdialgueObject);
+        }
 
-        LookPlayer?.Invoke(player);
-        ResponseEventsCheck(dialogueObject);
-        player.DialogueUI.ShowDialogue(dialogueObject);
     }
 
     public override void Observation()

@@ -2421,6 +2421,7 @@ MonoBehaviour:
   interactionType: 0
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: 1839d820aaa01cf4e952fd0b8566c84e, type: 2}
+  MorwickdialgueObject: {fileID: 0}
 --- !u!65 &177504257
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3079,6 +3080,7 @@ MonoBehaviour:
   interactionType: 0
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: 176de6669f0f34342b3a1a1a47fef602, type: 2}
+  MorwickdialgueObject: {fileID: 0}
 --- !u!135 &239652084
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -16529,6 +16531,7 @@ MonoBehaviour:
   interactionType: 0
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: 0006c5df27ab46243a7c9db0cccb5337, type: 2}
+  MorwickdialgueObject: {fileID: 0}
 --- !u!1001 &1402128621
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17027,6 +17030,7 @@ MonoBehaviour:
   interactionType: 0
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: 19d27ed3e88a6b146ac6254947908803, type: 2}
+  MorwickdialgueObject: {fileID: 0}
 --- !u!1001 &1428004867
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18130,6 +18134,7 @@ MonoBehaviour:
   interactionType: 0
   dialogueObject: {fileID: 11400000, guid: 0e259e6cf51fd924ca0f3cfe1d088a07, type: 2}
   o_DialogueObject: {fileID: 11400000, guid: f700f4b193f65c94081c4f7f1e702e3a, type: 2}
+  MorwickdialgueObject: {fileID: 0}
 --- !u!65 &1499528149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -21093,6 +21098,7 @@ MonoBehaviour:
   interactionType: 0
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: 454bcfe6825ca0a4a93b9ae5dcd0a473, type: 2}
+  MorwickdialgueObject: {fileID: 0}
 --- !u!65 &1718294836
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24685,6 +24691,7 @@ MonoBehaviour:
   interactionType: 0
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: 2074da9f07195764daff1d86573e37cf, type: 2}
+  MorwickdialgueObject: {fileID: 0}
 --- !u!65 &1931487377
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -24721,6 +24728,7 @@ MonoBehaviour:
   interactionType: 0
   dialogueObject: {fileID: 11400000, guid: 19d27ed3e88a6b146ac6254947908803, type: 2}
   o_DialogueObject: {fileID: 0}
+  MorwickdialgueObject: {fileID: 0}
 --- !u!4 &1952336423 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8707025466779033249, guid: bbd85e700f0f23546bfd0547bf83ad02, type: 3}
@@ -25692,6 +25700,7 @@ MonoBehaviour:
   interactionType: 0
   dialogueObject: {fileID: 11400000, guid: 585d15b7b8bb89a4b82b5ef645663049, type: 2}
   o_DialogueObject: {fileID: 11400000, guid: b0127fb5c95b3aa4f88989076bbe9766, type: 2}
+  MorwickdialgueObject: {fileID: 11400000, guid: c5a05bf8386259f4c9abf763937305ce, type: 2}
 --- !u!95 &2015093868
 Animator:
   serializedVersion: 3
