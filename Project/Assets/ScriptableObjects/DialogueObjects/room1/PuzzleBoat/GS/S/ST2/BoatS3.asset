@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Eso hace un total de 8 jornadas y media, pero la con el ultimo recorrido de
-      Sam Max y Manny Grim ser\xEDan 11 jornadas y media. "
+    - "Eso hace un total de 7 jornadas, pero la con el ultimo recorrido de G.Threepwood
+      y Manny Grim ser\xEDan 9 jornadas y media. "
     - "As\xED que me quedo con tu dorito, pero quiero ver como sufres, as\xED que
       puedes seguir intentando resolver el acertijo."
     whoTalk: 1

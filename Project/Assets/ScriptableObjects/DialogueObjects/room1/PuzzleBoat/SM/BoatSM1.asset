@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Y para eso vinieron a tardar... 3 jornadas, ahora dime \xBFcual de los dos
-      volvi\xF3 a Cueva Lenteja?\n"
+    - "Y para eso vinieron a tardar... 2  jornadas y media, ahora dime \xBFcual de
+      los dos volvi\xF3 a Cueva Lenteja?\n"
     whoTalk: 1
   responses:
   - responseText: Sam Max

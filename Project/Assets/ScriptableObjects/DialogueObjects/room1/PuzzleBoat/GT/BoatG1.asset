@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Eso hace un total de 11 jornadas, me quedo con tu dorito, pero quiero ver
+    - "Eso hace un total de 10 jornadas, me quedo con tu dorito, pero quiero ver
       como sufres, as\xED que puedes seguir intentando resolver el acertijo."
     whoTalk: 1
   responses: []
