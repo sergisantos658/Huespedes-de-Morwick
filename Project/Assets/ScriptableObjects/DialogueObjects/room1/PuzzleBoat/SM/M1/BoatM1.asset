@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Eso hace un total de 5 jornadas, \xBFque pareja, fue la siguiente en recorrer
+    - "Eso hace un total de 5 jornadas, \xBFQu\xE9 pareja, fue la siguiente en recorrer
       el trayecto con la pata de palo?"
     whoTalk: 1
   responses:

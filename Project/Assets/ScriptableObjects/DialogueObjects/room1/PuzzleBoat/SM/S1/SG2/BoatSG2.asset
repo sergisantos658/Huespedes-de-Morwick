@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Eso hace un total de 8 jornadas, \xBFque pareja, fue la siguiente en recorrer
+    - "Eso hace un total de 8 jornadas, \xBFQu\xE9 pareja, fue la siguiente en recorrer
       el trayecto con la pata de palo?"
     whoTalk: 1
   responses:
@@ -22,3 +22,5 @@ MonoBehaviour:
     dialogueObject: {fileID: 11400000, guid: 267a3a7109916474792656ca51373243, type: 2}
   - responseText: George Stobbart
     dialogueObject: {fileID: 11400000, guid: 13e6744fd361b0a46a305c77760511fd, type: 2}
+  - responseText: Manny Grim
+    dialogueObject: {fileID: 11400000, guid: f8241686f56ed174eb8b47154081d4c4, type: 2}

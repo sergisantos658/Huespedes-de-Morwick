@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Eso hace un total de 7 jornadas, pero la con el ultimo recorrido de Sam Max
+    - "Eso hace un total de 7 jornadas, pero con el \xFAltimo recorrido de Sam Max
       y Manny Grim ser\xEDan 9 jornadas y media."
     - "As\xED que me quedo con tu dorito, pero quiero ver como sufres, as\xED que
       puedes seguir intentando resolver el acertijo."

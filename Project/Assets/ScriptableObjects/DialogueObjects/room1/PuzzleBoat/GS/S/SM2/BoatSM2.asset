@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Eso hace un total de 8 jornadas, ahora dime \xBFque pirata vuelve a Cueva
+    - "Eso hace un total de 8 jornadas, ahora dime \xBFQu\xE9 pirata vuelve a Cueva
       Lenteja?"
     whoTalk: 1
   responses:

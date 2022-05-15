@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Y para eso vinieron a tardar... 1 jornada, ahora dime \xBFcual de los dos
+    - "Y para eso vinieron a tardar... 1 jornada, ahora dime \xBFCual de los dos
       volvi\xF3 a Cueva Lenteja?\n"
     whoTalk: 1
   responses:
