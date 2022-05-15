@@ -190,7 +190,7 @@
     <None Include="Assets\Scenes\Sala1\KeypadsEntryLocks\Resources\Shaders\NumpadText.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Escenario-Props\PolygonHorrorMansion\Materials\Shaders\SyntyStudios_Ghost.shader" />
-    <None Include="Assets\Sprites\Orange.Juice\ReadMe.txt" />
+    <None Include="Assets\Fonts\Orange.Juice\ReadMe.txt" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF Overlay.shader" />
     <None Include="Assets\Escenario-Props\PolygonHorrorMansion\Materials\Shaders\SyntyStudios_Grunge.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_Bitmap-Mobile.shader" />

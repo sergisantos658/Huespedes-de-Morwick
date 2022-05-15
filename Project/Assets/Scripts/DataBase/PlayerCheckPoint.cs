@@ -73,10 +73,12 @@ public class PlayerCheckPoint : MonoBehaviour
         if(data.level > level)
         {
             transform.position = posicionDeRetorno.transform.position;
+            transform.rotation = posicionDeRetorno.transform.rotation;
         }
         else if(data.level <= level)
         {
             transform.position = posicionDeInicio.transform.position;
+            transform.rotation = posicionDeInicio.transform.rotation;
         }
 
         puzzle1 = data.puzzle1;
