@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Eso hace un total de 5 jornadas y media, pero la con el ultimo recorrido de
-      Sam Max y George Stobbar ser\xEDan 11 jornadas. "
+    - "Eso hace un total de 4 jornadas y media, pero la con el ultimo recorrido de
+      Sam Max y George Stobbar ser\xEDan 9 jornadas y media. "
     - "As\xED que me quedo con tu dorito, pero quiero ver como sufres, as\xED que
       puedes seguir intentando resolver el acertijo."
     whoTalk: 1

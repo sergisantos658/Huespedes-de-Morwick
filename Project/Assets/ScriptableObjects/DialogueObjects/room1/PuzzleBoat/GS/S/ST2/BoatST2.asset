@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Eso hace un total de 7 jornadas y media, ahora dime \xBFcual de los dos volvi\xF3
+    - "Eso hace un total de 6 jornadas y media, ahora dime \xBFcual de los dos volvi\xF3
       a Cueva Lenteja?"
     whoTalk: 1
   responses:

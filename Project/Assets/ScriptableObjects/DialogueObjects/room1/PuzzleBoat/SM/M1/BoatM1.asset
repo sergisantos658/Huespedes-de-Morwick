@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Eso hace un total de 5 jornadas y media, \xBFque pareja, fue la siguiente
-      en recorrer el trayecto con la pata de palo?"
+    - "Eso hace un total de 5 jornadas, \xBFque pareja, fue la siguiente en recorrer
+      el trayecto con la pata de palo?"
     whoTalk: 1
   responses:
   - responseText: George Stobbart y Manny Grim
@@ -23,4 +23,4 @@ MonoBehaviour:
   - responseText: G.Threepwood y Manny Grim
     dialogueObject: {fileID: 11400000, guid: bf76eca412c8ce54789dfa38fef7422b, type: 2}
   - responseText: G.Threepwood y George Stobbart
-    dialogueObject: {fileID: 11400000, guid: b98e884a724a3a8439e33956681703de, type: 2}
+    dialogueObject: {fileID: 11400000, guid: e87aee31872ceaf42b659447830f3458, type: 2}

@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Eso hace un total de 3 jornadas y media, \xBFque pareja, fue la siguiente
-      en recorrer el trayecto con la pata de palo?"
+    - "Eso hace un total de 3 jornadas, \xBFque pareja, fue la siguiente en recorrer
+      el trayecto con la pata de palo?"
     whoTalk: 1
   responses:
   - responseText: Sam Max y G.Threepwood
     dialogueObject: {fileID: 11400000, guid: 11a1927b6e8c3f4469b487de9f8c2721, type: 2}
   - responseText: Sam Max y George Stobbar
-    dialogueObject: {fileID: 11400000, guid: f045e69d47e6dcd4fb4b07ce1430d355, type: 2}
+    dialogueObject: {fileID: 11400000, guid: 631712850b0c1a046a4fb728b2cec1f3, type: 2}
   - responseText: George Stobbar y G.Threepwood
     dialogueObject: {fileID: 11400000, guid: 68ac6bd51113413468fe83f5619ec369, type: 2}

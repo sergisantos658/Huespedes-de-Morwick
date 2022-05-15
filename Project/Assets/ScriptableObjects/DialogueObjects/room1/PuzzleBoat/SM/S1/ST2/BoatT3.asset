@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Eso hace un total de 6 jornadas, pero la con el ultimo recorrido de G.Threepwood
-      y George Stobbar ser\xEDan 11 jornadas. "
+    - "Eso hace un total de 5 jornadas, pero la con el ultimo recorrido de G.Threepwood
+      y George Stobbar ser\xEDan 10 jornadas. "
     - "As\xED que me quedo con tu dorito, pero quiero ver como sufres, as\xED que
       puedes seguir intentando resolver el acertijo."
     whoTalk: 1
