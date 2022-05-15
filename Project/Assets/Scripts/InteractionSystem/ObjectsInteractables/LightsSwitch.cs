@@ -4,17 +4,29 @@ using UnityEngine;
 using TMPro;
 public class LightsSwitch : Interactable
 {
+    [Header("Default ")]
+    public GameObject switchButton;
     public DialogueObject defaultDialogue;
     public DialogueObject getSwitchCoverDialogue;
 
+    [Space(20)]
+    public DialogueObject PressOffTheLightSwitchDialogue;
+
+
+
+    [Header("Item ")]
+    [SerializeField] private Items lightSwitchItem;
+
+    [Header("Lights ")]
     [SerializeField] private GameObject[] m_Lights;
 
-    [SerializeField] private bool lightSwitch = false;
+    [SerializeField] private bool isLightSwitch = false;
     public bool allLightsOff = false;
 
     private bool onlyOnce = false;
     private bool lights = false;
     private PlayerController player;
+    private ControlObjects inventory;
 
     private void OnEnable()
     {
@@ -29,14 +41,40 @@ public class LightsSwitch : Interactable
     private void Start()
     {
         player = PlayerController.currentPlayer;
+        inventory = player.GetComponent<ControlObjects>();
+
         if (player.GetComponent<PlayerCheckPoint>().puzzle2 == 0)
         {
-            lightSwitch = false;
+            isLightSwitch = false;
+            switchButton.SetActive(false);
         }
         else if(player.GetComponent<PlayerCheckPoint>().puzzle2 == 1)
         {
-            lightSwitch = true;
+            isLightSwitch = true;
+            UpdateDialogueObject(PressOffTheLightSwitchDialogue);
+            switchButton.SetActive(true);
+            return;
         }
+        
+        if (inventory != null)
+        {
+            for (int i = 0; i < inventory.objetosRecogidos.Count; i++)
+            {
+                if(inventory.objetosRecogidos[i] == lightSwitchItem)
+                {
+                    isLightSwitch = true;
+                    switchButton.SetActive(false);
+                    return;
+                }
+            }
+        }
+
+        
+    }
+
+    public void CheckInInventory()
+    {
+
     }
 
     public void UpdateLight()
@@ -91,7 +129,7 @@ public class LightsSwitch : Interactable
 
     public override void Interact()
     {
-        if (lightSwitch)
+        if (isLightSwitch)
         {
             onlyOnce = false;
 

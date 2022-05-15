@@ -5019,6 +5019,25 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3121784523027337349, guid: 20dc69066f16acc48b952aed5b788376, type: 3}
   m_PrefabInstance: {fileID: 509075698}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &519106005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7988370400263282195, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+  m_PrefabInstance: {fileID: 7069821695837086404}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &519106006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519106005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6d6e0ddf18e5644a92ce5b75236cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosRecogidos:
+  - {fileID: 11400000, guid: 7022c06e0a45f374c8431afb60919542, type: 2}
 --- !u!1 &520259878
 GameObject:
   m_ObjectHideFlags: 0
@@ -9020,8 +9039,11 @@ MonoBehaviour:
   interactOpction: 1
   observationOpction: 0
   interactionType: 1
+  switchButton: {fileID: 1651990765}
   defaultDialogue: {fileID: 11400000, guid: 0d7fd726fb0928244aca1290dd123793, type: 2}
   getSwitchCoverDialogue: {fileID: 11400000, guid: 966411dd3b0728f449bdd9c84acfb717, type: 2}
+  PressOffTheLightSwitchDialogue: {fileID: 11400000, guid: bc92c2ea7ef12e9458752fa36949e303, type: 2}
+  lightSwitchItem: {fileID: 11400000, guid: 7022c06e0a45f374c8431afb60919542, type: 2}
   m_Lights:
   - {fileID: 1279706103}
   - {fileID: 1279706102}
@@ -9068,7 +9090,7 @@ MonoBehaviour:
   - {fileID: 1849741242}
   - {fileID: 169316739}
   - {fileID: 805537468}
-  lightSwitch: 0
+  isLightSwitch: 0
   allLightsOff: 0
 --- !u!114 &828389926
 MonoBehaviour:
@@ -9191,6 +9213,18 @@ MonoBehaviour:
             m_FloatArgument: 0
             m_StringArgument: 
             m_BoolArgument: 0
+          m_CallState: 2
+        - m_Target: {fileID: 1651990765}
+          m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+          m_MethodName: SetActive
+          m_Mode: 6
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 1
           m_CallState: 2
   - name: No
     onPickedResponse:
@@ -93001,6 +93035,11 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 6390087017413320644, guid: b402bc0133532434b873cefde0db7814, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b402bc0133532434b873cefde0db7814, type: 3}
+--- !u!1 &1651990765 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4539770016154403946, guid: e574f658d3fabcc43bdbe89b4425b18b, type: 3}
+  m_PrefabInstance: {fileID: 828389921}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1681384440
 PrefabInstance:
   m_ObjectHideFlags: 0

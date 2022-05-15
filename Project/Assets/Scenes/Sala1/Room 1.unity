@@ -9349,7 +9349,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7988370400263282195, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: m_Name
-      value: Player (1)
+      value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 7988370400263282204, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: m_Enabled
