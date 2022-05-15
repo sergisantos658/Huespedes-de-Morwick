@@ -28,7 +28,7 @@ public class InteractKeypad : Interactable
 		{
 			activeNum.SetActive(true);
 		}
-		if (Input.GetKeyDown(KeyCode.Return))
+		if (Input.GetKeyDown(KeyCode.Escape))
         {
 			camOn = false;
 			activeNum.SetActive(false);
@@ -42,6 +42,7 @@ public class InteractKeypad : Interactable
 
 		camOn = true;
 		colliderNumpad.enabled = false;
+		PlayerController.currentPlayer.gameObject.SetActive(false);
 	}
 
 	public override void Observation()
@@ -53,6 +54,7 @@ public class InteractKeypad : Interactable
 	{
 		colliderNumpad.enabled = true;
 		CameraManager.SetCameraPosition(camZone);
+		PlayerController.currentPlayer.gameObject.SetActive(true);
 	}
 	
 }

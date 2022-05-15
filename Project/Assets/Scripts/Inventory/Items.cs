@@ -5,5 +5,5 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Item")]
 public class Items : ScriptableObject
 {
-    public Texture2D spriteInventory;
+    public Sprite spriteInventory;
 }

@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "\xBFCuanto tiempo llevas ah\xED, como te has quitado los grilletes?"
+    - "\xBFCu\xE1nto tiempo llevas ah\xED, c\xF3mo te has quitado los grilletes?"
     whoTalk: 1
   responses:
-  - responseText: Una calabaza flotante me ha dejado un cuchara afilada para cortar
+  - responseText: Una calabaza flotante me ha dejado una cuchara afilada para cortar
       el pan.
     dialogueObject: {fileID: 11400000, guid: cdf814f4bee29fc4bb695f85a0733df3, type: 2}
   - responseText: "\xBFTe refieres a esa cuerda mal atada?"

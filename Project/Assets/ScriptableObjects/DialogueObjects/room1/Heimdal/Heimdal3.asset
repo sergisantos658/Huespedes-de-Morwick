@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "*suspiro* Bueno da igual, mi nombre es Heimdal y estas en la dimensi\xF3n
+    - "*suspiro* Bueno da igual, mi nombre es Heimdal y est\xE1s en la dimensi\xF3n
       fantasma. "
     - "El jefe necesita humanos, para no se que pruebas en un laboratorio con cubos
       y portales... no nos ha dado mucha informaci\xF3n, as\xED que no preguntes. "
@@ -22,6 +22,6 @@ MonoBehaviour:
   responses:
   - responseText: "\xBFCulos y portales? Me interesa."
     dialogueObject: {fileID: 11400000, guid: 3a9bde3083480c246b34a8facf1ea439, type: 2}
-  - responseText: "\xBFPor casualidad esas pruebas no tendr\xE1n como recompesa una
-      tarta?"
+  - responseText: "\xBFPor casualidad esas pruebas no tendr\xE1n como recompensa
+      una tarta?"
     dialogueObject: {fileID: 11400000, guid: 3a9bde3083480c246b34a8facf1ea439, type: 2}

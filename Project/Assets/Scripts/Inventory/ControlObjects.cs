@@ -2,9 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
+
 public class ControlObjects : MonoBehaviour
 {
 	public List<Items> objetosRecogidos = new List<Items>();
+	public List<Image> images = new List<Image>();
 
 	const string ITEMS_KEY = "/items";
 	const string ITEMS_Count_KEY = "/items.count";
@@ -24,17 +27,35 @@ public class ControlObjects : MonoBehaviour
 	{
 		objetosRecogidos.Add(obj);
 		Save();
+		UpdateInventory();
 	}
 
 	public void RemoveObject(Items obj)
 	{
 		objetosRecogidos.Remove(obj);
 		Save();
+		UpdateInventory();
 	}
 
 	public bool ObjectOn(Items obj)
 	{
 		return objetosRecogidos.Contains(obj);
+	}
+
+	public void UpdateInventory()
+	{
+		for (int i = 0; i < images.Count; i++)
+		{
+			if(i < objetosRecogidos.Count)
+            {
+				images[i].gameObject.SetActive(true);
+				images[i].sprite = objetosRecogidos[i].spriteInventory;
+			}
+			else
+            {
+				images[i].gameObject.SetActive(false);
+            }
+		}
 	}
 
 	void Save()
@@ -65,6 +86,8 @@ public class ControlObjects : MonoBehaviour
 			Items item = Resources.Load<Items>(data.scriptedItemName);
 			objetosRecogidos.Add(item);
 		}
+
+		UpdateInventory();
 	}
 
 }

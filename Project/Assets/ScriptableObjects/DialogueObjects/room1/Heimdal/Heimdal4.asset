@@ -19,7 +19,7 @@ MonoBehaviour:
     - "Entre tus cosas jurar\xEDa haber visto un anillo de incalculable valor y un
       dorito con forma de Elvis Presley... Si resuelves un acertijo, te dar\xE9 una
       llave y si fallas... me quedar\xE9 con el dorito."
-    - "\xBFQue me dices?"
+    - "\xBFQu\xE9 me dices?"
     whoTalk: 1
   responses:
   - responseText: "Adelante, solo quiero salir de aqu\xED."

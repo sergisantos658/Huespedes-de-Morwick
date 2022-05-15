@@ -5383,6 +5383,7 @@ GameObject:
   - component: {fileID: 7069821695779106867}
   - component: {fileID: 7069821695779106876}
   - component: {fileID: 3221098072880903380}
+  - component: {fileID: 111566986}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -5534,10 +5535,10 @@ MonoBehaviour:
   speedRotate: 1
   GoalPosition: {fileID: 0}
   rotate: 0
-  rayDistance: 1
+  rayDistance: 1.3
   interactableLayer:
     serializedVersion: 2
-    m_Bits: 32833
+    m_Bits: 32832
   mainCamera: {fileID: 0}
   interactCursor: {fileID: 2800000, guid: 7ec1dbfa4ac227442ae8e6e238233e41, type: 3}
   ObservationCursor: {fileID: 2800000, guid: 9cda48e378d35dc4ab62c87729c084dd, type: 3}
@@ -5623,6 +5624,28 @@ MonoBehaviour:
   puzzle1: 0
   puzzle2: 0
   puzzle3: 0
+--- !u!114 &111566986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988370400263282195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6d6e0ddf18e5644a92ce5b75236cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosRecogidos: []
+  images:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1 &8051654296591093321
 GameObject:
   m_ObjectHideFlags: 0
