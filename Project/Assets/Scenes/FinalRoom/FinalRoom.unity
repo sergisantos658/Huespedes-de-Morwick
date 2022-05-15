@@ -4980,7 +4980,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2e5fdb012cba441bd5f09ce9e2e8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 1
+  sceneIndex: 2
 --- !u!4 &326867775 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9144917434236459188, guid: 09853b7f062375a438e1fcc026b8e7ba, type: 3}
@@ -22517,6 +22517,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3221098072880903380, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: posicionDeInicio
+      value: 
+      objectReference: {fileID: 658963521}
+    - target: {fileID: 3221098072880903380, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: posicionDeRetorno
+      value: 
+      objectReference: {fileID: 1304713687}
     - target: {fileID: 7069821695779106865, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: mainCamera
       value: 
@@ -26775,6 +26783,7 @@ MonoBehaviour:
   direccionLookEnabled: 1
   useRigidBody: 0
   rotateSpeed: 5
+  changeScene: {fileID: 317796576}
   viewpoint: {fileID: 582262165}
   playerlayer:
     serializedVersion: 2

@@ -29,6 +29,7 @@ public class FadeIn : MonoBehaviour
         }
         Cursor.visible = true;
         MorwickController.MorwickCauch = false;
+        PlayerCheckPoint.Instance.CheckPointSave();
         change.SceneLoad();
     }
 

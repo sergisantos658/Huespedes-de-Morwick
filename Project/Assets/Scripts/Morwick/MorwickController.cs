@@ -13,6 +13,7 @@ public class MorwickController : MonoBehaviour
     public bool useRigidBody = false;
     public float rotateSpeed = 10;
     public static bool MorwickCauch;
+    public ChangeScene changeScene;
 
 
     [Header("TargetInView enemy")]
@@ -237,6 +238,8 @@ public class MorwickController : MonoBehaviour
         {
             // -->
             // target.transform.position = target.GetComponent<PlayerInteraction>().GoalPosition.position;
+            PlayerCheckPoint.Instance.level = changeScene.sceneIndex;
+
             MorwickCauch = true;
             if (persecutionMusic.isPlaying)
             {
@@ -279,10 +282,12 @@ public class MorwickController : MonoBehaviour
         {
             Gizmos.color = colorGizmos;
             Gizmos.DrawSphere(viewpoint.position + viewpoint.forward * visionToSee, radioustosee);
+            Gizmos.DrawSphere(viewpoint.position, radioustosee);
             Gizmos.matrix = Matrix4x4.Translate(transform.position + Vector3.up) * Matrix4x4.Rotate(transform.rotation);
-            Gizmos.DrawCube(Vector3.zero + ((Vector3.forward * visionToSee)/2), new Vector3(0.5f, 1, 0.3f) + Vector3.forward * visionToSee);
+            Gizmos.DrawCube(Vector3.zero + ((Vector3.forward * visionToSee)/2), new Vector3(radioustosee, 1, 0.3f) + Vector3.forward * visionToSee);
+
             Gizmos.color = Color.blue;
-            Gizmos.DrawCube(Vector3.zero + ((Vector3.forward * visionToCatch)), new Vector3(0.5f, 1, 0.1f));
+            Gizmos.DrawCube(Vector3.zero + ((Vector3.forward * visionToCatch)), new Vector3(1f, 1, 1f));
 
         }
     }

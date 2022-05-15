@@ -38,7 +38,6 @@ public class TimeLineManager : MonoBehaviour
         //Debug.Log(inputSystem.Skip);
         if(GetComponent<PlayableDirector>().state != PlayState.Playing)
         {
-            Debug.Log("hi");
             isPlaying = false;
         }
         if (Input.GetKeyDown(KeyCode.Return) && !pause)
