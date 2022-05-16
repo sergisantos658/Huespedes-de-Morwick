@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Solo una libreria llena de libros de chistes malos y la calavera de Shakespeare.
-    - Hay un libro con una imagen de un conejo gigante partiendo por la mitad a una
-      estudiante de secundaria.
+    - "Solo una librer\xEDa llena de libros de chistes malos y la calavera de Shakespeare."
+    - Hay un libro con la imagen de una chica vestida de conejo en la portada.
     whoTalk: 0
   responses: []

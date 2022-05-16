@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "\xBF\xBFQuien eres tu??"
-    - No he visto a nadie, desde hace bastante t-t-t-tiempo.
+    - Hola, tu tienes que ser uno de los nuevos prisioneros del jefe.
+    - Encantado soy Shyne, quieres jugar conmigo?
     whoTalk: 1
   responses:
-  - responseText: Y tu quien eres?
+  - responseText: "No esperaba encontrarme con Casper aqu\xED dentro."
     dialogueObject: {fileID: 11400000, guid: 6d99a2dca66c7f94f83afba69a517bf6, type: 2}
-  - responseText: "\xBFComo puedo salir de aqui?"
+  - responseText: "\xBFComi\xF3 puedo salir de aqu\xED?"
     dialogueObject: {fileID: 11400000, guid: fc91d23fa54ea014b92d713f206dfdea, type: 2}
