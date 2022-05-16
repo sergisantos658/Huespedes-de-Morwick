@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Curiosa estanteria para vasos.
+    - "Curiosa estanter\xEDa para vasos."
     - Tiene hasta platos y cubiertos, lastima que nadie sepa y pueda comer.
     whoTalk: 0
   responses: []
