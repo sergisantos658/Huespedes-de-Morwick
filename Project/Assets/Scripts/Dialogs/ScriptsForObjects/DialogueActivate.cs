@@ -56,5 +56,10 @@ public class DialogueActivate : Interactable
     public void UpdateDialogueObject(DialogueObject updateDialogue)
     {
         dialogueObject = updateDialogue;
+    }    
+    
+    public void UpdateObservation(DialogueObject updateDialogue)
+    {
+        o_DialogueObject = updateDialogue;
     }
 }

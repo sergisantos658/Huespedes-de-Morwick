@@ -6,4 +6,5 @@ using UnityEngine;
 public class Items : ScriptableObject
 {
     public Sprite spriteInventory;
+    public bool pickUp = false;
 }

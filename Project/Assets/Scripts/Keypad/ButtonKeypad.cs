@@ -11,7 +11,7 @@ public class ButtonKeypad : MonoBehaviour
 
     void OnMouseDown()
     {
-        Debug.Log($"click {keyNum}");
+        //Debug.Log($"click {keyNum}");
         KeyClicked.Invoke();
     }
 }

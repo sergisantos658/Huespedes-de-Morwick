@@ -80,7 +80,7 @@ public class Keypad : MonoBehaviour
 
     void UpdateText()
     {
-        Debug.Log(userInput);
+        //Debug.Log(userInput);
         text.text = userInput + ((userInput.Length <= maxCaracters - 1) && isBlink? simbol : "");
     }
 }

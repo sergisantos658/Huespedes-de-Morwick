@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Parece ser solo una puerta
+    - "Ya he conseguido abrir la puerta, quiz\xE1s deber\xEDa avanzar a la siguiente
+      sala."
     whoTalk: 0
   responses: []

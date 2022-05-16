@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -43,64 +44,69 @@ public class LightsSwitch : Interactable
         player = PlayerController.currentPlayer;
         inventory = player.GetComponent<ControlObjects>();
 
-        if (player.GetComponent<PlayerCheckPoint>().puzzle2 == 0)
+        if (PlayerCheckPoint.Instance.puzzle2 == 0)
         {
             isLightSwitch = false;
-            switchButton.SetActive(false);
         }
-        else if(player.GetComponent<PlayerCheckPoint>().puzzle2 == 1)
+        else if(PlayerCheckPoint.Instance.puzzle2 == 1)
         {
             isLightSwitch = true;
             UpdateDialogueObject(PressOffTheLightSwitchDialogue);
+            CheckInInventory();
             switchButton.SetActive(true);
             return;
         }
         
-        if (inventory != null)
+        if (inventory.ObjectOn(lightSwitchItem))
         {
-            for (int i = 0; i < inventory.objetosRecogidos.Count; i++)
-            {
-                if(inventory.objetosRecogidos[i] == lightSwitchItem)
-                {
-                    isLightSwitch = true;
-                    switchButton.SetActive(false);
-                    return;
-                }
-            }
+            isLightSwitch = true;
+        }
+        else if (lightSwitchItem.pickUp && !inventory.ObjectOn(lightSwitchItem))
+        {
+            isLightSwitch = true;
+            switchButton.SetActive(true);
         }
 
-        
+
     }
 
     public void CheckInInventory()
     {
-
+        if (inventory.ObjectOn(lightSwitchItem))
+        {
+            inventory.RemoveObject(lightSwitchItem);
+        }
     }
 
     public void UpdateLight()
     {
         if (!onlyOnce)
         {
-            player.GetComponent<PlayerCheckPoint>().puzzle2 = 1;
+            PlayerCheckPoint.Instance.puzzle2 = 1;
 
             allLightsOff = true;
 
             foreach (GameObject m_light in m_Lights)
             {
-
-                if (m_light.GetComponent<Light>())
+                if(m_light.GetComponent<Light>().lightmapBakeType != LightmapBakeType.Baked)
                 {
-                    m_light.GetComponent<Light>().enabled = !m_light.GetComponent<Light>().enabled;
-                    if (m_light.GetComponent<Light>().enabled == true) 
-                    { 
-                        allLightsOff = false; 
+                    if (m_light.GetComponent<Light>())
+                    {
+                        m_light.GetComponent<Light>().enabled = !m_light.GetComponent<Light>().enabled;
+
+                        Behaviour halo = (Behaviour)m_light.GetComponent("Halo");
+                        halo.enabled = false;
+
+                        if (m_light.GetComponent<Light>().enabled == true)
+                        {
+                            allLightsOff = false;
+                        }
+                    }
+                    else
+                    {
+                        m_light.SetActive(lights);
                     }
                 }
-                else
-                {
-                    m_light.SetActive(lights);
-                }
-
             }
 
             lights = !lights;

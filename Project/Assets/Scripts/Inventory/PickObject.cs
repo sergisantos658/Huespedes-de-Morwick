@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PickObject : Interactable
 {
@@ -13,6 +14,23 @@ public class PickObject : Interactable
 	{
 		playerC = PlayerController.currentPlayer;
 		controlObjects = playerC.GetComponent<ControlObjects>();
+        if (item.pickUp)
+        {
+			gameObject.SetActive(false);
+			return;
+        }
+
+		if (controlObjects != null)
+		{
+			for (int i = 0; i < controlObjects.objetosRecogidos.Count; i++)
+			{
+				if (controlObjects.objetosRecogidos[i] == item)
+				{
+					gameObject.SetActive(false);
+					return;
+				}
+			}
+		}
 	}
 
 	public override void Interact()

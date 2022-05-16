@@ -25,6 +25,7 @@ public class ControlObjects : MonoBehaviour
 
 	public void AddObject(Items obj)
 	{
+		obj.pickUp = true;
 		objetosRecogidos.Add(obj);
 		Save();
 		UpdateInventory();
