@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <PropertyGroup>
-    <LangVersion>8.0</LangVersion>
+    <LangVersion>latest</LangVersion>
   </PropertyGroup>
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
@@ -52,9 +52,6 @@
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2021.1.22f1</UnityVersion>
   </PropertyGroup>
-  <ItemGroup>
-    <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\Common7\IDE\Extensions\Microsoft\Visual Studio Tools for Unity\Analyzers\Microsoft.Unity.Analyzers.dll" />
-  </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\InventoryMaster\Scripts\Item\CreateItemDatabase.cs" />
     <Compile Include="Assets\InventoryMaster\Scripts\Item\ItemAttribute.cs" />
@@ -190,7 +187,7 @@
     <None Include="Assets\TextMesh Pro\Shaders\TMPro_Surface.cginc" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Shaders\Mask.shader" />
-    <None Include="Assets\Scenes\Sala1\KeypadsEntryLocks\Resources\Shaders\NumpadText.shader" />
+    <None Include="Assets\Escenario-Props\Keypads\Resources\Shaders\NumpadText.shader" />
     <None Include="Assets\TextMesh Pro\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Escenario-Props\PolygonHorrorMansion\Materials\Shaders\SyntyStudios_Ghost.shader" />
     <None Include="Assets\Fonts\Orange.Juice\ReadMe.txt" />

@@ -28,7 +28,7 @@ public class InteractKeypad : Interactable
 		{
 			activeNum.SetActive(true);
 		}
-		if (Input.GetKeyDown(KeyCode.Escape))
+		if (Input.GetKeyDown(KeyCode.Escape) && camOn)
         {
 			camOn = false;
 			activeNum.SetActive(false);
