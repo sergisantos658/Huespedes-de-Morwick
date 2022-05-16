@@ -16,8 +16,9 @@ MonoBehaviour:
   - dialogue:
     - "Una estanter\xEDa llena de libros aburridos que hablan sobre magia."
     - Uno dice como revivir a los muertos pero sin perder el brazo en el proceso.
-    - 'Otro habla sobre una tal piedra filosofia o algo asi. '
-    - "Hay mil libros sobre animales fantasticos y como encotrarlos y no veo nada
-      mejor por aqu\xED,"
+    - "Otro menciona a una especie de pajaro azul que genera fri\xF3 (seguramente
+      mucha fiesta ese dia)."
+    - "Otro sobre si debo apostar en la bolsa y otro sobre algo llamado cryptomonedas
+      ( supongo que no se les ocurri\xF3 mejor nombre que ese)."
     whoTalk: 0
   responses: []

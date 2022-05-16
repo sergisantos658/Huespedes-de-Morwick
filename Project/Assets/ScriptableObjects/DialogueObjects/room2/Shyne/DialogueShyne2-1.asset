@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "\xBFCasper?"
-    - "\xBFQuien es ese?"
-    whoTalk: 1
+    - "\xBFY tu?"
+    - "\xBFQuien eres t\xFA?"
+    whoTalk: 0
   - dialogue:
     - Y-Y-Yo soy una huesped del hotel, o lo era antes. Me encerraron aqui y ahora
       solo soy una sombra de lo que antes.
     whoTalk: 1
   responses:
-  - responseText: "da igual, dejalo, \xBFa ver dime a que quieres juga?"
+  - responseText: "\xBFSabes como salir de aqui?"
     dialogueObject: {fileID: 11400000, guid: fc91d23fa54ea014b92d713f206dfdea, type: 2}

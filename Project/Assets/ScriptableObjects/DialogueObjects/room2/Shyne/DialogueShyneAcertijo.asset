@@ -14,19 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Venga empezemos.
+    - Por favor.
+    - Cuentame sobre el acertijo.
+    whoTalk: 0
+  - dialogue:
     - "Primero vinieron los rayos, luego la luz se apag\xF3, un anciano habl\xF3,
-<<<<<<< Updated upstream
       sosteniendo unos libros en su mano. Temiendo que se mojara los guard\xF3 en
       un cofre."
     - Eso es todo lo que me dijo.
-=======
-      sosteniendo unos libros en su mano, primero el libro rojo y luego el libro
-      verde. Temiendo que se mojara los guard\xF3 en un cofre."
-    - O algo asi.
-    - "A ver si lo consigues, \xA1\xA1\xA1suerte!!! jijiji"
->>>>>>> Stashed changes
     whoTalk: 1
-  responses:
-  - responseText: Mmmmm
-    dialogueObject: {fileID: 0}
+  responses: []
