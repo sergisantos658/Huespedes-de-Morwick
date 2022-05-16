@@ -15,7 +15,6 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - "Curiosa estanter\xEDa para vasos."
-    - Tiene hasta platos y cubiertos, lastima que los fantasmas no puedan comer.
-    - Como me gustaria tener alga majo ahora mismo.
+    - Tiene hasta platos y cubiertos, lastima que nadie sepa y pueda comer.
     whoTalk: 0
   responses: []
