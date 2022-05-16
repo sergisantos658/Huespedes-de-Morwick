@@ -10,26 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
-  m_Name: PuzzleBoat1
+  m_Name: PuzzleBoatB1
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Perfecto, un placer hacer tratos contigo. La prueba se las trae as\xED  que
-      te pondr\xE9 en antecedentes."
-    - En su primera aventura los piratas con pata de palo Sam Max, G.Threepwood,
-      Manny Grim y George Stobbart.
-    - "No dispon\xEDan de nav\xEDo propio, as\xED que embarcar\xF3n en el Perla Blanca
-      Express rumbo a Isla Garbanzo, en cuya Cueva Lenteja encontraron el Mapa del
-      Tesoro H-94856."
-    - "Como buenos piratas, abellacados y rastreros, pelearon entre ellos durante
-      d\xEDas, hasta que la extenuaci\xF3n los llev\xF3 a partir el mapa en cuatro
-      pedazos y colaborar los unos con los otros."
-    - "El \xFAltimo Perla Blanca Express pasaba por Garbanzo 8 jornadas despu\xE9s.
-      Como en ese momento era de buena ma\xF1ana, dispon\xEDan de 8 jornadas y media
-      para llegar a la parada."
-    - "El problema fue que, durante la rufianesca refriega, hab\xEDan perdido 3 de
-      sus 4 patas de palo. As\xED que decidieron ir a la parada por parejas, uno
-      calzando la pata de palo y el otro apoyandose en \xE9l."
+    - Vale, te hago un repaso del acertijo.
+    - "Nuestros protagonistas decidierion ir a la parada por parejas, uno calzando
+      la pata de palo y el otro apoyandose en \xE9l."
     - "Despu\xE9s, uno de los dos regresar\xEDa a Cueva Lenteja con la pata de palo
       para que la siguiente pareja pudiese llegar a la parada, y as\xED sucesivamente
       hasta que todos llegasen a la parada."

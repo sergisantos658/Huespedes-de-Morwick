@@ -10,14 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
-  m_Name: BoatT3
+  m_Name: Key
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Muy bien, eso hace un total de 7 jornadas y media, con el \xFAltimo recorrido
-      de G.Threepwood y Sam Max ser\xEDan 8 jornadas y media."
-    - "Se nota el doctorado en astrofisica. Muy bien aqu\xED tienes la llave."
+    - "\xBFQu\xE9 quieres ahora?"
     whoTalk: 1
   responses:
-  - responseText: No se si eso ultimo es ironia, pero gracias.
-    dialogueObject: {fileID: 0}
+  - responseText: Esta llave que me has dado no abre nada.
+    dialogueObject: {fileID: 11400000, guid: ed249be422dbe5f45a5d038d5f5c3c04, type: 2}

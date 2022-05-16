@@ -18,4 +18,6 @@ MonoBehaviour:
       de G.Threepwood y Sam Max ser\xEDan 8 jornadas y media."
     - "Se nota el doctorado en astrofisica. Muy bien aqu\xED tienes la llave."
     whoTalk: 1
-  responses: []
+  responses:
+  - responseText: No se si eso ultimo es ironia, pero gracias.
+    dialogueObject: {fileID: 0}

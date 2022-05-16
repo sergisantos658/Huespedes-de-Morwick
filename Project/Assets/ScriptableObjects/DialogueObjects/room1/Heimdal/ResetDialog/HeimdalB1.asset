@@ -10,14 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
-  m_Name: BoatT3
+  m_Name: HeimdalB1
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Muy bien, eso hace un total de 7 jornadas y media, con el \xFAltimo recorrido
-      de G.Threepwood y Sam Max ser\xEDan 8 jornadas y media."
-    - "Se nota el doctorado en astrofisica. Muy bien aqu\xED tienes la llave."
+    - "\xBFHas cambiado de idea con nuetro trato?"
+    - "\xBFQu\xE9 me dices?"
     whoTalk: 1
   responses:
-  - responseText: No se si eso ultimo es ironia, pero gracias.
-    dialogueObject: {fileID: 0}
+  - responseText: Adelante, necesito salir de aqui.
+    dialogueObject: {fileID: 11400000, guid: fa4d7f283923b114e80382c8d974f1b2, type: 2}
+  - responseText: No gracias, sigo prefiriendo mi dorito.
+    dialogueObject: {fileID: 11400000, guid: d2e7109a9337c0242a0db89b3c6f37d0, type: 2}
