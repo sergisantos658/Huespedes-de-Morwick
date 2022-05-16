@@ -10,15 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
-  m_Name: DoorObservation
+  m_Name: DoorObservation1
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-<<<<<<< Updated upstream
     - "Ya he conseguido abrir la puerta, quiz\xE1s deber\xEDa avanzar a la siguiente
       sala."
-=======
-    - Parece ser solo una puerta.
->>>>>>> Stashed changes
     whoTalk: 0
   responses: []
