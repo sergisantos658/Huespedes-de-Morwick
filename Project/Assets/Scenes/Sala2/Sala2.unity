@@ -5023,6 +5023,29 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3121784523027337349, guid: 20dc69066f16acc48b952aed5b788376, type: 3}
   m_PrefabInstance: {fileID: 509075698}
   m_PrefabAsset: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+--- !u!1 &519106005 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7988370400263282195, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+  m_PrefabInstance: {fileID: 7069821695837086404}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &519106006
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519106005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc6d6e0ddf18e5644a92ce5b75236cae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objetosRecogidos:
+  - {fileID: 11400000, guid: 7022c06e0a45f374c8431afb60919542, type: 2}
+  images: []
+>>>>>>> Stashed changes
 --- !u!1 &520259878
 GameObject:
   m_ObjectHideFlags: 0
@@ -17198,9 +17221,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa608590177334948863f9de7714852f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 11400000, guid: 5740b0f9d96bbb3439c623355c84da7c, type: 2}
+  dialogueObject: {fileID: 11400000, guid: faf8caa1c730eb94bb86c7f746f77841, type: 2}
   events:
-  - name: "\xBFY cual es el acertijo?"
+  - name: Mmmmm
     onPickedResponse:
       m_PersistentCalls:
         m_Calls:

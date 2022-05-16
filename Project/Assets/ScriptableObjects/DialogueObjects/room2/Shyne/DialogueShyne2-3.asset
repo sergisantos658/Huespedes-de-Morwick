@@ -14,14 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Te estas repitiendo.
-    - Y bastante.
-    whoTalk: 0
-  - dialogue:
-    - "\xBF\xBFE-E-E-Enserio??\nDebe, ser por culpa del tiempo."
+    - O venga
+    - No me seas aburrido
     whoTalk: 1
   responses:
-  - responseText: "\xBFQue paso con esa persona?"
-    dialogueObject: {fileID: 11400000, guid: 195907e4214c13f4181a1a947e0edc7d, type: 2}
-  - responseText: "\xBFSabes quien te hizo esto?"
-    dialogueObject: {fileID: 11400000, guid: 5740b0f9d96bbb3439c623355c84da7c, type: 2}
+  - responseText: "de alguna manera tendr\xE9 que salir de aqui asi que dile"
+    dialogueObject: {fileID: 11400000, guid: faf8caa1c730eb94bb86c7f746f77841, type: 2}
+  - responseText: Me lo pienso
+    dialogueObject: {fileID: 0}

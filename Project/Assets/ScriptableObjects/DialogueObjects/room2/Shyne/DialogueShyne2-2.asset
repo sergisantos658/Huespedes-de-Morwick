@@ -14,21 +14,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Necesito salir de este sitio.
-    - Sabes alguna manera de abrir la puerta?
-    whoTalk: 0
+    - "!!!Que guay\xA1\xA1\xA1"
+    - "Un compa\xF1ero de juegos nuevo."
+    whoTalk: 1
   - dialogue:
-    - "P-PP-Puues lo tienes mal porque nadie a conseguido entrar, ni salir desde
-      hace ... [2] mil a\xF1os?"
-    - H-Ha pasado mucho tiempo desde que alguien vino
-    - Y la unica manera de salir es colocando 6 numeros especiales en la puerta para
-      que se habra, pero nadie a conseguido abrir la puerta.
-    - "Ya que sino, yo no estaria aqu\xED."
+    - "Llevo sin que nadia quiera jugar conmigo desde hara mmmm...   [2] mil a\xF1os
+      puede ser?"
+    - Ha pasado mucho tiempo desde que alguien vino.
+    - Mira te voy a decir.
+    - esa puerta tiene 4 numeros donde podras pasar a la siguiente sala, numeros
+      que tendras que conseguir jugando conmigo jijiji
     whoTalk: 1
   responses:
-  - responseText: "\xBFQue paso con esa persona?"
-    dialogueObject: {fileID: 11400000, guid: 195907e4214c13f4181a1a947e0edc7d, type: 2}
-  - responseText: "\xBFSabes quien te hizo esto?"
-    dialogueObject: {fileID: 11400000, guid: 5740b0f9d96bbb3439c623355c84da7c, type: 2}
-  - responseText: Te estas repitiendo
+  - responseText: si, si que estas muy emocionado bla bla bla, date prisa
+    dialogueObject: {fileID: 11400000, guid: faf8caa1c730eb94bb86c7f746f77841, type: 2}
+  - responseText: Bueno juguemos entonces
+    dialogueObject: {fileID: 11400000, guid: faf8caa1c730eb94bb86c7f746f77841, type: 2}
+  - responseText: Ya... no soy muy fan de los juegos
     dialogueObject: {fileID: 11400000, guid: 9be572b4adcd2174485e1ed3676dec41, type: 2}
