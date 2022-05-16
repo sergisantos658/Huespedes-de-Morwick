@@ -9,8 +9,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06619c2e8f5f50442aa58604abce2f53, type: 3}
-  m_Name: LightSwitch
+  m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
+  m_Name: SwitchObs
   m_EditorClassIdentifier: 
-  spriteInventory: {fileID: 21300000, guid: d837e556a04615c45bd2316e0f21f3d3, type: 3}
-  pickUp: 1
+  dialogueTyping:
+  - dialogue:
+    - "No se muy bien que es, pero mi septimo sentido dice que puede ser \xFAtil."
+    whoTalk: 0
+  responses: []
