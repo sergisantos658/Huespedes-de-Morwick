@@ -29,6 +29,8 @@ public class ChangeScene : MonoBehaviour
 
         DBManager.InsertPlayerData();
 
+        SaveItemsSytem.DeleteFile("/items");
+
         MenuManager.pause = false;
         Time.timeScale = 1;
 

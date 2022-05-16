@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: Valve
   m_EditorClassIdentifier: 
   spriteInventory: {fileID: 21300000, guid: d0662e68851767846ba090412c0e8255, type: 3}
-  pickUp: 1
+  pickUp: 0

@@ -52,4 +52,28 @@ public class SaveItemsSytem
         return File.Exists(path + key);
     }
 
+    public static void DeleteFile(string key)
+    {
+        string filePath = Application.persistentDataPath + SAVES_PATH;
+
+        // check if file exists
+        if (File.Exists(filePath + key))
+        {
+            File.Delete(filePath + key);
+
+            RefreshEditorProjectWindow();
+        }
+        else
+        {
+            Debug.Log( "no " + filePath + key + " file exists" );
+        }
+    }
+
+
+    static void RefreshEditorProjectWindow()
+    {
+#if UNITY_EDITOR
+        UnityEditor.AssetDatabase.Refresh();
+#endif
+    }
 }
