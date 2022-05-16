@@ -1,0 +1,52 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Interact
+  - Puzzle
+  - Canvas
+  - Hotbar
+  - Slots
+  - Slot
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - Player
+  - Water
+  - UI
+  - Interactable
+  - Lamps
+  - Clutter
+  - Furniture
+  - InteractableLent
+  - IgnoreBake
+  - invisibleWall
+  - invisibleWallCameraMain
+  - CameraZones
+  - WallRaycast
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: text
+    uniqueID: 2302959009
+    locked: 0

@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
+  m_Name: BoatMS2
+  m_EditorClassIdentifier: 
+  dialogueTyping:
+  - dialogue:
+    - "Y para eso vinieron a tardar... 7 jornadas y media, ahora dime \xBFQu\xE9
+      pirata volvi\xF3 a Cueva Lenteja?"
+    whoTalk: 1
+  responses:
+  - responseText: Manny Grim
+    dialogueObject: {fileID: 11400000, guid: 071c98d93cfa810438cf65b603ba907c, type: 2}
+  - responseText: Sam Max
+    dialogueObject: {fileID: 11400000, guid: 9550e421d323a3a499bd89544a4f1981, type: 2}
+  - responseText: G.Threepwood
+    dialogueObject: {fileID: 11400000, guid: 9ee3ce68cc28fc54e9f20dca6d3e56dc, type: 2}

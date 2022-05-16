@@ -1,0 +1,37 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
+  m_Name: Buu
+  m_EditorClassIdentifier: 
+  dialogueTyping:
+  - dialogue:
+    - " Ho ho ho, que tenemos aqu\xED. Un joven muy apuesto y guapo."
+    - Veo que pudiste escapar sin la ayuda de nadie ni de ninguna cuchara.
+    whoTalk: 1
+  - dialogue:
+    - "Ya... y yo veo que no sabes mentir a dem\xE1s Tengo 43 a\xF1os eso de joven
+      creo que no es lo m\xE1s adecuado, pero lo de guapo no te lo quito."
+    whoTalk: 0
+  - dialogue:
+    - "Tengo m\xE1s de 300 a\xF1os,  para m\xED eres un caramelito"
+    whoTalk: 1
+  responses:
+  - responseText: "Vale, no s\xE9 si me acabas de dar ganas de vomitar o de escupir
+      un ri\xF1\xF3n."
+    dialogueObject: {fileID: 11400000, guid: 90fea80c151a4d24793e407a8fc97907, type: 2}
+  - responseText: "Dios s\xE1came de aqui porfavor."
+    dialogueObject: {fileID: 11400000, guid: 90fea80c151a4d24793e407a8fc97907, type: 2}
+  - responseText: Vale, creo acabo de perder por completo las ganas de vivir.
+    dialogueObject: {fileID: 11400000, guid: 90fea80c151a4d24793e407a8fc97907, type: 2}
+  - responseText: "Quien dir\xEDa que un se\xF1or con cabeza de calabaza intentaria
+      tirarme los tejos."
+    dialogueObject: {fileID: 11400000, guid: 90fea80c151a4d24793e407a8fc97907, type: 2}

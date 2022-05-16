@@ -1,0 +1,44 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
+  m_Name: PuzzleBoatB1
+  m_EditorClassIdentifier: 
+  dialogueTyping:
+  - dialogue:
+    - Vale, te hago un repaso del acertijo.
+    - "Nuestros protagonistas decidierion ir a la parada por parejas, uno calzando
+      la pata de palo y el otro apoyandose en \xE9l."
+    - "Despu\xE9s, uno de los dos regresar\xEDa a Cueva Lenteja con la pata de palo
+      para que la siguiente pareja pudiese llegar a la parada, y as\xED sucesivamente
+      hasta que todos llegasen a la parada."
+    - "El orden en que lo hiciesen era muy importante, ya que unos eran mucho m\xE1s
+      r\xE1pidos que otros. Cada pareja tardar\xEDa en recorrer el camino tanto como
+      el m\xE1s lento de los dos."
+    - "Sam Max tardaba media jornada, G.Threepwood recorria el camino en 1 jornada,
+      Manny Grim pod\xEDa llegar a la parada en 2 jornadas y media, y por ultimo
+      George Stobbart tardaba la friolera de 5 jornadas."
+    - "\xBFPor medio de qu\xE9 ingeniosa combinaci\xF3n llegaron los cutro piratas
+      de Puerto Frijoles a tomar el Perla Blanca Express en la parada de Isla Garbanzo?"
+    whoTalk: 1
+  responses:
+  - responseText: Sam Max y G.Threepwood
+    dialogueObject: {fileID: 11400000, guid: f8e3a6bae55d5e54a82c714b37324bac, type: 2}
+  - responseText: Sam Max y Manny Grim
+    dialogueObject: {fileID: 11400000, guid: 420672051cbd75c4492a7cfaec090e14, type: 2}
+  - responseText: George Stobbart y Manny Grim
+    dialogueObject: {fileID: 11400000, guid: dfb1b176997f342489b811c61a224c1a, type: 2}
+  - responseText: George Stobbart y G.Threepwood
+    dialogueObject: {fileID: 11400000, guid: 69dadda8fb50c1c4991f7442405c32cd, type: 2}
+  - responseText: George Stobbart y Sam Max
+    dialogueObject: {fileID: 11400000, guid: 278826340a62c664ca0b93ca9076c658, type: 2}
+  - responseText: G.Threepwood y Manny Grim
+    dialogueObject: {fileID: 11400000, guid: 8c03b84cc27ba4e4cbd978a8cf19bbb4, type: 2}

@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
+  m_Name: HeimdalB1
+  m_EditorClassIdentifier: 
+  dialogueTyping:
+  - dialogue:
+    - "\xBFHas cambiado de idea con nuetro trato?"
+    - "\xBFQu\xE9 me dices?"
+    whoTalk: 1
+  responses:
+  - responseText: Adelante, necesito salir de aqui.
+    dialogueObject: {fileID: 11400000, guid: fa4d7f283923b114e80382c8d974f1b2, type: 2}
+  - responseText: No gracias, sigo prefiriendo mi dorito.
+    dialogueObject: {fileID: 11400000, guid: d2e7109a9337c0242a0db89b3c6f37d0, type: 2}
