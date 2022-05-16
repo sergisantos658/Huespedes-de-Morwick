@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Por favor.
-    - Cuentame sobre el acertijo.
-    whoTalk: 0
-  - dialogue:
+    - Venga, empecemos.
     - "Primero vinieron los rayos, luego la luz se apag\xF3, un anciano habl\xF3,
       sosteniendo unos libros en su mano. Temiendo que se mojara los guard\xF3 en
       un cofre."
-    - Eso es todo lo que me dijo.
+    - O algo asi.
+    - "\xA1Suerte!"
     whoTalk: 1
-  responses: []
+  responses:
+  - responseText: Mmmmm...
+    dialogueObject: {fileID: 0}

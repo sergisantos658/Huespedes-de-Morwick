@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - "Solo una librer\xEDa llena de libros de chistes malos y la calavera de Shakespeare."
-    - Hay un libro con la imagen de una chica vestida de conejo en la portada.
+    - Hay un libro de buscando a Wally
     whoTalk: 0
   responses: []

@@ -9382,7 +9382,7 @@ MonoBehaviour:
   defaultDialogue: {fileID: 11400000, guid: 0d7fd726fb0928244aca1290dd123793, type: 2}
   getSwitchCoverDialogue: {fileID: 11400000, guid: 966411dd3b0728f449bdd9c84acfb717, type: 2}
   PressOffTheLightSwitchDialogue: {fileID: 11400000, guid: bc92c2ea7ef12e9458752fa36949e303, type: 2}
-  lightSwitchItem: {fileID: 11400000, guid: 7022c06e0a45f374c8431afb60919542, type: 2}
+  lightSwitchItem: {fileID: 0}
   m_Lights:
   - {fileID: 1279706103}
   - {fileID: 1279706102}
@@ -16667,6 +16667,10 @@ PrefabInstance:
       propertyPath: normalCursor
       value: 
       objectReference: {fileID: 2800000, guid: a9ae0267b06e7b24d90f188a4370cce3, type: 3}
+    - target: {fileID: 3580866466175672369, guid: acc2b4d164f10414b82686f61e6407e1, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 89.183105
+      objectReference: {fileID: 0}
     - target: {fileID: 3580866466648617694, guid: acc2b4d164f10414b82686f61e6407e1, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -17198,9 +17202,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fa608590177334948863f9de7714852f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueObject: {fileID: 11400000, guid: 5740b0f9d96bbb3439c623355c84da7c, type: 2}
+  dialogueObject: {fileID: 11400000, guid: faf8caa1c730eb94bb86c7f746f77841, type: 2}
   events:
-  - name: "\xBFY cual es el acertijo?"
+  - name: Mmmmm...
     onPickedResponse:
       m_PersistentCalls:
         m_Calls:
@@ -17209,7 +17213,7 @@ MonoBehaviour:
           m_MethodName: UpdateDialogueObject
           m_Mode: 2
           m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: 4377c85f5d7f6e34c8d054660d530b5a, type: 2}
+            m_ObjectArgument: {fileID: 11400000, guid: faf8caa1c730eb94bb86c7f746f77841, type: 2}
             m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
             m_IntArgument: 0
             m_FloatArgument: 0
@@ -97906,6 +97910,7 @@ GameObject:
   - component: {fileID: 919132148904347689}
   - component: {fileID: 1527409417}
   - component: {fileID: 1527409416}
+  - component: {fileID: 919132148904347691}
   m_Layer: 6
   m_Name: NPCShyne
   m_TagString: Untagged
@@ -97943,6 +97948,40 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 0
   m_Center: {x: 0, y: 0.5, z: 0}
   m_TimeToStationary: 0.5
+--- !u!114 &919132148904347691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148904347688}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fa608590177334948863f9de7714852f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogueObject: {fileID: 11400000, guid: 9be572b4adcd2174485e1ed3676dec41, type: 2}
+  events:
+  - name: "Supongo que tendr\xE9 que jugar contigo si quiero salir de aqu\xED."
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls: []
+  - name: Ehhhh... no.
+    onPickedResponse:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1527409417}
+          m_TargetAssemblyTypeName: DialogueActivate, Assembly-CSharp
+          m_MethodName: UpdateDialogueObject
+          m_Mode: 2
+          m_Arguments:
+            m_ObjectArgument: {fileID: 11400000, guid: 195907e4214c13f4181a1a947e0edc7d, type: 2}
+            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &940319169145342241
 GameObject:
   m_ObjectHideFlags: 0

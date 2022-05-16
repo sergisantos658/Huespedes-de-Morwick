@@ -14,18 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "\xBFSabes algo sobre esa persona que vino hace tiempo?"
-    - Porque no veo ni sus restos.
-    whoTalk: 0
-  - dialogue:
-    - "S\xED, estuvo conmigo en esta misma sala."
-    - 'Pero murio despues de un tiempo.
-
-      Y su cuerpo desaparecio en la alfombra.'
-    whoTalk: 1
-  - dialogue:
-    - Vaya...
+    - "\xBFQu\xE9 dices?"
+    - "\xBFTe lo has pensado ya?"
     whoTalk: 0
   responses:
-  - responseText: "\xBFSabes quien te hizo esto?"
-    dialogueObject: {fileID: 11400000, guid: 5740b0f9d96bbb3439c623355c84da7c, type: 2}
+  - responseText: "Supongo que tendr\xE9 que jugar contigo si quiero salir de aqu\xED."
+    dialogueObject: {fileID: 11400000, guid: faf8caa1c730eb94bb86c7f746f77841, type: 2}
+  - responseText: Ehhhh... no.
+    dialogueObject: {fileID: 0}
