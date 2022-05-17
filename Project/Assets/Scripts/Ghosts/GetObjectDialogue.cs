@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GetKeyHeimdal : MonoBehaviour
+public class GetObjectDialogue : MonoBehaviour
 {
     ControlObjects controlObjects;
     public Items item;
@@ -14,7 +14,7 @@ public class GetKeyHeimdal : MonoBehaviour
 		controlObjects = playerC.GetComponent<ControlObjects>();
 	}
 
-    public void GetKey()
+    public void GetObject()
     {
         controlObjects.AddObject(item);
     }

@@ -5,6 +5,9 @@ using UnityEngine;
 public class CauchObjectLent : Interactable
 {
     // Start is called before the first frame update
+    [Header("Item ")]
+    [SerializeField] private Items keyItem;
+
     public DialogueObject obs;
     public Vector3 Pose;
     public Quaternion Rotation;
@@ -12,6 +15,8 @@ public class CauchObjectLent : Interactable
     public GameObject Ghost;
     public GameObject lens;
     public static bool keyS3;
+    private ControlObjects inventory;
+    public Items item;
 
 
     private PlayerController playerC;
@@ -19,6 +24,18 @@ public class CauchObjectLent : Interactable
     private void Start()
     {
         playerC = PlayerController.currentPlayer;
+        inventory = player.GetComponent<ControlObjects>();
+        if (inventory != null)
+        {
+            for (int i = 0; i < inventory.objetosRecogidos.Count; i++)
+            {
+                if (inventory.objetosRecogidos[i] == item)
+                {
+                    gameObject.SetActive(false);
+                    return;
+                }
+            }
+        }
     }
 
     public override void Interact()
@@ -29,6 +46,7 @@ public class CauchObjectLent : Interactable
         Ghost.SetActive(true);
         lens.SetActive(false);
         ActivateLen.Active = false;
+        inventory.AddObject(item);
         playerC.DialogueUI.ShowDialogue(obs);
         keyS3 = true;
         Cursor.visible = true;
