@@ -4,52 +4,79 @@ using UnityEngine;
 
 public class FoldInventory : MonoBehaviour
 {
-	public Vector2 foldedPos;
-	Vector2 originalPos;
-	public float foldingTime;
-
-	[HideInInspector]
 	public bool isFolded = false;
+
+	Animator anim;
 
 	void Start()
 	{
-		originalPos = transform.position;
-		isFolded = false;
+		anim = GetComponent<Animator>();
 	}
 
 	void Update()
     {
-
-
-		if(Input.GetKeyDown(KeyCode.Mouse2))
-        {
-			
-			//FoldInv();
-		}
-    }
-
-	public void FoldInv()
-	{
-		StartCoroutine(Fold());
-	}
-
-	IEnumerator Fold()
-	{
-		for (float time = 0f; time < foldingTime; time += Time.deltaTime)
+		if (Input.GetKeyDown(KeyCode.Mouse2))
 		{
-			if(!isFolded)
-            {
-				transform.position = Vector2.Lerp(originalPos, foldedPos, time / foldingTime);
-			}
-			
-			else
-			{
-				transform.position = Vector2.Lerp(foldedPos, originalPos, time / foldingTime);
-			}
-
-			yield return new WaitForEndOfFrame();
+			Action();
 		}
-
-		isFolded = !isFolded;
 	}
+
+	public void Action()
+	{
+		isFolded = !isFolded;
+		anim.SetBool("folded", isFolded);
+	}
+
+	
+
+
+
+
+	//public Vector2 foldedPos;
+	//Vector2 originalPos;
+	//public float foldingTime;
+
+	//[HideInInspector]
+	//public bool isFolded = false;
+
+	//void Start()
+	//{
+	//	originalPos = transform.position;
+	//	isFolded = false;
+	//}
+
+	//void Update()
+	//   {
+
+
+	//	if(Input.GetKeyDown(KeyCode.Mouse2))
+	//       {
+	//		FoldInv();
+	//	}
+	//   }
+
+	//public void FoldInv()
+	//{
+	//	StartCoroutine(Fold());
+	//}
+
+	//IEnumerator Fold()
+	//{
+	//	for (float time = 0f; time < foldingTime; time += Time.deltaTime)
+	//	{
+	//		if(!isFolded)
+	//           {
+	//			transform.position = Vector2.Lerp(originalPos, foldedPos, time / foldingTime);
+	//		}
+
+	//		else
+	//		{
+	//			transform.position = Vector2.Lerp(foldedPos, originalPos, time / foldingTime);
+	//		}
+
+	//		yield return new WaitForEndOfFrame();
+	//	}
+
+	//	isFolded = !isFolded;
+	//}
 }

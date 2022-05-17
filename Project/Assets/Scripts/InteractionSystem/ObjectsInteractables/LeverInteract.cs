@@ -8,8 +8,6 @@ public class LeverInteract : Interactable
 
     public DoorScript Door;
 
-    public bool isOpened = false;
-
     Animator anim;
 
     public DialogueObject dialog;
@@ -25,7 +23,6 @@ public class LeverInteract : Interactable
 
     public override void Interact()
     {
-        Debug.Log("f");
         if (!Locked)
         {
             if (Door != null && Door.Remote)

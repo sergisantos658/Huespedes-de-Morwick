@@ -11,8 +11,6 @@ public class DoorScript : MonoBehaviour
 
 	public bool isOpened = false;
 
-	public float OpenSpeed = 3f;
-
 	Animator anim;
 
 	public bool useAnimation;

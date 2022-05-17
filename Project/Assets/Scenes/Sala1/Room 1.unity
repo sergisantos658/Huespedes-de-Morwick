@@ -152,6 +152,8 @@ MonoBehaviour:
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: 26356f2d7c557a24398f663eadd7178b, type: 2}
   MorwickdialgueObject: {fileID: 0}
+  type: 0
+  dialogueAfterPuzzle: {fileID: 0}
 --- !u!65 &15764666
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -807,6 +809,8 @@ MonoBehaviour:
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: 240da24d68a817845a7b0a809d9ebcdb, type: 2}
   MorwickdialgueObject: {fileID: 0}
+  type: 0
+  dialogueAfterPuzzle: {fileID: 0}
 --- !u!1001 &93271115
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2445,7 +2449,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8, y: 0.01, z: 8.575705}
+  m_Size: {x: 8, y: 0.1, z: 8.575705}
   m_Center: {x: 0, y: 0, z: 0.2878523}
 --- !u!4 &395045914
 Transform:
@@ -3913,6 +3917,78 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 581596778}
   m_CullTransparentMesh: 1
+--- !u!1 &581918532 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1811303225927930204, guid: 847dc83df1a52eb48a58b8be152c67b2, type: 3}
+  m_PrefabInstance: {fileID: 1724309964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &581918534 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1811303225927930206, guid: 847dc83df1a52eb48a58b8be152c67b2, type: 3}
+  m_PrefabInstance: {fileID: 1724309964}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581918532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1344c3c82d62a2a41a3576d8abb8e3ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &581918536
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 581918532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 581918534}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 701780314}
+        m_TargetAssemblyTypeName: FoldInventory, Assembly-CSharp
+        m_MethodName: Action
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1001 &601105789
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4217,6 +4293,8 @@ MonoBehaviour:
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: 09399bd103733c0469154746e3bc4854, type: 2}
   MorwickdialgueObject: {fileID: 0}
+  type: 0
+  dialogueAfterPuzzle: {fileID: 0}
 --- !u!65 &636500590
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4418,6 +4496,41 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &701780311 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1811303225119396411, guid: 847dc83df1a52eb48a58b8be152c67b2, type: 3}
+  m_PrefabInstance: {fileID: 1724309964}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &701780313
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701780311}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c7ccdc80c39218444849d8695e523b04, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &701780314 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 24490311, guid: 847dc83df1a52eb48a58b8be152c67b2, type: 3}
+  m_PrefabInstance: {fileID: 1724309964}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 701780311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0baf312256c0429867660fa5cd676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &710770233 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6721092324547233634, guid: 6eee7306fe377634f9645a176df43265, type: 3}
@@ -4452,6 +4565,8 @@ MonoBehaviour:
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: b314528cb2b5362468ad1c455317a60a, type: 2}
   MorwickdialgueObject: {fileID: 0}
+  type: 0
+  dialogueAfterPuzzle: {fileID: 0}
 --- !u!65 &717825314
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5341,6 +5456,8 @@ MonoBehaviour:
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: 8b04061d6af73384588915003dfe9a2d, type: 2}
   MorwickdialgueObject: {fileID: 0}
+  type: 0
+  dialogueAfterPuzzle: {fileID: 0}
 --- !u!65 &851727302
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5587,7 +5704,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 12.015011, y: 0.01, z: 7.099498}
+  m_Size: {x: 12.015011, y: 0.1, z: 7.099498}
   m_Center: {x: 2.0075054, y: 0, z: 0.4502511}
 --- !u!1001 &881741491
 PrefabInstance:
@@ -8349,6 +8466,7 @@ MonoBehaviour:
   NotCompleted: {fileID: 0}
   observation: {fileID: 0}
   jumpIntoScene: 1
+  type: 0
 --- !u!65 &908633472
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10705,6 +10823,8 @@ MonoBehaviour:
   dialogueObject: {fileID: 11400000, guid: d95f1777241bc2d49bcc2a83766478e1, type: 2}
   o_DialogueObject: {fileID: 11400000, guid: 516cb6d87ff1527488efa35174592a38, type: 2}
   MorwickdialgueObject: {fileID: 0}
+  type: 0
+  dialogueAfterPuzzle: {fileID: 0}
 --- !u!4 &1275587916 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 2cf2c411992fafd47adeb51a33b0a90f, type: 3}
@@ -12505,7 +12625,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 11.766386, y: 0.01, z: 7.2526407}
+  m_Size: {x: 11.766386, y: 0.1, z: 7.2526407}
   m_Center: {x: 13.942321, y: 0, z: 0.37367964}
 --- !u!4 &1487317672 stripped
 Transform:
@@ -12606,6 +12726,8 @@ MonoBehaviour:
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: d6b9f9030a464e4438a0989b6e4d922b, type: 2}
   MorwickdialgueObject: {fileID: 0}
+  type: 0
+  dialogueAfterPuzzle: {fileID: 0}
 --- !u!65 &1487407382
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13854,7 +13976,6 @@ MonoBehaviour:
   interactionType: 1
   Locked: 0
   Door: {fileID: 1796406910}
-  isOpened: 1
   dialog: {fileID: 11400000, guid: 37c5024a344174d44acd8fc2fd1b6813, type: 2}
 --- !u!65 &1610743704
 BoxCollider:
@@ -14519,6 +14640,8 @@ MonoBehaviour:
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: 27db73503f36dd547829a0d7fa532b7b, type: 2}
   MorwickdialgueObject: {fileID: 0}
+  type: 0
+  dialogueAfterPuzzle: {fileID: 0}
 --- !u!65 &1695463972
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -15062,6 +15185,10 @@ PrefabInstance:
     - target: {fileID: 1811303225018715845, guid: 847dc83df1a52eb48a58b8be152c67b2, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1811303225119396404, guid: 847dc83df1a52eb48a58b8be152c67b2, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -119
       objectReference: {fileID: 0}
     - target: {fileID: 1811303225258572355, guid: 847dc83df1a52eb48a58b8be152c67b2, type: 3}
       propertyPath: m_AnchorMax.y
@@ -15826,7 +15953,6 @@ MonoBehaviour:
   Locked: 0
   Remote: 1
   isOpened: 0
-  OpenSpeed: 3
   useAnimation: 0
 --- !u!4 &1796406912 stripped
 Transform:
