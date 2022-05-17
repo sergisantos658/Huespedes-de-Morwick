@@ -6,7 +6,8 @@ public enum TYPEPUZZLE
 {
     puzzle1,
     puzzle2,
-    puzzle3,
+    puzzle3_1,
+    puzzle3_2,
     none
 }
 
@@ -40,7 +41,8 @@ public class DialogueActivate : Interactable
 
         if(((type == TYPEPUZZLE.puzzle1 && PlayerCheckPoint.Instance.puzzle1 > 0)||
             (type == TYPEPUZZLE.puzzle2 && PlayerCheckPoint.Instance.puzzle2 > 0)||
-            (type == TYPEPUZZLE.puzzle3 && PlayerCheckPoint.Instance.puzzle3 > 0))&&
+            (type == TYPEPUZZLE.puzzle3_1 && PlayerCheckPoint.Instance.puzzle3_1 > 0)||
+            (type == TYPEPUZZLE.puzzle3_2 && PlayerCheckPoint.Instance.puzzle3_2 > 0))&&
             type != TYPEPUZZLE.none)
                 changeDialogueAfterPuzzle = true;
 

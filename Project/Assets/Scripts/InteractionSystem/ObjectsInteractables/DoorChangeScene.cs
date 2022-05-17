@@ -34,8 +34,11 @@ public class DoorChangeScene : Interactable
                 case TYPEPUZZLE.puzzle2:
                     PlayerCheckPoint.Instance.puzzle2 = 1;
                     break;
-                case TYPEPUZZLE.puzzle3:
-                    PlayerCheckPoint.Instance.puzzle3 = 1;
+                case TYPEPUZZLE.puzzle3_1:
+                    PlayerCheckPoint.Instance.puzzle3_1 = 1;
+                    break;
+                case TYPEPUZZLE.puzzle3_2:
+                    PlayerCheckPoint.Instance.puzzle3_2 = 1;
                     break;
                 case TYPEPUZZLE.none:
                     //Debug.LogError("None puzzle has been selected");
@@ -43,7 +46,6 @@ public class DoorChangeScene : Interactable
                 default:
                     break;
             }
-
             player.GetComponent<PlayerCheckPoint>().CheckPointSave();
 
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + jumpIntoScene);

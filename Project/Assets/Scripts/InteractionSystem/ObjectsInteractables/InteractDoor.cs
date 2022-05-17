@@ -39,7 +39,7 @@ public class InteractDoor : Interactable
     }
     public void Update()
     {
-        if(PlayerCheckPoint.Instance.puzzle3 == 0)
+        if(PlayerCheckPoint.Instance.puzzle3_2 == 0)
         {
             if (!player.DialogueUI.isOpen && finishDialogue == true)
             {
@@ -50,7 +50,7 @@ public class InteractDoor : Interactable
             }
             if (CauchObjectLent.keyS3 && piecesScript.puzzleCompleted)
             {
-                PlayerCheckPoint.Instance.puzzle3 = 1;
+                PlayerCheckPoint.Instance.puzzle3_2 = 1;
                 gameObject.SetActive(false);
 
 

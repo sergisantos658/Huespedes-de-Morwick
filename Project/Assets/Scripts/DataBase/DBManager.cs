@@ -13,7 +13,8 @@ public static class DBManager
     public static int tutorial;
     public static int puzzle1;
     public static int puzzle2;
-    public static int puzzle3;
+    public static int puzzle3_1;
+    public static int puzzle3_2;
 
     public static void CreateDB()
     {
@@ -23,7 +24,7 @@ public static class DBManager
 
             using (var command = connection.CreateCommand())
             {
-                command.CommandText = "CREATE TABLE IF NOT EXISTS playerData (Id INT, Level INT, Tutorial INT, Puzzle1 INT, Puzzle2 INT, Puzzle3 INT, PositionX TEXT);";
+                command.CommandText = "CREATE TABLE IF NOT EXISTS playerData (Id INT, Level INT, Tutorial INT, Puzzle1 INT, Puzzle2 INT, Puzzle3_1 INT, Puzzle3_2 INT, PositionX TEXT);";
                 command.ExecuteNonQuery();
             }
 
@@ -42,14 +43,15 @@ public static class DBManager
         tutorial = 1;
         puzzle1 = 0;
         puzzle2 = 0;
-        puzzle3 = 0;
+        puzzle3_1 = 0;
+        puzzle3_2 = 0;
 
         // SQL
         dbconn.Open();
         using (var dbcmd = dbconn.CreateCommand())
         {
             // Colocar 8 informaciones.
-            dbcmd.CommandText = "INSERT INTO playerData (Id, Level, Tutorial, Puzzle1, Puzzle2, Puzzle3) VALUES ( 1 , '" + level + "', '" + tutorial + "', '" + puzzle1 + "', '" + puzzle2 + "', '" + puzzle3 + "' );";
+            dbcmd.CommandText = "INSERT INTO playerData (Id, Level, Tutorial, Puzzle1, Puzzle2, Puzzle3_1, Puzzle3_2) VALUES ( 1 , '" + level + "', '" + tutorial + "', '" + puzzle1 + "', '" + puzzle2 + "', '" + puzzle3_1 + "', '" + puzzle3_2 + "' );";
             dbcmd.ExecuteNonQuery();
         }
 
@@ -64,7 +66,8 @@ public static class DBManager
         level = player.level;
         puzzle1 = player.puzzle1;
         puzzle2 = player.puzzle2;
-        puzzle3 = player.puzzle3;
+        puzzle3_1 = player.puzzle3_1;
+        puzzle3_2 = player.puzzle3_2;
 
         tutorial = player.tutorial ? 1 : 0;
 
@@ -76,7 +79,7 @@ public static class DBManager
             using (var command = connection.CreateCommand())
             {
                 // Colocar 8 informaciones.
-                string query = "UPDATE playerData SET Id= 1, Level= '" + level + "', Tutorial= '" + tutorial + "',Puzzle1= '" + puzzle1 + "', Puzzle2= '" + puzzle2 + "', Puzzle3= '" + puzzle3 + "'  WHERE Id= 1 ;";
+                string query = "UPDATE playerData SET Id= 1, Level= '" + level + "', Tutorial= '" + tutorial + "',Puzzle1= '" + puzzle1 + "', Puzzle2= '" + puzzle2 + "', Puzzle3_1= '" + puzzle3_1 + "', Puzzle3_2= '" + puzzle3_2 + "'  WHERE Id= 1 ;";
 
                 command.CommandText = query;
                 command.ExecuteNonQuery();
@@ -113,7 +116,8 @@ public static class DBManager
                     data.tutorial = reader.GetBoolean(2);
                     data.puzzle1 = reader.GetInt32(3);
                     data.puzzle2 = reader.GetInt32(4);
-                    data.puzzle3 = reader.GetInt32(5);
+                    data.puzzle3_1 = reader.GetInt32(5);
+                    data.puzzle3_2 = reader.GetInt32(6);
                     //data.position[0] = float.Parse(reader.GetString(3));
                     //data.position[1] = float.Parse(reader.GetString(4));
                     //data.countBombs = reader.GetInt32(5);

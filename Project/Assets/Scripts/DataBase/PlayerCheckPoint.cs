@@ -34,7 +34,9 @@ public class PlayerCheckPoint : MonoBehaviour
     [Range(0, 1)]
     public int puzzle2;
     [Range(0, 1)]
-    public int puzzle3;
+    public int puzzle3_1;    
+    [Range(0, 1)]
+    public int puzzle3_2;
 
     public bool tutorial;
 
@@ -86,7 +88,8 @@ public class PlayerCheckPoint : MonoBehaviour
 
         puzzle1 = data.puzzle1;
         puzzle2 = data.puzzle2;
-        puzzle3 = data.puzzle3;
+        puzzle3_1 = data.puzzle3_1;
+        puzzle3_2 = data.puzzle3_2;
 
         tutorial = data.tutorial;
 
