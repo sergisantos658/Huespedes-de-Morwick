@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: KeyMusicBox
   m_EditorClassIdentifier: 
   spriteInventory: {fileID: 21300000, guid: 75129d5ac9aaa184abbd8ad1e1d17c8f, type: 3}
+  pickUp: 1
+  Observation: {fileID: 0}
