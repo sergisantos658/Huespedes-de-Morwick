@@ -17,9 +17,9 @@ MonoBehaviour:
     - Hola, soy tu voz interior que viene a recordarte como se respira.
     - Si se te ha olvidado como caminar, solo tienes que clicar a cualquier zona
       de la sala.
-    - Usa clic derecho e en los objetos para interactuar y clic izquierdo para observar
+    - Usa clic derecho en los objetos para interactuar y clic izquierdo para observar
       objetos.
-    - "interactu\xE1 un poco con la sala para familiarizarte con los controles, ya
+    - "Interactu\xE1 un poco con la sala para familiarizarte con los controles, ya
       est\xE1, ya sabes caminar y mirar con esto creo que es suficiente para que
       no te ahogues \xA1y todo en menos de un minuto!"
     whoTalk: 0

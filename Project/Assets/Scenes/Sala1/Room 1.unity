@@ -9321,7 +9321,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7320517779906380969, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -24.462
+      value: -13.22
       objectReference: {fileID: 0}
     - target: {fileID: 7320517779906380969, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: m_LocalPosition.y
@@ -9329,7 +9329,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7320517779906380969, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -21.53
+      value: -13.51
       objectReference: {fileID: 0}
     - target: {fileID: 7320517779906380969, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10827,6 +10827,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1275587922}
+          m_TargetAssemblyTypeName: GetKeyHeimdal, Assembly-CSharp
+          m_MethodName: GetKey
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!114 &1275587921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10857,6 +10869,31 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 1275587922}
+          m_TargetAssemblyTypeName: GetKeyHeimdal, Assembly-CSharp
+          m_MethodName: GetKey
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+--- !u!114 &1275587922
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1275587911}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ab5f9f3dd217b49b4ac1f86818b956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: eae77c4e7dc3ea74da88dd21960c583a, type: 2}
 --- !u!1001 &1280475612
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15530,7 +15567,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1796442548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15555,8 +15592,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 14.160876, y: 0.6816166, z: 10.419025}
-  m_Center: {x: 1.0667119, y: 0.81225693, z: -0.527956}
+  m_Size: {x: 10.533122, y: 0.68161654, z: 10.419025}
+  m_Center: {x: 2.880589, y: 0.81225693, z: -0.527956}
 --- !u!4 &1796442550
 Transform:
   m_ObjectHideFlags: 0
