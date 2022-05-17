@@ -86,25 +86,37 @@ public class LightsSwitch : Interactable
 
             allLightsOff = true;
 
-            foreach (GameObject m_light in m_Lights)
+            for (int i = 0; i < m_Lights.Length; i++)
             {
-                if(m_light.GetComponent<Light>().lightmapBakeType != LightmapBakeType.Baked)
+                int count = m_Lights[i].transform.childCount;
+                bool baked = true;
+                for (int o = 0; o < count; o++)
                 {
-                    if (m_light.GetComponent<Light>())
+                    if (m_Lights[i].transform.GetChild(o).GetComponent<Light>())
                     {
-                        m_light.GetComponent<Light>().enabled = !m_light.GetComponent<Light>().enabled;
+                        if (!m_Lights[i].transform.GetChild(o).GetComponent<Light>().bakingOutput.isBaked)
+                        {
+                            baked = false;  
+                        }
+                    }
 
-                        Behaviour halo = (Behaviour)m_light.GetComponent("Halo");
+                    if(!baked && m_Lights[i].transform.GetChild(o).GetComponent<Light>())
+                    {
+                        m_Lights[i].transform.GetChild(o).GetComponent<Light>().enabled = !m_Lights[i].transform.GetChild(o).GetComponent<Light>().enabled;
+
+                        Behaviour halo = (Behaviour)m_Lights[i].transform.GetChild(o).GetComponent("Halo");
                         halo.enabled = false;
 
-                        if (m_light.GetComponent<Light>().enabled == true)
+                        if (m_Lights[i].transform.GetChild(o).GetComponent<Light>().enabled == true)
                         {
                             allLightsOff = false;
                         }
                     }
-                    else
+                    else if (!baked)
                     {
-                        m_light.SetActive(lights);
+                        Behaviour halo = (Behaviour)m_Lights[i].transform.GetChild(o).GetComponent("Halo");
+                        halo.enabled = false;
+                        m_Lights[i].transform.GetChild(o).gameObject.SetActive(lights);
                     }
                 }
             }

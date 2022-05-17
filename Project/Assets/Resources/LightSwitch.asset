@@ -13,4 +13,4 @@ MonoBehaviour:
   m_Name: LightSwitch
   m_EditorClassIdentifier: 
   spriteInventory: {fileID: 21300000, guid: d837e556a04615c45bd2316e0f21f3d3, type: 3}
-  pickUp: 0
+  pickUp: 1

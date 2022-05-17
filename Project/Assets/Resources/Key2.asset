@@ -13,3 +13,4 @@ MonoBehaviour:
   m_Name: Key2
   m_EditorClassIdentifier: 
   spriteInventory: {fileID: 21300000, guid: 7b1b5291842bee74397b975befc01567, type: 3}
+  pickUp: 0

@@ -5538,7 +5538,7 @@ MonoBehaviour:
   rayDistance: 1.3
   interactableLayer:
     serializedVersion: 2
-    m_Bits: 32832
+    m_Bits: 32833
   mainCamera: {fileID: 0}
   interactCursor: {fileID: 2800000, guid: 7ec1dbfa4ac227442ae8e6e238233e41, type: 3}
   ObservationCursor: {fileID: 2800000, guid: 9cda48e378d35dc4ab62c87729c084dd, type: 3}
@@ -5624,6 +5624,7 @@ MonoBehaviour:
   puzzle1: 0
   puzzle2: 0
   puzzle3: 0
+  tutorial: 0
 --- !u!114 &111566986
 MonoBehaviour:
   m_ObjectHideFlags: 0
