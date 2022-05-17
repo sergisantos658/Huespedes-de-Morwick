@@ -26362,8 +26362,8 @@ MonoBehaviour:
   dialogueObject: {fileID: 11400000, guid: 585d15b7b8bb89a4b82b5ef645663049, type: 2}
   o_DialogueObject: {fileID: 11400000, guid: b0127fb5c95b3aa4f88989076bbe9766, type: 2}
   MorwickdialgueObject: {fileID: 0}
-  type: 0
-  dialogueAfterPuzzle: {fileID: 0}
+  type: 2
+  dialogueAfterPuzzle: {fileID: 11400000, guid: cf0baefb016217a4aa98b6fdfd659723, type: 2}
 --- !u!95 &2015093868
 Animator:
   serializedVersion: 3
@@ -26613,7 +26613,7 @@ MonoBehaviour:
   NotCompleted: {fileID: 0}
   observation: {fileID: 0}
   jumpIntoScene: -1
-  type: 0
+  type: 3
 --- !u!65 &2027468267
 BoxCollider:
   m_ObjectHideFlags: 0

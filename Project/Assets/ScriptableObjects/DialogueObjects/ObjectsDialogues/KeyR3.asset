@@ -9,9 +9,12 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 06619c2e8f5f50442aa58604abce2f53, type: 3}
-  m_Name: Key3
+  m_Script: {fileID: 11500000, guid: 280da7096775e4443b12ee0d2e739bf6, type: 3}
+  m_Name: KeyR3
   m_EditorClassIdentifier: 
-  spriteInventory: {fileID: 21300000, guid: 1a2d7929787c1af469d18efbb6ea0432, type: 3}
-  pickUp: 0
-  Observation: {fileID: 11400000, guid: 15fc3de0e0e4cb2468918f0125eb886e, type: 2}
+  dialogueTyping:
+  - dialogue:
+    - Una Llave.
+    - "Quiz\xE1s con esta llave pueda salir al fin de aqu\xED."
+    whoTalk: 0
+  responses: []

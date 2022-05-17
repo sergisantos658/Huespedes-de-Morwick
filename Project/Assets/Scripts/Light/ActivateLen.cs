@@ -24,6 +24,7 @@ public class ActivateLen : MonoBehaviour
     public void ActiveLen()
     {
         lenActive = true;
+        PlayerCheckPoint.Instance.puzzle3_1 = 1;
     }
     // Update is called once per frame
     void Update()

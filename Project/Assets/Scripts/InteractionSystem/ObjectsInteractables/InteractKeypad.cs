@@ -1,11 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using TMPro;
 public class InteractKeypad : Interactable
 {
 	public Transform camKeypad;
 	public Transform camZone;
+
+	public TextMeshProUGUI m_text;
 
 	public Collider colliderNumpad;
 
@@ -27,6 +29,7 @@ public class InteractKeypad : Interactable
 		if (camOn)
 		{
 			activeNum.SetActive(true);
+			m_text.text = " ";
 		}
 		if (Input.GetKeyDown(KeyCode.Escape) && camOn)
         {

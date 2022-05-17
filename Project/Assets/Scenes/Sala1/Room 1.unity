@@ -16017,6 +16017,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae9ec7617b4f5f4a926ef03a94a0a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tuto: {fileID: 11400000, guid: 2eb2fcd85bdb30a4c84d1d636a1639b7, type: 2}
 --- !u!65 &1796442549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -18433,6 +18434,10 @@ PrefabInstance:
       propertyPath: OnEntryAllowed.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 389558899}
+    - target: {fileID: 641728920, guid: 545ddde45b6d601498197347902d2ba7, type: 3}
+      propertyPath: m_text
+      value: 
+      objectReference: {fileID: 1537087061}
     - target: {fileID: 641728920, guid: 545ddde45b6d601498197347902d2ba7, type: 3}
       propertyPath: camZone
       value: 

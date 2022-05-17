@@ -53,16 +53,11 @@ public class DialogueActivate : Interactable
 
     public override void Interact()
     {
-        if(MorwickController.cauched == false || MorwickdialgueObject == null)
-        {
-            LookPlayer?.Invoke(player);
-            ResponseEventsCheck(dialogueObject);
-            player.DialogueUI.ShowDialogue(dialogueObject);
-        }
-        else
-        {
-            player.DialogueUI.ShowDialogue(MorwickdialgueObject);
-        }
+           LookPlayer?.Invoke(player);
+           ResponseEventsCheck(dialogueObject);
+           player.DialogueUI.ShowDialogue(dialogueObject);
+        
+
 
     }
 
