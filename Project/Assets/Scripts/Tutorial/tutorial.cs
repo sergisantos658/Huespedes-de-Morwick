@@ -14,9 +14,9 @@ public class tutorial : MonoBehaviour
         playerC = PlayerController.currentPlayer;
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerStay(Collider other)
     {
-        if (tutoStart == true)
+        if (tutoStart == true /*&& !TimeLineManager.isPlaying*/)
         {
             playerC.DialogueUI.ShowDialogue(tuto);
             tutoStart = false;
