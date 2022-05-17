@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11937977, g: 0.1010839, b: 0.08306535, a: 1}
+  m_IndirectSpecularColor: {r: 0.11937981, g: 0.10108391, b: 0.08306547, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -12575,8 +12575,46 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4883379290849355150, guid: 571f5dec7e36f1d44bd714b42ba5c2ee, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 571f5dec7e36f1d44bd714b42ba5c2ee, type: 3}
+--- !u!1 &1487407380 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4883379290849355137, guid: 571f5dec7e36f1d44bd714b42ba5c2ee, type: 3}
+  m_PrefabInstance: {fileID: 1487407379}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1487407381
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487407380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 57a01bde18727df46a3fc23d4c316cca, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  holdTime: 0
+  interactOpction: 0
+  observationOpction: 1
+  interactionType: 0
+  dialogueObject: {fileID: 0}
+  o_DialogueObject: {fileID: 11400000, guid: d6b9f9030a464e4438a0989b6e4d922b, type: 2}
+  MorwickdialgueObject: {fileID: 0}
+--- !u!65 &1487407382
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1487407380}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.58435726, y: 0.33688843, z: 1.1198736}
+  m_Center: {x: -0.8293174, y: 0.16350031, z: -0.24065949}
 --- !u!1 &1491355739 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3532566678301893690, guid: 85ce586e84eb148469341f160fb9c1ec, type: 3}
@@ -18221,6 +18259,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1161818285}
     m_Modifications:
+    - target: {fileID: 20127932, guid: 545ddde45b6d601498197347902d2ba7, type: 3}
+      propertyPath: password
+      value: 6526
+      objectReference: {fileID: 0}
     - target: {fileID: 20127932, guid: 545ddde45b6d601498197347902d2ba7, type: 3}
       propertyPath: clickSound
       value: 
