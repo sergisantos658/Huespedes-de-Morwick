@@ -25,17 +25,6 @@ public class CauchObjectLent : Interactable
     {
         playerC = PlayerController.currentPlayer;
         inventory = player.GetComponent<ControlObjects>();
-        if (inventory != null)
-        {
-            for (int i = 0; i < inventory.objetosRecogidos.Count; i++)
-            {
-                if (inventory.objetosRecogidos[i] == item)
-                {
-                    gameObject.SetActive(false);
-                    return;
-                }
-            }
-        }
     }
 
     public override void Interact()

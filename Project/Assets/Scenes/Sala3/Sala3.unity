@@ -1079,7 +1079,7 @@ MonoBehaviour:
   interactionType: 0
   close: {fileID: 11400000, guid: cc9e0347837c87246a2b44ac8cb8a15c, type: 2}
   StartPuzzle: {fileID: 11400000, guid: 6d69bccb8cc534547851cba9b4fe65b4, type: 2}
-  finishscene: {fileID: 11400000, guid: 9d77cbf77d1bad84588aa666c3101ddc, type: 2}
+  item: {fileID: 11400000, guid: 79b8eec62b8932e448ac61082763efda, type: 2}
   camera0: {fileID: 1360471544}
   camera1: {fileID: 887073993}
 --- !u!1001 &60351085
@@ -29308,6 +29308,7 @@ GameObject:
   - component: {fileID: 919132148004828121}
   - component: {fileID: 919132148004828122}
   - component: {fileID: 919132148004828123}
+  - component: {fileID: 919132148004828124}
   m_Layer: 6
   m_Name: ghost
   m_TagString: Untagged
@@ -29442,6 +29443,18 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+        - m_Target: {fileID: 919132148004828124}
+          m_TargetAssemblyTypeName: GetObjectDialogue, Assembly-CSharp
+          m_MethodName: GetObject
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
   - name: Lupa de rayos UVA. Por fin dices algo interesante jijijiji.
     onPickedResponse:
       m_PersistentCalls:
@@ -29470,6 +29483,19 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
+--- !u!114 &919132148004828124
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148004828120}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 99ab5f9f3dd217b49b4ac1f86818b956, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 11400000, guid: 21af30de2a08feb4bb6ea0cc04971127, type: 2}
 --- !u!4 &968658699316089767 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 7963677795723374696, guid: 112215925bb5334408b09b15b0f2d939, type: 3}

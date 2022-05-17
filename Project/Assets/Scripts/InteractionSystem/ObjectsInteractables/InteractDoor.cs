@@ -7,7 +7,8 @@ public class InteractDoor : Interactable
     // Start is called before the first frame update
     public DialogueObject close;
     public DialogueObject StartPuzzle;
-    public DialogueObject finishscene;
+    ControlObjects controlObjects;
+    public Items item;
     public GameObject camera0;
     public GameObject camera1;
     bool finishDialogue;
@@ -17,7 +18,8 @@ public class InteractDoor : Interactable
 
     private void Start()
     {
-        player = PlayerController.currentPlayer;   
+        player = PlayerController.currentPlayer;
+        controlObjects = player.GetComponent<ControlObjects>();
     }
 
     public override void Interact()
@@ -28,6 +30,7 @@ public class InteractDoor : Interactable
         }
         else
         {
+            controlObjects.RemoveObject(item);
             player.DialogueUI.ShowDialogue(StartPuzzle);
             finishDialogue = true;
 

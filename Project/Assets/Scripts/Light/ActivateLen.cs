@@ -24,7 +24,6 @@ public class ActivateLen : MonoBehaviour
     public void ActiveLen()
     {
         lenActive = true;
-
     }
     // Update is called once per frame
     void Update()
