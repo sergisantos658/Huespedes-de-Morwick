@@ -2,16 +2,17 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class tutorial : MonoBehaviour
+public class Tutorial : MonoBehaviour
 {
     // Start is called before the first frame update
     private PlayerController playerC;
     public DialogueObject tuto;
-    private static bool tutoStart = true;
+    public static bool tutoStart = true;
 
     private void Start()
     {
         playerC = PlayerController.currentPlayer;
+        tutoStart = PlayerCheckPoint.Instance.tutorial;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -20,6 +21,7 @@ public class tutorial : MonoBehaviour
         {
             playerC.DialogueUI.ShowDialogue(tuto);
             tutoStart = false;
+            PlayerCheckPoint.Instance.CheckPointSave();
         }
 
     }
