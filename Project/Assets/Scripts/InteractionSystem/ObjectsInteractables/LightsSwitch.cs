@@ -82,8 +82,6 @@ public class LightsSwitch : Interactable
     {
         if (!onlyOnce)
         {
-            PlayerCheckPoint.Instance.puzzle2 = 1;
-
             allLightsOff = true;
 
             for (int i = 0; i < m_Lights.Length; i++)

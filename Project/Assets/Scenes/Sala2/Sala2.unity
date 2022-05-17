@@ -8753,6 +8753,7 @@ MonoBehaviour:
   NotCompleted: {fileID: 0}
   observation: {fileID: 0}
   jumpIntoScene: 1
+  type: 1
 --- !u!1 &814647928
 GameObject:
   m_ObjectHideFlags: 0
@@ -10415,6 +10416,8 @@ MonoBehaviour:
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: c5478f39e49c8744e8ad50689a952475, type: 2}
   MorwickdialgueObject: {fileID: 0}
+  type: 0
+  dialogueAfterPuzzle: {fileID: 0}
 --- !u!1 &873033366
 GameObject:
   m_ObjectHideFlags: 0
@@ -12935,6 +12938,7 @@ MonoBehaviour:
   NotCompleted: {fileID: 0}
   observation: {fileID: 0}
   jumpIntoScene: -1
+  type: 3
 --- !u!4 &1067448651 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9074594807982636234, guid: 15745f8b70e5d524183539fa272d90a3, type: 3}
@@ -16960,6 +16964,8 @@ MonoBehaviour:
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: d83c2676adf363649874eb504aea4872, type: 2}
   MorwickdialgueObject: {fileID: 0}
+  type: 0
+  dialogueAfterPuzzle: {fileID: 0}
 --- !u!4 &1496575945 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1402758661513540240, guid: 4ecf6aa2a2182cf4c843c0d565e94cd0, type: 3}
@@ -17118,6 +17124,8 @@ MonoBehaviour:
   dialogueObject: {fileID: 11400000, guid: 07ef0f8d305d89a4589ae98a45250346, type: 2}
   o_DialogueObject: {fileID: 0}
   MorwickdialgueObject: {fileID: 0}
+  type: 1
+  dialogueAfterPuzzle: {fileID: 0}
 --- !u!136 &1527409418
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -94058,6 +94066,8 @@ MonoBehaviour:
   dialogueObject: {fileID: 0}
   o_DialogueObject: {fileID: 11400000, guid: 4ce662a9f237daf40a20ac151965f608, type: 2}
   MorwickdialgueObject: {fileID: 0}
+  type: 0
+  dialogueAfterPuzzle: {fileID: 0}
 --- !u!1001 &1756558774
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -2,11 +2,24 @@ using System;
 using UnityEngine;
 using UnityEngine.EventSystems;
 
+public enum TYPEPUZZLE
+{
+    puzzle1,
+    puzzle2,
+    puzzle3,
+    none
+}
+
 public class DialogueActivate : Interactable
 {
     [SerializeField] private DialogueObject dialogueObject;
     [SerializeField] private DialogueObject o_DialogueObject;
     [SerializeField] private DialogueObject MorwickdialgueObject;
+
+    [Header("Scene that you are")]
+    [SerializeField] private TYPEPUZZLE type;
+    [SerializeField] private DialogueObject dialogueAfterPuzzle;
+    private bool changeDialogueAfterPuzzle = false;
 
     private PlayerController player => PlayerController.currentPlayer;
     public  event Action<PlayerController> LookPlayer = delegate { };
@@ -19,6 +32,21 @@ public class DialogueActivate : Interactable
     private void OnDisable()
     {
         DialogueUI.CheckResponseDialogue -= ResponseEventsCheck;
+    }
+
+    private void Start()
+    {
+        changeDialogueAfterPuzzle = false;
+
+        if(((type == TYPEPUZZLE.puzzle1 && PlayerCheckPoint.Instance.puzzle1 > 0)||
+            (type == TYPEPUZZLE.puzzle2 && PlayerCheckPoint.Instance.puzzle2 > 0)||
+            (type == TYPEPUZZLE.puzzle3 && PlayerCheckPoint.Instance.puzzle3 > 0))&&
+            type != TYPEPUZZLE.none)
+                changeDialogueAfterPuzzle = true;
+
+        if (changeDialogueAfterPuzzle)
+            UpdateDialogueObject(dialogueAfterPuzzle);
+
     }
 
     public override void Interact()
