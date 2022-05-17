@@ -9360,6 +9360,10 @@ PrefabInstance:
       propertyPath: images.Array.data[7]
       value: 
       objectReference: {fileID: 1340225466}
+    - target: {fileID: 111566986, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: objetosRecogidos.Array.size
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3221098072880903380, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: posicionDeInicio
       value: 
