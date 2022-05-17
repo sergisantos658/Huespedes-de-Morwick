@@ -9,8 +9,6 @@ public class ControlObjects : MonoBehaviour
 	public List<Items> objetosRecogidos = new List<Items>();
 	public List<Image> images = new List<Image>();
 
-	//[SerializeField] List<ItemsData> ItemsData = new List<ItemsData>();
-
 	const string ITEMS_KEY = "/items";
 	const string ITEMS_Count_KEY = "/items.count";
 
@@ -61,6 +59,7 @@ public class ControlObjects : MonoBehaviour
 		}
 	}
 
+	
 	void Save()
 	{
 		string key = ITEMS_KEY;
@@ -86,51 +85,13 @@ public class ControlObjects : MonoBehaviour
 		for (int i = 0; i < count; i++)
 		{
 			ItemsData data = SaveItemsSytem.Load<ItemsData>(key + i);
+			Debug.Log("a " + data);
 			Items item = Resources.Load<Items>(data.scriptedItemName);
 			objetosRecogidos.Add(item);
 		}
 
 		UpdateInventory();
 	}
-
-	/*
-	 void Save()
-	{
-		string key = ITEMS_KEY;
-
-		itemsData.Clear();
-
-		for (int i = 0; i < objetosRecogidos.Count; i++)
-		{
-			ItemsData data = new ItemsData(objetosRecogidos[i]);
-			itemsData.Add(data);
-		}
-		SaveItemsSytem.Save(itemsData, key);
-	}
-
-	void Load()
-	{
-		objetosRecogidos.Clear();
-
-		string key = ITEMS_KEY;
-		itemsData = SaveItemsSytem.Load<List<ItemsData>>(key);
-		if(itemsData != null)
-        {
-
-			for (int i = 0; i < itemsData.Count; i++)
-			{
-				Items item = Resources.Load<Items>(itemsData[i].scriptedItemName);
-				objetosRecogidos.Add(item);
-			}
-
-        }
-        else
-        {
-			Debug.Log("Ayuda");
-        }
-
-		UpdateInventory();
-	} 
-	  */
+	  
 
 }

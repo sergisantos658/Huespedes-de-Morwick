@@ -36,6 +36,8 @@ public class PlayerCheckPoint : MonoBehaviour
     [Range(0, 1)]
     public int puzzle3;
 
+    public bool tutorial;
+
     PlayerData data;
 
     private void Awake()
@@ -43,7 +45,7 @@ public class PlayerCheckPoint : MonoBehaviour
         level = SceneManager.GetActiveScene().buildIndex;
 
         data = DBManager.SelectPlayerData(this);
-        if (data != null && data.level != level)
+        if (data != null)
         {
             LoadGame();
         }
@@ -64,6 +66,7 @@ public class PlayerCheckPoint : MonoBehaviour
 
     public void CheckPointSave()
     {
+        tutorial = Tutorial.tutoStart;
         DBManager.UpdatePlayerData(this);
     }
 
@@ -84,6 +87,8 @@ public class PlayerCheckPoint : MonoBehaviour
         puzzle1 = data.puzzle1;
         puzzle2 = data.puzzle2;
         puzzle3 = data.puzzle3;
+
+        tutorial = data.tutorial;
 
     }
     

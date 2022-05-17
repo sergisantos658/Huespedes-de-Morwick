@@ -29,7 +29,19 @@ public class ChangeScene : MonoBehaviour
 
         DBManager.InsertPlayerData();
 
-        SaveItemsSytem.DeleteFile("/items");
+        int count = SaveItemsSytem.Load<int>("/items.count");
+        if(count >= 0)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                ItemsData data = SaveItemsSytem.Load<ItemsData>("/items" + i);
+                Items item = Resources.Load<Items>(data.scriptedItemName);
+                item.pickUp = false;
+                SaveItemsSytem.DeleteFile("/items" + i);
+            }
+
+            SaveItemsSytem.DeleteFile("/items.count");
+        }
 
         MenuManager.pause = false;
         Time.timeScale = 1;
@@ -39,6 +51,10 @@ public class ChangeScene : MonoBehaviour
 
     public void LoadGame()
     {
+
+        MenuManager.pause = false;
+        Time.timeScale = 1;
+
         int levelState = DBManager.GetLevelState();
         if (levelState != -1)
         {
@@ -48,5 +64,6 @@ public class ChangeScene : MonoBehaviour
         {
             SceneManager.LoadScene(sceneIndex, LoadSceneMode.Single);
         }
+
     }
 }
