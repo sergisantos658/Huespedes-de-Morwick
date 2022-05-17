@@ -12625,8 +12625,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 11.766386, y: 0.1, z: 7.2526407}
-  m_Center: {x: 13.942321, y: 0, z: 0.37367964}
+  m_Size: {x: 11.766386, y: 0.20024784, z: 7.2526407}
+  m_Center: {x: 13.942321, y: 0.050123923, z: 0.37367964}
 --- !u!4 &1487317672 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
@@ -18070,8 +18070,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2097789528}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -30.341, y: 2, z: -22.502}
+  m_LocalRotation: {x: 0.076228164, y: 0.48296478, z: -0.04225396, w: 0.8712916}
+  m_LocalPosition: {x: -19.44, y: 2, z: -16.6}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -18095,7 +18095,7 @@ MonoBehaviour:
   - {fileID: 1817010152}
   - {fileID: 1648180221}
   currentPosition: 2
-  lastPosition: 0
+  lastPosition: 2
   cam: {fileID: 2097789530}
 --- !u!82 &2097789533
 AudioSource:
