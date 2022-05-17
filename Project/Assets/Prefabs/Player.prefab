@@ -5603,7 +5603,7 @@ NavMeshAgent:
   m_AutoBraking: 1
   m_AutoRepath: 1
   m_Height: 1.49
-  m_BaseOffset: 0
+  m_BaseOffset: -0.08
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
 --- !u!114 &3221098072880903380
@@ -5623,7 +5623,8 @@ MonoBehaviour:
   level: 0
   puzzle1: 0
   puzzle2: 0
-  puzzle3: 0
+  puzzle3_1: 0
+  puzzle3_2: 0
   tutorial: 0
 --- !u!114 &111566986
 MonoBehaviour:

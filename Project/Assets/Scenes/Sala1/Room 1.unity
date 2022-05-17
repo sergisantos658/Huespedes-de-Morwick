@@ -9510,6 +9510,30 @@ PrefabInstance:
       propertyPath: cameraToInteract
       value: 
       objectReference: {fileID: 2097789528}
+    - target: {fileID: 7069821695779106878, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: m_Height
+      value: 1.4927963
+      objectReference: {fileID: 0}
+    - target: {fileID: 7069821695779106878, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: m_Center.x
+      value: 9.908766e-17
+      objectReference: {fileID: 0}
+    - target: {fileID: 7069821695779106878, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: m_Center.y
+      value: 0.70678693
+      objectReference: {fileID: 0}
+    - target: {fileID: 7069821695779106878, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7069821695779106879, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: m_UseGravity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7069821695779106879, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: m_IsKinematic
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 7320517779906380969, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -9520,7 +9544,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7320517779906380969, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.12
+      value: 0.397
       objectReference: {fileID: 0}
     - target: {fileID: 7320517779906380969, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: m_LocalPosition.z
