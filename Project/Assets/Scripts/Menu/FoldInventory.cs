@@ -19,9 +19,12 @@ public class FoldInventory : MonoBehaviour
 
 	void Update()
     {
+
+
 		if(Input.GetKeyDown(KeyCode.Mouse2))
         {
-			FoldInv();
+			
+			//FoldInv();
 		}
     }
 
