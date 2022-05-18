@@ -35,7 +35,6 @@ public class ControlObjects : MonoBehaviour
 	public void RemoveObject(Items obj)
 	{
 		obj.pickUp = true;
-		Delete(obj);
 		objetosRecogidos.Remove(obj);
 		Save();
 		UpdateInventory();
@@ -78,7 +77,6 @@ public class ControlObjects : MonoBehaviour
 
 		for (int i = 0; i < objetosRecogidos.Count; i++)
 		{
-			Debug.Log("Ayuda " + objetosRecogidos[i].pickUp);
 			ItemsData data = new ItemsData(objetosRecogidos[i]);
 			SaveItemsSytem.Save(data, key + i);
 		}

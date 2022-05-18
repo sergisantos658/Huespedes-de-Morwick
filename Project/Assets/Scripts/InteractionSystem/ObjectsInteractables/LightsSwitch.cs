@@ -61,10 +61,14 @@ public class LightsSwitch : Interactable
         {
             isLightSwitch = true;
         }
-        else if (lightSwitchItem.pickUp && !inventory.ObjectOn(lightSwitchItem))
+        else if (PlayerPrefs.GetInt(lightSwitchItem.name) == 1 || lightSwitchItem.pickUp && !inventory.ObjectOn(lightSwitchItem))
         {
             isLightSwitch = true;
             switchButton.SetActive(true);
+        }
+        else
+        {
+            PlayerPrefs.SetInt(lightSwitchItem.name, 0);
         }
 
 
@@ -74,6 +78,7 @@ public class LightsSwitch : Interactable
     {
         if (inventory.ObjectOn(lightSwitchItem))
         {
+            PlayerPrefs.SetInt(lightSwitchItem.name, 1);
             inventory.RemoveObject(lightSwitchItem);
         }
     }

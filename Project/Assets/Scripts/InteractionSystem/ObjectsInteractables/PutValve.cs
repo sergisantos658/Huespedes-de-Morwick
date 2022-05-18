@@ -18,18 +18,34 @@ public class PutValve : Interactable
 	void Start()
 	{
 		inventory = player.GetComponent<ControlObjects>();
-		Debug.Log("Valvule1 " + item.pickUp);
-		if (item.pickUp && !inventory.ObjectOn(item))
+
+		if (PlayerCheckPoint.Instance.puzzle1 == 0)
+		{
+			valve.SetActive(false);
+		}
+		else if (PlayerCheckPoint.Instance.puzzle1 == 1)
+		{
+			valve.SetActive(true);
+			colliderHole.enabled = false;
+			return;
+		}
+
+		if (PlayerPrefs.GetInt(item.name) == 1 || item.pickUp && !inventory.ObjectOn(item))
         {
 			valve.SetActive(true);
 			colliderHole.enabled = false;
-		}
+        }
+        else
+        {
+			PlayerPrefs.SetInt(item.name, 0);
+        }
 	}
 
 	public override void Interact()
 	{
 		if(inventory.ObjectOn(item))
 		{
+			PlayerPrefs.SetInt(item.name, 1);
 			inventory.RemoveObject(item);
 			valve.SetActive(true);
 			colliderHole.enabled = false;
