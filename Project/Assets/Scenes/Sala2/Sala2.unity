@@ -3308,32 +3308,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 699375680506621872, guid: d5ab9ab84b099424e99b433567330718, type: 3}
   m_PrefabInstance: {fileID: 390095391}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &391794274 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7988370400263282195, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
-  m_PrefabInstance: {fileID: 7069821695837086404}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &391794275
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 391794274}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0de5d4156994cf4f9e8cdbbd639f865, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NormalMusic: {fileID: 814647933}
-  MusicMenu: {fileID: 875821006}
-  mainPauseMenu: {fileID: 1613653658}
 --- !u!114 &391794276 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 111566986, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
   m_PrefabInstance: {fileID: 7069821695837086404}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 391794274}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc6d6e0ddf18e5644a92ce5b75236cae, type: 3}
@@ -10172,7 +10152,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 391794275}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: HideMenu
         m_Mode: 1
@@ -11723,7 +11703,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 391794275}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: HideMenu
         m_Mode: 1
@@ -98855,6 +98835,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 111566976, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: MusicMenu
+      value: 
+      objectReference: {fileID: 875821006}
+    - target: {fileID: 111566976, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: NormalMusic
+      value: 
+      objectReference: {fileID: 814647933}
+    - target: {fileID: 111566976, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: mainPauseMenu
+      value: 
+      objectReference: {fileID: 1613653658}
     - target: {fileID: 111566986, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: images.Array.size
       value: 8

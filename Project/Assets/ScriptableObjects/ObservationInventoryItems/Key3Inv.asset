@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - 
+    - Una Llave.
+    - "Quiz\xE1s con esta llave pueda salir al fin de aqu\xED."
     whoTalk: 0
   responses: []
