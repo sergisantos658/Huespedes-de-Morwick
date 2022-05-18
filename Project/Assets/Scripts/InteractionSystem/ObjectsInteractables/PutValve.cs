@@ -30,7 +30,6 @@ public class PutValve : Interactable
 	{
 		if(inventory.ObjectOn(item))
 		{
-			Debug.Log("V " + item.pickUp);
 			inventory.RemoveObject(item);
 			valve.SetActive(true);
 			colliderHole.enabled = false;

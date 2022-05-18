@@ -85,6 +85,7 @@ public class ControlObjects : MonoBehaviour
 		for (int i = 0; i < count; i++)
 		{
 			ItemsData data = SaveItemsSytem.Load<ItemsData>(key + i);
+			Debug.Log("a " + data);
 			Items item = Resources.Load<Items>(data.scriptedItemName);
 			objetosRecogidos.Add(item);
 		}
