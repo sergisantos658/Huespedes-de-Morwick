@@ -11,6 +11,7 @@ public class ControlObjects : MonoBehaviour
 
 	const string ITEMS_KEY = "/items";
 	const string ITEMS_Count_KEY = "/items.count";
+	PlayerController player => PlayerController.currentPlayer;
 
 	private void Awake()
 	{
@@ -45,7 +46,8 @@ public class ControlObjects : MonoBehaviour
 
 	public void DialogItem(int position)
 	{
-		PlayerController.currentPlayer.DialogueUI.ShowDialogue(objetosRecogidos[position].Observation);
+		if(!player.DialogueUI.isOpen)
+			player.DialogueUI.ShowDialogue(objetosRecogidos[position].Observation);
 	}
 
 	public void UpdateInventory()
