@@ -18,6 +18,10 @@ public class ActivateLen : MonoBehaviour
     {
         playerC = PlayerController.currentPlayer;
         controlObjects = playerC.GetComponent<ControlObjects>();
+        if (PlayerCheckPoint.Instance.puzzle3_1 == 1)
+        {
+            ActiveLen();
+        }
 
     }
 
