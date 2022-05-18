@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.11937977, g: 0.1010839, b: 0.08306535, a: 1}
+  m_IndirectSpecularColor: {r: 0.11937981, g: 0.10108391, b: 0.08306547, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -2295,8 +2295,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 8, y: 0.1, z: 8.575705}
-  m_Center: {x: 0, y: 0, z: 0.2878523}
+  m_Size: {x: 8, y: 0.1, z: 8.128117}
+  m_Center: {x: 0, y: 0, z: 0.064058304}
 --- !u!4 &395045914
 Transform:
   m_ObjectHideFlags: 0
@@ -5011,8 +5011,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 12.015011, y: 0.1, z: 7.099498}
-  m_Center: {x: 2.0075054, y: 0, z: 0.4502511}
+  m_Size: {x: 12.300474, y: 0.1, z: 6.6763296}
+  m_Center: {x: 2.150237, y: 0, z: 0.6618352}
 --- !u!1001 &881741491
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11568,8 +11568,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 11.766386, y: 0.20024784, z: 7.2526407}
-  m_Center: {x: 13.942321, y: 0.050123923, z: 0.37367964}
+  m_Size: {x: 11.239893, y: 0.20024784, z: 7.2526407}
+  m_Center: {x: 14.205567, y: 0.050123923, z: 0.37367964}
 --- !u!4 &1487317672 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: f57cc7a1624e76443b185852b327936b, type: 3}
@@ -14422,6 +14422,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae9ec7617b4f5f4a926ef03a94a0a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  tuto: {fileID: 0}
 --- !u!65 &1796442549
 BoxCollider:
   m_ObjectHideFlags: 0

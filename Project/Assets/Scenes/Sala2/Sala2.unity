@@ -10889,6 +10889,17 @@ AudioSource:
   m_CorrespondingSourceObject: {fileID: 4552321528644350310, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
   m_PrefabInstance: {fileID: 875821004}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &875821007 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4552321529270040664, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+  m_PrefabInstance: {fileID: 875821004}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &876543938 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 5575272835648422380, guid: 741afadbc8ee8d6498f2ac5ed155cefb, type: 3}
@@ -17608,7 +17619,7 @@ PrefabInstance:
     - target: {fileID: 641728920, guid: 545ddde45b6d601498197347902d2ba7, type: 3}
       propertyPath: m_text
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 875821007}
     - target: {fileID: 641728920, guid: 545ddde45b6d601498197347902d2ba7, type: 3}
       propertyPath: camZone
       value: 

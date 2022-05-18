@@ -64,6 +64,7 @@ public class LightsSwitch : Interactable
         else if (PlayerPrefs.GetInt(lightSwitchItem.name) == 1 || lightSwitchItem.pickUp && !inventory.ObjectOn(lightSwitchItem))
         {
             isLightSwitch = true;
+            UpdateDialogueObject(PressOffTheLightSwitchDialogue);
             switchButton.SetActive(true);
         }
         else
