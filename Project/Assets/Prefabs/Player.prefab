@@ -5384,6 +5384,7 @@ GameObject:
   - component: {fileID: 7069821695779106876}
   - component: {fileID: 3221098072880903380}
   - component: {fileID: 111566986}
+  - component: {fileID: 111566976}
   m_Layer: 3
   m_Name: Player
   m_TagString: Untagged
@@ -5480,10 +5481,10 @@ Rigidbody:
   m_Mass: 1
   m_Drag: 0
   m_AngularDrag: 0.05
-  m_UseGravity: 0
-  m_IsKinematic: 1
+  m_UseGravity: 1
+  m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 80
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!136 &7069821695779106878
 CapsuleCollider:
@@ -5496,9 +5497,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.27919376
-  m_Height: 1.48
+  m_Height: 1.4927963
   m_Direction: 1
-  m_Center: {x: 0, y: 0.7231851, z: -0.02259767}
+  m_Center: {x: 9.908766e-17, y: 0.70678693, z: -0.02259767}
 --- !u!95 &7069821695779106877
 Animator:
   serializedVersion: 3
@@ -5535,7 +5536,7 @@ MonoBehaviour:
   speedRotate: 1
   GoalPosition: {fileID: 0}
   rotate: 0
-  rayDistance: 1.3
+  rayDistance: 1.1
   interactableLayer:
     serializedVersion: 2
     m_Bits: 32833
@@ -5648,6 +5649,21 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &111566976
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7988370400263282195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0de5d4156994cf4f9e8cdbbd639f865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NormalMusic: {fileID: 0}
+  MusicMenu: {fileID: 0}
+  mainPauseMenu: {fileID: 0}
 --- !u!1 &8051654296591093321
 GameObject:
   m_ObjectHideFlags: 0

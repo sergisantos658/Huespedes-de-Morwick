@@ -18,6 +18,7 @@ public class DoorScript : MonoBehaviour
 
 	void Start()
 	{
+		Locked = true;
 		anim = GetComponent<Animator>();
 		if (((type == TYPEPUZZLE.puzzle1 && PlayerCheckPoint.Instance.puzzle1 > 0) ||
 			(type == TYPEPUZZLE.puzzle2 && PlayerCheckPoint.Instance.puzzle2 > 0) ||

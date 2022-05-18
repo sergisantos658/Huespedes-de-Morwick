@@ -18,8 +18,8 @@ public class PutValve : Interactable
 	void Start()
 	{
 		inventory = player.GetComponent<ControlObjects>();
-
-		if(item.pickUp && !inventory.ObjectOn(item))
+		Debug.Log("Valvule1 " + item.pickUp);
+		if (item.pickUp && !inventory.ObjectOn(item))
         {
 			valve.SetActive(true);
 			colliderHole.enabled = false;
@@ -30,7 +30,6 @@ public class PutValve : Interactable
 	{
 		if(inventory.ObjectOn(item))
 		{
-			Debug.Log("V " + item.pickUp);
 			inventory.RemoveObject(item);
 			valve.SetActive(true);
 			colliderHole.enabled = false;

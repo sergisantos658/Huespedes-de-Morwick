@@ -27,6 +27,7 @@ public class LeverInteract : Interactable
         {
             if (Door != null && Door.Remote)
             {
+                Door.Lock(false);
                 Door.Action();
 
                 anim.SetBool("LeverUp", !Door.isOpened);

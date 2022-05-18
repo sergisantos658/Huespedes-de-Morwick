@@ -30,14 +30,18 @@ public class ChangeScene : MonoBehaviour
         DBManager.InsertPlayerData();
 
         int count = SaveItemsSytem.Load<int>("/items.count");
+
         if(count >= 0)
         {
-            for (int i = 0; i < count; i++)
+            for (int i = 0; i < count + 1; i++)
             {
                 ItemsData data = SaveItemsSytem.Load<ItemsData>("/items" + i);
-                Items item = Resources.Load<Items>(data.scriptedItemName);
-                item.pickUp = false;
-                SaveItemsSytem.DeleteFile("/items" + i);
+                if(data != null)
+                {
+                    Items item = Resources.Load<Items>(data.scriptedItemName);
+                    item.pickUp = false;
+                    SaveItemsSytem.DeleteFile("/items" + i);
+                }
             }
 
             SaveItemsSytem.DeleteFile("/items.count");
