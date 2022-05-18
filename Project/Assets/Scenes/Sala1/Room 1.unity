@@ -8777,6 +8777,17 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+--- !u!114 &996653916 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 111566976, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+  m_PrefabInstance: {fileID: 996653915}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0de5d4156994cf4f9e8cdbbd639f865, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1011153344 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6816924712164408238, guid: 628b35708d1b48849ae6ee2b707ee8f1, type: 3}
@@ -13006,6 +13017,11 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!1 &1640193420 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1811303224867643269, guid: 847dc83df1a52eb48a58b8be152c67b2, type: 3}
+  m_PrefabInstance: {fileID: 1724309964}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1648180220
 GameObject:
   m_ObjectHideFlags: 0
@@ -14422,7 +14438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae9ec7617b4f5f4a926ef03a94a0a6a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tuto: {fileID: 0}
+  tuto: {fileID: 11400000, guid: 2eb2fcd85bdb30a4c84d1d636a1639b7, type: 2}
 --- !u!65 &1796442549
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17233,7 +17249,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 996653916}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: HideMenu
         m_Mode: 1
@@ -17826,6 +17842,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1052948804880789373, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552321529422108371, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 1640193420}
+    - target: {fileID: 4552321529422108374, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
@@ -18867,7 +18891,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 996653916}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: HideMenu
         m_Mode: 1

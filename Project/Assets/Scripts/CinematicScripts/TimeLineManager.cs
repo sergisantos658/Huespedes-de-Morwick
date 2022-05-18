@@ -11,6 +11,7 @@ public class TimeLineManager : MonoBehaviour
     //  that will take you to a specific "Marker"
     // NOTE: the Marker # is not necessarily sequential... Marker # may have to do with the order in which they are created
     public PlayableDirector playableDirector;
+    public GameObject inventory;
     bool pause = false;
     public static bool isPlaying = true;
     // The # of the Marker you want to go to
@@ -25,6 +26,7 @@ public class TimeLineManager : MonoBehaviour
         {
             playableDirector.enabled = false;
         }
+            inventory.SetActive(false);
 
         
 
@@ -39,6 +41,7 @@ public class TimeLineManager : MonoBehaviour
         if(GetComponent<PlayableDirector>().state != PlayState.Playing)
         {
             isPlaying = false;
+            inventory.SetActive(true);
         }
         if (Input.GetKeyDown(KeyCode.Return) && !pause)
         {
