@@ -43,11 +43,6 @@ public class ControlObjects : MonoBehaviour
 		return objetosRecogidos.Contains(obj);
 	}
 
-	public void DialogItem(int position)
-	{
-		PlayerController.currentPlayer.DialogueUI.ShowDialogue(objetosRecogidos[position].Observation);
-	}
-
 	public void UpdateInventory()
 	{
 		for (int i = 0; i < images.Count; i++)
