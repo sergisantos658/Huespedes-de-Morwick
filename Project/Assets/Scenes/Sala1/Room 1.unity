@@ -8680,6 +8680,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3221098072880903380, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: puzzle1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221098072880903380, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: posicionDeInicio
       value: 
       objectReference: {fileID: 70339498}
@@ -10086,8 +10090,8 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1275587922}
-          m_TargetAssemblyTypeName: GetKeyHeimdal, Assembly-CSharp
-          m_MethodName: GetKey
+          m_TargetAssemblyTypeName: GetObjectDialogue, Assembly-CSharp
+          m_MethodName: GetObject
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -10128,8 +10132,8 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1275587922}
-          m_TargetAssemblyTypeName: GetKeyHeimdal, Assembly-CSharp
-          m_MethodName: GetKey
+          m_TargetAssemblyTypeName: GetObjectDialogue, Assembly-CSharp
+          m_MethodName: GetObject
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -14388,6 +14392,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Locked: 0
   Remote: 1
+  type: 0
   isOpened: 0
   useAnimation: 0
 --- !u!4 &1796406912 stripped
@@ -17699,6 +17704,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1052948802889595492, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052948803176884494, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052948803176884496, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 310e0f30c5cb4944382d257588a39a94, type: 3}
+    - target: {fileID: 1052948803176884496, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052948803176884496, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052948803176884496, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1052948803573327489, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -17786,6 +17815,10 @@ PrefabInstance:
     - target: {fileID: 1052948803573327547, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052948804880789373, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
