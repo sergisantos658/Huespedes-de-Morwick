@@ -166,7 +166,7 @@ public class PlayerInteraction : MonoBehaviour
 				interactable = hitInfo.collider.GetComponent<Interactable>();
 			}
 
-			if (Input.GetKeyDown(KeyCode.Mouse1)) // Observation
+			if (Input.GetKeyDown(KeyCode.Mouse1) && interactable != null) // Observation
 			{
 				interactable?.Observation();
 				PController.RotateTo(interactable.transform.position);
