@@ -38,7 +38,7 @@ public class PlayerCheckPoint : MonoBehaviour
     [Range(0, 1)]
     public int puzzle3_2;
 
-    public bool tutorial;
+    [HideInInspector] public bool tutorial;
 
     PlayerData data;
 

@@ -35,8 +35,9 @@ public class ControlObjects : MonoBehaviour
 	public void RemoveObject(Items obj)
 	{
 		obj.pickUp = true;
-		objetosRecogidos.Remove(obj);
 		Delete(obj);
+		objetosRecogidos.Remove(obj);
+		Save();
 		UpdateInventory();
 	}
 
@@ -106,17 +107,17 @@ public class ControlObjects : MonoBehaviour
 	{
 
 		string key = ITEMS_KEY;
-		string countKey = ITEMS_Count_KEY;
 
 		int index = objetosRecogidos.IndexOf(obj);
 
-			ItemsData data = SaveItemsSytem.Load<ItemsData>(key + index);
-			if (data != null)
-			{
-				Items items = Resources.Load<Items>(data.scriptedItemName);
-				SaveItemsSytem.DeleteFile(key + index);
-			}
-		SaveItemsSytem.Save(objetosRecogidos.Count, countKey);
+		ItemsData data = SaveItemsSytem.Load<ItemsData>(key + index);
+		if (data != null)
+		{
+			Items items = Resources.Load<Items>(data.scriptedItemName);
+			SaveItemsSytem.DeleteFile(key + index);
+
+			Debug.Log("Soy Bobo " + (key + index) + " " + items.pickUp);
+		}
 	}
 
 }
