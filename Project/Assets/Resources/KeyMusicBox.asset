@@ -14,4 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   spriteInventory: {fileID: 21300000, guid: 75129d5ac9aaa184abbd8ad1e1d17c8f, type: 3}
   pickUp: 0
-  Observation: {fileID: 0}
+  Observation: {fileID: 11400000, guid: ba93823433dbd8349b4827d45e0d4c51, type: 2}
