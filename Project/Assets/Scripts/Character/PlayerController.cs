@@ -126,14 +126,17 @@ public class PlayerController : MonoBehaviour
 
 	public void RotateTo(Vector3 pos)
     {
-		if(isRotating)
+		if(agent.isStopped == false)
         {
-			StopAllCoroutines();
-			StartCoroutine(RotationChar(pos - transform.position));
-		}
-        else
-        {
-			StartCoroutine(RotationChar(pos - transform.position));
+			if(isRotating)
+			{
+				StopAllCoroutines();
+				StartCoroutine(RotationChar(pos - transform.position));
+			}
+			else
+			{
+				StartCoroutine(RotationChar(pos - transform.position));
+			}
         }
     }
 

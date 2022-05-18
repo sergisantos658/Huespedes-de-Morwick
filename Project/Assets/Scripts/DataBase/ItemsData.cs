@@ -9,9 +9,11 @@ public class ItemsData
 {
 
     public string scriptedItemName;
+    public bool pickUp = false;
 
     public ItemsData(Items items)
     {
         scriptedItemName = items.name;
+        pickUp = items.pickUp;
     }
 }

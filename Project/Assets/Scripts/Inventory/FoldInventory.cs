@@ -23,7 +23,7 @@ public class FoldInventory : MonoBehaviour
 
 	public void Action()
 	{
-		Debug.Log("snif");
+		//Debug.Log("snif");
 		isFolded = !isFolded;
 		anim.SetBool("folded", isFolded);
 	}

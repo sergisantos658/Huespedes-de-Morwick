@@ -931,32 +931,12 @@ NavMeshObstacle:
   m_CarveOnlyStationary: 1
   m_Center: {x: 0, y: 0.73600006, z: -0.002}
   m_TimeToStationary: 0.5
---- !u!1 &111566975 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7988370400263282195, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
-  m_PrefabInstance: {fileID: 996653915}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &111566976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111566975}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d0de5d4156994cf4f9e8cdbbd639f865, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  NormalMusic: {fileID: 2097789533}
-  MusicMenu: {fileID: 1043029867}
-  mainPauseMenu: {fileID: 352915704725945646}
 --- !u!114 &111566977 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 111566986, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
   m_PrefabInstance: {fileID: 996653915}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 111566975}
+  m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc6d6e0ddf18e5644a92ce5b75236cae, type: 3}
@@ -8643,6 +8623,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 111566976, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: MusicMenu
+      value: 
+      objectReference: {fileID: 1043029867}
+    - target: {fileID: 111566976, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: NormalMusic
+      value: 
+      objectReference: {fileID: 2097789533}
+    - target: {fileID: 111566976, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: mainPauseMenu
+      value: 
+      objectReference: {fileID: 352915704725945646}
     - target: {fileID: 111566986, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: images.Array.data[0]
       value: 
@@ -8677,6 +8669,10 @@ PrefabInstance:
       objectReference: {fileID: 1340225466}
     - target: {fileID: 111566986, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: objetosRecogidos.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3221098072880903380, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: puzzle1
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3221098072880903380, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
@@ -10086,8 +10082,8 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1275587922}
-          m_TargetAssemblyTypeName: GetKeyHeimdal, Assembly-CSharp
-          m_MethodName: GetKey
+          m_TargetAssemblyTypeName: GetObjectDialogue, Assembly-CSharp
+          m_MethodName: GetObject
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -10128,8 +10124,8 @@ MonoBehaviour:
             m_BoolArgument: 0
           m_CallState: 2
         - m_Target: {fileID: 1275587922}
-          m_TargetAssemblyTypeName: GetKeyHeimdal, Assembly-CSharp
-          m_MethodName: GetKey
+          m_TargetAssemblyTypeName: GetObjectDialogue, Assembly-CSharp
+          m_MethodName: GetObject
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -14388,6 +14384,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Locked: 0
   Remote: 1
+  type: 0
   isOpened: 0
   useAnimation: 0
 --- !u!4 &1796406912 stripped
@@ -17235,7 +17232,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 111566976}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: HideMenu
         m_Mode: 1
@@ -17642,6 +17639,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 111566977}
+        m_TargetAssemblyTypeName: ControlObjects, Assembly-CSharp
+        m_MethodName: Save
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2844246859339521126
 GameObject:
   m_ObjectHideFlags: 0
@@ -17699,6 +17708,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1052948802889595492, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052948803176884494, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052948803176884496, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 310e0f30c5cb4944382d257588a39a94, type: 3}
+    - target: {fileID: 1052948803176884496, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052948803176884496, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052948803176884496, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1052948803573327489, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
       propertyPath: m_Pivot.x
       value: 0
@@ -17786,6 +17819,14 @@ PrefabInstance:
     - target: {fileID: 1052948803573327547, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
       propertyPath: m_Name
       value: Canvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052948804042077293, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1052948804880789373, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
@@ -18825,7 +18866,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 111566976}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: MenuManager, Assembly-CSharp
         m_MethodName: HideMenu
         m_Mode: 1
