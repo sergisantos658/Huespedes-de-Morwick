@@ -61,7 +61,7 @@ public class LightsSwitch : Interactable
         {
             isLightSwitch = true;
         }
-        else if (PlayerPrefs.GetInt(lightSwitchItem.name) == 1 || lightSwitchItem.pickUp && !inventory.ObjectOn(lightSwitchItem))
+        else if (/*PlayerPrefs.GetInt(lightSwitchItem.name) == 1*/  lightSwitchItem.pickUp && !inventory.ObjectOn(lightSwitchItem))
         {
             isLightSwitch = true;
             UpdateDialogueObject(PressOffTheLightSwitchDialogue);
@@ -69,7 +69,7 @@ public class LightsSwitch : Interactable
         }
         else
         {
-            PlayerPrefs.SetInt(lightSwitchItem.name, 0);
+            //PlayerPrefs.SetInt(lightSwitchItem.name, 0);
         }
 
 

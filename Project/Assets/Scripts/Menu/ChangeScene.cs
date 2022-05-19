@@ -47,7 +47,7 @@ public class ChangeScene : MonoBehaviour
             SaveItemsSytem.DeleteFile("/items.count");
         }
 
-        PlayerPrefs.DeleteAll();
+        //PlayerPrefs.DeleteAll();
 
         MenuManager.pause = false;
         Time.timeScale = 1;

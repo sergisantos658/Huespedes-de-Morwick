@@ -17,10 +17,6 @@ MonoBehaviour:
     - "\xBFCasper?"
     - "\xBFQuien es ese?"
     whoTalk: 1
-  - dialogue:
-    - Y-Y-Yo soy una huesped del hotel, o lo era antes. Me encerraron aqui y ahora
-      solo soy una sombra de lo que antes.
-    whoTalk: 1
   responses:
-  - responseText: "da igual, dejalo, \xBFa ver dime a que quieres juga?"
+  - responseText: "Da igual, dejalo, \xBFa ver dime a que quieres juga?"
     dialogueObject: {fileID: 11400000, guid: fc91d23fa54ea014b92d713f206dfdea, type: 2}

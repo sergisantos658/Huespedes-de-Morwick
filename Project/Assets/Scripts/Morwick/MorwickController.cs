@@ -16,6 +16,9 @@ public class MorwickController : MonoBehaviour
     public static bool cauched;
     public ChangeScene changeScene;
 
+    ControlObjects controlObjects;
+    public Items item;
+    private PlayerController playerC;
 
     [Header("TargetInView enemy")]
     [SerializeField] Transform viewpoint;
@@ -44,6 +47,7 @@ public class MorwickController : MonoBehaviour
     public bool pathByPointsEnabled = true;
     public List<Transform> points;
     public GameObject fadein;
+    public GameObject key;
 
     //The int value for the next point in list
     public int nextId;
@@ -96,6 +100,8 @@ public class MorwickController : MonoBehaviour
         animator = GetComponent<Animator>();
         target = PlayerController.currentPlayer.gameObject;
         normalMusic.Play();
+        playerC = PlayerController.currentPlayer;
+        controlObjects = playerC.GetComponent<ControlObjects>();
     }
 
     private void FixedUpdate()
@@ -250,6 +256,11 @@ public class MorwickController : MonoBehaviour
             speedByFollowPathPoint = 0;
             Cursor.visible = false;
             fadein.SetActive(true);
+            if(controlObjects.ObjectOn(item))
+            {
+                controlObjects.RemoveObject(item);
+                key.SetActive(false);
+            }
             // <--
             timeToForgetPlayer = 0;
         }

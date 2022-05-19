@@ -1177,8 +1177,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 12.563715, y: 0, z: 15.290343}
-  m_Center: {x: -1.1197369, y: -1.996233, z: -3.7159295}
+  m_Size: {x: 12.563715, y: 0.07574844, z: 15.290343}
+  m_Center: {x: -1.1197367, y: -2.1776628, z: -3.7159295}
 --- !u!1001 &94222152
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -13621,8 +13621,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 3.275178, y: 0, z: 8.830908}
-  m_Center: {x: -1.6519938, y: -0.5, z: 0.41112423}
+  m_Size: {x: 3.275178, y: 0.54424417, z: 8.830908}
+  m_Center: {x: -1.6519938, y: -0.6891691, z: 0.41112423}
 --- !u!114 &966110648
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27150,6 +27150,7 @@ MonoBehaviour:
   useRigidBody: 0
   rotateSpeed: 5
   changeScene: {fileID: 317796576}
+  item: {fileID: 11400000, guid: 2890ebbce04953f4eb2af1020d6e7dd9, type: 2}
   viewpoint: {fileID: 582262165}
   playerlayer:
     serializedVersion: 2
@@ -27171,6 +27172,7 @@ MonoBehaviour:
   - {fileID: 309954834}
   - {fileID: 1354894287}
   fadein: {fileID: 2022202375}
+  key: {fileID: 2004364372}
   nextId: 0
   normalMusic: {fileID: 317796574}
   persecutionMusic: {fileID: 1912236817156686}

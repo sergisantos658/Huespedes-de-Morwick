@@ -5,6 +5,9 @@ using UnityEngine;
 public class FinalCinematic : Interactable
 {
     private Animator anim;
+	public AudioSource normalMusic;
+	public AudioSource boxMusic;
+
 	public DialogueObject obsBox;
 	public DialogueObject normalDialogue;
 	private PlayerController playerC;
@@ -28,12 +31,15 @@ public class FinalCinematic : Interactable
 	// Update is called once per frame
 	public override void Interact()
 	{
-		//if(!inventory.ObjectOn(item))
-		//{
-		//playerC.DialogueUI.ShowDialogue(normalDialogue);
-		//}
-		//else
-		//{
+		
+		if(!inventory.ObjectOn(item))
+		{
+			playerC.DialogueUI.ShowDialogue(normalDialogue);
+		}
+		else
+		{
+			normalMusic.Stop();
+			boxMusic.Play();
 			inventoryObject.SetActive(false);
 			playerC.gameObject.SetActive(false);
 			Maincamera.gameObject.SetActive(false);
@@ -42,7 +48,7 @@ public class FinalCinematic : Interactable
 			Invoke("changeCredit", 27.0f);
 
 
-		//}
+		}
 	}
 	void changeCredit()
     {
