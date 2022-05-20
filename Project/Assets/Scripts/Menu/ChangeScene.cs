@@ -39,7 +39,7 @@ public class ChangeScene : MonoBehaviour
                 if(data != null)
                 {
                     Items item = Resources.Load<Items>(data.scriptedItemName);
-                    item.pickUp = false;
+                    PlayerPrefs.DeleteKey(item.name);
                     SaveItemsSytem.DeleteFile("/items" + i);
                 }
             }
@@ -47,7 +47,6 @@ public class ChangeScene : MonoBehaviour
             SaveItemsSytem.DeleteFile("/items.count");
         }
 
-        //PlayerPrefs.DeleteAll();
 
         MenuManager.pause = false;
         Time.timeScale = 1;

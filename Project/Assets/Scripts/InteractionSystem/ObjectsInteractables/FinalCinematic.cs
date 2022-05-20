@@ -18,6 +18,7 @@ public class FinalCinematic : Interactable
 	public GameObject inventoryObject;
 	public ChangeScene creditchange;
 
+	public static bool isCinematicOn = false;
 	// Start is called before the first frame update
 	void Start()
     {
@@ -26,6 +27,7 @@ public class FinalCinematic : Interactable
 		cameraCinematic.gameObject.SetActive(false);
 		inventory = playerC.GetComponent<ControlObjects>();
 		cameraCinematic = cameraCinematic.GetComponent<Camera>();
+		isCinematicOn = false;
 	}
 
 	// Update is called once per frame
@@ -38,7 +40,9 @@ public class FinalCinematic : Interactable
 		}
 		else
 		{
+			isCinematicOn = true;
 			normalMusic.Stop();
+			normalMusic.enabled = false;
 			boxMusic.Play();
 			inventoryObject.SetActive(false);
 			playerC.gameObject.SetActive(false);

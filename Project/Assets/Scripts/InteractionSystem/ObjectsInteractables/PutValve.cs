@@ -30,7 +30,7 @@ public class PutValve : Interactable
 			return;
 		}
 
-		if ( PlayerCheckPoint.Instance.puzzle1 == 1 ||  item.pickUp && !inventory.ObjectOn(item))
+		if (PlayerPrefs.GetInt(item.name) == 1 ||  item.pickUp && !inventory.ObjectOn(item))
         {
 			valve.SetActive(true);
 			colliderHole.enabled = false;
@@ -45,7 +45,7 @@ public class PutValve : Interactable
 	{
 		if(inventory.ObjectOn(item))
 		{
-			//PlayerPrefs.SetInt(item.name, 1);
+			PlayerPrefs.SetInt(item.name, 1);
 			inventory.RemoveObject(item);
 			valve.SetActive(true);
 			colliderHole.enabled = false;

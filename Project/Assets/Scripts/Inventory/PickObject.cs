@@ -15,7 +15,7 @@ public class PickObject : Interactable
 		playerC = PlayerController.currentPlayer;
 		controlObjects = playerC.GetComponent<ControlObjects>();
 
-		if (item.pickUp)
+		if (item.pickUp || PlayerPrefs.GetInt(item.name) == 1)
         {
 			gameObject.SetActive(false);
 			return;

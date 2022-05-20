@@ -20,14 +20,14 @@ public class OpenChestByKey : Interactable
         player = PlayerController.currentPlayer;
         inventory = player.GetComponent<ControlObjects>();
 
-        if (/*PlayerPrefs.GetInt(item.name) == 1 ||*/ !inventory.ObjectOn(item) && item.pickUp)
+        if (PlayerPrefs.GetInt(item.name) == 1 || !inventory.ObjectOn(item) && item.pickUp)
         {
             haveKey = true;
 
         }
         else
         {
-            //PlayerPrefs.SetInt(item.name, 0);
+            PlayerPrefs.SetInt(item.name, 0);
             haveKey = false;
         }
     }
@@ -38,7 +38,7 @@ public class OpenChestByKey : Interactable
         // Because we don't have it the chest will opened if we just press the chest
         if (inventory.ObjectOn(item))
         {
-            //PlayerPrefs.SetInt(item.name, 1);
+            PlayerPrefs.SetInt(item.name, 1);
             haveKey = true;
             inventory.RemoveObject(item);
         }
