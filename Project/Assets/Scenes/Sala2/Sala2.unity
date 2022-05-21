@@ -7619,6 +7619,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &679194523 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 24490311, guid: 847dc83df1a52eb48a58b8be152c67b2, type: 3}
+  m_PrefabInstance: {fileID: 679194514}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9b0baf312256c0429867660fa5cd676, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &679880379
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -98994,6 +99005,10 @@ PrefabInstance:
       propertyPath: mainPauseMenu
       value: 
       objectReference: {fileID: 1613653658}
+    - target: {fileID: 111566986, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
+      propertyPath: inventory
+      value: 
+      objectReference: {fileID: 679194523}
     - target: {fileID: 111566986, guid: 2acfed29460d82846b3ddf9a3d217d78, type: 3}
       propertyPath: soundCuch
       value: 

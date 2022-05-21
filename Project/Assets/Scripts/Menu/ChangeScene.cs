@@ -31,8 +31,9 @@ public class ChangeScene : MonoBehaviour
 
         int count = SaveItemsSytem.Load<int>("/items.count");
 
-        foreach (Items item in Resources.FindObjectsOfTypeAll(typeof(Items)) as Items[])
+        foreach (Items item in Resources.LoadAll("", typeof(Items)))
         {
+            Debug.Log(item.name + " " + PlayerPrefs.GetInt(item.name));
             PlayerPrefs.DeleteKey(item.name);
         }
 
