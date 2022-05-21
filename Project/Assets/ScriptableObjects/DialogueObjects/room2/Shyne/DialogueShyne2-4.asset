@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "\xBFQu\xE9 dices?"
+    - "\xBFQu\xE9 me dices?"
     - "\xBFTe lo has pensado ya?"
     whoTalk: 0
   responses:

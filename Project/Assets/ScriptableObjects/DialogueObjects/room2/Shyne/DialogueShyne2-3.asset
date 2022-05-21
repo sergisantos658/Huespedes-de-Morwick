@@ -18,7 +18,7 @@ MonoBehaviour:
     - No me seas aburrido.
     whoTalk: 1
   responses:
-  - responseText: "De alguna manera tendr\xE9 que salir de aqu\xED as\xED que dime."
+  - responseText: "De alguna manera tendr\xE9 que salir de aqu\xED,  as\xED que dime."
     dialogueObject: {fileID: 11400000, guid: faf8caa1c730eb94bb86c7f746f77841, type: 2}
   - responseText: Me lo pienso.
     dialogueObject: {fileID: 0}

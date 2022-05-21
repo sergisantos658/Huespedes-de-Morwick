@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Enciendo las luces?
+    - "\xBFEnciendo las luces?"
     whoTalk: 0
   responses:
-  - responseText: Si
+  - responseText: "S\xED."
     dialogueObject: {fileID: 0}
-  - responseText: No
+  - responseText: No.
     dialogueObject: {fileID: 0}

@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - "Solo una librer\xEDa llena de libros de chistes malos y la calavera de Shakespeare."
-    - Hay un libro de buscando a Wally
+    - "Hay un libro de \xBFD\xF3nde est\xE1 Wally?, me encantaban de peque\xF1o."
     whoTalk: 0
   responses: []

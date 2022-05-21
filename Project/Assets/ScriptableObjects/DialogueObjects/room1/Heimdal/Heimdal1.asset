@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "*piensa en voz alta* No podr\xEDa el jefe secuestrar a alguna chica de vez
-      en cuando... o como m\xEDnimo a alguien interesante."
+    - "*piensa en voz alta* No podr\xEDa el jefe secuestrar a alguien interesante
+      de vez en cuando..."
     - "Para que necesita a un tipo raro e inadaptado, con problemas de vista, claramente
       en mala forma y lo peor de todo, habla dormido... ponle los grilletes y vig\xEDlalo
       dice..."

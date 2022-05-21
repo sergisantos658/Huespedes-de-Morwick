@@ -14,11 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Parece que la tapa del interruptor encaja con este interruptor sin tapa.
-    - "Deberia colocar aqu\xED la tapa?"
+    - "Parece que la tapa del interruptor encaja aqu\xED."
+    - "\xBFDeberia colocar aqu\xED la tapa?"
     whoTalk: 0
   responses:
-  - responseText: Si
+  - responseText: "S\xED."
     dialogueObject: {fileID: 11400000, guid: 46b4731a012f577439682e68b9c279db, type: 2}
-  - responseText: No
+  - responseText: No.
     dialogueObject: {fileID: 0}

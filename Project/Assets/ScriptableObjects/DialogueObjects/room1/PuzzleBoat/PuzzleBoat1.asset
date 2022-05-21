@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Perfecto, un placer hacer tratos contigo. La prueba se las trae as\xED  que
+    - "Perfecto, un placer hacer tratos contigo. La prueba se las trae as\xED que
       te pondr\xE9 en antecedentes."
     - En su primera aventura los piratas con pata de palo Sam Max, G.Threepwood,
       Manny Grim y George Stobbart.
@@ -39,7 +39,7 @@ MonoBehaviour:
     - "Sam Max tardaba media jornada, G.Threepwood recorria el camino en 1 jornada,
       Manny Grim pod\xEDa llegar a la parada en 2 jornadas y media, y por ultimo
       George Stobbart tardaba la friolera de 5 jornadas."
-    - "\xBFPor medio de qu\xE9 ingeniosa combinaci\xF3n llegaron los cutro piratas
+    - "\xBFPor medio de qu\xE9 ingeniosa combinaci\xF3n llegaron los cuatro piratas
       de Puerto Frijoles a tomar el Perla Blanca Express en la parada de Isla Garbanzo?"
     whoTalk: 1
   responses:

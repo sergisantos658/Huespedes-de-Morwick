@@ -15,10 +15,10 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - "\xBFQue pasa? "
-    - "\xBFte has quedado atascado?"
+    - "\xBFTe has quedado atascado?"
     whoTalk: 1
   responses:
-  - responseText: no... pero repiteme el acertijo por si acaso
+  - responseText: No... pero repiteme el acertijo por si acaso.
     dialogueObject: {fileID: 11400000, guid: faf8caa1c730eb94bb86c7f746f77841, type: 2}
-  - responseText: No, voy bien, no te necesito
+  - responseText: No, voy bien.
     dialogueObject: {fileID: 0}

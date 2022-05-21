@@ -18,5 +18,5 @@ MonoBehaviour:
     - "\xBFQuien es ese?"
     whoTalk: 1
   responses:
-  - responseText: "Da igual, dejalo, \xBFa ver dime a que quieres juga?"
+  - responseText: "Da igual, \xBFA ver dime, a que quieres jugar?"
     dialogueObject: {fileID: 11400000, guid: fc91d23fa54ea014b92d713f206dfdea, type: 2}

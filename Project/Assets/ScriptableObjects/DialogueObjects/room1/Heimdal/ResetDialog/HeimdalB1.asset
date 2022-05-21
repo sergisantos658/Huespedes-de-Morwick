@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "\xBFHas cambiado de idea con nuestro  trato?"
+    - "\xBFHas cambiado de idea con nuestro trato?"
     - "\xBFQu\xE9 me dices?"
     whoTalk: 1
   responses:
