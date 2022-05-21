@@ -17092,7 +17092,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -18569,9 +18569,23 @@ PrefabInstance:
       propertyPath: m_Texture
       value: 
       objectReference: {fileID: 2800000, guid: 0e78598e87af0654e846435273ef20b7, type: 3}
+    - target: {fileID: 4552321528644350310, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552321528799637147, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_text
+      value: "Le ped\xED las llaves de mi habitaci\xF3n y me fu\xCD a dormir, si
+        por favor ignoren mi cara de medio muerto, estaba cansado"
+      objectReference: {fileID: 0}
     - target: {fileID: 4552321529122429031, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
       propertyPath: m_IsActive
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4552321529172020666, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
+      propertyPath: m_text
+      value: "Resulta que volviendo de la convenci\xF3n se me estrope\xF3 el coche
+        y decido pasar la idea en este hotel que no da para nada, nada de miedo."
       objectReference: {fileID: 0}
     - target: {fileID: 4552321529422108371, guid: 1db77576a73ef5a48ba3b412a760ce52, type: 3}
       propertyPath: inventory
