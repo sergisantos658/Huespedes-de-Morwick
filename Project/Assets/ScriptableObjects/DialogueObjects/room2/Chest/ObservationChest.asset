@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Es un cofre.\r Sospecho que est\xE1 cerrado."
+    - "Es un cofre.\r"
+    - "Sospecho que est\xE1 cerrado."
     - "Sobretodo por que no se habr\xE9."
     whoTalk: 0
   - dialogue:
