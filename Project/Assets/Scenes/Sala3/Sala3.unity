@@ -15265,7 +15265,7 @@ MonoBehaviour:
   NotCompleted: {fileID: 0}
   observation: {fileID: 0}
   jumpIntoScene: 1
-  type: 0
+  type: 3
 --- !u!65 &1335326355
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26985,7 +26985,7 @@ MonoBehaviour:
   NotCompleted: {fileID: 0}
   observation: {fileID: 0}
   jumpIntoScene: -1
-  type: 3
+  type: 4
 --- !u!65 &2027468267
 BoxCollider:
   m_ObjectHideFlags: 0
