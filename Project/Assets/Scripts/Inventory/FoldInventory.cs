@@ -8,6 +8,7 @@ public class FoldInventory : MonoBehaviour
 
 	Animator anim;
 
+
 	void Start()
 	{
 		anim = GetComponent<Animator>();

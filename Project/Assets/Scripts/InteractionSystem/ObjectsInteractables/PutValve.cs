@@ -30,7 +30,7 @@ public class PutValve : Interactable
 			return;
 		}
 
-		if (PlayerPrefs.GetInt(item.name) == 1 ||  item.pickUp && !inventory.ObjectOn(item))
+		if (PlayerPrefs.GetInt(item.name) == 1)
         {
 			valve.SetActive(true);
 			colliderHole.enabled = false;

@@ -12,15 +12,26 @@ public class ControlObjects : MonoBehaviour
 	const string ITEMS_KEY = "/items";
 	const string ITEMS_Count_KEY = "/items.count";
 	PlayerController player => PlayerController.currentPlayer;
+	
+	public Animator anim;
 
 	public AudioSource soundCuch;
+
+	public FoldInventory inventory;
+
+
+
 
 	private void Awake()
 	{
 		Load();
 	}
+    private void Start()
+    {
+		inventory = inventory.GetComponent<FoldInventory>();
+    }
 
-	private void OnApplicationQuit()
+    private void OnApplicationQuit()
 	{
 		Save();
 	}
@@ -30,6 +41,11 @@ public class ControlObjects : MonoBehaviour
 	{
 		obj.pickUp = true;
 		soundCuch.Play();
+		if(!inventory.isFolded)
+        {
+			inventory.Action();
+		}
+		
 		objetosRecogidos.Add(obj);
 		Save();
 		UpdateInventory();
