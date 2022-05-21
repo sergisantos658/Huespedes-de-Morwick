@@ -31,22 +31,25 @@ public class ChangeScene : MonoBehaviour
 
         int count = SaveItemsSytem.Load<int>("/items.count");
 
-        if(count >= 0)
+        foreach (Items item in Resources.FindObjectsOfTypeAll(typeof(Items)) as Items[])
         {
+            PlayerPrefs.DeleteKey(item.name);
+        }
+
+        if (count >= 0)
+        {
+                            
             for (int i = 0; i < count + 1; i++)
             {
                 ItemsData data = SaveItemsSytem.Load<ItemsData>("/items" + i);
                 if(data != null)
                 {
-                    Items item = Resources.Load<Items>(data.scriptedItemName);
-                    PlayerPrefs.DeleteKey(item.name);
                     SaveItemsSytem.DeleteFile("/items" + i);
                 }
             }
 
             SaveItemsSytem.DeleteFile("/items.count");
         }
-
 
         MenuManager.pause = false;
         Time.timeScale = 1;

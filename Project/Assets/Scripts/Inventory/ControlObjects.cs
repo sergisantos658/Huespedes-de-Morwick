@@ -13,6 +13,8 @@ public class ControlObjects : MonoBehaviour
 	const string ITEMS_Count_KEY = "/items.count";
 	PlayerController player => PlayerController.currentPlayer;
 
+	public AudioSource soundCuch;
+
 	private void Awake()
 	{
 		Load();
@@ -27,6 +29,7 @@ public class ControlObjects : MonoBehaviour
 	public void AddObject(Items obj)
 	{
 		obj.pickUp = true;
+		soundCuch.Play();
 		objetosRecogidos.Add(obj);
 		Save();
 		UpdateInventory();

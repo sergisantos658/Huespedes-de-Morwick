@@ -6,6 +6,7 @@ public class OpenChestByKey : Interactable
 {
     [SerializeField] private GameObject ChestLook;
     [SerializeField] private DialogueObject observation;
+    [SerializeField] private DialogueObject afterOpen;
 
     [Space(10)]
     [SerializeField] private Items item;
@@ -46,7 +47,7 @@ public class OpenChestByKey : Interactable
         if (haveKey)
         {
             ChestLook.GetComponent<Animator>().SetBool("OpenChest", onlyOnce);
-
+            observation = afterOpen;
             onlyOnce = !onlyOnce;
         }
 
