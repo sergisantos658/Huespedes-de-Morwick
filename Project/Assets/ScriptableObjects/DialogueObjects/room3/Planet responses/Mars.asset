@@ -18,9 +18,9 @@ MonoBehaviour:
     - Por ser un planeta rojo.
     whoTalk: 0
   - dialogue:
-    - "T\xFA s\xED que haces que me ponga rojo"
+    - "T\xFA s\xED que haces que me ponga rojo."
     whoTalk: 1
   - dialogue:
-    - Me lo tomare como un no
+    - "Me lo tomar\xE9 como un no."
     whoTalk: 0
   responses: []

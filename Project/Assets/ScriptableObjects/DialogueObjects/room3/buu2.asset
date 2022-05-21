@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "No tienes por qu\xE9 ser tan grosero mi peque\xF1o Jimmy "
+    - "No tienes por qu\xE9 ser tan grosero mi peque\xF1o Jimmy."
     - "Solo quiero ser cari\xF1oso."
     whoTalk: 1
   responses:

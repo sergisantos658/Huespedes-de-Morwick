@@ -20,5 +20,5 @@ MonoBehaviour:
   responses:
   - responseText: "Creo que no sabes pillar la iron\xEDa."
     dialogueObject: {fileID: 11400000, guid: 2f464cdf8530f8943baa397dde5b0966, type: 2}
-  - responseText: "Era broma, \xA1\xA1dale a la lengua de una vez!!"
+  - responseText: Era broma, dale a la lengua de una vez por favor.
     dialogueObject: {fileID: 11400000, guid: 2f464cdf8530f8943baa397dde5b0966, type: 2}

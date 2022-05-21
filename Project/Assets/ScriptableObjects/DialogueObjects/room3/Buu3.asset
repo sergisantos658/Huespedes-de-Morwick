@@ -15,12 +15,10 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - Lo que tu digas, amor.
-    - "Mira, \xBFque tal si te hago un favor y te explico como abrir esa puerta?"
+    - "Mira, \xBFQue tal si te hago un favor y te explico como abrir esa puerta?"
     whoTalk: 1
   responses:
-  - responseText: Dios, pensaba que nunca ibas a decir eso.
-    dialogueObject: {fileID: 11400000, guid: 2f464cdf8530f8943baa397dde5b0966, type: 2}
   - responseText: "S\xED, eso estar\xEDa bastante bien la verdad."
     dialogueObject: {fileID: 11400000, guid: 2f464cdf8530f8943baa397dde5b0966, type: 2}
-  - responseText: No, la verdad es que me apetece seguir hablando contigo
+  - responseText: No, la verdad es que me apetece seguir hablando contigo.
     dialogueObject: {fileID: 11400000, guid: ab0400b78bf46784eaf904de4e72fc95, type: 2}

@@ -15,10 +15,10 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - Mmmmmm...
-    - Mercurio, por que es un planeta helado
+    - Mercurio, porque es un planeta helado.
     whoTalk: 0
   - dialogue:
-    - "La tierra tambi\xE9n tiene hielo"
+    - "La tierra tambi\xE9n tiene hielo."
     whoTalk: 1
   - dialogue:
     - "Esa respuesta es demasiado est\xFApida."

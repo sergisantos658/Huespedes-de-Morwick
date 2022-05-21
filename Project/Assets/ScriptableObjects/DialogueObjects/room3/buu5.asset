@@ -18,7 +18,7 @@ MonoBehaviour:
     - Quieres intentarlo otra vez?
     whoTalk: 1
   responses:
-  - responseText: Hazme el favor y no perdamos el tiempo.
+  - responseText: "Hazme el favor y no quiero perder m\xE1s tiempo."
     dialogueObject: {fileID: 11400000, guid: 2f464cdf8530f8943baa397dde5b0966, type: 2}
   - responseText: No.
     dialogueObject: {fileID: 0}

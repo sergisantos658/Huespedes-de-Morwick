@@ -20,7 +20,5 @@ MonoBehaviour:
   responses:
   - responseText: No, gracias.
     dialogueObject: {fileID: 0}
-  - responseText: De hecho cuanto antes te pierda de mi vista mejor.
-    dialogueObject: {fileID: 0}
-  - responseText: Antes muerto.
+  - responseText: De hecho cuanto antes te pierda de vista mejor.
     dialogueObject: {fileID: 0}

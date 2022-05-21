@@ -14,14 +14,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - La respuesta es la Tierra .
+    - La respuesta es la Tierra.
     - Porque la Tierra es plana.
     whoTalk: 0
   - dialogue:
-    - .....
+    - ...
     - Menos mal que eres guapo.
     whoTalk: 1
   - dialogue:
-    - No se si me tendria que ofender
+    - No se si me tendria que ofender.
     whoTalk: 0
   responses: []

@@ -15,10 +15,10 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - La respuesta es Jupiter.
-    - "Porque es el \xFAnico planeta de estos que es gaseoso."
+    - "Porque es el \xFAnico planeta gaseoso de los cuatro."
     whoTalk: 0
   - dialogue:
-    - Respuesta Correcta.
+    - Respuesta correcta.
     - Bien, ahora podemos pasar a la siguiente parte.
     whoTalk: 1
   - dialogue:
@@ -31,8 +31,5 @@ MonoBehaviour:
   responses:
   - responseText: "Voy a ignorar que sigas invent\xE1ndote mi nombre, gracias."
     dialogueObject: {fileID: 0}
-  - responseText: "Okay, pero no me vuelvas a llamar cari\xF1o, es m\xE1s, no me
-      vuelvas a hablar."
-    dialogueObject: {fileID: 0}
-  - responseText: Lupa de rayos UVA. Por fin dices algo interesante jijijiji.
+  - responseText: "\xBFLupa de rayos UVA? Por fin dices algo interesante."
     dialogueObject: {fileID: 0}
