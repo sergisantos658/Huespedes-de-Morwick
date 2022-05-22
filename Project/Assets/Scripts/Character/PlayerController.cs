@@ -88,10 +88,6 @@ public class PlayerController : MonoBehaviour
 		
 		Vector3 tempV = new Vector3(selectedVector.x, 0, selectedVector.z) - new Vector3(transform.position.x, 0, transform.position.z);
 		float tempOffset = tempV.magnitude;
-		if(MorwickController.MorwickCauch == true)
-        {
-			agent.isStopped = true;
-        }
 		if (tempOffset <= tempVectorOffset && onlyOnce)
 		{
 			agent.isStopped = true; 

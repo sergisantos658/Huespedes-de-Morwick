@@ -7469,7 +7469,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!81 &638203613
 AudioListener:
   m_ObjectHideFlags: 0
@@ -16203,11 +16203,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 7400456941558662964, guid: f86dc25794fda774aa908152821e0248, type: 3}
   m_PrefabInstance: {fileID: 1267186714}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &1397924067 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1811303224867643269, guid: 847dc83df1a52eb48a58b8be152c67b2, type: 3}
-  m_PrefabInstance: {fileID: 576338507}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1401278815 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5093988919415237477, guid: c5ef04fb4ce25e046956b9dc2a11ead8, type: 3}
@@ -18247,14 +18242,9 @@ MonoBehaviour:
   interactOpction: 1
   observationOpction: 1
   interactionType: 0
-  normalMusic: {fileID: 1360471551}
-  boxMusic: {fileID: 1499528152}
   obsBox: {fileID: 11400000, guid: 0e259e6cf51fd924ca0f3cfe1d088a07, type: 2}
   normalDialogue: {fileID: 11400000, guid: f700f4b193f65c94081c4f7f1e702e3a, type: 2}
-  cameraCinematic: {fileID: 638203614}
-  Maincamera: {fileID: 1360471546}
   item: {fileID: 11400000, guid: 2890ebbce04953f4eb2af1020d6e7dd9, type: 2}
-  inventoryObject: {fileID: 1397924067}
   creditchange: {fileID: 1524878570}
 --- !u!65 &1499528149
 BoxCollider:
@@ -18545,7 +18535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c2e5fdb012cba441bd5f09ce9e2e8d9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneIndex: 7
+  sceneIndex: 5
 --- !u!1001 &1545151650
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -29787,8 +29777,7 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - name: "Okay, pero no me vuelvas a llamar cari\xF1o, es m\xE1s, no me vuelvas
-      a hablar."
+  - name: "\xBFLupa de rayos UVA? Por fin dices algo interesante."
     onPickedResponse:
       m_PersistentCalls:
         m_Calls:
@@ -29819,34 +29808,6 @@ MonoBehaviour:
         - m_Target: {fileID: 919132148004828124}
           m_TargetAssemblyTypeName: GetObjectDialogue, Assembly-CSharp
           m_MethodName: GetObject
-          m_Mode: 1
-          m_Arguments:
-            m_ObjectArgument: {fileID: 0}
-            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-  - name: Lupa de rayos UVA. Por fin dices algo interesante jijijiji.
-    onPickedResponse:
-      m_PersistentCalls:
-        m_Calls:
-        - m_Target: {fileID: 2015093867}
-          m_TargetAssemblyTypeName: DialogueActivate, Assembly-CSharp
-          m_MethodName: UpdateDialogueObject
-          m_Mode: 2
-          m_Arguments:
-            m_ObjectArgument: {fileID: 11400000, guid: cf0baefb016217a4aa98b6fdfd659723, type: 2}
-            m_ObjectArgumentAssemblyTypeName: DialogueObject, Assembly-CSharp
-            m_IntArgument: 0
-            m_FloatArgument: 0
-            m_StringArgument: 
-            m_BoolArgument: 0
-          m_CallState: 2
-        - m_Target: {fileID: 1766778089}
-          m_TargetAssemblyTypeName: ActivateLen, Assembly-CSharp
-          m_MethodName: ActiveLen
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}

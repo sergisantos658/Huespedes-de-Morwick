@@ -221,7 +221,11 @@ public class PlayerInteraction : MonoBehaviour
 				rotation = Quaternion.LookRotation(relativePos);
 				transform.rotation = rotation;
 				rotate = true;*/
-				PController.RotateTo(interactable.transform.position);
+				if(PController != null)
+                {
+					PController.RotateTo(interactable.transform.position);
+				}
+				
 
 				if (interactionHoldGO.activeSelf)
                 {

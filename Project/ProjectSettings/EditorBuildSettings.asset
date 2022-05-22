@@ -21,11 +21,8 @@ EditorBuildSettings:
     path: Assets/Scenes/FinalRoom/FinalRoom.unity
     guid: b94ee59f12f411f488e6df197429e012
   - enabled: 1
-    path: Assets/Scenes/Sala3/Light.unity
-    guid: 4785c1aca7b8ca7448f1845205f7f0f1
-  - enabled: 1
-    path: Assets/Scenes/Sala3/Puzzler.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Sala3/Sala scena final.unity
+    guid: 0d8ffd23848c31d42a08df4021e8e77a
   - enabled: 1
     path: Assets/Scenes/Menus/CreditsScreen.unity
     guid: a78189d607401ca4ebc9b18e26cd9511
