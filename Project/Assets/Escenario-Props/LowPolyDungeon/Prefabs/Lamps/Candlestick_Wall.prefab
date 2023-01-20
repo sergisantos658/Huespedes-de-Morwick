@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 113386649}
   - component: {fileID: 113386650}
   - component: {fileID: 3474235370440126395}
-  m_Layer: 10
+  m_Layer: 0
   m_Name: CandleLight
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -28,7 +28,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.34, z: 0.248}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4725356937742777146}
   m_RootOrder: 0
@@ -45,8 +44,8 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.9529412, g: 0.81960785, b: 0.45490196, a: 1}
-  m_Intensity: 2
-  m_Range: 5
+  m_Intensity: 2.35
+  m_Range: 7.26
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -54,10 +53,10 @@ Light:
     m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
-    m_Strength: 1
+    m_Strength: 0.641
     m_Bias: 0.02
     m_NormalBias: 0.4
-    m_NearPlane: 0.0945
+    m_NearPlane: 0.1
     m_CullingMatrixOverride:
       e00: 1
       e01: 0
@@ -87,7 +86,7 @@ Light:
   m_Lightmapping: 4
   m_LightShadowCasterMode: 0
   m_AreaSize: {x: 1, y: 1}
-  m_BounceIntensity: 1.5
+  m_BounceIntensity: 3.67
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
@@ -134,7 +133,6 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0.32, z: 0.248}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 4725356937742777146}
   m_RootOrder: 1
@@ -180,13 +178,12 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 113386649}
   - {fileID: 620471810702236654}
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -89.98, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &4725356937743547162
 MeshFilter:
   m_ObjectHideFlags: 0

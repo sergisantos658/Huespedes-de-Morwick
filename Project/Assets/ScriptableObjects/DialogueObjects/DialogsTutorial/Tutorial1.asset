@@ -14,12 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Hola, soy tu voz interior que viene a recordarte como se respira.
-    - Si se te ha olvidado como caminar, solo tienes que clicar a cualquier zona
+    - 'Hey, '
+    - Si se te ha olvidado como caminar, solo tienes que hacer clic a cualquier zona
       de la sala.
-    - Usa clic derecho en los objetos para interactuar y clic izquierdo para observar
-      objetos.
-    - "Tambi\xE9n puedes usar clic en la flecha de arriba para desplegar y plegar
+    - "Haz clic derecho con el rat\xF3n en los objetos para interactuar y clic izquierdo
+      para observar."
+    - "Tambi\xE9n puedes hacer clic en la flecha de arriba para desplegar y plegar
       el inventario, o la rueda del rat\xF3n."
     - "Interactu\xE1 un poco con la sala para familiarizarte con los controles, ya
       est\xE1, ya sabes caminar y mirar con esto creo que es suficiente para que
