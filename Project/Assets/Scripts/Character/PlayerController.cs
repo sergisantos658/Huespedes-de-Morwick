@@ -177,7 +177,7 @@ public class PlayerController : MonoBehaviour
 		
 		if (Input.GetMouseButtonDown(0))
 		{
-			Ray ray = m_Camera.ScreenPointToRay(new Vector3(Input.mousePosition.x, Input.mousePosition.y, m_Camera.nearClipPlane));
+			Ray ray = m_Camera.ScreenPointToRay(Input.mousePosition);
 			if (Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask) && !EventSystem.current.IsPointerOverGameObject())
 			{
 				agent.isStopped = false;
