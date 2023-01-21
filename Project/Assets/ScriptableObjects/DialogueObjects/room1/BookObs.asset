@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Algunos libros sobre las exploraciones de Fernando de Magallanes y unos apuntes
-      que no llego a entender... A-1, B-2, C-3, D-4... sigue as\xED hasta la Z."
+    - "Aqu\xED hay algo escrito, puede serme \xFAtil. "
+    - "A-1, B-2, C-3, D-4... y sigue as\xED hasta acabar en la Z."
     whoTalk: 0
   responses: []
