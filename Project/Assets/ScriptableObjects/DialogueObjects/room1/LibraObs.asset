@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Una libra... Esto me recuerda a un puzzle.
-    - Pero no hay tiempo para esas cosas ahora.
+    - Una libra.
+    - Sigue siendo una libra.
+    - Esto me recuerda a un puzzle, pero no hay tiempo para esas cosas.
     whoTalk: 0
   responses: []

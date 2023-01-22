@@ -14,8 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
+    - 'En la tapa se puede leer a duras penas lo siguiente:'
     - "Barriles llenos de queroseno, glicol prop\xEDlico, endulzantes artificiales,
-      \xE1cido sulf\xFArico, ron, acetona, colorante rojo \u21162, SCUMM, grasa para
-      ejes, \xE1cido para bater\xEDas y pepperoni."
+      \xE1cido sulf\xFArico, ron, acetona, colorante rojo \u21162, algo que no entiendo,
+      grasa para ejes, \xE1cido para bater\xEDas y... pepperoni?"
     whoTalk: 0
   responses: []
