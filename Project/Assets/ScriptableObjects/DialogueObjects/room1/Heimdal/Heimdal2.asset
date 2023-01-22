@@ -17,8 +17,7 @@ MonoBehaviour:
     - "\xBFCu\xE1nto tiempo llevas ah\xED, c\xF3mo te has quitado los grilletes?"
     whoTalk: 1
   responses:
-  - responseText: Una calabaza flotante me ha dejado una cuchara afilada para cortar
-      el pan.
+  - responseText: Un mago nunca revela sus secretos.
     dialogueObject: {fileID: 11400000, guid: cdf814f4bee29fc4bb695f85a0733df3, type: 2}
   - responseText: "\xBFTe refieres a esa cuerda mal atada?"
     dialogueObject: {fileID: 11400000, guid: cdf814f4bee29fc4bb695f85a0733df3, type: 2}

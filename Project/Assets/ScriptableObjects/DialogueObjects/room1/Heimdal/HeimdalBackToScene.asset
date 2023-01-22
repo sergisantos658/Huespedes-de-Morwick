@@ -14,10 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Me echabas de menos?
+    - 'Vete ya, te lo suplico. '
     whoTalk: 1
-  responses:
-  - responseText: Si, soy masoca me gusta que me insulten.
-    dialogueObject: {fileID: 0}
-  - responseText: Me he desmayado y me he vuelto a desperta aqui.
-    dialogueObject: {fileID: 0}
+  responses: []

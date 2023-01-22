@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "\xBFHas cambiado de idea con nuestro trato?"
-    - "\xBFQu\xE9 me dices?"
+    - "\xBFTe has pensado mejor lo del trato?"
     whoTalk: 1
   responses:
-  - responseText: "Adelante, no tengo nada mejor que hacer aqu\xED."
+  - responseText: No, pero tampoco tengo nada mejor que hacer.
     dialogueObject: {fileID: 11400000, guid: fa4d7f283923b114e80382c8d974f1b2, type: 2}
   - responseText: No gracias, sigo prefiriendo mi dorito.
     dialogueObject: {fileID: 11400000, guid: d2e7109a9337c0242a0db89b3c6f37d0, type: 2}

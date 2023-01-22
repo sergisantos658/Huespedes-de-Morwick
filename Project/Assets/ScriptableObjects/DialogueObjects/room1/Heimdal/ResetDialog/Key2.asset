@@ -14,8 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Igual tienes que observar con m\xE1s detenimiento."
+    - "Prueba a observarla m\xE1s detalladamente."
     whoTalk: 1
-  responses:
-  - responseText: Igual tengo que usar mi cuchara.
-    dialogueObject: {fileID: 11400000, guid: c50a3d827c1372e40aa2096ef9e46c5e, type: 2}
+  responses: []

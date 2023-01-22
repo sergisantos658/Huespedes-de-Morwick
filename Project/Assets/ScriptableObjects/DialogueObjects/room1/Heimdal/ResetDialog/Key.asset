@@ -17,5 +17,5 @@ MonoBehaviour:
     - "\xBFQu\xE9 quieres ahora?"
     whoTalk: 1
   responses:
-  - responseText: Esta llave que me has dado no abre nada.
+  - responseText: La llave que me has dado no abre nada.
     dialogueObject: {fileID: 11400000, guid: ed249be422dbe5f45a5d038d5f5c3c04, type: 2}

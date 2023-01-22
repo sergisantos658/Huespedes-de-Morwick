@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "*suspiro* Bueno da igual, mi nombre es Heimdal y est\xE1s en la dimensi\xF3n
-      fantasma. "
+    - "\xBFQue he hecho yo para aguantar a idiotas como este?...  Mi nombre es Heimdal
+      y est\xE1s en la dimensi\xF3n fantasma. "
     - "El jefe necesita humanos, para no se que pruebas en un laboratorio con cubos
       y portales... no nos ha dado mucha informaci\xF3n, as\xED que no preguntes. "
     whoTalk: 1

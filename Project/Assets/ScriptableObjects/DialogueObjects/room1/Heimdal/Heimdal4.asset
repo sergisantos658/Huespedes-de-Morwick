@@ -15,14 +15,14 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - "Adem\xE1s de ciego, sordo... Me impresiona que hayas podido conducir hasta
-      el hotel... "
-    - "Entre tus cosas jurar\xEDa haber visto un anillo de incalculable valor y un
-      dorito con forma de Elvis Presley... Si resuelves un acertijo, te dar\xE9 una
-      llave y si fallas... me quedar\xE9 con el dorito."
+      el hotel."
+    - "Vamos a hacer un trato, entre tus cosas jurar\xEDa haber visto un anillo con
+      pinta de ser caro y un dorito... Si resuelves mi acertijo, te dar\xE9 una llave
+      y si fallas... me quedar\xE9 con el dorito."
     - "\xBFQu\xE9 me dices?"
     whoTalk: 1
   responses:
-  - responseText: "Adelante, solo quiero salir de aqu\xED."
+  - responseText: No tengo nada que perder.
     dialogueObject: {fileID: 11400000, guid: fa4d7f283923b114e80382c8d974f1b2, type: 2}
   - responseText: No gracias, tuve que hipotecar mi casa por ese dorito.
     dialogueObject: {fileID: 11400000, guid: d2e7109a9337c0242a0db89b3c6f37d0, type: 2}
