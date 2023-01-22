@@ -14,10 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Una estanter\xEDa llena de libros aburridos que hablan sobre magia."
-    - Uno dice como revivir a los muertos pero sin perder el brazo en el proceso.
+    - "Una estanter\xEDa llena de libros aburridos sobre magia."
+    - "Uno de ellos es una enciclopedia sobre animales fant\xE1sticos y d\xF3nde
+      encontrarlos."
     - 'Otro habla sobre una tal piedra filosofia o algo asi. '
-    - "Hay mil libros sobre animales fantasticos y como encotrarlos y no veo nada
-      mejor por aqu\xED,"
+    - "No hay nada mas interesante por aqu\xED."
     whoTalk: 0
   responses: []

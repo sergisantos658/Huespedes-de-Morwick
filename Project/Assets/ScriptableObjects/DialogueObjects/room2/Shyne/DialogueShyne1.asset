@@ -15,7 +15,7 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - Hola, tu tienes que ser uno de los nuevos prisioneros del jefe.
-    - Encantado soy Shyne, quieres jugar conmigo?
+    - "Encantado soy Shyne, \xBFquieres jugar conmigo?"
     whoTalk: 1
   responses:
   - responseText: "No esperaba encontrarme con Casper aqu\xED dentro."

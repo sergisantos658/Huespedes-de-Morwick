@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - "Es una estanter\xEDa con medicinas."
-    - "No s\xE9 qu\xE9 te esperabas que fuera, la verdad."
+    - "No s\xE9 qu\xE9 te esperabas que fuera."
     whoTalk: 0
   responses: []

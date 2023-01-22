@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Curiosa estanter\xEDa, contiene platos, cubiertos y frascos, lastima que los
-      fantasmas no puedan comer."
-    - Como me gustaria comer  alga majo ahora mismo.
+    - "Contiene algunos frascos con substancias qu\xEDmicas, nada que me pueda ser
+      \xFAtil"
     whoTalk: 0
   responses: []

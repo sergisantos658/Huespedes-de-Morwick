@@ -16,9 +16,6 @@ MonoBehaviour:
   - dialogue:
     - "Es un cofre.\r"
     - "Sospecho que est\xE1 cerrado."
-    - "Sobretodo por que no se habr\xE9."
+    - Principalmente por que no se abre.
     whoTalk: 0
-  - dialogue:
-    - "No s\xE9 como has conseguido salir de la sala anterior."
-    whoTalk: 1
   responses: []

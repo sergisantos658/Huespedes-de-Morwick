@@ -18,7 +18,7 @@ MonoBehaviour:
     - No tiene la llave...
     whoTalk: 0
   - dialogue:
-    - "Jujuju, no s\xE9 si deber\xEDa decirte esto, pero, as\xED podremos salir de
+    - "Jujuju, no s\xE9 si deber\xEDa decirte esto, pero as\xED podremos salir de
       aqu\xED juntitos y tener una vida larga y feliz."
     whoTalk: 1
   - dialogue:

@@ -21,6 +21,6 @@ MonoBehaviour:
     - "La tierra tambi\xE9n tiene hielo."
     whoTalk: 1
   - dialogue:
-    - "Esa respuesta es demasiado est\xFApida."
-    whoTalk: 1
+    - Creo que el calentamiento global no opina igual
+    whoTalk: 0
   responses: []
