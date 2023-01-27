@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Ya esta, he colocado la tapa en este interruptor, \xBFPodr\xE9 apagar las
-      luces ahora?"
+    - "Ya he colocado el interruptor, ahora deber\xEDa poder apagar la luz."
+    - Son velas, no tiene mucho sentido pero por probar.
     whoTalk: 0
   responses: []

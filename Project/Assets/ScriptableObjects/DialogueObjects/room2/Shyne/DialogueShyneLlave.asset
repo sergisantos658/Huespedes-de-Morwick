@@ -14,11 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "\xBFSabes donde puedo encontrar la llave para abrir el cofre?"
-    - "No la encuentro en ning\xFAn lado."
-    whoTalk: 0
-  - dialogue:
     - No lo se, has mirado debajo de la alfombra?
     - Normalmente la gente deja las llaves en esos lugares.
     whoTalk: 1
-  responses: []
+  responses:
+  - responseText: "No se que gente conoces t\xFA, pero gracias."
+    dialogueObject: {fileID: 0}

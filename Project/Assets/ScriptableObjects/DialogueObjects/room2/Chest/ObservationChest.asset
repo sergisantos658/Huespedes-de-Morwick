@@ -16,6 +16,6 @@ MonoBehaviour:
   - dialogue:
     - "Es un cofre.\r"
     - "Sospecho que est\xE1 cerrado."
-    - Principalmente por que no se abre.
+    - "Principalmente porqu\xE9 no se abre."
     whoTalk: 0
   responses: []

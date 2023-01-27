@@ -22,7 +22,7 @@ MonoBehaviour:
     - Bien, ahora podemos pasar a la siguiente parte.
     whoTalk: 1
   - dialogue:
-    - Voy a darte esta lupa de rayos UVA
+    - Voy a darte esta lupa de rayos UVA.
     - "Te ayudar\xE1 a ver objetos que no puedes ver sin ella."
     - Pulsa la E para utilizarla.
     - "A partir de ahora yo no te dir\xE9 nada m\xE1s."
@@ -31,5 +31,5 @@ MonoBehaviour:
   responses:
   - responseText: "Voy a ignorar que sigas invent\xE1ndote mi nombre, gracias."
     dialogueObject: {fileID: 0}
-  - responseText: "\xBFLupa de rayos UVA? Por fin dices algo interesante."
+  - responseText: "\xBFLupa de rayos UVA? Por fin algo interesante."
     dialogueObject: {fileID: 0}

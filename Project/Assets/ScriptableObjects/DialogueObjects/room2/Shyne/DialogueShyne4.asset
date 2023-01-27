@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "\xBFQue pasa? "
-    - "\xBFTe has quedado atascado?"
+    - "\xBFQue pasa, necesitas alguna pista?"
     whoTalk: 1
   responses:
   - responseText: No... pero repiteme el acertijo por si acaso.
     dialogueObject: {fileID: 11400000, guid: faf8caa1c730eb94bb86c7f746f77841, type: 2}
+  - responseText: "\xBFSabes donde puedo encontrar la llave para abrir el cofre?"
+    dialogueObject: {fileID: 11400000, guid: d82ec22b2e3717d4aa34b14fc062196a, type: 2}
   - responseText: No, voy bien.
     dialogueObject: {fileID: 0}

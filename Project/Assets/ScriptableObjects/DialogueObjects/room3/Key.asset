@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - Una llave.
-    - "Vale, supongo que con esto al fin podr\xE9 abrir esa puerta de ah\xED."
+    - "Vale, con esto al fin podr\xE9 abrir esa puerta de ah\xED."
     whoTalk: 0
   responses: []

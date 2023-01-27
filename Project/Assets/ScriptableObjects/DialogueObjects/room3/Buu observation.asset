@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - Ese fantasma me esta mirando de forma un poco rara.
-    - Me siento hasta incomodo
+    - Me siento un poco incomodo.
     whoTalk: 0
   responses: []

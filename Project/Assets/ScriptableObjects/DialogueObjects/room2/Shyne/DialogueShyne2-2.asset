@@ -14,17 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "!Que guay\xA1 Un compa\xF1ero de juegos nuevo."
-    whoTalk: 1
-  - dialogue:
-    - "Llevo sin que nadia quiera jugar conmigo desde hace mmmm...   [2] mil a\xF1os
-      m\xE1s o menos?"
-    - Mira, te explico el juego.
-    - Esa puerta tiene 4 numeros donde podras pasar a la siguiente sala, numeros
-      que tendras que conseguir jugando conmigo jijiji.
+    - "!Que guay\xA1 Un compa\xF1ero de juegos nuevo, jijijiji."
+    - "Llevo sin que nadia quiera jugar conmigo unos...  \xBF2 mil a\xF1os?"
+    - "Para abrir esa puerta necesitar\xE1s 4 numeros, numeros que tendr\xE1s que
+      conseguir jugando a las adivinanzas conmigo jijiji."
     whoTalk: 1
   responses:
   - responseText: Bueno juguemos entonces.
     dialogueObject: {fileID: 11400000, guid: faf8caa1c730eb94bb86c7f746f77841, type: 2}
-  - responseText: Ya... no soy muy fan de los juegos.
+  - responseText: Ya... no soy muy fan de las adivinanzas.
     dialogueObject: {fileID: 11400000, guid: 9be572b4adcd2174485e1ed3676dec41, type: 2}

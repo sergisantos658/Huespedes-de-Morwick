@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Una estanter\xEDa llena de libros aburridos sobre magia."
+    - "Una estanter\xEDa llena de libros aburridos sobre m\xE1gia."
     - "Uno de ellos es una enciclopedia sobre animales fant\xE1sticos y d\xF3nde
       encontrarlos."
     - 'Otro habla sobre una tal piedra filosofia o algo asi. '

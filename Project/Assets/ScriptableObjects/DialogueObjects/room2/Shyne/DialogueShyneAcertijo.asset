@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - Venga, empecemos.
+    - "Este acertijo me lo ense\xF1\xF3 mi abuelo hace 2 mil a\xF1os, jijijji."
     - "Primero vinieron los rayos, luego la luz se apag\xF3, un anciano habl\xF3,
       sosteniendo unos libros en su mano. Temiendo que se mojara los guard\xF3 en
       un cofre."
