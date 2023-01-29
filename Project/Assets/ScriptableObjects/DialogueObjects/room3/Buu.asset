@@ -14,18 +14,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - " Ho ho ho, que tenemos aqu\xED. Un joven apuesto y muy guapo."
+    - " Ho ho ho, que tenemos aqu\xED. Que joven tan apuesto."
     - Veo que pudiste escapar sin la ayuda de nadie, ni de ninguna cuchara.
     whoTalk: 1
   - dialogue:
-    - "Ya... y yo veo que no sabes disimular, adem\xE1s tengo 43 a\xF1os eso de joven
-      creo que no es lo m\xE1s adecuado, pero lo de guapo no te lo quito."
+    - "Ya... veo que no sabes disimular y tengo 43 a\xF1os eso de joven creo que
+      no es lo m\xE1s adecuado, pero lo de guapo no te lo quito."
     whoTalk: 0
   - dialogue:
     - "Tengo m\xE1s de 300 a\xF1os, para m\xED eres un caramelito."
     whoTalk: 1
   responses:
-  - responseText: Vale, creo acabo de perder por completo las ganas de vivir.
+  - responseText: "Creo que vas demasiado r\xE1pido y no eres mi tipo."
     dialogueObject: {fileID: 11400000, guid: 90fea80c151a4d24793e407a8fc97907, type: 2}
   - responseText: "Quien dir\xEDa que un se\xF1or con cabeza de calabaza intentaria
       tirarme los tejos."

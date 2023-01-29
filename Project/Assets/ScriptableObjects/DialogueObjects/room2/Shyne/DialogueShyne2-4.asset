@@ -14,11 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "\xBFQu\xE9 me dices?"
-    - "\xBFTe lo has pensado ya?"
+    - "\xBFHas cambiado de idea? JIjijiji."
     whoTalk: 0
   responses:
-  - responseText: "Supongo que tendr\xE9 que jugar contigo si quiero salir de aqu\xED."
+  - responseText: "Supongo que no tengo m\xE1s remedio si quiero salir de aqu\xED."
     dialogueObject: {fileID: 11400000, guid: faf8caa1c730eb94bb86c7f746f77841, type: 2}
   - responseText: Ehhhh... no.
     dialogueObject: {fileID: 0}

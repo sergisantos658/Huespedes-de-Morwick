@@ -15,6 +15,6 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - "Parece una caja de m\xFAsica."
-    - "Ser\xE1 porque es una caja de m\xFAsica."
+    - Y seguramente lo sea.
     whoTalk: 0
   responses: []

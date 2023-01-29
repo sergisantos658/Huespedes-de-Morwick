@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - No puedo presionar esto sin la tapa del interruptor.
-    - "Me podria electrocutar y quedarme igual de tieso que la fantasma de esta habitaci\xF3n."
+    - No puedo presionar esto sin el interruptor.
+    - "Me podr\xEDa electrocutar y quedarme igual de tieso que la fantasma de esta
+      habitaci\xF3n."
     whoTalk: 0
   responses: []

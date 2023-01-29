@@ -15,14 +15,9 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - "Venga, empecemos con un peque\xF1o acertijo que s\xE9 que te gustan."
-    whoTalk: 1
-  - dialogue:
-    - Me estoy sintiendo acosado.
-    whoTalk: 0
-  - dialogue:
     - "Voy a ense\xF1arte 3 im\xE1genes y vas a tener que adivinar cu\xE1l se sale
       del patr\xF3n."
     whoTalk: 1
   responses:
-  - responseText: Adelante entonces.
+  - responseText: Me estoy sintiendo acosado, pero adelante.
     dialogueObject: {fileID: 0}

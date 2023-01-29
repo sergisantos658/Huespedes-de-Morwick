@@ -20,7 +20,6 @@ MonoBehaviour:
   - dialogue:
     - "T\xFA s\xED que haces que me ponga rojo."
     whoTalk: 1
-  - dialogue:
-    - "Me lo tomar\xE9 como un no."
-    whoTalk: 0
-  responses: []
+  responses:
+  - responseText: "Me lo tomar\xE9 como un no."
+    dialogueObject: {fileID: 0}

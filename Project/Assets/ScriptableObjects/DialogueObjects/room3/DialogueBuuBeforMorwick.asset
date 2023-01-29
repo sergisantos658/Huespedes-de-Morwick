@@ -15,9 +15,8 @@ MonoBehaviour:
   dialogueTyping:
   - dialogue:
     - Veo que ya has conocido al jefe.
-    - "Jujuju ten un poco m\xE1s de cuidado para la pr\xF3xima cari\xF1o."
+    - " Ho ho ho, ten un poco m\xE1s de cuidado para la pr\xF3xima cari\xF1o."
     whoTalk: 1
-  - dialogue:
-    - "Ya... lo tendr\xE9 en cuenta."
-    whoTalk: 0
-  responses: []
+  responses:
+  - responseText: "Ya... lo tendr\xE9 en cuenta."
+    dialogueObject: {fileID: 0}

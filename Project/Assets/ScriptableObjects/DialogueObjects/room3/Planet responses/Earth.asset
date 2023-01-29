@@ -21,7 +21,6 @@ MonoBehaviour:
     - ...
     - Menos mal que eres guapo.
     whoTalk: 1
-  - dialogue:
-    - No se si me tendria que ofender.
-    whoTalk: 0
-  responses: []
+  responses:
+  - responseText: No se si me tendria que ofender.
+    dialogueObject: {fileID: 0}

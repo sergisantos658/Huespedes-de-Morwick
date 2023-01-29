@@ -18,21 +18,20 @@ MonoBehaviour:
     - No tiene la llave...
     whoTalk: 0
   - dialogue:
-    - "Jujuju, no s\xE9 si deber\xEDa decirte esto, pero as\xED podremos salir de
-      aqu\xED juntitos y tener una vida larga y feliz."
+    - "Ho ho ho, no s\xE9 si deber\xEDa decirte esto, pero as\xED podremos salir
+      de aqu\xED juntitos y tener una vida larga y feliz."
     whoTalk: 1
   - dialogue:
-    - La verdad es que eso no entra en mis planes.
+    - Eso no entra en mis planes, lo siento.
     whoTalk: 0
   - dialogue:
-    - Morwick tiene la llave.
-    - "Con la llave de esa caja podr\xE1s volver al mundo humano."
-    - "Y por fin seremos felices juntos \xC1ngel."
+    - Morwick, el jefe, tiene la llave.
+    - "Con ella podr\xE1s abrir un portal y volver al mundo humano."
+    - "As\xED por fin seremos felices juntos \xC1ngel."
     whoTalk: 1
   - dialogue:
-    - Ya estamos.
     - "No me llamo \xC1ngel."
     - "O sea, \xC1ngel es nombre de hombre barbudo con aires a Jesucristo."
-    - "Y creo que soy m\xE1s guapo."
+    - "Y creo que soy m\xE1s que eso."
     whoTalk: 0
   responses: []

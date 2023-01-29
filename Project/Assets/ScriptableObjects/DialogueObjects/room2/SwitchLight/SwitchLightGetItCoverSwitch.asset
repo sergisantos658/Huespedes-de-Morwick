@@ -14,8 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogueTyping:
   - dialogue:
-    - "Parece que la tapa del interruptor encaja aqu\xED."
-    - "\xBFDeberia colocar aqu\xED la tapa?"
+    - "Parece que el interruptor encaja aqu\xED."
+    - "\xBFDeber\xEDa colocarlo aqu\xED?"
     whoTalk: 0
   responses:
   - responseText: "S\xED."

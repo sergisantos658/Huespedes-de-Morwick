@@ -20,7 +20,6 @@ MonoBehaviour:
   - dialogue:
     - "La tierra tambi\xE9n tiene hielo."
     whoTalk: 1
-  - dialogue:
-    - Creo que el calentamiento global no opina igual
-    whoTalk: 0
-  responses: []
+  responses:
+  - responseText: Creo que el calentamiento global no opina igual.
+    dialogueObject: {fileID: 0}
