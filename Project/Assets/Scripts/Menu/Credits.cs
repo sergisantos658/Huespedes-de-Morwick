@@ -8,7 +8,7 @@ public class Credits : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Invoke("WaitToEnd",45);
+        Invoke("WaitToEnd",42);
     }
 
     // Update is called once per frame
